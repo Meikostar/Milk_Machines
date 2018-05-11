@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="F:\GitWorkSapce\Milk_Powder\app\libs"><file name="eventbus-3.0.0-beta1.jar" path="F:\GitWorkSapce\Milk_Powder\app\libs\eventbus-3.0.0-beta1.jar"/><file name="pinyin4j-2.5.0.jar" path="F:\GitWorkSapce\Milk_Powder\app\libs\pinyin4j-2.5.0.jar"/><file name="slf4j-api-1.7.21.jar" path="F:\GitWorkSapce\Milk_Powder\app\libs\slf4j-api-1.7.21.jar"/></source></dataSet><dataSet config="debug"><source path="F:\GitWorkSapce\Milk_Powder\app\src\debug\jniLibs"/></dataSet></merger>

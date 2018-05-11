@@ -12,7 +12,10 @@ import android.widget.TextView;
 
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseFragment;
+import com.canplay.milk.mvp.activity.mine.AboutActivity;
 import com.canplay.milk.mvp.activity.mine.MineInfoActivity;
+import com.canplay.milk.mvp.activity.mine.UpdateActivity;
+import com.canplay.milk.mvp.activity.mine.UserAvarActivity;
 import com.canplay.milk.mvp.activity.mine.WifiSettingActivity;
 import com.canplay.milk.util.SpUtil;
 import com.canplay.milk.view.EditorNameDialog;
@@ -86,10 +89,28 @@ public class SetFragment extends BaseFragment implements View.OnClickListener {
                 startActivity(new Intent(getActivity(),WifiSettingActivity.class));
             }
         });
+        llAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(),AboutActivity.class));
+            }
+        });
+        llUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(),UpdateActivity.class));
+            }
+        });
+        llWifi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(),WifiSettingActivity.class));
+            }
+        });
         ivImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), MineInfoActivity.class));
+                startActivity(new Intent(getActivity(), UserAvarActivity.class));
 
             }
         });

@@ -134,6 +134,18 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
+            android:name="com.canplay.milk.mvp.activity.mine.UpdateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.canplay.milk.mvp.activity.mine.UserAvarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.canplay.milk.mvp.activity.mine.AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name="com.canplay.milk.mvp.activity.account.RegisteredSecondActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />

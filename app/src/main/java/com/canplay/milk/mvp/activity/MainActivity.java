@@ -2,15 +2,17 @@ package com.canplay.milk.mvp.activity;
 
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.view.KeyEvent;
 import android.view.View;
 
 
 import com.canplay.medical.R;
-import com.canplay.milk.base.BaseAllActivity;
-import com.canplay.milk.base.BaseApplication;
+
+import com.canplay.milk.base.BaseActivity;
 import com.canplay.milk.base.BaseDailogManager;
 import com.canplay.milk.base.RxBus;
 import com.canplay.milk.base.SubscriptionBean;
@@ -19,18 +21,14 @@ import com.canplay.milk.fragment.HomeFragment;
 import com.canplay.milk.fragment.SetFragment;
 import com.canplay.milk.fragment.WikiPediaFragment;
 import com.canplay.milk.mvp.adapter.FragmentViewPagerAdapter;
-import com.canplay.milk.mvp.component.OnChangeListener;
 import com.canplay.milk.permission.PermissionConst;
-import com.canplay.milk.permission.PermissionGen;
 import com.canplay.milk.permission.PermissionSuccess;
 import com.canplay.milk.receiver.Service1;
-import com.canplay.milk.util.TextUtil;
 import com.canplay.milk.view.BottonNevgBar;
 import com.canplay.milk.view.ChangeNoticeDialog;
 import com.canplay.milk.view.MarkaBaseDialog;
 import com.canplay.milk.view.NoScrollViewPager;
 
-import com.google.zxing.client.android.activity.BaseActivity;
 import com.google.zxing.client.android.activity.CaptureActivity;
 
 
@@ -42,8 +40,8 @@ import java.util.List;
 
 import rx.Subscription;
 import rx.functions.Action1;
-
-public class MainActivity extends com.canplay.milk.base.BaseActivity {
+import android.content.DialogInterface;
+public class MainActivity extends BaseActivity {
 
     NoScrollViewPager viewpagerMain;
     BottonNevgBar bnbHome;
@@ -65,7 +63,17 @@ public class MainActivity extends com.canplay.milk.base.BaseActivity {
         bnbHome = (BottonNevgBar) findViewById(R.id.bnb_home);
         line =  findViewById(R.id.line);
 
-        exitDialog= BaseDailogManager.getInstance().getBuilder(this).create();
+        exitDialog= BaseDailogManager.getInstance().getBuilder(this).setOnClickListener(new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if(which==DialogInterface.BUTTON_POSITIVE){
+                    dialog.dismiss();
+                    finish();
+                }else {
+                    dialog.dismiss();
+                }
+            }
+        }).create();
         viewpagerMain = (NoScrollViewPager) findViewById(R.id.viewpager_main);
         viewpagerMain.setScanScroll(false);
         dialog=new ChangeNoticeDialog(this,line);
@@ -80,7 +88,6 @@ public class MainActivity extends com.canplay.milk.base.BaseActivity {
 
         setViewPagerListener();
         setNevgBarChangeListener();
-
 
         mSubscription = RxBus.getInstance().toObserverable(SubscriptionBean.RxBusSendBean.class).subscribe(new Action1<SubscriptionBean.RxBusSendBean>() {
             @Override
@@ -168,6 +175,9 @@ public class MainActivity extends com.canplay.milk.base.BaseActivity {
         if (mSubscription != null) {
             RxBus.getInstance().unSub(mSubscription);
         }
+        if(exitDialog!=null){
+            exitDialog.dismiss();
+        }
     }
 
     @PermissionSuccess(requestCode = PermissionConst.REQUECT_CODE_CAMERA)
@@ -204,6 +214,17 @@ public class MainActivity extends com.canplay.milk.base.BaseActivity {
         }
     }
 
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+//            exitDialog.show();
+            return true;
+        }else {
+            return true;
+        }
+
+    }
 
 
 }

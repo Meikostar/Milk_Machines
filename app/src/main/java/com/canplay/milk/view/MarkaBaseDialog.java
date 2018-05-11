@@ -48,7 +48,7 @@ public class MarkaBaseDialog extends Dialog {
 		private Button mButtonRight;
 		private LinearLayout mLayoutContent;
 		private LinearLayout mLayoutMessage;
-		private View mViewLine;
+
 		protected OnClickListener onClickListener;
 		private TextView mTexViewTitle;
 		private View mView;
@@ -146,7 +146,7 @@ public class MarkaBaseDialog extends Dialog {
 			mButtonRight=(Button)mView.findViewById(R.id.but_right);
 			mTexViewTitle= (TextView) mView.findViewById(R.id.tv_title);
 			mLayoutContent = (LinearLayout)mView.findViewById(R.id.ll_content);
-			mViewLine = mView.findViewById(R.id.view_line);
+
 			mLayoutMessage = (LinearLayout) mView.findViewById(R.id.ll_message);
 
 
@@ -190,15 +190,11 @@ public class MarkaBaseDialog extends Dialog {
 
 			if(StringUtil.isNotEmpty(leftButtonText)&&mButtonLeft!=null){
 				mButtonLeft.setVisibility(View.VISIBLE);
-				if (StringUtil.isEmpty(rightButtonText)){
-					mViewLine.setVisibility(View.GONE);
-				}else {
-					mViewLine.setVisibility(View.VISIBLE);
-				}
+
 				mButtonLeft.setText(leftButtonText);
 			}else if (mButtonLeft!=null){
 				mButtonLeft.setVisibility(View.GONE);
-				mViewLine.setVisibility(View.GONE);
+
 				if(rightButtonText!=null&&mButtonRight!=null){
 					//mButtonRight.setBackgroundResource(R.drawable.selector_click_dialog);
 				}
@@ -213,14 +209,9 @@ public class MarkaBaseDialog extends Dialog {
 			if(rightButtonText!=null&&mButtonRight!=null){
 				mButtonRight.setText(rightButtonText);
 				mButtonRight.setVisibility(View.VISIBLE);
-				if (StringUtil.isEmpty(leftButtonText)){
-					mViewLine.setVisibility(View.GONE);
-				}else {
-					mViewLine.setVisibility(View.VISIBLE);
-				}
+
 			}else {
 				mButtonRight.setVisibility(View.GONE);
-				mViewLine.setVisibility(View.GONE);
 				if(mButtonLeft!=null&&mButtonLeft!=null){
 					//mButtonLeft.setBackgroundResource(R.drawable.selector_click_dialog);
 				}
