@@ -1,0 +1,4 @@
+#Thu May 10 23:37:06 CST 2018
+base.0=F\:\\GitWorkSapce\\Milk_Powder\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_6
+renamed.0=classes.dex
+file.0=F\:\\GitWorkSapce\\Milk_Powder\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_6\\classes.dex

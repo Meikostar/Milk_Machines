@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Powder\\app\\build\\intermediates\\res\\merged\\debug\\xml\\preferences.xml",
+        "source": "F:\\GitWorkSapce\\Milk_Powder\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\xml\\preferences.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Powder\\app\\build\\intermediates\\res\\merged\\debug\\xml\\file_paths.xml",
+        "source": "F:\\GitWorkSapce\\Milk_Powder\\app\\src\\main\\res\\xml\\file_paths.xml"
+    }
+]

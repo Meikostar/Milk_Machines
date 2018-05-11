@@ -1,0 +1,7 @@
+#Fri May 11 00:01:57 CST 2018
+base.0=F\:\\GitWorkSapce\\Milk_Powder\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_c361df1288379c094247e090691a141aad763808
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=F\:\\GitWorkSapce\\Milk_Powder\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_472f668c9b2bffed23ce3649e646b3d06e2d0d63\\classes.dex
+base.1=F\:\\GitWorkSapce\\Milk_Powder\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_472f668c9b2bffed23ce3649e646b3d06e2d0d63
+file.0=F\:\\GitWorkSapce\\Milk_Powder\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_c361df1288379c094247e090691a141aad763808\\classes.dex
