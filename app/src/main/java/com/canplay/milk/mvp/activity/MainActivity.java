@@ -11,6 +11,7 @@ import android.view.View;
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseAllActivity;
 import com.canplay.milk.base.BaseApplication;
+import com.canplay.milk.base.BaseDailogManager;
 import com.canplay.milk.base.RxBus;
 import com.canplay.milk.base.SubscriptionBean;
 import com.canplay.milk.fragment.FileFragment;
@@ -26,6 +27,7 @@ import com.canplay.milk.receiver.Service1;
 import com.canplay.milk.util.TextUtil;
 import com.canplay.milk.view.BottonNevgBar;
 import com.canplay.milk.view.ChangeNoticeDialog;
+import com.canplay.milk.view.MarkaBaseDialog;
 import com.canplay.milk.view.NoScrollViewPager;
 
 import com.google.zxing.client.android.activity.BaseActivity;
@@ -56,13 +58,14 @@ public class MainActivity extends com.canplay.milk.base.BaseActivity {
     private WikiPediaFragment wikiPediaFragment;
     private View line;
     private ChangeNoticeDialog dialog;
+    private MarkaBaseDialog exitDialog;
     @Override
     public void initViews() {
         setContentView(R.layout.activity_main);
         bnbHome = (BottonNevgBar) findViewById(R.id.bnb_home);
         line =  findViewById(R.id.line);
 
-
+        exitDialog= BaseDailogManager.getInstance().getBuilder(this).create();
         viewpagerMain = (NoScrollViewPager) findViewById(R.id.viewpager_main);
         viewpagerMain.setScanScroll(false);
         dialog=new ChangeNoticeDialog(this,line);

@@ -8,12 +8,32 @@
         "source": "F:\\GitWorkSapce\\Milk_Powder\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\raw\\record_start.mp3"
     },
     {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\raw\\ring_weac_alarm_clock_default.mp3",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\raw\\ring_weac_alarm_clock_default.mp3"
+    },
+    {
         "merged": "F:\\GitWorkSapce\\Milk_Powder\\app\\build\\intermediates\\res\\merged\\debug\\raw\\record_stop.mp3",
         "source": "F:\\GitWorkSapce\\Milk_Powder\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\raw\\record_stop.mp3"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Powder\\app\\build\\intermediates\\res\\merged\\debug\\raw\\beep.ogg",
         "source": "F:\\GitWorkSapce\\Milk_Powder\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\raw\\beep.ogg"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\raw\\scan.mp3",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\raw\\scan.mp3"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\raw\\record_stop.mp3",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\raw\\record_stop.mp3"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\raw\\record_start.mp3",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\raw\\record_start.mp3"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\raw\\beep.ogg",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\raw\\beep.ogg"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Powder\\app\\build\\intermediates\\res\\merged\\debug\\raw\\scan.mp3",

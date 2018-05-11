@@ -8,8 +8,28 @@
         "source": "F:\\GitWorkSapce\\Milk_Powder\\app\\src\\main\\res\\mipmap\\mykar_eye_ac.png"
     },
     {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\mipmap\\mykar_eye_nor.png",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\mipmap\\mykar_eye_nor.png"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\mipmap\\mykar_eye_ac.png",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\mipmap\\mykar_eye_ac.png"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\mipmap\\yjlogo.png",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\mipmap\\yjlogo.png"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\mipmap\\star2.jpg",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\mipmap\\star2.jpg"
+    },
+    {
         "merged": "F:\\GitWorkSapce\\Milk_Powder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap\\mykar_eye_nor.png",
         "source": "F:\\GitWorkSapce\\Milk_Powder\\app\\src\\main\\res\\mipmap\\mykar_eye_nor.png"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\mipmap\\star.jpg",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\mipmap\\star.jpg"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Powder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap\\star2.jpg",
@@ -22,5 +42,9 @@
     {
         "merged": "F:\\GitWorkSapce\\Milk_Powder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap\\yjlogo.png",
         "source": "F:\\GitWorkSapce\\Milk_Powder\\app\\src\\main\\res\\mipmap\\yjlogo.png"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\mipmap\\star1.jpg",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\mipmap\\star1.jpg"
     }
 ]

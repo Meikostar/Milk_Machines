@@ -1,10 +1,18 @@
 [
     {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\mipmap-hdpi-v4\\ic_launcher.png"
+    },
+    {
         "merged": "F:\\GitWorkSapce\\Milk_Powder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
         "source": "F:\\GitWorkSapce\\Milk_Powder\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\mipmap-hdpi-v4\\ic_launcher.png"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Powder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher_round.png",
         "source": "F:\\GitWorkSapce\\Milk_Powder\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\mipmap-hdpi-v4\\ic_launcher_round.png"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher_round.png",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\mipmap-hdpi-v4\\ic_launcher_round.png"
     }
 ]
