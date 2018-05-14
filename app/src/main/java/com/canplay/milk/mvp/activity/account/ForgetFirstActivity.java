@@ -1,6 +1,7 @@
 package com.canplay.milk.mvp.activity.account;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -38,7 +39,7 @@ public class ForgetFirstActivity extends BaseActivity {
         tvNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                 startActivity(new Intent(ForgetFirstActivity.this,ForgetPswActivity.class));
             }
         });
 

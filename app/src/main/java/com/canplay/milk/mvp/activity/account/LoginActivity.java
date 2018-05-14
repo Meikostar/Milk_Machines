@@ -10,7 +10,11 @@ import android.widget.TextView;
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseActivity;
 import com.canplay.milk.base.BaseApplication;
+import com.canplay.milk.bean.USER;
 import com.canplay.milk.mvp.activity.MainActivity;
+import com.canplay.milk.mvp.component.DaggerBaseComponent;
+import com.canplay.milk.mvp.present.LoginContract;
+import com.canplay.milk.mvp.present.LoginPresenter;
 import com.canplay.milk.permission.PermissionConst;
 import com.canplay.milk.permission.PermissionFail;
 import com.canplay.milk.permission.PermissionGen;
@@ -28,8 +32,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class LoginActivity extends BaseActivity {
+public class LoginActivity extends BaseActivity implements LoginContract.View{
 
+    @Inject
+    LoginPresenter presenter;
     @BindView(R.id.tv_logo)
     ImageView tvLogo;
     @BindView(R.id.et_user)
@@ -48,6 +54,8 @@ public class LoginActivity extends BaseActivity {
     public void initViews() {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+        DaggerBaseComponent.builder().appComponent(((BaseApplication) getApplication()).getAppComponent()).build().inject(this);
+        presenter.attachView(this);
 
 
         String userId = SpUtil.getInstance().getUserId();
@@ -87,13 +95,13 @@ public class LoginActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this,MainActivity.class));
-//                PermissionGen.with(LoginActivity.this)
-//                        .addRequestCode(PermissionConst.REQUECT_DATE)
-//                        .permissions(
-//                                Manifest.permission.CAMERA,
-//                                Manifest.permission.WRITE_EXTERNAL_STORAGE,
-//                                Manifest.permission.READ_EXTERNAL_STORAGE)
-//                        .request();
+                PermissionGen.with(LoginActivity.this)
+                        .addRequestCode(PermissionConst.REQUECT_DATE)
+                        .permissions(
+                                Manifest.permission.CAMERA,
+                                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                                Manifest.permission.READ_EXTERNAL_STORAGE)
+                        .request();
                 String user = etUser.getText().toString();
                 String password = etPws.getText().toString();
 
@@ -105,6 +113,7 @@ public class LoginActivity extends BaseActivity {
                     showToasts(getString(R.string.mimanull));
                     return;
                 }
+                presenter.goLogin(user,password);
                 showProgress("登录中...");
             }
         });
@@ -132,5 +141,18 @@ public class LoginActivity extends BaseActivity {
 
     }
 
+   private USER user;
+    @Override
+    public <T> void toEntity(T entity, int type) {
+       dimessProgress();
+        user= (USER) entity;
+        SpUtil.getInstance().putUser(user);
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
+    }
 
+    @Override
+    public void showTomast(String msg) {
+
+    }
 }

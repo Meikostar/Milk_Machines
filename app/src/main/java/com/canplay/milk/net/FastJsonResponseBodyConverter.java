@@ -31,32 +31,30 @@ public class FastJsonResponseBodyConverter<T> implements Converter<ResponseBody,
         String errorMsg = "";
         int errorCode = 0;
         try{
-
             Logger.d("convert:" + value.toString());
-//            BaseEntity baseEntity = JSON.parseObject(value.string(), BaseEntity.class);
-//            Logger.d("convert:" + baseEntity.toString());
-            return (T)JSON.parseObject(value.string(), type);
-//            if(baseEntity.getCode() == 0){
-//                if(baseEntity.getData() == null)
-//                    return null;
-//                if(type != BaseEntity.class && "".equals(baseEntity.getData())){
-//                    return null;
-//                }
-//
-//            }else if(baseEntity.getCode() == 1001){
-//                //弹系统文案
-//                errorMsg = baseEntity.getMsg();
-//            }else if((baseEntity.getCode() >= 1 && baseEntity.getCode() <= 99) || (baseEntity.getCode() >= 1000 && baseEntity.getCode() <= 1999) || (baseEntity.getCode() >= 9000 && baseEntity.getCode() <= 9999)){
-//                //return (T) baseEntity;
-//                //弹客户端文案
-//                errorMsg = "登录失效，请重新登录";
-//            }else if((baseEntity.getCode() >= 100 && baseEntity.getCode() <= 999) || (baseEntity.getCode() >= 2000 && baseEntity.getCode() <= 8999)){
-//                //弹系统文案
-//                errorMsg = baseEntity.getMsg();
-//            }else{
-//                errorMsg = "系统异常";
-//            }
-//            throw new IOException(errorMsg);
+            BaseEntity baseEntity = JSON.parseObject(value.string(), BaseEntity.class);
+            Logger.d("convert:" + baseEntity.toString());
+            if(baseEntity.getCode() == 0){
+                if(baseEntity.getData() == null)
+                    return null;
+                if(type != BaseEntity.class && "".equals(baseEntity.getData())){
+                    return null;
+                }
+                return (T) (JSON.parseObject(baseEntity.getData(), type) == null ? baseEntity : JSON.parseObject(baseEntity.getData(), type));
+            }else if(baseEntity.getCode() == 1001){
+                //弹系统文案
+                errorMsg = baseEntity.getMsg();
+            }else if((baseEntity.getCode() >= 1 && baseEntity.getCode() <= 99) || (baseEntity.getCode() >= 1000 && baseEntity.getCode() <= 1999) || (baseEntity.getCode() >= 9000 && baseEntity.getCode() <= 9999)){
+                //return (T) baseEntity;
+                //弹客户端文案
+                errorMsg = "登录失效，请重新登录";
+            }else if((baseEntity.getCode() >= 100 && baseEntity.getCode() <= 999) || (baseEntity.getCode() >= 2000 && baseEntity.getCode() <= 8999)){
+                //弹系统文案
+                errorMsg = baseEntity.getMsg();
+            }else{
+                errorMsg = "系统异常";
+            }
+            throw new IOException(errorMsg);
         }catch(NullPointerException exception){
             throw new IOException("系统异常");
         }

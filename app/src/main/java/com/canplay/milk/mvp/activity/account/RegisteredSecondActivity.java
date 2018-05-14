@@ -9,12 +9,19 @@ import android.widget.TextView;
 
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseActivity;
+import com.canplay.milk.base.BaseApplication;
+import com.canplay.milk.bean.Rigter;
+import com.canplay.milk.mvp.component.DaggerBaseComponent;
+import com.canplay.milk.mvp.present.LoginContract;
+import com.canplay.milk.mvp.present.LoginPresenter;
 import com.canplay.milk.util.TextUtil;
 import com.canplay.milk.view.ClearEditText;
 import com.canplay.milk.view.NavigationBar;
 import com.canplay.milk.view.TimeSelectorDialog;
 
 import java.util.Date;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,9 +30,10 @@ import rx.Subscription;
 /**
  * 注册2
  */
-public class RegisteredSecondActivity extends BaseActivity {
+public class RegisteredSecondActivity extends BaseActivity implements LoginContract.View{
 
-
+    @Inject
+    LoginPresenter presenter;
     @BindView(R.id.navigationBar)
     NavigationBar navigationBar;
     @BindView(R.id.et_name)
@@ -45,7 +53,7 @@ public class RegisteredSecondActivity extends BaseActivity {
     @BindView(R.id.tv_next)
     TextView tvNext;
     private Subscription mSubscription;
-
+    private Rigter rigter;
     private LinearLayoutManager mLinearLayoutManager;
     private int type;
     private boolean is_time;
@@ -62,6 +70,9 @@ public class RegisteredSecondActivity extends BaseActivity {
     public void initViews() {
         setContentView(R.layout.activity_registered2);
         ButterKnife.bind(this);
+        DaggerBaseComponent.builder().appComponent(((BaseApplication) getApplication()).getAppComponent()).build().inject(this);
+        presenter.attachView(this);
+        rigter= (Rigter) getIntent().getSerializableExtra("data");
         navigationBar.setNavigationBarListener(this);
         selectorDialog = new TimeSelectorDialog(RegisteredSecondActivity.this);
         selectorDialog.setDate(new Date(System.currentTimeMillis()))
@@ -101,6 +112,27 @@ public class RegisteredSecondActivity extends BaseActivity {
 
             }
         });
+        tvNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(TextUtil.isEmpty(etDate.getText().toString())){
+                    showToasts("请选择出生日期");
+                    return;
+                }  if(TextUtil.isEmpty(etName.getText().toString())){
+                    showToasts("请填写baby名称");
+                    return;
+                }  if(TextUtil.isEmpty(etWeight.getText().toString())){
+                    showToasts("请填写baby体重");
+                    return;
+                } if(TextUtil.isEmpty(tvSex.getText().toString())){
+                    showToasts("请选择baby姓别");
+                    return;
+                }
+
+                presenter.mobileRegister(rigter.mobile,rigter.regCode,rigter.pwd,etDate.getText().toString(),
+                        etName.getText().toString(),tvSex.getText().toString().equals("男")?"1":"2",etWeight.getText().toString());
+            }
+        });
 
 
     }
@@ -118,5 +150,13 @@ public class RegisteredSecondActivity extends BaseActivity {
     }
 
 
+    @Override
+    public <T> void toEntity(T entity, int type) {
 
+    }
+
+    @Override
+    public void showTomast(String msg) {
+
+    }
 }

@@ -14,15 +14,17 @@ public class SpUtil{
     public static final String LONGITUDE="longitude";
     public static final String COMPANYID="company_id";
     public static final String PROVINCE="province";
-    public static final String CITY="city";
-    public static final String ADDRESS_DETAIL="address_detail";
+    public static final String WEIGHT="weight";
+    public static final String BIRTHDAY="birthday";
     public static final String CONTURY="contury";//国家
     public static final String TOKEN="access_token";//国家
     public static final String TOKEN_TYPE="token_type";//国家
     public static final String USERID="userId";//国家
     public static final String USERNAME="userName";//国家
-    public static final String FIRSTNAME="firstName";//国家
-    public static final String LASTNAME="lastName";//国家
+    public static final String FATHERTNAME="fatherName";//国家
+    public static final String PHONE="phone";//国家
+    public static final String AVATOR="imgResourceKey";//国家
+    public static final String MOTHERNAME="motherName";//国家
     private static SharedPreferences settings;
     public static String USER_ID="merchantId";
 
@@ -34,12 +36,14 @@ public class SpUtil{
 
     public boolean putUser(USER location) {
         SharedPreferences.Editor editor = settings.edit();
-        editor.putString(TOKEN, location.getAccess_token()+"");
-        editor.putString(TOKEN_TYPE, location.getToken_type()+"");
-        editor.putString(USERID, location.getUserId());
-        editor.putString(USERNAME, location.getUserName());
-        editor.putString(FIRSTNAME, location.getFirstName());
-        editor.putString(LASTNAME, location.getLastName());
+        editor.putString(TOKEN, location.token+"");
+        editor.putString(BIRTHDAY, location.birthday+"");
+        editor.putString(USERID, location.userId);
+        editor.putString(USERNAME, location.name);
+        editor.putString(AVATOR, location.imgResourceKey);
+        editor.putString(MOTHERNAME, location.motherName);
+        editor.putString(FATHERTNAME, location.fatherName);
+        editor.putString(PHONE, location.mobile);
         return editor.commit();
     }
 
