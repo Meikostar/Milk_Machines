@@ -58,8 +58,8 @@
                     app:canNoClick="false"
                     android:layout_gravity="center_vertical"
                     android:id="@+id/iv_wifi"
-                    app:drawablechoose="@drawable/btn_cur_wifi_on"
-                    app:drawables="@drawable/btn_cur_wifi_off"
+                    app:drawablechoose="@drawable/btn_enc_time_on"
+                    app:drawables="@drawable/btn_enc_time_off"
                     android:layout_width="57dp"
                     android:layout_height="27dp"/>
             </LinearLayout>

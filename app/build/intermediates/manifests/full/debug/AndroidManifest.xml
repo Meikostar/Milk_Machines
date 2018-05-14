@@ -142,6 +142,30 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
+            android:name="com.canplay.milk.mvp.activity.wiki.LookTImeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.canplay.milk.mvp.activity.wiki.SeachResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.canplay.milk.mvp.activity.wiki.SendRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.canplay.milk.mvp.activity.wiki.NurseryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.canplay.milk.mvp.activity.wiki.PastWipiActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.canplay.milk.mvp.activity.wiki.GroupRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name="com.canplay.milk.mvp.activity.mine.AboutActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />

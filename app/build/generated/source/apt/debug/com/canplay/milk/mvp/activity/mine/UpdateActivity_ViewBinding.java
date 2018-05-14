@@ -4,6 +4,7 @@ package com.canplay.milk.mvp.activity.mine;
 import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
@@ -26,8 +27,10 @@ public class UpdateActivity_ViewBinding implements Unbinder {
 
     target.line = Utils.findRequiredView(source, R.id.line, "field 'line'");
     target.navigationBar = Utils.findRequiredViewAsType(source, R.id.navigationBar, "field 'navigationBar'", NavigationBar.class);
-    target.tvTitle = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tvTitle'", TextView.class);
+    target.tvVersion = Utils.findRequiredViewAsType(source, R.id.tv_version, "field 'tvVersion'", TextView.class);
+    target.tvUpdate = Utils.findRequiredViewAsType(source, R.id.tv_update, "field 'tvUpdate'", TextView.class);
     target.tvContent = Utils.findRequiredViewAsType(source, R.id.tv_content, "field 'tvContent'", TextView.class);
+    target.llUpdate = Utils.findRequiredViewAsType(source, R.id.ll_update, "field 'llUpdate'", LinearLayout.class);
   }
 
   @Override
@@ -39,7 +42,9 @@ public class UpdateActivity_ViewBinding implements Unbinder {
 
     target.line = null;
     target.navigationBar = null;
-    target.tvTitle = null;
+    target.tvVersion = null;
+    target.tvUpdate = null;
     target.tvContent = null;
+    target.llUpdate = null;
   }
 }

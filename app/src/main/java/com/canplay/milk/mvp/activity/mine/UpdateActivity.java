@@ -2,6 +2,7 @@ package com.canplay.milk.mvp.activity.mine;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.canplay.medical.R;
@@ -21,10 +22,14 @@ public class UpdateActivity extends BaseActivity {
     View line;
     @BindView(R.id.navigationBar)
     NavigationBar navigationBar;
-    @BindView(R.id.tv_title)
-    TextView tvTitle;
+    @BindView(R.id.tv_version)
+    TextView tvVersion;
+    @BindView(R.id.tv_update)
+    TextView tvUpdate;
     @BindView(R.id.tv_content)
     TextView tvContent;
+    @BindView(R.id.ll_update)
+    LinearLayout llUpdate;
 
     @Override
     public void initViews() {
@@ -49,10 +54,5 @@ public class UpdateActivity extends BaseActivity {
     }
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
+
 }

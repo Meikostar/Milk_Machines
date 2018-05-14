@@ -43,6 +43,7 @@
                 android:background="@color/linecolor" />
 
             <LinearLayout
+                android:id="@+id/tv_time"
                 android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="59dp"
@@ -110,6 +111,7 @@
 
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/ll_record"
                 android:background="@color/white"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -204,13 +206,8 @@
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="34dp"
-                        android:layout_height="34dp"
-                        android:layout_marginLeft="15dp"
-                        android:src="@drawable/bai4" />
-
                     <TextView
+                        android:id="@+id/textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -219,6 +216,13 @@
                         android:text="往期百科"
                         android:textColor="@color/a0"
                         android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_marginRight="15dp"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/bai4" />
 
 
                 </LinearLayout>

@@ -121,8 +121,8 @@ public class NavigationBar extends LinearLayout implements View.OnClickListener 
                 img_right.setVisibility(GONE);
                 txt_right.setVisibility(VISIBLE);
                 txt_right.setText(barStyle.right_txt);
-                txt_right.setTextColor(getResources().getColor(R.color.blue));
-                txt_right.setBackgroundColor(getResources().getColor(R.color.white));
+//                txt_right.setTextColor(getResources().getColor(R.color.blue));
+//                txt_right.setBackgroundColor(getResources().getColor(R.color.white));
                 break;
             case TOP:
                 img_right.setVisibility(GONE);

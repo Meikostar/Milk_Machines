@@ -12,7 +12,10 @@ import android.widget.TextView;
 
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseFragment;
-import com.canplay.milk.mvp.activity.mine.MineInfoActivity;
+import com.canplay.milk.mvp.activity.wiki.GroupRecordActivity;
+import com.canplay.milk.mvp.activity.wiki.LookTImeActivity;
+import com.canplay.milk.mvp.activity.wiki.PastWipiActivity;
+import com.canplay.milk.mvp.activity.wiki.SeachResultActivity;
 import com.canplay.milk.view.PhotoPopupWindow;
 
 import butterknife.BindView;
@@ -42,6 +45,10 @@ public class WikiPediaFragment extends BaseFragment implements View.OnClickListe
     LinearLayout llPast;
     @BindView(R.id.ll_pass)
     LinearLayout llPass;
+    @BindView(R.id.tv_time)
+    LinearLayout llTime;
+    @BindView(R.id.ll_record)
+    LinearLayout llRecord;
 
 
     @Override
@@ -70,8 +77,31 @@ public class WikiPediaFragment extends BaseFragment implements View.OnClickListe
 
 
     private void initListener() {
+        llTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), LookTImeActivity.class));
 
-
+            }
+        });
+        llGroup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), GroupRecordActivity.class));
+            }
+        });
+        llRecord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), SeachResultActivity.class));
+            }
+        });
+        llPast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), PastWipiActivity.class));
+            }
+        });
     }
 
     private void initView() {

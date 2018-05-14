@@ -340,7 +340,7 @@
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
-    <color name="slow_black">#333333</color>
+    <color name="slow_black">#3e3a39</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
@@ -911,7 +911,7 @@
     <dimen name="text_size_45px">22.5sp</dimen>
     <dimen name="text_size_50px">25sp</dimen>
     <dimen name="text_size_60px">30sp</dimen>
-    <dimen name="textsize_big">17dp</dimen>
+    <dimen name="textsize_big">17.5dp</dimen>
     <dimen name="textsize_big_low">16dp</dimen>
     <dimen name="timepicker_item_height">10dp</dimen>
     <dimen name="title_bar_height">44dp</dimen>

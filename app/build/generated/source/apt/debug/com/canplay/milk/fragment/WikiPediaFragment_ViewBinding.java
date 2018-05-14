@@ -28,6 +28,8 @@ public class WikiPediaFragment_ViewBinding implements Unbinder {
     target.ivFirst = Utils.findRequiredViewAsType(source, R.id.iv_first, "field 'ivFirst'", ImageView.class);
     target.llPast = Utils.findRequiredViewAsType(source, R.id.ll_past, "field 'llPast'", LinearLayout.class);
     target.llPass = Utils.findRequiredViewAsType(source, R.id.ll_pass, "field 'llPass'", LinearLayout.class);
+    target.llTime = Utils.findRequiredViewAsType(source, R.id.tv_time, "field 'llTime'", LinearLayout.class);
+    target.llRecord = Utils.findRequiredViewAsType(source, R.id.ll_record, "field 'llRecord'", LinearLayout.class);
   }
 
   @Override
@@ -45,5 +47,7 @@ public class WikiPediaFragment_ViewBinding implements Unbinder {
     target.ivFirst = null;
     target.llPast = null;
     target.llPass = null;
+    target.llTime = null;
+    target.llRecord = null;
   }
 }

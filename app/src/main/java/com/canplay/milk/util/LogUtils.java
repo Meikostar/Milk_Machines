@@ -1,12 +1,43 @@
 package com.canplay.milk.util;
 
 import android.util.Log;
+import android.widget.Toast;
+
+import com.canplay.milk.base.BaseApplication;
+
+import rx.Observable;
+import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
 
 
 /**
  * 管理Log 的类.
  */
 public class LogUtils {
+    public static void showToast(final String msg){
+        Observable.create(new Observable.OnSubscribe<String>() {
+            @Override
+            public void call(Subscriber<? super String> subscriber) {
+                if (msg!=null){
+                    subscriber.onNext(msg);
+                }
+            }
+        }).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<String>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+                    @Override
+                    public void onNext(String s) {
+                        Toast.makeText(BaseApplication.getInstance(),s,Toast.LENGTH_LONG).show();
+                    }
+                });
+    }
     private static final String TAG = "ChaoJiPi";
     private static boolean DEBUG=true;
     public static void d(String TAG, String content){

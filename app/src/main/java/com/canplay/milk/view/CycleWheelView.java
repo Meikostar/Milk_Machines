@@ -480,7 +480,7 @@ public class CycleWheelView extends ListView {
                 // 第一种方法绘制圆环
                 //绘制内圆
                 paint.setStrokeWidth(2);
-                RectF rectF = new RectF(dip2px(getContext(),2),mItemHeight * (mWheelSize / 2),viewWidth-dip2px(getContext(),2),mItemHeight * (mWheelSize / 2 + 1));
+                RectF rectF = new RectF(dip2px(getContext(),6),mItemHeight * (mWheelSize / 2),viewWidth-dip2px(getContext(),6),mItemHeight * (mWheelSize / 2 + 1));
                 canvas.drawRoundRect(rectF,dip2px(getContext(),44),dip2px(getContext(),44), paint);
 //
 

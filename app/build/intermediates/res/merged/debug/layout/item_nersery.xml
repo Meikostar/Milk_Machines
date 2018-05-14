@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/green1_oval_line"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:singleLine="true"
+                android:layout_marginLeft="12dp"
+                android:id="@+id/tv_name"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dsfdsfdsflj;ds"
+                android:textSize="14sp"
+                android:textColor="@color/a0"
+                />
+            <TextView
+
+                android:layout_marginLeft="8dp"
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="2018年5月4号"
+                android:textSize="11sp"
+                android:layout_marginRight="22dp"
+                android:textColor="@color/slow_black"
+                />
+        </LinearLayout>
+
+
+
+
+</LinearLayout>
