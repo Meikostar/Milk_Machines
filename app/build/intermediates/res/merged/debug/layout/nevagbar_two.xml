@@ -4,67 +4,45 @@
     android:background="#fcfcfc"
     android:layout_height="match_parent">
     <RadioGroup
+        android:padding="2dp"
+        android:layout_gravity="center_horizontal"
         android:id="@+id/rd_group"
-        android:layout_width="match_parent"
-        android:layout_height="47dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
 
-        android:background="#FFFFFF"
+        android:background="@drawable/greeb_retagle"
         android:gravity="center"
         android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/rd_one"
             style="@style/button_item"
-            android:layout_height="48dp"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+           android:layout_width="65dp"
 
-            android:text="曲线" />
+            android:background="@drawable/develop_selector"
+            android:text="身高" />
 
-        <View
-            android:layout_width="0.5dp"
-            android:layout_height="match_parent"
-            android:background="@color/linecolor"/>
+
         <RadioButton
-            android:layout_marginLeft="20dp"
-            android:layout_weight="1"
-            android:layout_height="48dp"
+
+            android:layout_width="65dp"
+            android:layout_height="40dp"
             android:id="@+id/rd_two"
             style="@style/button_item"
+            android:background="@drawable/develop_selector"
+            android:text="头围" />
 
-            android:text="列表" />
-
+        <RadioButton
+            android:id="@+id/rd_three"
+            style="@style/button_item"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="65dp"
+            android:background="@drawable/develop_selector"
+            android:text="体重" />
 
     </RadioGroup>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:orientation="horizontal">
-        <LinearLayout
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-           >
-         <ImageView
-             android:id="@+id/img0"
-             android:layout_width="93dp"
-             android:layout_height="2dp"
-             />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_marginLeft="20dp"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:orientation="horizontal">
-            <ImageView
-                android:id="@+id/img1"
-                android:layout_width="93dp"
-                android:layout_height="2dp"
-                />
-        </LinearLayout>
-    </LinearLayout>
+
 </LinearLayout>

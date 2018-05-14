@@ -20,7 +20,7 @@
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:backgroundDimAmount">0.6</item>
     </style>
-    <declare-styleable name="TwoNevgBar">
+    <declare-styleable name="ThreeNevgBar">
         <attr name="types" format="boolean"/>
     </declare-styleable>
     <style name="capture_padding_iv_vertical">

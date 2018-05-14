@@ -36,27 +36,27 @@ public final class R {
     }
     public static final class id {
         public static final int bottom = 0x7f0f0032;
-        public static final int empty = 0x7f0f0144;
+        public static final int empty = 0x7f0f014a;
         public static final int insideInset = 0x7f0f0062;
         public static final int insideOverlay = 0x7f0f0063;
         public static final int item_touch_helper_previous_elevation = 0x7f0f0008;
         public static final int lay_down = 0x7f0f005c;
         public static final int left = 0x7f0f0038;
-        public static final int more_progress = 0x7f0f0142;
+        public static final int more_progress = 0x7f0f0148;
         public static final int outsideInset = 0x7f0f0064;
         public static final int outsideOverlay = 0x7f0f0065;
-        public static final int ptr_layout = 0x7f0f0143;
+        public static final int ptr_layout = 0x7f0f0149;
         public static final int pull_out = 0x7f0f005d;
         public static final int recyclerview_swipe = 0x7f0f000c;
         public static final int right = 0x7f0f0039;
         public static final int top = 0x7f0f003b;
     }
     public static final class layout {
-        public static final int layout_more_progress = 0x7f040052;
-        public static final int layout_progress = 0x7f040053;
-        public static final int layout_progress_recyclerview = 0x7f040054;
-        public static final int layout_recyclerview_horizontalscroll = 0x7f040055;
-        public static final int layout_recyclerview_verticalscroll = 0x7f040056;
+        public static final int layout_more_progress = 0x7f040056;
+        public static final int layout_progress = 0x7f040057;
+        public static final int layout_progress_recyclerview = 0x7f040058;
+        public static final int layout_recyclerview_horizontalscroll = 0x7f040059;
+        public static final int layout_recyclerview_verticalscroll = 0x7f04005a;
     }
     public static final class styleable {
         public static final int[] RecyclerView = { 0x010100c4, 0x7f010169, 0x7f01016a, 0x7f01016b, 0x7f01016c };

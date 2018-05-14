@@ -2,6 +2,7 @@
 package com.canplay.milk.mvp.component;
 
 import com.canplay.milk.base.AppComponent;
+import com.canplay.milk.fragment.DataFragment;
 import com.canplay.milk.mvp.activity.account.LoginActivity;
 import dagger.internal.MembersInjectors;
 import dagger.internal.Preconditions;
@@ -18,6 +19,11 @@ public final class DaggerBaseComponent implements BaseComponent {
   @Override
   public void inject(LoginActivity binderActivity) {
     MembersInjectors.<LoginActivity>noOp().injectMembers(binderActivity);
+  }
+
+  @Override
+  public void inject(DataFragment binderActivity) {
+    MembersInjectors.<DataFragment>noOp().injectMembers(binderActivity);
   }
 
   public static final class Builder {

@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseFragment;
 import com.canplay.milk.mvp.activity.mine.AboutActivity;
+import com.canplay.milk.mvp.activity.mine.EditorInfoActivity;
 import com.canplay.milk.mvp.activity.mine.MineInfoActivity;
 import com.canplay.milk.mvp.activity.mine.UpdateActivity;
 import com.canplay.milk.mvp.activity.mine.UserAvarActivity;
@@ -110,7 +111,7 @@ public class SetFragment extends BaseFragment implements View.OnClickListener {
         ivImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), UserAvarActivity.class));
+                startActivity(new Intent(getActivity(), EditorInfoActivity.class));
 
             }
         });

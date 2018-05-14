@@ -67,12 +67,14 @@ public class RegisteredSecondActivity extends BaseActivity {
         selectorDialog.setDate(new Date(System.currentTimeMillis()))
                 .setBindClickListener(new TimeSelectorDialog.BindClickListener() {
                     @Override
-                    public void time(String time) {
+                    public void time(String time, int poition, String times) {
                         if (TextUtil.isNotEmpty(time)) {
                             etDate.setText(time);
 
                         }
                     }
+
+
                 });
 
     }

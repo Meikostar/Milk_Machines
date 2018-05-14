@@ -132,7 +132,15 @@
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.canplay.milk.mvp.activity.mine.AboutActivity"
+        android:name="com.canplay.milk.mvp.activity.mine.AboutActivity"
+        android:theme="@style/AppTheme"
+        android:screenOrientation="portrait" />
+        <activity
+            android:name="com.canplay.milk.mvp.activity.mine.EditorInfoActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.canplay.milk.mvp.activity.mine.DevelopActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait" />
         <activity

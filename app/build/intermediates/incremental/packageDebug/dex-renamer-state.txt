@@ -1,0 +1,7 @@
+#Sat May 12 17:13:33 CST 2018
+base.0=F\:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_185a42a641f8dd64e5dc9b2e2a6382b0c3dbbe2c
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=F\:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_6a15c374e7abe2dd4ab22a0ac1435cfa1fa92fba\\classes.dex
+base.1=F\:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_6a15c374e7abe2dd4ab22a0ac1435cfa1fa92fba
+file.0=F\:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_185a42a641f8dd64e5dc9b2e2a6382b0c3dbbe2c\\classes.dex

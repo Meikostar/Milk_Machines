@@ -10,6 +10,8 @@
         android:layout_height="0.01dp"
         android:id="@+id/line"/>
     <com.canplay.milk.view.NavigationBar
+        app:navigationRight_img="@drawable/gou2"
+        app:navigationRight_type="img"
         android:id="@+id/navigationBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/content_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.01dp"
+        android:id="@+id/line"/>
+    <com.canplay.milk.view.NavigationBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:navigationTitle="发育评估" />
+    <TextView
+        android:textColor="@color/a0"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:text="数据仅供参考，不可作为实际评判标准。"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:background="@drawable/white_retagle"/>
+    <TextView
+        android:id="@+id/tv_data"
+        android:textColor="@color/color72"
+        android:textSize="16sp"
+        android:text="身高（单位CM）"
+        android:layout_marginTop="5dp"
+       android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       />
+
+    <com.canplay.milk.view.NoScrollViewPager
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/viewpager_main"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.canplay.milk.view.ThreeNevgBar
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:id="@+id/ne_bar"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="18dp"
+        android:layout_width="220dp"
+        android:layout_height="40dp"/>
+</LinearLayout>

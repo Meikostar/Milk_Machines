@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
 import android.graphics.PixelFormat;
+import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -456,6 +457,7 @@ public class CycleWheelView extends ListView {
                 int viewWidth = getWidth();
                 Paint dividerPaint = new Paint();
                 dividerPaint.setColor(dividerColor);
+
                 dividerPaint.setStrokeWidth(dividerHeight);
                 Paint seletedSolidPaint = new Paint();
                 seletedSolidPaint.setColor(seletedSolidColor);
@@ -466,10 +468,23 @@ public class CycleWheelView extends ListView {
                         * (mWheelSize), solidPaint);
                 canvas.drawRect(0, mItemHeight * (mWheelSize / 2), viewWidth, mItemHeight
                         * (mWheelSize / 2 + 1), seletedSolidPaint);
-                canvas.drawLine(0, mItemHeight * (mWheelSize / 2), viewWidth, mItemHeight
-                        * (mWheelSize / 2), dividerPaint);
-                canvas.drawLine(0, mItemHeight * (mWheelSize / 2 + 1), viewWidth, mItemHeight
-                        * (mWheelSize / 2 + 1), dividerPaint);
+//                canvas.drawLine(0, mItemHeight * (mWheelSize / 2), viewWidth, mItemHeight
+//                        * (mWheelSize / 2), dividerPaint);
+//                canvas.drawLine(0, mItemHeight * (mWheelSize / 2 + 1), viewWidth, mItemHeight
+//                        * (mWheelSize / 2 + 1), dividerPaint);
+                Paint paint = new Paint();
+                paint.setAntiAlias(true);                       //设置画笔为无锯齿
+                paint.setColor(Color.parseColor("#3DDDA8"));                    //设置画笔颜色
+                paint.setStrokeWidth((float) 2.0);              //线宽
+                paint.setStyle(Paint.Style.STROKE);
+                // 第一种方法绘制圆环
+                //绘制内圆
+                paint.setStrokeWidth(2);
+                RectF rectF = new RectF(dip2px(getContext(),2),mItemHeight * (mWheelSize / 2),viewWidth-dip2px(getContext(),2),mItemHeight * (mWheelSize / 2 + 1));
+                canvas.drawRoundRect(rectF,dip2px(getContext(),44),dip2px(getContext(),44), paint);
+//
+
+//                canvas.drawArc(oval, 0, 360, false, paint);    //绘制圆弧
             }
 
             @Override
@@ -487,7 +502,11 @@ public class CycleWheelView extends ListView {
         };
         setBackgroundDrawable(backgroud);
     }
-
+    /* 根据手机的分辨率从 dp 的单位 转成为 px(像素) */
+    public  int dip2px(Context context, float dpValue) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
+    }
     private int measureHeight() {
         View itemView = LayoutInflater.from(getContext()).inflate(mItemLayoutId, null);
         itemView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,

@@ -3,7 +3,7 @@
     android:id="@+id/rl_top"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/top_bg">
+    android:background="#3DDDA8">
 
     <ImageView
         android:id="@+id/btn_back"
@@ -13,7 +13,7 @@
         android:paddingLeft="17dp"
         android:paddingRight="20dp"
         android:scaleType="center"
-        android:src="@drawable/gallery_back" />
+        android:src="@drawable/arrow_left_whiite" />
 
     <LinearLayout
         android:id="@+id/selectFold"
