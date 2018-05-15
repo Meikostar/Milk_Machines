@@ -1417,14 +1417,14 @@ int id et_father 0x7f0f00ea
 int id et_mami 0x7f0f00eb
 int id et_money 0x7f0f01a4
 int id et_name 0x7f0f00ed
-int id et_pass 0x7f0f00d0
+int id et_pass 0x7f0f00d2
 int id et_phone 0x7f0f00c3
 int id et_psw 0x7f0f0197
 int id et_pws 0x7f0f00ca
 int id et_pws1 0x7f0f00cb
 int id et_pws2 0x7f0f00cc
 int id et_search 0x7f0f00f2
-int id et_user 0x7f0f00d2
+int id et_user 0x7f0f00d0
 int id et_weight 0x7f0f00f1
 int id exitUntilCollapsed 0x7f0f0026
 int id expand_activities_button 0x7f0f0071

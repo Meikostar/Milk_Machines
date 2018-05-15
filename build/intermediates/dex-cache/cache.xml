@@ -64,5 +64,14 @@
         sha1="b1eb2cbef45f16bbd5205bcf60ab3adc07e037eb">
         <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\4\classes_10142fded220d58ab67f177e33f1bc78471a5397\classes.dex" />
     </item>
+    <item
+        is-multidex="true"
+        jar="F:\GitWorkSpace\Milk_Machine\framework\build\intermediates\bundles\default\libs\gson-2.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="21332fb8bd3c444784ce2627719322b3385495ee">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\8\gson-2.3.1_5496f9010f25f29cf8e9af409da4ebe15c7ae41b\classes.dex" />
+    </item>
 
 </items>

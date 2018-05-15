@@ -4844,14 +4844,14 @@ containing a value of this type.
         public static final int et_mami=0x7f0f00eb;
         public static final int et_money=0x7f0f01a4;
         public static final int et_name=0x7f0f00ed;
-        public static final int et_pass=0x7f0f00d0;
+        public static final int et_pass=0x7f0f00d2;
         public static final int et_phone=0x7f0f00c3;
         public static final int et_psw=0x7f0f0197;
         public static final int et_pws=0x7f0f00ca;
         public static final int et_pws1=0x7f0f00cb;
         public static final int et_pws2=0x7f0f00cc;
         public static final int et_search=0x7f0f00f2;
-        public static final int et_user=0x7f0f00d2;
+        public static final int et_user=0x7f0f00d0;
         public static final int et_weight=0x7f0f00f1;
         public static final int exitUntilCollapsed=0x7f0f0026;
         public static final int expand_activities_button=0x7f0f0071;

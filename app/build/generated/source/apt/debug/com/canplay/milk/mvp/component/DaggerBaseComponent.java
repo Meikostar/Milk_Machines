@@ -2,23 +2,94 @@
 package com.canplay.milk.mvp.component;
 
 import com.canplay.milk.base.AppComponent;
+import com.canplay.milk.base.manager.ApiManager;
 import com.canplay.milk.fragment.DataFragment;
+import com.canplay.milk.mvp.activity.account.ForgetPswActivity;
+import com.canplay.milk.mvp.activity.account.ForgetPswActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.account.LoginActivity;
+import com.canplay.milk.mvp.activity.account.LoginActivity_MembersInjector;
+import com.canplay.milk.mvp.activity.account.RegisteredActivity;
+import com.canplay.milk.mvp.activity.account.RegisteredActivity_MembersInjector;
+import com.canplay.milk.mvp.activity.account.RegisteredSecondActivity;
+import com.canplay.milk.mvp.activity.account.RegisteredSecondActivity_MembersInjector;
+import com.canplay.milk.mvp.present.LoginPresenter;
+import com.canplay.milk.mvp.present.LoginPresenter_Factory;
+import dagger.MembersInjector;
+import dagger.internal.Factory;
 import dagger.internal.MembersInjectors;
 import dagger.internal.Preconditions;
+import javax.inject.Provider;
 
 public final class DaggerBaseComponent implements BaseComponent {
+  private Provider<ApiManager> apiManagerProvider;
+
+  private Provider<LoginPresenter> loginPresenterProvider;
+
+  private MembersInjector<LoginActivity> loginActivityMembersInjector;
+
+  private MembersInjector<ForgetPswActivity> forgetPswActivityMembersInjector;
+
+  private MembersInjector<RegisteredSecondActivity> registeredSecondActivityMembersInjector;
+
+  private MembersInjector<RegisteredActivity> registeredActivityMembersInjector;
+
   private DaggerBaseComponent(Builder builder) {
     assert builder != null;
+    initialize(builder);
   }
 
   public static Builder builder() {
     return new Builder();
   }
 
+  @SuppressWarnings("unchecked")
+  private void initialize(final Builder builder) {
+
+    this.apiManagerProvider =
+        new Factory<ApiManager>() {
+          private final AppComponent appComponent = builder.appComponent;
+
+          @Override
+          public ApiManager get() {
+            return Preconditions.checkNotNull(
+                appComponent.apiManager(),
+                "Cannot return null from a non-@Nullable component method");
+          }
+        };
+
+    this.loginPresenterProvider = LoginPresenter_Factory.create(apiManagerProvider);
+
+    this.loginActivityMembersInjector =
+        LoginActivity_MembersInjector.create(loginPresenterProvider);
+
+    this.forgetPswActivityMembersInjector =
+        ForgetPswActivity_MembersInjector.create(loginPresenterProvider);
+
+    this.registeredSecondActivityMembersInjector =
+        RegisteredSecondActivity_MembersInjector.create(loginPresenterProvider);
+
+    this.registeredActivityMembersInjector =
+        RegisteredActivity_MembersInjector.create(loginPresenterProvider);
+  }
+
   @Override
   public void inject(LoginActivity binderActivity) {
-    MembersInjectors.<LoginActivity>noOp().injectMembers(binderActivity);
+    loginActivityMembersInjector.injectMembers(binderActivity);
+  }
+
+  @Override
+  public void inject(ForgetPswActivity binderActivity) {
+    forgetPswActivityMembersInjector.injectMembers(binderActivity);
+  }
+
+  @Override
+  public void inject(RegisteredSecondActivity binderActivity) {
+    registeredSecondActivityMembersInjector.injectMembers(binderActivity);
+  }
+
+  @Override
+  public void inject(RegisteredActivity binderActivity) {
+    registeredActivityMembersInjector.injectMembers(binderActivity);
   }
 
   @Override

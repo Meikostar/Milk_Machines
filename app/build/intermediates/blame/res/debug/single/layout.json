@@ -1,15 +1,15 @@
 [
     {
-        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_searchs.xml",
-        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\view_searchs.xml"
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_popwindow.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\list_popwindow.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\include_select_image_top.xml",
         "source": "F:\\GitWorkSpace\\Milk_Machine\\gallery\\build\\intermediates\\bundles\\default\\res\\layout\\include_select_image_top.xml"
     },
     {
-        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_popwindow.xml",
-        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\list_popwindow.xml"
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_searchs.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\view_searchs.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\order_detail_item.xml",
