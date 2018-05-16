@@ -130,6 +130,10 @@
             android:launchMode="singleTop"
             android:windowSoftInputMode="adjustResize" />
         <activity
+            android:name="com.canplay.milk.mvp.activity.home.RemindMilkActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
             android:name="com.canplay.milk.mvp.activity.mine.MineCodeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />

@@ -1,0 +1,17 @@
+package com.canplay.milk.bean;
+
+/**
+ * Created by mykar on 17/4/26.
+ */
+public class Milk {
+//    "id": "535",
+//            "name": "爱尔巴桑",
+//            "parent_id": "534",
+//            "type": "city"
+
+    public String content;
+    public String name;
+    public String filter;
+    public String surcharge;
+
+}

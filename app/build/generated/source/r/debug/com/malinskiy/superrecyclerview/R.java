@@ -36,16 +36,16 @@ public final class R {
     }
     public static final class id {
         public static final int bottom = 0x7f0f0032;
-        public static final int empty = 0x7f0f0163;
+        public static final int empty = 0x7f0f0162;
         public static final int insideInset = 0x7f0f0062;
         public static final int insideOverlay = 0x7f0f0063;
         public static final int item_touch_helper_previous_elevation = 0x7f0f0008;
         public static final int lay_down = 0x7f0f005c;
         public static final int left = 0x7f0f0038;
-        public static final int more_progress = 0x7f0f0161;
+        public static final int more_progress = 0x7f0f0160;
         public static final int outsideInset = 0x7f0f0064;
         public static final int outsideOverlay = 0x7f0f0065;
-        public static final int ptr_layout = 0x7f0f0162;
+        public static final int ptr_layout = 0x7f0f0161;
         public static final int pull_out = 0x7f0f005d;
         public static final int recyclerview_swipe = 0x7f0f000c;
         public static final int right = 0x7f0f0039;

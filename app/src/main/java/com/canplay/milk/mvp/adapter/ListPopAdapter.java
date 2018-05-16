@@ -60,7 +60,8 @@ public class ListPopAdapter extends BaseAdapter {
         ResultViewHolder holder;
         if (view == null){
             holder = new ResultViewHolder();
-
+            view = LayoutInflater.from(mContext).inflate(R.layout.item_list_pop, parent, false);
+            holder.data= (TextView) view.findViewById(R.id.tv_data);
 
 
             view.setTag(holder);

@@ -120,7 +120,25 @@
             android:launchMode="singleTop"
             android:windowSoftInputMode="adjustResize" />
         <activity
+            android:name="com.canplay.milk.mvp.activity.home.MilkDetailActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.canplay.milk.mvp.activity.home.PushMilkActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.canplay.milk.mvp.activity.home.AddBrandsActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
             android:name="com.canplay.milk.mvp.activity.home.RemindMilkActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.canplay.milk.mvp.activity.home.SearchMilkActivity"
             android:launchMode="singleTop"
             android:windowSoftInputMode="adjustResize" />
 
