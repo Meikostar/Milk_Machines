@@ -30,6 +30,7 @@ public class HomeFragment_ViewBinding implements Unbinder {
     target.tvChange = Utils.findRequiredViewAsType(source, R.id.tv_change, "field 'tvChange'", TextView.class);
     target.tvYm = Utils.findRequiredViewAsType(source, R.id.tv_ym, "field 'tvYm'", TextView.class);
     target.tvTime = Utils.findRequiredViewAsType(source, R.id.tv_time, "field 'tvTime'", TextView.class);
+    target.ivPop = Utils.findRequiredViewAsType(source, R.id.iv_pop, "field 'ivPop'", ImageView.class);
   }
 
   @Override
@@ -50,5 +51,6 @@ public class HomeFragment_ViewBinding implements Unbinder {
     target.tvChange = null;
     target.tvYm = null;
     target.tvTime = null;
+    target.ivPop = null;
   }
 }

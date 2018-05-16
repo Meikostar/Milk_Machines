@@ -1,15 +1,15 @@
 [
     {
-        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_popwindow.xml",
-        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\list_popwindow.xml"
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_searchs.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\view_searchs.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\include_select_image_top.xml",
         "source": "F:\\GitWorkSpace\\Milk_Machine\\gallery\\build\\intermediates\\bundles\\default\\res\\layout\\include_select_image_top.xml"
     },
     {
-        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_searchs.xml",
-        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\view_searchs.xml"
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_popwindow.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\list_popwindow.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\order_detail_item.xml",
@@ -76,6 +76,10 @@
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\press_record_item.xml"
     },
     {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_remind_health.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\activity_remind_health.xml"
+    },
+    {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ite_search_result.xml",
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\ite_search_result.xml"
     },
@@ -84,16 +88,16 @@
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_send_dynamic.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\activity_send_dynamic.xml"
+    },
+    {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popview_navigationbar_menu.xml",
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\popview_navigationbar_menu.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_list_menu_item_icon.xml"
-    },
-    {
-        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_send_dynamic.xml",
-        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\activity_send_dynamic.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\alarm_pop.xml",
@@ -276,12 +280,12 @@
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\notification_template_media.xml"
     },
     {
-        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_registered2.xml",
-        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\activity_registered2.xml"
-    },
-    {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_nersery.xml",
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\item_nersery.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_registered2.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\activity_registered2.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
@@ -350,6 +354,10 @@
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\lv_ring_select.xml",
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\lv_ring_select.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_remind_mesure.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\item_remind_mesure.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
@@ -428,6 +436,10 @@
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\item_cyc.xml"
     },
     {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\acitivity_add_milk.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\acitivity_add_milk.xml"
+    },
+    {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_location_list.xml",
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\item_location_list.xml"
     },
@@ -480,6 +492,10 @@
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\view_guide_three.xml"
     },
     {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_remind_medical.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\fragment_remind_medical.xml"
+    },
+    {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\notification_template_part_time.xml"
     },
@@ -530,6 +546,10 @@
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_set.xml",
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\fragment_set.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\base_selector.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\base_selector.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\file_fragment.xml",

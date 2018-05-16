@@ -95,13 +95,13 @@ public class LoginActivity extends BaseActivity implements LoginContract.View{
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this,MainActivity.class));
-                PermissionGen.with(LoginActivity.this)
-                        .addRequestCode(PermissionConst.REQUECT_DATE)
-                        .permissions(
-                                Manifest.permission.CAMERA,
-                                Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                                Manifest.permission.READ_EXTERNAL_STORAGE)
-                        .request();
+//                PermissionGen.with(LoginActivity.this)
+//                        .addRequestCode(PermissionConst.REQUECT_DATE)
+//                        .permissions(
+//                                Manifest.permission.CAMERA,
+//                                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+//                                Manifest.permission.READ_EXTERNAL_STORAGE)
+//                        .request();
                 String user = etUser.getText().toString();
                 String password = etPws.getText().toString();
 

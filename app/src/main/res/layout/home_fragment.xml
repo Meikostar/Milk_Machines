@@ -25,6 +25,15 @@
             android:textColor="@color/white"
             android:background="@color/greens"
             android:textSize="17sp" />
+        <ImageView
+            android:id="@+id/iv_pop"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:padding="6dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/btn_home_upp_nor"/>
 
     </RelativeLayout>
 

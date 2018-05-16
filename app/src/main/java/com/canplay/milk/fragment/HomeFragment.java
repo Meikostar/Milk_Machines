@@ -11,9 +11,11 @@ import android.widget.TextView;
 
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseFragment;
+import com.canplay.milk.mvp.activity.home.AddMilkActivity;
 import com.canplay.milk.mvp.activity.mine.MineInfoActivity;
 import com.canplay.milk.view.EditorNameDialog;
 import com.canplay.milk.view.PhotoPopupWindow;
+import com.canplay.milk.view.PopView_NavigationBar_Menu;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -48,6 +50,8 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     TextView tvYm;
     @BindView(R.id.tv_time)
     TextView tvTime;
+    @BindView(R.id.iv_pop)
+    ImageView ivPop;
 
 
     private EditorNameDialog dialog;
@@ -67,6 +71,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         mWindowAddPhoto = new PhotoPopupWindow(getActivity());
         mWindowAddPhoto.setCont("解除绑定", "取消");
         mWindowAddPhoto.setColor(R.color.red_pop, 0);
+        initPopView();
         initListener();
         return view;
     }
@@ -88,7 +93,18 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
             }
         });
-
+        tvAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), AddMilkActivity.class));
+            }
+        });
+        ivPop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popView_navigationBar.showPopView();
+            }
+        });
 
     }
 
@@ -109,4 +125,34 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         }
     }
 
+    /**
+     * popwindow
+     */
+    private PopView_NavigationBar_Menu popView_navigationBar;
+
+    private void initPopView() {
+//        mWindowAddPhoto = new PhotoPopupWindow(getActivity());
+        popView_navigationBar = new PopView_NavigationBar_Menu(getActivity(), 1);
+        popView_navigationBar.setView(line);
+
+        popView_navigationBar.setClickListener(new PopView_NavigationBar_Menu.ItemCliskListeners() {
+            @Override
+            public void clickListener(int poition) {
+                switch (poition) {
+                    case 0://冲奶提醒
+
+                        break;
+                    case 1://WIFI设置
+                        break;
+                    case 2://饮水设置
+
+                        break;
+                    case 3://跟换奶粉品牌
+                        break;
+                }
+                popView_navigationBar.dismiss();
+            }
+
+        });
+    }
 }

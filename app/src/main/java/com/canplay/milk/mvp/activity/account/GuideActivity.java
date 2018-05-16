@@ -101,7 +101,7 @@ public class GuideActivity extends BaseActivity implements ViewPager.OnPageChang
         if(position==2){
             mLinearLayout.setVisibility(View.GONE);
         }else {
-            mLinearLayout.setVisibility(View.VISIBLE);
+            mLinearLayout.setVisibility(View.GONE);
         }
         dots[position].setEnabled(false);
         dots[currentIndex].setEnabled(true);

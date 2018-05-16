@@ -8,14 +8,14 @@ package fr.castorflex.android.circularprogressbar;
 
 public final class R {
     public static final class attr {
-        public static final int cpbStyle = 0x7f0100f7;
-        public static final int cpb_color = 0x7f0100f8;
-        public static final int cpb_colors = 0x7f0100f9;
-        public static final int cpb_max_sweep_angle = 0x7f0100fc;
-        public static final int cpb_min_sweep_angle = 0x7f0100fb;
-        public static final int cpb_rotation_speed = 0x7f0100fe;
-        public static final int cpb_stroke_width = 0x7f0100fa;
-        public static final int cpb_sweep_speed = 0x7f0100fd;
+        public static final int cpbStyle = 0x7f0100fb;
+        public static final int cpb_color = 0x7f0100fc;
+        public static final int cpb_colors = 0x7f0100fd;
+        public static final int cpb_max_sweep_angle = 0x7f010100;
+        public static final int cpb_min_sweep_angle = 0x7f0100ff;
+        public static final int cpb_rotation_speed = 0x7f010102;
+        public static final int cpb_stroke_width = 0x7f0100fe;
+        public static final int cpb_sweep_speed = 0x7f010101;
     }
     public static final class color {
         public static final int cpb_default_color = 0x7f0d003e;
@@ -37,7 +37,7 @@ public final class R {
         public static final int Theme_SmoothProgressBarDefaults = 0x7f0a012f;
     }
     public static final class styleable {
-        public static final int[] CircularProgressBar = { 0x7f0100f7, 0x7f0100f8, 0x7f0100f9, 0x7f0100fa, 0x7f0100fb, 0x7f0100fc, 0x7f0100fd, 0x7f0100fe };
+        public static final int[] CircularProgressBar = { 0x7f0100fb, 0x7f0100fc, 0x7f0100fd, 0x7f0100fe, 0x7f0100ff, 0x7f010100, 0x7f010101, 0x7f010102 };
         public static final int CircularProgressBar_cpbStyle = 0;
         public static final int CircularProgressBar_cpb_color = 1;
         public static final int CircularProgressBar_cpb_colors = 2;

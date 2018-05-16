@@ -4,6 +4,7 @@ package com.canplay.milk.view;
 import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
@@ -18,8 +19,11 @@ public class PopView_NavigationBar_ViewBinding implements Unbinder {
   public PopView_NavigationBar_ViewBinding(PopView_NavigationBar target, View source) {
     this.target = target;
 
+    target.llRing = Utils.findRequiredViewAsType(source, R.id.ll_ring, "field 'llRing'", LinearLayout.class);
+    target.llWifi = Utils.findRequiredViewAsType(source, R.id.ll_wifi, "field 'llWifi'", LinearLayout.class);
     target.tvNew = Utils.findRequiredViewAsType(source, R.id.tv_new, "field 'tvNew'", TextView.class);
-    target.tvPreview = Utils.findRequiredViewAsType(source, R.id.tv_preview, "field 'tvPreview'", TextView.class);
+    target.llWater = Utils.findRequiredViewAsType(source, R.id.ll_water, "field 'llWater'", LinearLayout.class);
+    target.llMilk = Utils.findRequiredViewAsType(source, R.id.ll_milk, "field 'llMilk'", LinearLayout.class);
   }
 
   @Override
@@ -29,7 +33,10 @@ public class PopView_NavigationBar_ViewBinding implements Unbinder {
     if (target == null) throw new IllegalStateException("Bindings already cleared.");
     this.target = null;
 
+    target.llRing = null;
+    target.llWifi = null;
     target.tvNew = null;
-    target.tvPreview = null;
+    target.llWater = null;
+    target.llMilk = null;
   }
 }

@@ -217,13 +217,11 @@ public class MainActivity extends BaseActivity {
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
 
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-//            exitDialog.show();
-            return true;
-        }else {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN) {
+            exitDialog.show();
             return true;
         }
-
+        return super.onKeyDown(keyCode, event);
     }
 
 
