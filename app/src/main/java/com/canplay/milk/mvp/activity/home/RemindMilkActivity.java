@@ -1,5 +1,6 @@
 package com.canplay.milk.mvp.activity.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.View;
@@ -80,7 +81,7 @@ public class RemindMilkActivity extends BaseActivity {
         tvAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+             startActivity(new Intent(RemindMilkActivity.this,RemindSettingActivity.class));
 
             }
         });

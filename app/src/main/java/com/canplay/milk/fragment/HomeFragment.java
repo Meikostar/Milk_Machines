@@ -11,11 +11,15 @@ import android.widget.TextView;
 
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseFragment;
+import com.canplay.milk.bean.ShareBean;
 import com.canplay.milk.mvp.activity.home.AddMilkActivity;
+import com.canplay.milk.mvp.activity.home.RemindMilkActivity;
 import com.canplay.milk.mvp.activity.mine.MineInfoActivity;
+import com.canplay.milk.util.ThirdShareManager;
 import com.canplay.milk.view.EditorNameDialog;
 import com.canplay.milk.view.PhotoPopupWindow;
 import com.canplay.milk.view.PopView_NavigationBar_Menu;
+import com.canplay.milk.view.SharePopupWindow;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -69,6 +73,18 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
 
         mWindowAddPhoto = new PhotoPopupWindow(getActivity());
+        sharePopupWindow = new SharePopupWindow(getActivity());
+        sharePopupWindow.setSureListener(new SharePopupWindow.ClickListener() {
+            @Override
+            public void clickListener(int type) {
+                if(type==1){
+                    ThirdShareManager.getInstance().shareWeChat(new ShareBean(),true);
+                }else {
+                    ThirdShareManager.getInstance().shareWeChat(new ShareBean(),false);
+                }
+                sharePopupWindow.dismiss();
+            }
+        });
         mWindowAddPhoto.setCont("解除绑定", "取消");
         mWindowAddPhoto.setColor(R.color.red_pop, 0);
         initPopView();
@@ -77,7 +93,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     }
 
     public PhotoPopupWindow mWindowAddPhoto;
-
+    public SharePopupWindow sharePopupWindow;
     @Override
     public void onResume() {
         super.onResume();
@@ -103,6 +119,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             @Override
             public void onClick(View v) {
                 popView_navigationBar.showPopView();
+//                sharePopupWindow.showAsDropDown(line);
             }
         });
 
@@ -140,9 +157,10 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             public void clickListener(int poition) {
                 switch (poition) {
                     case 0://冲奶提醒
-
+                     startActivity(new Intent(getActivity(),RemindMilkActivity.class));
                         break;
                     case 1://WIFI设置
+                        startActivity(new Intent(getActivity(),RemindMilkActivity.class));
                         break;
                     case 2://饮水设置
 

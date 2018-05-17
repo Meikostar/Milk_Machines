@@ -39,6 +39,24 @@
     </item>
     <item
         is-multidex="true"
+        jar="F:\GitWorkSpace\Milk_Machine\LibMarsdaemon\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="3f246ac625b04f985715968abdbdf52ddff9b9bd">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\4\classes_c1fd2fef36b6693b18497eee19ebe6b2fda477ab\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\GitWorkSpace\Milk_Machine\app\libs\libammsdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="11b09244aedaa51bfd09269637be7c32c60da314">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\2\libammsdk_82c490c15b94dd34734f70c54b38eea609ba8ebb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="F:\GitWorkSpace\Milk_Machine\app\libs\slf4j-api-1.7.21.jar"
         jumboMode="false"
         optimize="true"
@@ -61,7 +79,7 @@
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="b1eb2cbef45f16bbd5205bcf60ab3adc07e037eb">
+        sha1="a6b0cc1a589e0bcf9a295802a71d3416260fe0b9">
         <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\4\classes_10142fded220d58ab67f177e33f1bc78471a5397\classes.dex" />
     </item>
     <item
@@ -72,6 +90,15 @@
         revision="26.0.2"
         sha1="21332fb8bd3c444784ce2627719322b3385495ee">
         <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\8\gson-2.3.1_5496f9010f25f29cf8e9af409da4ebe15c7ae41b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\GitWorkSpace\Milk_Machine\litepal\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9f8dccf3958372db35c072612f8cdd920b3f33a6">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\4\classes_bee35f0d054f296ea8e7ca898566f50967cfbd82\classes.dex" />
     </item>
 
 </items>

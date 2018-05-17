@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
 
-    <com.canplay.milk.view.CycleWheelView
+    <com.canplay.milk.view.CycleWheelViewbig
         android:id="@+id/cwv_base"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

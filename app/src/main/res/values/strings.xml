@@ -13,6 +13,30 @@
     <string name="cancel">取消</string>
     <string name="sure">确定</string>
     <string name="offline">设备不在线</string>
+    <string name="monday">一</string>
+    <string name="tuesday">二</string>
+    <string name="wednesday">三</string>
+    <string name="thursday">四</string>
+    <string name="friday">五</string>
+    <string name="saturday">六</string>
+    <string name="sunday">日</string>
+    <string name="countdown_day_hour_minute">距闹钟响起还有%1$d天%2$d小时%3$d分</string>
+    <string name="countdown_hour_minute">距闹钟响起还有%1$d小时%2$d分</string>
+    <string name="countdown_minute">距闹钟响起还有%1$d分钟</string>
+
+    <string name="one_h">一</string>
+    <string name="two_h">二</string>
+    <string name="three_h">三</string>
+    <string name="four_h">四</string>
+    <string name="five_h">五</string>
+    <string name="six_h">六</string>
+    <string name="repeat_once">只响一次</string>
+    <string name="day">日</string>
+    <string name="every_day">每天</string>
+    <string name="week_day">平日</string>
+    <string name="week_end">周末</string>
+    <string name="week">周</string>
+    <string name="caesura">、</string>
     <!--Ramp-->
     <string name="rampindex">段号：</string>
     <string name="rampvalue">功率(%):</string>

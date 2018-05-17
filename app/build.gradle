@@ -65,7 +65,7 @@ android {
             exclude group: 'xpp3', module: 'xpp3'
         }
         compile project(':gallery')
-
+        compile project(':LibMarsdaemon')
         compile project(':zxingLibrary')
         compile project(':framework')
 //        compile project(':zxingLibrary')
@@ -101,3 +101,6 @@ android {
     }
 }
 
+dependencies {
+    compile files('libs/libammsdk.jar')
+}

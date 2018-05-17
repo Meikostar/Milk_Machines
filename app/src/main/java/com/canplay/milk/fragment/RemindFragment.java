@@ -1,10 +1,7 @@
 package com.canplay.milk.fragment;
 
-import android.app.Activity;
-import android.app.NotificationManager;
-import android.content.Intent;
 import android.os.Bundle;
-import android.provider.AlarmClock;
+
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,16 +9,17 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.canplay.medical.R;
-import com.canplay.milk.base.BaseApplication;
 import com.canplay.milk.base.BaseFragment;
 import com.canplay.milk.base.RxBus;
 import com.canplay.milk.base.SubscriptionBean;
-import com.canplay.milk.bean.BASE;
+import com.canplay.milk.bean.AlarmClock;
 import com.canplay.milk.bean.RemindMilk;
 import com.canplay.milk.mvp.adapter.RemindMeasureAdapter;
-import com.canplay.milk.mvp.component.DaggerBaseComponent;
+import com.canplay.milk.mvp.component.AlarmClockDeleteEvent;
 import com.canplay.milk.mvp.present.BaseContract;
 import com.canplay.milk.mvp.present.BasesPresenter;
+import com.canplay.milk.util.AlarmClockOperate;
+import com.canplay.milk.util.MyUtil;
 import com.canplay.milk.util.TextUtil;
 
 
@@ -73,20 +71,20 @@ public class RemindFragment extends BaseFragment implements BaseContract.View {
         super.onResume();
     }
 
+    private List<AlarmClock> mAlarmClockList;
     private Subscription mSubscription;
+
     private void initView() {
         adapter = new RemindMeasureAdapter(getActivity());
         rlMenu.setAdapter(adapter);
+        mAlarmClockList = new ArrayList<>();
         mSubscription = RxBus.getInstance().toObserverable(SubscriptionBean.RxBusSendBean.class).subscribe(new Action1<SubscriptionBean.RxBusSendBean>() {
             @Override
             public void call(SubscriptionBean.RxBusSendBean bean) {
                 if (bean == null) return;
-                if(SubscriptionBean.MESURE==bean.type){
-                  String cont= (String) bean.content;
-                    if(TextUtil.isNotEmpty(cont)){
-                        return;
-                    }
-//                    presenter.MeasureRemindList();
+                if (SubscriptionBean.MESURE == bean.type) {
+                    AlarmClock cont = (AlarmClock) bean.content;
+                    addList(cont);
                 }
 
 
@@ -98,55 +96,30 @@ public class RemindFragment extends BaseFragment implements BaseContract.View {
             }
         });
         RxBus.getInstance().addSubscription(mSubscription);
+        updateList();
         adapter.setListener(new RemindMeasureAdapter.selectItemListener() {
             @Override
-            public void delete(RemindMilk medicine, int type, int poistion) {
-
+            public void delete(AlarmClock medicine, int type, int poistion) {
 
 
             }
         });
 
     }
-    private String name="";
-    private String time="";
-//    private Mesure mesure=new Mesure();
-    private List<String> times=new ArrayList<>();
 
-//
-//    /**
-//     * 保存闹钟信息的list
-//     */
-//    private List<AlarmClock> mAlarmClockList;
-//    private void addList(AlarmClock ac) {
-//        mAlarmClockList.clear();
-//
-//        int id = ac.getId();
-//        int count = 0;
-//        int position = 0;
-//        List<AlarmClock> list = AlarmClockOperate.getInstance().loadAlarmClocks();
-//        for (AlarmClock alarmClock : list) {
-//            mAlarmClockList.add(alarmClock);
-//
-//            if (id == alarmClock.getId()) {
-//                position = count;
-//                if (alarmClock.isOnOff()) {
-//                    MyUtil.startAlarmClock(getActivity(), alarmClock);
-//                }
-//            }
-//            count++;
-//        }
-//
-//        checkIsEmpty(list);
-//
-//
-//    }
+    private String name = "";
+    private String time = "";
+    //    private Mesure mesure=new Mesure();
+    private List<String> times = new ArrayList<>();
+
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
 
     }
+
     private void checkIsEmpty(List<AlarmClock> list) {
         if (list.size() != 0) {
             rlMenu.setVisibility(View.VISIBLE);
@@ -158,19 +131,80 @@ public class RemindFragment extends BaseFragment implements BaseContract.View {
 
         }
     }
+
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if(mSubscription!=null){
+        if (mSubscription != null) {
             mSubscription.unsubscribe();
         }
 
     }
 
-//    private List<Medicine> data;
-    private int i=0;
+    private void addList(AlarmClock ac) {
+        mAlarmClockList.clear();
+
+        int id = ac.getId();
+        int count = 0;
+        int position = 0;
+        List<AlarmClock> list = AlarmClockOperate.getInstance().loadAlarmClocks();
+        for (AlarmClock alarmClock : list) {
+            mAlarmClockList.add(alarmClock);
+
+            if (id == alarmClock.getId()) {
+                position = count;
+                if (alarmClock.isOnOff()) {
+                    MyUtil.startAlarmClock(getActivity(), alarmClock);
+                }
+            }
+            count++;
+        }
+        adapter.setData(mAlarmClockList);
+        checkIsEmpty(list);
+
+
+    }
+
+    private void deleteList(AlarmClockDeleteEvent event) {
+        mAlarmClockList.clear();
+
+        int position = event.getPosition();
+        List<AlarmClock> list = AlarmClockOperate.getInstance().loadAlarmClocks();
+        for (AlarmClock alarmClock : list) {
+            mAlarmClockList.add(alarmClock);
+        }
+        // 列表为空时不显示删除，完成按钮
+
+
+        checkIsEmpty(list);
+
+        adapter.setData(mAlarmClockList);
+//        mAdapter.notifyItemRangeChanged(position, mAdapter.getItemCount());
+    }
+
+    private void updateList() {
+        mAlarmClockList.clear();
+
+        List<AlarmClock> list = AlarmClockOperate.getInstance().loadAlarmClocks();
+        for (AlarmClock alarmClock : list) {
+            mAlarmClockList.add(alarmClock);
+
+            // 当闹钟为开时刷新开启闹钟
+            if (alarmClock.isOnOff()) {
+                MyUtil.startAlarmClock(getActivity(), alarmClock);
+            }
+        }
+        adapter.setData(mAlarmClockList);
+        checkIsEmpty(list);
+
+
+    }
+
+
+    private int i = 0;
+
     @Override
-    public <T> void toEntity(T entity,int type) {
+    public <T> void toEntity(T entity, int type) {
 //        if(type==6){
 //            BASE base= (BASE) entity;
 //            if(base.isSucceeded){
@@ -220,7 +254,9 @@ public class RemindFragment extends BaseFragment implements BaseContract.View {
 //        }
 
     }
+
     private int poition;
+
     @Override
     public void toNextStep(int type) {
 

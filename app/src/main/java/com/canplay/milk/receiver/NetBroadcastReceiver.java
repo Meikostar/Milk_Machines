@@ -8,6 +8,7 @@ import android.net.ConnectivityManager;
 
 import com.canplay.milk.util.NetUtil;
 
+
 public class NetBroadcastReceiver extends BroadcastReceiver {
 
     private NetEvent netEvent;

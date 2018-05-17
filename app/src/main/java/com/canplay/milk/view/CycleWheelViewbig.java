@@ -134,7 +134,7 @@ public class CycleWheelViewbig extends ListView {
     }
     private void init() {
         mHandler = new Handler();
-        mItemLayoutId = R.layout.item_cyclewheel;
+        mItemLayoutId = R.layout.item_cyclewheels;
         mItemLabelTvId = R.id.tv_label_item_wheel;
         mAdapter = new CycleWheelViewAdapter();
         setVerticalScrollBarEnabled(false);
@@ -467,20 +467,20 @@ public class CycleWheelViewbig extends ListView {
                         * (mWheelSize), solidPaint);
                 canvas.drawRect(0, mItemHeight * (mWheelSize / 2), viewWidth, mItemHeight
                         * (mWheelSize / 2 + 1), seletedSolidPaint);
-//                canvas.drawLine(0, mItemHeight * (mWheelSize / 2), viewWidth, mItemHeight
-//                        * (mWheelSize / 2), dividerPaint);
-//                canvas.drawLine(0, mItemHeight * (mWheelSize / 2 + 1), viewWidth, mItemHeight
-//                        * (mWheelSize / 2 + 1), dividerPaint);
-                Paint paint = new Paint();
-                paint.setAntiAlias(true);                       //设置画笔为无锯齿
-                paint.setColor(Color.parseColor("#3DDDA8"));                    //设置画笔颜色
-                paint.setStrokeWidth((float) 2.0);              //线宽
-                paint.setStyle(Paint.Style.STROKE);
-                // 第一种方法绘制圆环
-                //绘制内圆
-                paint.setStrokeWidth(2);
-                RectF rectF = new RectF(dip2px(getContext(),6),mItemHeight * (mWheelSize / 2),viewWidth-dip2px(getContext(),6),mItemHeight * (mWheelSize / 2 + 1));
-                canvas.drawRoundRect(rectF,dip2px(getContext(),44),dip2px(getContext(),44), paint);
+                canvas.drawLine(0, mItemHeight * (mWheelSize / 2), viewWidth, mItemHeight
+                        * (mWheelSize / 2), dividerPaint);
+                canvas.drawLine(0, mItemHeight * (mWheelSize / 2 + 1), viewWidth, mItemHeight
+                        * (mWheelSize / 2 + 1), dividerPaint);
+//                Paint paint = new Paint();
+//                paint.setAntiAlias(true);                       //设置画笔为无锯齿
+//                paint.setColor(Color.parseColor("#3DDDA8"));                    //设置画笔颜色
+//                paint.setStrokeWidth((float) 2.0);              //线宽
+//                paint.setStyle(Paint.Style.STROKE);
+//                // 第一种方法绘制圆环
+//                //绘制内圆
+//                paint.setStrokeWidth(2);
+//                RectF rectF = new RectF(dip2px(getContext(),6),mItemHeight * (mWheelSize / 2),viewWidth-dip2px(getContext(),6),mItemHeight * (mWheelSize / 2 + 1));
+//                canvas.drawRoundRect(rectF,dip2px(getContext(),44),dip2px(getContext(),44), paint);
 //
 
 //                canvas.drawArc(oval, 0, 360, false, paint);    //绘制圆弧

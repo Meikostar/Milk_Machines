@@ -55,13 +55,13 @@ public class HourSelector extends LinearLayout {
         }
         init();
     }
-    private CycleWheelView mCycleWheelViewHour;
-    private CycleWheelView mCycleWheelViewMinute;
+    private CycleWheelViews mCycleWheelViewHour;
+    private CycleWheelViews mCycleWheelViewMinute;
     public void init(){
         LayoutInflater inflater = LayoutInflater.from(mContext);
        View mView = inflater.inflate( R.layout.hour_selector, this);
-        mCycleWheelViewHour = (CycleWheelView)mView.findViewById(R.id.cwv_hour);
-        mCycleWheelViewMinute = (CycleWheelView)mView.findViewById(R.id.cwv_minute);
+        mCycleWheelViewHour = (CycleWheelViews)mView.findViewById(R.id.cwv_hour);
+        mCycleWheelViewMinute = (CycleWheelViews)mView.findViewById(R.id.cwv_minute);
         setHour();
         setMinute();
     }
@@ -78,8 +78,8 @@ public class HourSelector extends LinearLayout {
         }
         mCycleWheelViewHour.setLabels(list,null);
         try {
-            mCycleWheelViewHour.setWheelSize(5);
-        } catch (CycleWheelView.CycleWheelViewException e) {
+            mCycleWheelViewHour.setWheelSize(3);
+        } catch (CycleWheelViews.CycleWheelViewException e) {
             e.printStackTrace();
         }
         SimpleDateFormat sDateFormat = new SimpleDateFormat("HH");
@@ -90,16 +90,16 @@ public class HourSelector extends LinearLayout {
         if(hour==00){
             hour=23;
         }
-        mCycleWheelViewHour.setLabelSelectSize(16f);
+        mCycleWheelViewHour.setLabelSelectSize(30f);
 
-        mCycleWheelViewHour.setLabelSize(14f);
+        mCycleWheelViewHour.setLabelSize(30f);
         mCycleWheelViewHour.setAlphaGradual(0.7f);
         mCycleWheelViewHour.setCycleEnable(false);
         mCycleWheelViewHour.selection(hour+1);
         mCycleWheelViewHour.setLabelColor(Color.parseColor("#b3b3b3"));
         mCycleWheelViewHour.setDivider(Color.parseColor("#e3e3e3"), 1);
-        mCycleWheelViewHour.setLabelSelectColor(Color.parseColor("#3399ff"));
-        mCycleWheelViewHour.setSolid(Color.WHITE, Color.WHITE);
+        mCycleWheelViewHour.setLabelSelectColor(Color.parseColor("#333333"));
+//        mCycleWheelViewHour.setSolid(Color.WHITE, Color.WHITE);
     }
 
 
@@ -126,8 +126,8 @@ public class HourSelector extends LinearLayout {
         }
         mCycleWheelViewMinute.setLabels(list,null);
         try {
-            mCycleWheelViewMinute.setWheelSize(5);
-        } catch (CycleWheelView.CycleWheelViewException e) {
+            mCycleWheelViewMinute.setWheelSize(3);
+        } catch (CycleWheelViews.CycleWheelViewException e) {
             e.printStackTrace();
         }
         SimpleDateFormat sDateFormat = new SimpleDateFormat("mm");
@@ -138,15 +138,15 @@ public class HourSelector extends LinearLayout {
         }
 
 
-        mCycleWheelViewMinute.setLabelSelectSize(16f);
-        mCycleWheelViewMinute.setLabelSize(14f);
+        mCycleWheelViewMinute.setLabelSelectSize(30f);
+        mCycleWheelViewMinute.setLabelSize(30f);
         mCycleWheelViewMinute.setAlphaGradual(0.7f);
         mCycleWheelViewMinute.setCycleEnable(false);
         mCycleWheelViewMinute.setSelection(minter);
         mCycleWheelViewMinute.setLabelColor(Color.parseColor("#b3b3b3"));
         mCycleWheelViewMinute.setDivider(Color.parseColor("#e3e3e3"), 1);
-        mCycleWheelViewMinute.setLabelSelectColor(Color.parseColor("#3399ff"));
-        mCycleWheelViewMinute.setSolid(Color.WHITE, Color.WHITE);
+        mCycleWheelViewMinute.setLabelSelectColor(Color.parseColor("#333333"));
+//        mCycleWheelViewMinute.setSolid(Color.WHITE, Color.WHITE);
     }
 
 

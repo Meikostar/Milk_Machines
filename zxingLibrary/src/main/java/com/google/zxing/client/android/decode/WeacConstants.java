@@ -21,8 +21,7 @@ package com.google.zxing.client.android.decode;
  *
  * @author 咖枯
  * @version 1.0 2015
- */
-public class WeacConstants {
+ */public class WeacConstants {
 
     /**
      * SharedPreferences属性信息文件
@@ -68,6 +67,7 @@ public class WeacConstants {
      * 保存的AlarmClock单例
      */
     public static final String ALARM_CLOCK = "alarm_clock";
+    public static final String ALARM_ID = "alarm_ids";
 
     /**
      * 铃声地址

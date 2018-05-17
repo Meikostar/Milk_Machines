@@ -1003,6 +1003,7 @@
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="btn_retry">重试</string>
     <string name="btn_switch">切换</string>
+    <string name="caesura">、</string>
     <string name="camera">拍照上传</string>
     <string name="camera_error">相机错误</string>
     <string name="cancel">取消</string>
@@ -1029,8 +1030,12 @@
     <string name="control_fail">授权失败</string>
     <string name="copy">复制</string>
     <string name="count">账号</string>
+    <string name="countdown_day_hour_minute">距闹钟响起还有%1$d天%2$d小时%3$d分</string>
+    <string name="countdown_hour_minute">距闹钟响起还有%1$d小时%2$d分</string>
+    <string name="countdown_minute">距闹钟响起还有%1$d分钟</string>
     <item format="float" name="cpb_default_rotation_speed" type="string">1</item>
     <item format="float" name="cpb_default_sweep_speed" type="string">1</item>
+    <string name="day">日</string>
     <string name="decode_null">未发现二维码/条形码</string>
     <string name="default_ring">默认铃声</string>
     <string name="device_del_tip">确定要删除该设备吗？</string>
@@ -1056,10 +1061,14 @@
     <string name="edit_alarm_clock">编辑闹钟</string>
     <string name="envtemper">内部温度</string>
     <string name="ercode_faild">二维码信息不对</string>
+    <string name="every_day">每天</string>
     <string name="fault_list_title">当前故障</string>
     <string name="faultoff">故障解除</string>
     <string name="faulton">故障指示</string>
+    <string name="five_h">五</string>
     <string name="fore_color">前景色</string>
+    <string name="four_h">四</string>
+    <string name="friday">五</string>
     <string name="generate_qr_code">生成二维码</string>
     <string name="generate_qrcode_please">还没有生成二维码图片呢</string>
     <string name="giveup">放弃</string>
@@ -1169,6 +1178,7 @@
     <string name="man">男</string>
     <string name="message">消息</string>
     <string name="mimanull">密码不能为空</string>
+    <string name="monday">一</string>
     <string name="name">姓名</string>
     <string name="name_desc">请输入您的姓名</string>
     <string name="nav_localdevice">本地设备列表</string>
@@ -1189,6 +1199,7 @@
     <string name="no_occupy">可用</string>
     <string name="occupy">占用</string>
     <string name="offline">设备不在线</string>
+    <string name="one_h">一</string>
     <string name="online">在线</string>
     <string name="optical_cut">光纤断开</string>
     <string name="optical_cut_rm">光纤断开解除</string>
@@ -1234,6 +1245,7 @@
     <string name="reflet_nor">激光反射能量超上限解除</string>
     <string name="reflet_up">激光反射能量超上限</string>
     <string name="repeat">重复</string>
+    <string name="repeat_once">只响一次</string>
     <string name="request_timeout">请求超时</string>
     <string name="reset_logo_color">重置Logo、前景色、背景色？</string>
     <string name="restore">恢复默认</string>
@@ -1242,6 +1254,7 @@
     <string name="ring">铃声</string>
     <string name="ris">00日</string>
     <string name="runingdata">运行数据</string>
+    <string name="saturday">六</string>
     <string name="save_fail_retry">保存失败，请重试</string>
     <string name="save_qr_code">保存二维码到手机</string>
     <string name="scan_code">扫码</string>
@@ -1258,10 +1271,12 @@
     <string name="shen">省份</string>
     <string name="shi">城市</string>
     <string name="shoujigesibzq">手机号码格式不正确</string>
+    <string name="six_h">六</string>
     <string name="spike_pluse">窄脉冲保护</string>
     <string name="spike_pluse_rm">窄脉冲保护解除</string>
     <string name="statelogfaulttitle">故障列表</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="sunday">日</string>
     <string name="sure">确定</string>
     <string name="switch_model">模式切换成功</string>
     <string name="systemoff">主电源断开</string>
@@ -1270,7 +1285,11 @@
     <string name="temp_leak">温度报警</string>
     <string name="temp_nor">温度正常</string>
     <string name="text_already_copied">已复制到剪贴板</string>
+    <string name="three_h">三</string>
+    <string name="thursday">四</string>
     <string name="title_activity_print_data">PrintDataActivity</string>
+    <string name="tuesday">二</string>
+    <string name="two_h">二</string>
     <string name="user_withoutavatar">请先上传头像</string>
     <string name="vapourpress">气压</string>
     <string name="vibrate">振动</string>
@@ -1280,6 +1299,10 @@
     <string name="waterspeed">水流量</string>
     <string name="watertemper">冷却水温</string>
     <string name="we_chat">微信</string>
+    <string name="wednesday">三</string>
+    <string name="week">周</string>
+    <string name="week_day">平日</string>
+    <string name="week_end">周末</string>
     <string name="wet_leak">内部湿度报警</string>
     <string name="wet_nor">内部湿度正常</string>
     <string name="wet_up">内部湿度超上限超湿</string>
@@ -3021,6 +3044,20 @@
         <item name="android:scrollbars">none</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="new_alarm_clcok_repeat_days_tog_btn">
+        <item name="android:layout_width">33dp</item>
+        <item name="android:layout_height">33dp</item>
+        <item name="android:background">@drawable/toggle_btn_repeat_week</item>
+        <item name="android:checked">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@drawable/text_color_toggle_btn_circle</item>
+    </style>
+    <style name="new_alarm_clock_repeat_days_llyt">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
     </style>
     <style name="popwin_anim">
         <item name="android:windowEnterAnimation">@anim/popw_show</item>
