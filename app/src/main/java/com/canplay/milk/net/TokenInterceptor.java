@@ -22,12 +22,10 @@ public class TokenInterceptor implements Interceptor {
 
     @Override
     public Response intercept(Chain chain) throws IOException {
-        String token = SpUtil.getInstance().getToken();
-        String type = SpUtil.getInstance().getTokenType();
+
 
         Request request = chain.request().newBuilder()
-                .addHeader("Source", "android")
-                .addHeader("authorization",type+"  "+token)
+
                 .build();
         return chain.proceed(request);
 

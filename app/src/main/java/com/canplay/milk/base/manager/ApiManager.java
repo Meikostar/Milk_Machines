@@ -11,6 +11,8 @@ import com.canplay.milk.net.HttpCachInterceptor;
 import com.canplay.milk.net.MarvelSignInterceptor;
 import com.canplay.milk.net.TokenInterceptor;
 import com.canplay.milk.util.CryptUtil;
+import com.canplay.milk.util.SpUtil;
+import com.canplay.milk.util.TextUtil;
 import com.orhanobut.logger.Logger;
 
 import org.simpleframework.xml.Serializer;
@@ -19,11 +21,16 @@ import org.simpleframework.xml.core.Persister;
 import org.simpleframework.xml.strategy.Strategy;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Cache;
+import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
@@ -33,6 +40,11 @@ import rx.Observer;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
+
+/**
+ * 接口管理
+ * Created by peter on 2016/9/11.
+ */
 
 /**
  * 接口管理
@@ -88,6 +100,7 @@ public class ApiManager{
                 baseUrl(NetConfig.SERVER_URL + File.separator).
                 addConverterFactory(FastJsonConverterFactory.create()).
                 client(getOkHttpClient());
+
         if(isRxJava){
             (builder).addCallAdapterFactory(RxJavaCallAdapterFactory.create());
         }
@@ -130,7 +143,7 @@ public class ApiManager{
         MarvelSignInterceptor marvelSign = new MarvelSignInterceptor();
         HttpCachInterceptor cachInterceptor = new HttpCachInterceptor();
         OkHttpClient.Builder builder = new OkHttpClient.Builder().
-                addInterceptor(new TokenInterceptor()).
+                addInterceptor(logging).
                 addNetworkInterceptor(cachInterceptor).
                 addInterceptor(marvelSign).
                 connectTimeout(NetConfig.HTTP_TIMEOUT, TimeUnit.SECONDS).
@@ -157,7 +170,7 @@ public class ApiManager{
         HttpCachInterceptor cachInterceptor = new HttpCachInterceptor();
         return new OkHttpClient.Builder().cache(cache)
                 //添加拦截器
-                .addInterceptor(logging).addNetworkInterceptor(cachInterceptor).addInterceptor(marvelSign)
+                .addInterceptor(logging).addNetworkInterceptor(cachInterceptor).addInterceptor(marvelSign).addInterceptor(new IOExceptionDecorator())
                 // 连接超时时间设置
                 .connectTimeout(NetConfig.HTTP_TIMEOUT, TimeUnit.SECONDS)
                 // 读取超时时间设置
@@ -165,7 +178,28 @@ public class ApiManager{
                 //写超时时间设置
                 .writeTimeout(NetConfig.HTTP_TIMEOUT, TimeUnit.SECONDS).build();
     }
+    public class IOExceptionDecorator implements Interceptor {
 
+        @Override
+        public Response intercept(final Chain chain) throws IOException {
+            final Response response;
+
+            try {
+                response = chain.proceed(chain.request());
+            } catch (IOException e) {
+                throw new HttpIOException(chain.request(), e);
+            }
+
+            return response;
+        }
+
+        private  class HttpIOException extends IOException {
+
+            HttpIOException(final Request request, final IOException e) {
+                super(String.format(Locale.US, "IOException during http request. Request= %s", request), e);
+            }
+        }
+    }
     public <T> T createWSApi(Class<T> paramClass){
         return this.mWSRetrofit.create(paramClass);
     }
@@ -188,6 +222,10 @@ public class ApiManager{
             //把用户的userID和token带上
             parametersMap.put("device", AppManager.imei);//设备标识
             parametersMap.put("times", System.currentTimeMillis() + "");
+        }
+        if(TextUtil.isNotEmpty(SpUtil.getInstance().getToken())){
+            parametersMap.put("token", SpUtil.getInstance().getToken());
+            parametersMap.put("userId", SpUtil.getInstance().getUserId());
         }
         parametersMap.put("platform", "1"); //手表
         parametersMap.put("version", AppManager.info.versionCode + "");//客户端版本

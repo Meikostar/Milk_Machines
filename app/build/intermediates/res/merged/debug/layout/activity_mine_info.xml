@@ -15,7 +15,7 @@
         android:id="@+id/navigationBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:navigationTitle="个人信息" />
+        app:navigationTitle="个人中心" />
     <com.canplay.milk.view.scrollView.StickyScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -30,7 +30,7 @@
                 android:layout_height="118dp"
                 >
 
-                <ImageView
+                <com.canplay.milk.view.CircleImageView
                     android:layout_centerInParent="true"
                     android:id="@+id/iv_imgs"
                     android:src="@drawable/btn_per_head"
@@ -67,7 +67,7 @@
                     android:layout_height="35dp"
                     android:background="@null"
                     android:gravity="center_vertical"
-                    android:text="Mess gae"
+                    android:text=""
                     android:hint="输入baby昵称"
                     android:layout_marginRight="12dp"
                     android:maxLength="11"
@@ -114,7 +114,7 @@
                     android:layout_height="35dp"
                     android:background="@null"
                     android:gravity="center_vertical"
-                    android:text="Sb"
+                    android:text=""
                     android:hint="输入father昵称"
                     android:layout_marginRight="12dp"
                     android:maxLength="11"
@@ -160,7 +160,7 @@
                     android:layout_height="35dp"
                     android:background="@null"
                     android:gravity="center_vertical"
-                    android:text="MAMI"
+                    android:text=""
                     android:hint="输入mother昵称"
                     android:layout_marginRight="12dp"
                     android:maxLength="11"

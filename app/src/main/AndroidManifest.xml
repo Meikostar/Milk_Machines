@@ -213,6 +213,11 @@
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait" />
         <activity
+            android:name="com.canplay.milk.mvp.activity.account.RegisteredActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name="com.canplay.milk.mvp.activity.mine.WifiSettingActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait" />

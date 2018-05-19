@@ -68,6 +68,18 @@ public class SpUtil{
         editor.clear();
         return editor.commit();
     }
+
+    public USER getUsers(){
+        USER user = new USER();
+        user.token=settings.getString(TOKEN, "");
+        user.birthday=settings.getString(BIRTHDAY, "");
+        user.userId=settings.getString(USERID, "");
+        user.name=settings.getString(USERNAME, "");
+        user.motherName=settings.getString(MOTHERNAME, "");
+        user.fatherName=settings.getString(FATHERTNAME, "");
+        user.mobile=settings.getString(PHONE, "");
+        return user;
+    }
     public String getUserId(){
         return settings.getString(USERID, "");
     }
@@ -80,6 +92,10 @@ public class SpUtil{
     public String getUser(){
         return settings.getString(USERNAME, "");
     }
+    public String getAvator(){
+        return settings.getString(AVATOR, "");
+    }
+
     /**
      * put string preferences
      *

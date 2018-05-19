@@ -1,5 +1,6 @@
 package com.canplay.milk.mvp.activity.account;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.text.Editable;
@@ -10,13 +11,20 @@ import android.widget.TextView;
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseActivity;
 import com.canplay.milk.base.BaseApplication;
+import com.canplay.milk.base.RxBus;
+import com.canplay.milk.base.SubscriptionBean;
 import com.canplay.milk.bean.Rigter;
+import com.canplay.milk.bean.ShareBean;
+import com.canplay.milk.mvp.activity.MainActivity;
 import com.canplay.milk.mvp.component.DaggerBaseComponent;
 import com.canplay.milk.mvp.present.LoginContract;
 import com.canplay.milk.mvp.present.LoginPresenter;
 import com.canplay.milk.util.TextUtil;
+import com.canplay.milk.util.ThirdShareManager;
 import com.canplay.milk.view.ClearEditText;
 import com.canplay.milk.view.NavigationBar;
+import com.canplay.milk.view.PhotoPopupWindow;
+import com.canplay.milk.view.SharePopupWindow;
 import com.canplay.milk.view.TimeSelectorDialog;
 
 import java.util.Date;
@@ -45,7 +53,7 @@ public class RegisteredSecondActivity extends BaseActivity implements LoginContr
     @BindView(R.id.ll_sex)
     LinearLayout llSex;
     @BindView(R.id.et_date)
-    ClearEditText etDate;
+    TextView etDate;
     @BindView(R.id.et_weight)
     ClearEditText etWeight;
     @BindView(R.id.tv_registered)
@@ -65,7 +73,7 @@ public class RegisteredSecondActivity extends BaseActivity implements LoginContr
     private String psw;
 
     private TimeSelectorDialog selectorDialog;
-
+    private PhotoPopupWindow mWindowAddPhoto;
     @Override
     public void initViews() {
         setContentView(R.layout.activity_registered2);
@@ -87,6 +95,18 @@ public class RegisteredSecondActivity extends BaseActivity implements LoginContr
 
 
                 });
+        mWindowAddPhoto = new PhotoPopupWindow(this);
+        mWindowAddPhoto.setSureListener(new PhotoPopupWindow.ClickListener() {
+            @Override
+            public void clickListener(int type) {
+                if(type==1){
+                    tvSex.setText("女");
+                }else {
+
+                    tvSex.setText("男");
+                }
+            }
+        });
 
     }
 
@@ -96,10 +116,16 @@ public class RegisteredSecondActivity extends BaseActivity implements LoginContr
             @Override
             public void onClick(View v) {
                 closeKeyBoard();
-
+              selectorDialog.show(tvSex);
             }
         });
-
+        llSex.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                closeKeyBoard();
+                mWindowAddPhoto.showAsDropDown(etDate);
+            }
+        });
         etName.setOnClearEditTextListener(new ClearEditText.ClearEditTextListener() {
             @Override
             public void afterTextChanged4ClearEdit(Editable s) {
@@ -152,11 +178,17 @@ public class RegisteredSecondActivity extends BaseActivity implements LoginContr
 
     @Override
     public <T> void toEntity(T entity, int type) {
+        dimessProgress();
 
+        startActivity(new Intent(this, MainActivity.class));
+        RxBus.getInstance().send(SubscriptionBean.createSendBean(SubscriptionBean.FINISH,""));
+        finish();
     }
 
     @Override
     public void showTomast(String msg) {
+        dimessProgress();
 
+        showToasts(msg);
     }
 }

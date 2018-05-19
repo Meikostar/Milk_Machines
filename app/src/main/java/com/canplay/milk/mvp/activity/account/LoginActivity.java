@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseActivity;
 import com.canplay.milk.base.BaseApplication;
+import com.canplay.milk.base.RxBus;
+import com.canplay.milk.base.SubscriptionBean;
 import com.canplay.milk.bean.USER;
 import com.canplay.milk.mvp.activity.MainActivity;
 import com.canplay.milk.mvp.component.DaggerBaseComponent;
@@ -30,6 +32,8 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import rx.Subscription;
+import rx.functions.Action1;
 
 
 public class LoginActivity extends BaseActivity implements LoginContract.View{
@@ -57,7 +61,13 @@ public class LoginActivity extends BaseActivity implements LoginContract.View{
         DaggerBaseComponent.builder().appComponent(((BaseApplication) getApplication()).getAppComponent()).build().inject(this);
         presenter.attachView(this);
 
-
+                PermissionGen.with(LoginActivity.this)
+                        .addRequestCode(PermissionConst.REQUECT_DATE)
+                        .permissions(
+                                Manifest.permission.CAMERA,
+                                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                                Manifest.permission.READ_EXTERNAL_STORAGE)
+                        .request();
         String userId = SpUtil.getInstance().getUserId();
         if (TextUtil.isNotEmpty(userId)) {
             startActivity(new Intent(this, MainActivity.class));
@@ -67,20 +77,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.View{
 
     @PermissionSuccess(requestCode = PermissionConst.REQUECT_DATE)
     public void requestSdcardSuccess() {
-        Intent intent = new Intent(LoginActivity.this, CaptureActivity.class);
-         /*ZxingConfig是配置类  可以设置是否显示底部布局，闪光灯，相册，是否播放提示音  震动等动能
-         * 也可以不传这个参数
-         * 不传的话  默认都为默认不震动  其他都为true
-         * */
 
-        //ZxingConfig config = new ZxingConfig();
-        //config.setShowbottomLayout(true);//底部布局（包括闪光灯和相册）
-        //config.setPlayBeep(true);//是否播放提示音
-        //config.setShake(true);//是否震动
-        //config.setShowAlbum(true);//是否显示相册
-        //config.setShowFlashLight(true);//是否显示闪光灯
-        //intent.putExtra(Constant.INTENT_ZXING_CONFIG, config);
-        startActivityForResult(intent, REQUEST_CODE_SCAN);
     }
 
     @PermissionFail(requestCode = PermissionConst.REQUECT_DATE)
@@ -94,14 +91,8 @@ public class LoginActivity extends BaseActivity implements LoginContract.View{
         tvLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this,MainActivity.class));
-//                PermissionGen.with(LoginActivity.this)
-//                        .addRequestCode(PermissionConst.REQUECT_DATE)
-//                        .permissions(
-//                                Manifest.permission.CAMERA,
-//                                Manifest.permission.WRITE_EXTERNAL_STORAGE,
-//                                Manifest.permission.READ_EXTERNAL_STORAGE)
-//                        .request();
+//                startActivity(new Intent(LoginActivity.this,MainActivity.class));
+
                 String user = etUser.getText().toString();
                 String password = etPws.getText().toString();
 
@@ -135,24 +126,51 @@ public class LoginActivity extends BaseActivity implements LoginContract.View{
             }
         });
     }
-
+   private Subscription mSubscription;
     @Override
     public void initData() {
 
+        mSubscription = RxBus.getInstance().toObserverable(SubscriptionBean.RxBusSendBean.class).subscribe(new Action1<SubscriptionBean.RxBusSendBean>() {
+            @Override
+            public void call(SubscriptionBean.RxBusSendBean bean) {
+                if (bean == null) return;
+                if(SubscriptionBean.FINISH==bean.type){
+                    finish();
+                }
+
+
+            }
+        }, new Action1<Throwable>() {
+            @Override
+            public void call(Throwable throwable) {
+                throwable.printStackTrace();
+            }
+        });
+        RxBus.getInstance().addSubscription(mSubscription);
     }
 
-   private USER user;
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(mSubscription!=null){
+            mSubscription.unsubscribe();
+        }
+    }
+
+    private USER user;
     @Override
     public <T> void toEntity(T entity, int type) {
        dimessProgress();
         user= (USER) entity;
-        SpUtil.getInstance().putUser(user);
+
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }
 
     @Override
     public void showTomast(String msg) {
+        dimessProgress();
 
+        showToasts(msg);
     }
 }

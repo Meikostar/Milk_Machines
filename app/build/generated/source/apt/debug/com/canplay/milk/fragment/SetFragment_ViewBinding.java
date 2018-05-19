@@ -10,6 +10,7 @@ import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
 import com.canplay.medical.R;
+import com.canplay.milk.view.CircleImageView;
 import java.lang.IllegalStateException;
 import java.lang.Override;
 
@@ -21,7 +22,7 @@ public class SetFragment_ViewBinding implements Unbinder {
     this.target = target;
 
     target.line = Utils.findRequiredView(source, R.id.line, "field 'line'");
-    target.ivImg = Utils.findRequiredViewAsType(source, R.id.iv_img, "field 'ivImg'", ImageView.class);
+    target.ivImg = Utils.findRequiredViewAsType(source, R.id.iv_img, "field 'ivImg'", CircleImageView.class);
     target.tvName = Utils.findRequiredViewAsType(source, R.id.tv_name, "field 'tvName'", TextView.class);
     target.llWifi = Utils.findRequiredViewAsType(source, R.id.ll_wifi, "field 'llWifi'", LinearLayout.class);
     target.llAbout = Utils.findRequiredViewAsType(source, R.id.ll_about, "field 'llAbout'", LinearLayout.class);

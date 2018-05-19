@@ -99,7 +99,7 @@ public class HourSelector extends LinearLayout {
         mCycleWheelViewHour.setLabelColor(Color.parseColor("#b3b3b3"));
         mCycleWheelViewHour.setDivider(Color.parseColor("#e3e3e3"), 1);
         mCycleWheelViewHour.setLabelSelectColor(Color.parseColor("#333333"));
-//        mCycleWheelViewHour.setSolid(Color.WHITE, Color.WHITE);
+       mCycleWheelViewHour.setSolid(Color.parseColor("#00ffffff"), Color.parseColor("#00ffffff"));
     }
 
 
@@ -146,7 +146,7 @@ public class HourSelector extends LinearLayout {
         mCycleWheelViewMinute.setLabelColor(Color.parseColor("#b3b3b3"));
         mCycleWheelViewMinute.setDivider(Color.parseColor("#e3e3e3"), 1);
         mCycleWheelViewMinute.setLabelSelectColor(Color.parseColor("#333333"));
-//        mCycleWheelViewMinute.setSolid(Color.WHITE, Color.WHITE);
+        mCycleWheelViewMinute.setSolid(Color.parseColor("#00ffffff"), Color.parseColor("#00ffffff"));
     }
 
 

@@ -8,7 +8,6 @@
         android:background="@drawable/white_retagle"
         android:layout_width="303dp"
         android:layout_height="wrap_content"
-        android:paddingLeft="5.7dp"
         android:layout_gravity="center"
         android:orientation="vertical">
         <LinearLayout
@@ -29,7 +28,7 @@
                 android:gravity="center"
                 android:textSize="19.5sp"/>
             <TextView
-                android:layout_marginBottom="27dp"
+                android:layout_marginBottom="20dp"
                 android:textColor="@color/white"
                 android:layout_marginTop="15dp"
                 android:id="@+id/tv_content"

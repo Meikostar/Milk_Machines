@@ -8,6 +8,7 @@ import java.util.regex.Pattern;
 
 
 public class StringUtils {
+
     public static final String RMB = "￥";
 
     public static boolean isEmpty(String string) {

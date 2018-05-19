@@ -1,17 +1,27 @@
 package com.canplay.milk.mvp.activity.mine;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseActivity;
+import com.canplay.milk.bean.USER;
+import com.canplay.milk.mvp.present.LoginContract;
+import com.canplay.milk.mvp.present.LoginPresenter;
 import com.canplay.milk.permission.PermissionConst;
 import com.canplay.milk.permission.PermissionSuccess;
+import com.canplay.milk.util.SpUtil;
+import com.canplay.milk.util.TextUtil;
+import com.canplay.milk.view.CircleTransform;
 import com.canplay.milk.view.ClearEditText;
 import com.canplay.milk.view.EditorNameDialog;
 import com.canplay.milk.view.NavigationBar;
 import com.canplay.milk.view.PhotoPopupWindow;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -22,9 +32,10 @@ import io.valuesfeng.picker.widget.ImageLoaderEngine;
 /**
  * 个人信息
  */
-public class MineInfoActivity extends BaseActivity {
+public class MineInfoActivity extends BaseActivity implements LoginContract.View{
 
-
+    @Inject
+    LoginPresenter presenter;
     @BindView(R.id.line)
     View line;
     @BindView(R.id.navigationBar)
@@ -41,19 +52,55 @@ public class MineInfoActivity extends BaseActivity {
     private PhotoPopupWindow mWindowAddPhoto;
     private int sex = 0;
     private String name = "";
-
+    private USER user;
     @Override
     public void initViews() {
         setContentView(R.layout.activity_mine_info);
         ButterKnife.bind(this);
         navigationBar.setNavigationBarListener(this);
+       user= SpUtil.getInstance().getUsers();
+        if(user!=null){
+            if(TextUtil.isNotEmpty(user.name)){
+                etBaby.setText(user.name);
+            }if(TextUtil.isNotEmpty(user.fatherName)){
+                etFather.setText(user.fatherName);
+            }if(TextUtil.isNotEmpty(user.motherName)){
+                etMami.setText(user.motherName);
+            }
+            Glide.with(this).load(user.imgResourceKey).asBitmap().transform(new CircleTransform(this)).placeholder(R.drawable.moren).into(ivImgs);
+
+        }
 
     }
 
     @Override
     public void bindEvents() {
+       ivImgs.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               startActivity(new Intent(MineInfoActivity.this,UserAvarActivity.class));
+           }
+       });
+         navigationBar.setNavigationBarListener(new NavigationBar.NavigationBarListener() {
+             @Override
+             public void navigationLeft() {
+                 finish();
+             }
 
+             @Override
+             public void navigationRight() {
+                 if(!TextUtil.isNotEmpty(etBaby.getText().toString())){
+                     showToasts("baby昵称不能为空");
+                     return;
+                 }
+              presenter.updateMyBaseInfo(etBaby.getText().toString(),etFather.getText().toString()==null?"":etFather.getText().toString(),etMami.getText().toString()==null?"":etMami.getText().toString());
+             }
 
+             @Override
+             public void navigationimg() {
+
+             }
+         });
     }
 
 
@@ -71,10 +118,15 @@ public class MineInfoActivity extends BaseActivity {
                 .forResult(4);
     }
 
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
+    public <T> void toEntity(T entity, int type) {
+        showToasts("编辑成功");
+        finish();
+    }
+
+    @Override
+    public void showTomast(String msg) {
+         showToasts(msg);
     }
 }

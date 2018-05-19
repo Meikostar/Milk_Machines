@@ -31,61 +31,71 @@ public interface BaseApi {
      */
 
 
-    @FormUrlEncoded
     @POST("web/mobileLogin")
-    Observable<USER> Login(@FieldMap Map<String, String> options);
+    Observable<USER> Login(@QueryMap Map<String, String> options);
+
+
+    /**
+     * Login
+     * @param options
+     * @return
+     */
+
+
+    @POST("web/getLastestVersion")
+    Observable<BASE> getLastestVersion(@QueryMap Map<String, String> options);
+
 
     /**
      * 重置密码
      * @param options
      * @return
      */
-    @FormUrlEncoded
+
     @POST("web/resetPwd")
-    Observable<USER> resetPwd(@FieldMap Map<String, String> options);
+    Observable<USER> resetPwd(@QueryMap Map<String, String> options);
 
     /**
      * 下載apk
      * @param options
      * @return
      */
-    @FormUrlEncoded
     @POST("Flow/Token")
-    Observable<BASE> downApk(@FieldMap Map<String, String> options);
+    Observable<BASE> downApk(@QueryMap Map<String, String> options);
     /**
      * 获取验证码
      * @param options
      * @return
      */
-    @FormUrlEncoded
+
     @POST("web/getRegisterCode")
-    Observable<BASE> getCode(@FieldMap Map<String, String> options);
+    Observable<BASE> getCode(@QueryMap Map<String, String> options);
 
     /**
      * 校验验证码
      * @param options
      * @return
      */
-    @FormUrlEncoded
-    @POST("web/getRegisterCode")
-    Observable<BASE> checkCode(@FieldMap Map<String, String> options);
+
+    @POST("web/validateRegisterCode")
+    Observable<BASE> checkCode(@QueryMap Map<String, String> options);
     /**
      * 重置密码
      * @param options
      * @return
      */
-    @FormUrlEncoded
+
     @POST("web/getResetCode")
-    Observable<BASE> getForgetPswCode(@FieldMap Map<String, String> options);
+    Observable<BASE> getForgetPswCode(@QueryMap Map<String, String> options);
 
     /**
      * 登出
      * @param options
      * @return
      */
-    @FormUrlEncoded
+
     @POST("web/logout")
-    Observable<BASE> logout(@FieldMap Map<String, String> options);
+    Observable<BASE> logout(@QueryMap Map<String, String> options);
 
     /**
      * 更新头像
@@ -94,33 +104,33 @@ public interface BaseApi {
      */
     @FormUrlEncoded
     @POST("web/updateBabyImg")
-    Observable<BASE> updateBabyImg(@FieldMap Map<String, String> options);
+    Observable<BASE> updateBabyImg(@QueryMap Map<String, String> options);
     /**
      *  手机注册
      * @param options
      * @return
      */
-    @FormUrlEncoded
-    @POST("web/getMyBaseInfo")
-    Observable<USER> mobileRegister(@FieldMap Map<String, String> options);
+
+    @POST("web/mobileRegister")
+    Observable<USER> mobileRegister(@QueryMap Map<String, String> options);
 
     /**
-     *  手机注册
+     *  更新用户信息
      * @param options
      * @return
      */
-    @FormUrlEncoded
+
     @POST("web/updateMyBaseInfo")
-    Observable<USER> updateMyBaseInfo(@FieldMap Map<String, String> options);
+    Observable<USER> updateMyBaseInfo(@QueryMap Map<String, String> options);
 
     /**
      * 获取我的基本信息
      * @param options
      * @return
      */
-    @FormUrlEncoded
+
     @POST("web/getMyBaseInfo")
-    Observable<USER> getMyBaseInfo(@FieldMap Map<String, String> options);
+    Observable<USER> getMyBaseInfo(@QueryMap Map<String, String> options);
 
 
 

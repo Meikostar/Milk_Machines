@@ -31,7 +31,7 @@ public class RegisteredSecondActivity_ViewBinding implements Unbinder {
     target.tvChoose = Utils.findRequiredViewAsType(source, R.id.tv_choose, "field 'tvChoose'", TextView.class);
     target.tvSex = Utils.findRequiredViewAsType(source, R.id.tv_sex, "field 'tvSex'", TextView.class);
     target.llSex = Utils.findRequiredViewAsType(source, R.id.ll_sex, "field 'llSex'", LinearLayout.class);
-    target.etDate = Utils.findRequiredViewAsType(source, R.id.et_date, "field 'etDate'", ClearEditText.class);
+    target.etDate = Utils.findRequiredViewAsType(source, R.id.et_date, "field 'etDate'", TextView.class);
     target.etWeight = Utils.findRequiredViewAsType(source, R.id.et_weight, "field 'etWeight'", ClearEditText.class);
     target.tvRegistered = Utils.findRequiredViewAsType(source, R.id.tv_registered, "field 'tvRegistered'", TextView.class);
     target.tvNext = Utils.findRequiredViewAsType(source, R.id.tv_next, "field 'tvNext'", TextView.class);

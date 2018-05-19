@@ -20,8 +20,10 @@ import com.canplay.milk.fragment.FileFragment;
 import com.canplay.milk.fragment.HomeFragment;
 import com.canplay.milk.fragment.SetFragment;
 import com.canplay.milk.fragment.WikiPediaFragment;
+import com.canplay.milk.mvp.activity.account.LoginActivity;
 import com.canplay.milk.mvp.adapter.FragmentViewPagerAdapter;
 import com.canplay.milk.permission.PermissionConst;
+import com.canplay.milk.permission.PermissionGen;
 import com.canplay.milk.permission.PermissionSuccess;
 import com.canplay.milk.receiver.Service1;
 import com.canplay.milk.view.BottonNevgBar;
@@ -62,7 +64,13 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         bnbHome = (BottonNevgBar) findViewById(R.id.bnb_home);
         line =  findViewById(R.id.line);
-
+        PermissionGen.with(MainActivity.this)
+                .addRequestCode(PermissionConst.REQUECT_DATE)
+                .permissions(
+                        Manifest.permission.CAMERA,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.READ_EXTERNAL_STORAGE)
+                .request();
         exitDialog= BaseDailogManager.getInstance().getBuilder(this).setOnClickListener(new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -214,15 +222,16 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-    @Override
-    public boolean onKeyUp(int keyCode, KeyEvent event) {
 
-        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN) {
-            exitDialog.show();
-            return true;
+    public boolean onKeyDown(int keyCode,KeyEvent event)
+    {
+        switch(keyCode)
+        {
+            case KeyEvent.KEYCODE_BACK:
+                exitDialog.show();
+                return true;
         }
         return super.onKeyDown(keyCode, event);
     }
-
 
 }

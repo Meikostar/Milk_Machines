@@ -12,6 +12,8 @@ import android.widget.TextView;
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseActivity;
 import com.canplay.milk.base.BaseApplication;
+import com.canplay.milk.base.RxBus;
+import com.canplay.milk.base.SubscriptionBean;
 import com.canplay.milk.bean.RecoveryPsw;
 import com.canplay.milk.mvp.component.DaggerBaseComponent;
 import com.canplay.milk.mvp.present.LoginContract;
@@ -95,12 +97,12 @@ public class ForgetPswActivity extends BaseActivity implements LoginContract.Vie
                     showToasts("请再次输入密码");
                     return;
                 }
-                if(etPass.getText().toString().equals(etConfirm.getText().toString())){
+                if(!etPass.getText().toString().equals(etConfirm.getText().toString())){
                     showToasts("两次密码不一致");
                     return;
                 }
-                if(!PwdCheckUtil.isContainAll(etPass.getText().toString())){
-                    showToasts("密码至少6位数且包含数字，大小写字母");
+                if(!PwdCheckUtil.isLetterDigit(etPass.getText().toString())){
+                    showToasts("密码至少6位数且包含数字，字母");
                     return;
                 }
                 presenter.resetPwd(etPhone.getText().toString(),etUser.getText().toString(),etPass.getText().toString());
@@ -155,6 +157,8 @@ public class ForgetPswActivity extends BaseActivity implements LoginContract.Vie
       if(type==1){
           timeCount.start();
       }else {
+          RxBus.getInstance().send(SubscriptionBean.createSendBean(SubscriptionBean.FINISH,""));
+
           startActivity(new Intent(ForgetPswActivity.this,LoginActivity.class));
           finish();
           showToasts("密码修改成功");

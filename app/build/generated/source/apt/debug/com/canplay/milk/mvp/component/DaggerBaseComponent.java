@@ -4,6 +4,8 @@ package com.canplay.milk.mvp.component;
 import com.canplay.milk.base.AppComponent;
 import com.canplay.milk.base.manager.ApiManager;
 import com.canplay.milk.fragment.DataFragment;
+import com.canplay.milk.fragment.SetFragment;
+import com.canplay.milk.fragment.SetFragment_MembersInjector;
 import com.canplay.milk.mvp.activity.account.ForgetPswActivity;
 import com.canplay.milk.mvp.activity.account.ForgetPswActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.account.LoginActivity;
@@ -12,6 +14,8 @@ import com.canplay.milk.mvp.activity.account.RegisteredActivity;
 import com.canplay.milk.mvp.activity.account.RegisteredActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.account.RegisteredSecondActivity;
 import com.canplay.milk.mvp.activity.account.RegisteredSecondActivity_MembersInjector;
+import com.canplay.milk.mvp.activity.mine.UpdateActivity;
+import com.canplay.milk.mvp.activity.mine.UpdateActivity_MembersInjector;
 import com.canplay.milk.mvp.present.LoginPresenter;
 import com.canplay.milk.mvp.present.LoginPresenter_Factory;
 import dagger.MembersInjector;
@@ -26,6 +30,10 @@ public final class DaggerBaseComponent implements BaseComponent {
   private Provider<LoginPresenter> loginPresenterProvider;
 
   private MembersInjector<LoginActivity> loginActivityMembersInjector;
+
+  private MembersInjector<UpdateActivity> updateActivityMembersInjector;
+
+  private MembersInjector<SetFragment> setFragmentMembersInjector;
 
   private MembersInjector<ForgetPswActivity> forgetPswActivityMembersInjector;
 
@@ -62,6 +70,11 @@ public final class DaggerBaseComponent implements BaseComponent {
     this.loginActivityMembersInjector =
         LoginActivity_MembersInjector.create(loginPresenterProvider);
 
+    this.updateActivityMembersInjector =
+        UpdateActivity_MembersInjector.create(loginPresenterProvider);
+
+    this.setFragmentMembersInjector = SetFragment_MembersInjector.create(loginPresenterProvider);
+
     this.forgetPswActivityMembersInjector =
         ForgetPswActivity_MembersInjector.create(loginPresenterProvider);
 
@@ -75,6 +88,16 @@ public final class DaggerBaseComponent implements BaseComponent {
   @Override
   public void inject(LoginActivity binderActivity) {
     loginActivityMembersInjector.injectMembers(binderActivity);
+  }
+
+  @Override
+  public void inject(UpdateActivity binderActivity) {
+    updateActivityMembersInjector.injectMembers(binderActivity);
+  }
+
+  @Override
+  public void inject(SetFragment binderActivity) {
+    setFragmentMembersInjector.injectMembers(binderActivity);
   }
 
   @Override

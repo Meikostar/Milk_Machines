@@ -62,6 +62,13 @@ public class LoginContract {
         /**
          * 检验验证码
          */
-        void checkCode(String code);
+        void checkCode(String mobile,String code,String pwd);
+
+        /**
+         * 更新用户信息
+         */
+        void updateMyBaseInfo(String name, String fatherName, String motherName);
+
+        void getLastestVersion();
     }
 }

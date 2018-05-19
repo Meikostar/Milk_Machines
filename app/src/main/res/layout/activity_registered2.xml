@@ -95,7 +95,7 @@
                 android:gravity="center_vertical"
                 android:text=""
                 android:inputType="text"
-                android:hint="男"
+                android:hint=""
                 android:id="@+id/tv_sex"
                 android:textColor="#9fa0a0"
                 android:textColorHint="#bdbdbd"/>
@@ -123,7 +123,7 @@
             android:layout_marginLeft="19dp"
             android:layout_width="25dp"
             android:layout_height="28dp" />
-        <com.canplay.milk.view.ClearEditText
+        <TextView
             android:textSize="15.5sp"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
@@ -132,7 +132,7 @@
             android:background="@null"
             android:gravity="center_vertical"
             android:text=""
-            android:inputType="textPassword"
+
             android:hint="宝宝出生日期"
             android:id="@+id/et_date"
             android:textColor="#9fa0a0"
@@ -164,6 +164,7 @@
             android:background="@null"
             android:gravity="center_vertical"
             android:text=""
+            android:inputType="numberDecimal"
             android:hint="宝宝出生体重"
             android:id="@+id/et_weight"
             android:maxLength="11"

@@ -10,11 +10,14 @@ import android.widget.TextView;
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseActivity;
 import com.canplay.milk.base.BaseApplication;
+import com.canplay.milk.base.RxBus;
+import com.canplay.milk.base.SubscriptionBean;
 import com.canplay.milk.bean.Rigter;
 import com.canplay.milk.mvp.component.DaggerBaseComponent;
 import com.canplay.milk.mvp.present.LoginContract;
 import com.canplay.milk.mvp.present.LoginPresenter;
 import com.canplay.milk.util.PwdCheckUtil;
+import com.canplay.milk.util.StringUtil;
 import com.canplay.milk.util.TextUtil;
 import com.canplay.milk.view.ClearEditText;
 import com.canplay.milk.view.MCheckBox;
@@ -24,6 +27,8 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import rx.Subscription;
+import rx.functions.Action1;
 
 public class RegisteredActivity extends BaseActivity implements LoginContract.View{
 
@@ -58,7 +63,6 @@ public class RegisteredActivity extends BaseActivity implements LoginContract.Vi
         presenter.attachView(this);
         //计时器
         timeCount = new TimeCount(60000, 1000);
-        tvSave.setEnabled(false);
     }
 
     @Override
@@ -71,6 +75,8 @@ public class RegisteredActivity extends BaseActivity implements LoginContract.Vi
                 if (TextUtil.isNotEmpty(phone) && phone.length() == 11) {
                     presenter.getCode(phone);
 
+                }else {
+                    showToasts("请输入正确手机号");
                 }
             }
         });
@@ -88,17 +94,17 @@ public class RegisteredActivity extends BaseActivity implements LoginContract.Vi
                     showToasts("请再次输入密码");
                     return;
                 }
-                if(etPass.getText().toString().equals(etUser.getText().toString())){
+                if(!etPass.getText().toString().equals(etUser.getText().toString())){
                     showToasts("两次密码不一致");
                     return;
                 }
-                if(!PwdCheckUtil.isContainAll(etPass.getText().toString())){
-                    showToasts("密码至少6位数且包含数字，大小写字母");
+                if(!PwdCheckUtil.isLetterDigit(etPass.getText().toString())){
+                    showToasts("密码至少6位数且包含数字,字母");
                     return;
                 }
-                presenter.checkCode(etCode.getText().toString());
+                presenter.checkCode(etPhone.getText().toString().trim(),etCode.getText().toString(),StringUtil.md5(etPass.getText().toString().trim()));
                 rigter.mobile=etPhone.getText().toString().trim();
-                rigter.pwd=etPass.getText().toString().trim();
+                rigter.pwd= StringUtil.md5(etPass.getText().toString().trim());
                 rigter.regCode=etCode.getText().toString().trim();
 
             }
@@ -124,8 +130,7 @@ public class RegisteredActivity extends BaseActivity implements LoginContract.Vi
             public void afterTextChanged4ClearEdit(Editable s) {
                 if (s.toString().length() < 11) {
                     etCode.setText("");
-                    tvGetcode.setText(R.string.chongxinhuoqu);
-                    tvGetcode.setBackground(getResources().getDrawable(R.drawable.login_selector));
+                    tvGetcode.setText("获取验证码");
                     tvGetcode.setEnabled(true);
                 }
             }
@@ -137,16 +142,37 @@ public class RegisteredActivity extends BaseActivity implements LoginContract.Vi
         });
     }
    private Rigter rigter=new Rigter();
+    private Subscription mSubscription;
     @Override
     public void initData() {
 
+        mSubscription = RxBus.getInstance().toObserverable(SubscriptionBean.RxBusSendBean.class).subscribe(new Action1<SubscriptionBean.RxBusSendBean>() {
+            @Override
+            public void call(SubscriptionBean.RxBusSendBean bean) {
+                if (bean == null) return;
+                if(SubscriptionBean.FINISH==bean.type){
+                    finish();
+                }
+
+
+            }
+        }, new Action1<Throwable>() {
+            @Override
+            public void call(Throwable throwable) {
+                throwable.printStackTrace();
+            }
+        });
+        RxBus.getInstance().addSubscription(mSubscription);
     }
+
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         if(timeCount!=null){
             timeCount.cancel();
+        }  if(mSubscription!=null){
+            mSubscription.unsubscribe();
         }
     }
 
@@ -157,7 +183,7 @@ public class RegisteredActivity extends BaseActivity implements LoginContract.Vi
             tvSave.setBackground(getResources().getDrawable(R.drawable.login_selector));
 
         } else {
-            tvSave.setEnabled(false);
+//            tvSave.setEnabled(false);
         }
 
     }
@@ -178,6 +204,7 @@ public class RegisteredActivity extends BaseActivity implements LoginContract.Vi
 
     @Override
     public void showTomast(String msg) {
+        showToasts(msg);
 
     }
 

@@ -10,17 +10,32 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.canplay.medical.R;
+import com.canplay.milk.base.BaseApplication;
 import com.canplay.milk.base.BaseFragment;
+import com.canplay.milk.base.RxBus;
+import com.canplay.milk.base.SubscriptionBean;
+import com.canplay.milk.bean.USER;
+import com.canplay.milk.mvp.activity.account.ForgetPswActivity;
+import com.canplay.milk.mvp.activity.account.LoginActivity;
 import com.canplay.milk.mvp.activity.mine.AboutActivity;
 import com.canplay.milk.mvp.activity.mine.EditorInfoActivity;
 import com.canplay.milk.mvp.activity.mine.MineInfoActivity;
 import com.canplay.milk.mvp.activity.mine.UpdateActivity;
 import com.canplay.milk.mvp.activity.mine.UserAvarActivity;
 import com.canplay.milk.mvp.activity.mine.WifiSettingActivity;
+import com.canplay.milk.mvp.component.DaggerBaseComponent;
+import com.canplay.milk.mvp.present.LoginContract;
+import com.canplay.milk.mvp.present.LoginPresenter;
 import com.canplay.milk.util.SpUtil;
+import com.canplay.milk.util.TextUtil;
+import com.canplay.milk.view.CircleImageView;
+import com.canplay.milk.view.CircleTransform;
 import com.canplay.milk.view.EditorNameDialog;
 import com.canplay.milk.view.PhotoPopupWindow;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,13 +45,15 @@ import butterknife.Unbinder;
 /**
  * Created by mykar on 17/4/10.
  */
-public class SetFragment extends BaseFragment implements View.OnClickListener {
+public class SetFragment extends BaseFragment implements View.OnClickListener ,LoginContract.View{
 
+    @Inject
+    LoginPresenter presenter;
     Unbinder unbinder;
     @BindView(R.id.line)
     View line;
     @BindView(R.id.iv_img)
-    ImageView ivImg;
+    CircleImageView ivImg;
     @BindView(R.id.tv_name)
     TextView tvName;
     @BindView(R.id.ll_wifi)
@@ -65,8 +82,9 @@ public class SetFragment extends BaseFragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_set, null);
         unbinder = ButterKnife.bind(this, view);
-
-
+        DaggerBaseComponent.builder().appComponent(((BaseApplication) getActivity().getApplication()).getAppComponent()).build().inject(this);
+        presenter.attachView(this);
+        presenter.getMyBaseInfo();
         mWindowAddPhoto = new PhotoPopupWindow(getActivity());
         mWindowAddPhoto.setCont("解除绑定", "取消");
         mWindowAddPhoto.setColor(R.color.red_pop, 0);
@@ -108,10 +126,23 @@ public class SetFragment extends BaseFragment implements View.OnClickListener {
                 startActivity(new Intent(getActivity(),WifiSettingActivity.class));
             }
         });
+        llPasw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(),ForgetPswActivity.class));
+            }
+        });
         ivImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), EditorInfoActivity.class));
+                startActivity(new Intent(getActivity(), MineInfoActivity.class));
+
+            }
+        });
+        llChange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                presenter.logout();
 
             }
         });
@@ -135,5 +166,33 @@ public class SetFragment extends BaseFragment implements View.OnClickListener {
 
         }
     }
+    private USER user;
+    @Override
+    public <T> void toEntity(T entity, int type) {
+        if(type==6){
+            RxBus.getInstance().send(SubscriptionBean.createSendBean(SubscriptionBean.FINISH,""));
+            SpUtil.getInstance().clearData();
+            SpUtil.getInstance().putString("firt","firt");
+            startActivity(new Intent(getActivity(), LoginActivity.class));
+            getActivity().finish();
+        }else {
+            user= (USER) entity;
+            if(user!=null){
+                if(TextUtil.isEmpty(user.name)){
+                    tvName.setText(user.name);
 
+                }
+
+                Glide.with(this).load(user.imgResourceKey).asBitmap().transform(new CircleTransform(getActivity())).placeholder(R.drawable.moren).into(ivImg);
+                SpUtil.getInstance().putUser(user);
+            }
+
+        }
+
+    }
+
+    @Override
+    public void showTomast(String msg) {
+          showToast(msg);
+    }
 }

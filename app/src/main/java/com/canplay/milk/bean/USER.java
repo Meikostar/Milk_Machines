@@ -24,4 +24,6 @@ public class USER {
   public String fatherName;
   public String motherName;
   public String imgResourceKey;
+
+
 }

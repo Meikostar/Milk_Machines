@@ -34,6 +34,8 @@ import java.util.regex.Pattern;
  ***/
 public class StringUtil {
     public  static String errorMsg ="";
+
+
     /**
      * Returns true if the string is null or 0-length.
      * @param str the string to be examined

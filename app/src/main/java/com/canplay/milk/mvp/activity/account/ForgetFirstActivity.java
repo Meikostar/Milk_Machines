@@ -8,11 +8,15 @@ import android.widget.TextView;
 
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseActivity;
+import com.canplay.milk.base.RxBus;
+import com.canplay.milk.base.SubscriptionBean;
 import com.canplay.milk.util.TextUtil;
 import com.canplay.milk.view.NavigationBar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import rx.Subscription;
+import rx.functions.Action1;
 
 public class ForgetFirstActivity extends BaseActivity {
 
@@ -46,21 +50,37 @@ public class ForgetFirstActivity extends BaseActivity {
 
     }
 
+    private Subscription mSubscription;
     @Override
     public void initData() {
 
+        mSubscription = RxBus.getInstance().toObserverable(SubscriptionBean.RxBusSendBean.class).subscribe(new Action1<SubscriptionBean.RxBusSendBean>() {
+            @Override
+            public void call(SubscriptionBean.RxBusSendBean bean) {
+                if (bean == null) return;
+                if(SubscriptionBean.FINISH==bean.type){
+                    finish();
+                }
+
+
+            }
+        }, new Action1<Throwable>() {
+            @Override
+            public void call(Throwable throwable) {
+                throwable.printStackTrace();
+            }
+        });
+        RxBus.getInstance().addSubscription(mSubscription);
     }
+
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
+        if(mSubscription!=null){
+            mSubscription.unsubscribe();
+        }
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
+
 }

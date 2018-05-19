@@ -10,11 +10,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.canplay.medical.R;
+import com.canplay.milk.base.BaseApplication;
 import com.canplay.milk.base.BaseFragment;
 import com.canplay.milk.bean.ShareBean;
 import com.canplay.milk.mvp.activity.home.AddMilkActivity;
 import com.canplay.milk.mvp.activity.home.RemindMilkActivity;
 import com.canplay.milk.mvp.activity.mine.MineInfoActivity;
+import com.canplay.milk.mvp.component.DaggerBaseComponent;
 import com.canplay.milk.util.ThirdShareManager;
 import com.canplay.milk.view.EditorNameDialog;
 import com.canplay.milk.view.PhotoPopupWindow;

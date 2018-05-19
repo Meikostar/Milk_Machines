@@ -10,6 +10,7 @@ import com.canplay.milk.bean.USER;
 import com.canplay.milk.mvp.http.BaseApi;
 import com.canplay.milk.net.MySubscriber;
 import com.canplay.milk.util.SpUtil;
+import com.canplay.milk.util.StringUtil;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -34,7 +35,7 @@ public class LoginPresenter implements LoginContract.Presenter {
     public void goLogin(String mobile, String pwd) {
         Map<String, String> params = new TreeMap<>();
         params.put("mobile", mobile);
-        params.put("pwd", pwd);
+        params.put("pwd", StringUtil.md5(pwd));
         subscription = ApiManager.setSubscribe(contactApi.Login(ApiManager.getParameters(params, true)), new MySubscriber<USER>(){
             @Override
             public void onError(Throwable e){
@@ -48,7 +49,7 @@ public class LoginPresenter implements LoginContract.Presenter {
             @Override
             public void onNext(USER entity){
                 mView.toEntity(entity,0);
-
+                SpUtil.getInstance().putUser(entity);
             }
         });
     }
@@ -57,8 +58,8 @@ public class LoginPresenter implements LoginContract.Presenter {
         Map<String, String> params = new TreeMap<>();
         params.put("mobile", mobile);
         params.put("resetCode", resetCode);
-        params.put("pwd", pwd);
-        params.put("rePwd", pwd);
+        params.put("pwd", StringUtil.md5(pwd));
+        params.put("rePwd", StringUtil.md5(pwd));
         subscription = ApiManager.setSubscribe(contactApi.resetPwd(ApiManager.getParameters(params, true)), new MySubscriber<USER>(){
             @Override
             public void onError(Throwable e){
@@ -72,6 +73,29 @@ public class LoginPresenter implements LoginContract.Presenter {
             @Override
             public void onNext(USER entity){
                 mView.toEntity(entity,2);
+
+//                SpUtil.getInstance().putString(SpUtil.USER_ID,entity.merchantId);
+            }
+        });
+    }
+    @Override
+    public void getLastestVersion() {
+        Map<String, String> params = new TreeMap<>();
+        params.put("platformType", "Android");
+        subscription = ApiManager.setSubscribe(contactApi.getLastestVersion(ApiManager.getParameters(params, true)), new MySubscriber<BASE>(){
+            @Override
+            public void onError(Throwable e){
+                super.onError(e);
+
+                mView.showTomast(e.getMessage());
+
+
+            }
+
+            @Override
+            public void onNext(BASE entity){
+                mView.toEntity(entity,2);
+
 //                SpUtil.getInstance().putString(SpUtil.USER_ID,entity.merchantId);
             }
         });
@@ -84,6 +108,7 @@ public class LoginPresenter implements LoginContract.Presenter {
         params.put("mobile", mobile);
         params.put("regCode", regCode);
         params.put("pwd", pwd);
+        params.put("rePwd", pwd);
         params.put("birthDate", birthDate);
         params.put("name", name);
         params.put("sex", sex);
@@ -101,11 +126,37 @@ public class LoginPresenter implements LoginContract.Presenter {
             @Override
             public void onNext(USER entity){
                 mView.toEntity(entity,0);
+                SpUtil.getInstance().putUser(entity);
 //                SpUtil.getInstance().putString(SpUtil.USER_ID,entity.merchantId);
             }
         });
     }
 
+    @Override
+    public void updateMyBaseInfo(String name, String fatherName, String motherName) {
+        Map<String, String> params = new TreeMap<>();
+
+        params.put("name", name);
+        params.put("fatherName", fatherName);
+        params.put("motherName", motherName);
+        subscription = ApiManager.setSubscribe(contactApi.updateMyBaseInfo(ApiManager.getParameters(params, true)), new MySubscriber<USER>(){
+            @Override
+            public void onError(Throwable e){
+                super.onError(e);
+
+                mView.showTomast(e.getMessage());
+
+
+            }
+
+            @Override
+            public void onNext(USER entity){
+                mView.toEntity(entity,0);
+                SpUtil.getInstance().putUser(entity);
+//                SpUtil.getInstance().putString(SpUtil.USER_ID,entity.merchantId);
+            }
+        });
+    }
 
 
     @Override
@@ -134,6 +185,8 @@ public class LoginPresenter implements LoginContract.Presenter {
     public void getMyBaseInfo() {
 
         Map<String, String> params = new TreeMap<>();
+
+
         subscription = ApiManager.setSubscribe(contactApi.getMyBaseInfo(ApiManager.getParameters(params, true)), new MySubscriber<USER >() {
             @Override
             public void onNext(USER ruslt) {
@@ -155,7 +208,8 @@ public class LoginPresenter implements LoginContract.Presenter {
     public void getCode(String phone) {
 
         Map<String, String> params = new TreeMap<>();
-        subscription = ApiManager.setSubscribe(contactApi.getCode(ApiManager.getParameters(params, true)), new MySubscriber<BASE >() {
+        params.put("mobile", phone);
+        subscription = ApiManager.setSubscribe(contactApi.getCode(params), new MySubscriber<BASE >() {
             @Override
             public void onNext(BASE ruslt) {
 
@@ -171,9 +225,13 @@ public class LoginPresenter implements LoginContract.Presenter {
             }
         });
     }
-    public void checkCode(String code) {
+    public void checkCode(String mobile,String code,String pwd) {
 
         Map<String, String> params = new TreeMap<>();
+        params.put("mobile", mobile);
+        params.put("regCode", code);
+        params.put("pwd", pwd);
+        params.put("rePwd", pwd);
         subscription = ApiManager.setSubscribe(contactApi.checkCode(ApiManager.getParameters(params, true)), new MySubscriber<BASE>() {
             @Override
             public void onNext(BASE ruslt) {
@@ -240,7 +298,7 @@ public class LoginPresenter implements LoginContract.Presenter {
             @Override
             public void onNext(BASE ruslt) {
 
-                mView.toEntity(ruslt,0);
+                mView.toEntity(ruslt,6);
 
             }
 

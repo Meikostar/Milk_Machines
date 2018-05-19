@@ -168,7 +168,7 @@ public class MarkaBaseDialog extends Dialog {
 			//	mLayoutContent.setBackground(ContextCompat.getDrawable(context,R.drawable.shape_bg_common_dialog_content));
 				mTexViewTitle.setVisibility(View.VISIBLE);
 			}else {
-				mTexViewTitle.setVisibility(View.GONE);
+//				mTexViewTitle.setVisibility(View.GONE);
 			//	mLayoutContent.setBackground(ContextCompat.getDrawable(context,R.drawable.shape_bg_common_dialog_content_notitle));
 			}
 
@@ -193,7 +193,7 @@ public class MarkaBaseDialog extends Dialog {
 
 				mButtonLeft.setText(leftButtonText);
 			}else if (mButtonLeft!=null){
-				mButtonLeft.setVisibility(View.GONE);
+//				mButtonLeft.setVisibility(View.GONE);
 
 				if(rightButtonText!=null&&mButtonRight!=null){
 					//mButtonRight.setBackgroundResource(R.drawable.selector_click_dialog);
@@ -211,7 +211,7 @@ public class MarkaBaseDialog extends Dialog {
 				mButtonRight.setVisibility(View.VISIBLE);
 
 			}else {
-				mButtonRight.setVisibility(View.GONE);
+//				mButtonRight.setVisibility(View.GONE);
 				if(mButtonLeft!=null&&mButtonLeft!=null){
 					//mButtonLeft.setBackgroundResource(R.drawable.selector_click_dialog);
 				}
