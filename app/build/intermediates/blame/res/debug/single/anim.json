@@ -32,12 +32,12 @@
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\97abfc55d1e504c2314e10ab5909fa0eb140d1bc\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
     },
     {
-        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\anim\\push_bottom_in.xml",
-        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\anim\\push_bottom_in.xml"
-    },
-    {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\6192085179e6056d54168618ede1f6f8f2213103\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\anim\\push_bottom_in.xml",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\anim\\push_bottom_in.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\anim\\push_bottom_out.xml",

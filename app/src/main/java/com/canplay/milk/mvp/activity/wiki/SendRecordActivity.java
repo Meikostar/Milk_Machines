@@ -137,7 +137,9 @@ public class SendRecordActivity extends BaseActivity  {
                 closeKeyBoard();
                 PermissionGen.with(SendRecordActivity.this)
                         .addRequestCode(PermissionConst.REQUECT_CODE_CAMERA)
-                        .permissions(Manifest.permission.CAMERA)
+                        .permissions(Manifest.permission.CAMERA,
+                                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                                Manifest.permission.READ_EXTERNAL_STORAGE)
                         .request();
 
             }

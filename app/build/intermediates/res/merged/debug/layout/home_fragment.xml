@@ -48,7 +48,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="331dp"
+                android:layout_height="320dp"
                 android:background="@drawable/home2">
 
                 <TextView
@@ -65,8 +65,8 @@
 
                 <ImageView
                     android:id="@+id/iv_img"
-                    android:layout_width="173dp"
-                    android:layout_height="173dp"
+                    android:layout_width="153dp"
+                    android:layout_height="153dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="26dp"
                     android:src="@drawable/home1" />
@@ -82,7 +82,7 @@
                         android:id="@+id/tv_mol"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="109dp"
+                        android:layout_marginTop="96dp"
                         android:gravity="center"
                         android:text="750\nml"
                         android:textColor="@color/white"

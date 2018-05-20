@@ -12,12 +12,12 @@
         "source": "F:\\GitWorkSpace\\Milk_Machine\\gallery\\build\\intermediates\\bundles\\default\\res\\drawable\\pick_photo_checkbox.xml"
     },
     {
-        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6192085179e6056d54168618ede1f6f8f2213103\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
-    },
-    {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6192085179e6056d54168618ede1f6f8f2213103\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
@@ -36,12 +36,12 @@
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\6192085179e6056d54168618ede1f6f8f2213103\\output\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
-        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\vpi__tab_unselected_pressed_holo.9.png",
-        "source": "F:\\GitWorkSapce\\Milk_Machine\\framework\\build\\intermediates\\bundles\\default\\res\\drawable\\vpi__tab_unselected_pressed_holo.9.png"
-    },
-    {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\vpi__tab_unselected_pressed_holo.9.png",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\framework\\build\\intermediates\\bundles\\default\\res\\drawable\\vpi__tab_unselected_pressed_holo.9.png"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_per_pic.png",
@@ -72,24 +72,24 @@
         "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\pop2.png"
     },
     {
-        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wifi3.png",
-        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\wifi3.png"
-    },
-    {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\hm33.png",
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\drawable\\hm33.png"
     },
     {
-        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_previous_item.png",
-        "source": "F:\\GitWorkSapce\\Milk_Machine\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\drawable\\ic_action_previous_item.png"
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wifi3.png",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\wifi3.png"
+    },
+    {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_home_pm_pic.png",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\drawable\\icon_home_pm_pic.png"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\sticky_shadow_default.xml",
         "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\sticky_shadow_default.xml"
     },
     {
-        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_home_pm_pic.png",
-        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\drawable\\icon_home_pm_pic.png"
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_previous_item.png",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\drawable\\ic_action_previous_item.png"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
@@ -116,12 +116,12 @@
         "source": "F:\\GitWorkSapce\\Milk_Machine\\framework\\build\\intermediates\\bundles\\default\\res\\drawable\\progress.png"
     },
     {
-        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\login_selectors.xml",
-        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\drawable\\login_selectors.xml"
-    },
-    {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_sign_pic.png",
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\drawable\\btn_sign_pic.png"
+    },
+    {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\login_selectors.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\drawable\\login_selectors.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\gou.png",
@@ -164,32 +164,32 @@
         "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\icon_home_pm_pic.png"
     },
     {
-        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6192085179e6056d54168618ede1f6f8f2213103\\output\\res\\drawable\\abc_vector_test.xml"
-    },
-    {
-        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\whilte2_retagle.xml",
-        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\whilte2_retagle.xml"
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\black_oval_line.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\drawable\\black_oval_line.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_circle_btn_sure_pressed.xml",
         "source": "F:\\GitWorkSapce\\Milk_Machine\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\drawable\\shape_circle_btn_sure_pressed.xml"
     },
     {
-        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\black_oval_line.xml",
-        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\drawable\\black_oval_line.xml"
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\whilte2_retagle.xml",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\whilte2_retagle.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6192085179e6056d54168618ede1f6f8f2213103\\output\\res\\drawable\\abc_vector_test.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\home4.png",
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\drawable\\home4.png"
     },
     {
-        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shadow_bottom.png",
-        "source": "F:\\GitWorkSpace\\Milk_Machine\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\drawable\\shadow_bottom.png"
-    },
-    {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shadow_bottom.png",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\drawable\\shadow_bottom.png"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
@@ -280,12 +280,12 @@
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\drawable\\btn_home_mil_set_nor.png"
     },
     {
-        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\open.png",
-        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\open.png"
-    },
-    {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\popbg.png",
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\drawable\\popbg.png"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\open.png",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\open.png"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\login_selector.xml",
@@ -312,12 +312,12 @@
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
-        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\vpi__tab_unselected_focused_holo.9.png",
-        "source": "F:\\GitWorkSpace\\Milk_Machine\\framework\\build\\intermediates\\bundles\\default\\res\\drawable\\vpi__tab_unselected_focused_holo.9.png"
-    },
-    {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_home_upp_nor.png",
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\drawable\\btn_home_upp_nor.png"
+    },
+    {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\vpi__tab_unselected_focused_holo.9.png",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\framework\\build\\intermediates\\bundles\\default\\res\\drawable\\vpi__tab_unselected_focused_holo.9.png"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\org_cycle.xml",
@@ -356,12 +356,12 @@
         "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\store_line.xml"
     },
     {
-        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_baby_logo.png",
-        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\drawable\\icon_baby_logo.png"
-    },
-    {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\white1_retagle.xml",
         "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\white1_retagle.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_baby_logo.png",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\drawable\\icon_baby_logo.png"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_home_upp_nor.png",
@@ -408,12 +408,12 @@
         "source": "F:\\GitWorkSapce\\Milk_Machine\\framework\\build\\intermediates\\bundles\\default\\res\\drawable\\vpi__tab_unselected_holo.9.png"
     },
     {
-        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\con_register_password.png",
-        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\con_register_password.png"
-    },
-    {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\con_register_password.png",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\con_register_password.png"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wifi2.png",
@@ -436,12 +436,12 @@
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\drawable\\btn_rep_1_pic.png"
     },
     {
-        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\white3_retagle.xml",
-        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\white3_retagle.xml"
-    },
-    {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\green1_retagle.xml",
         "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\green1_retagle.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\white3_retagle.xml",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\white3_retagle.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\blue_cycle.xml",
@@ -540,12 +540,12 @@
         "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\btn_per_head.png"
     },
     {
-        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bai3.png",
-        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\drawable\\bai3.png"
-    },
-    {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\chat2.png",
         "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\chat2.png"
+    },
+    {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bai3.png",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\drawable\\bai3.png"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\black_cycle.xml",
