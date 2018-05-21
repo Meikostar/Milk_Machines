@@ -48,6 +48,7 @@ public final class Picker {
     private LoadEngine engine;      //图片加载器 glide  imageloder picasso
     private List<Uri> mResumeList;
     private boolean add_watermark;
+    private boolean isScan=true;
     private String watermark;
 
     Picker(Activity activity, Fragment fragment, Set<MimeType> mimeType) {
@@ -91,6 +92,15 @@ public final class Picker {
      */
     public Picker setAdd_watermark(boolean add_watermark) {
         this.add_watermark = add_watermark;
+        return this;
+    }
+    /**
+     * 是否压缩
+     *
+     * @param isScan
+     */
+    public Picker isScan(boolean isScan) {
+        this.isScan = isScan;
         return this;
     }
 
@@ -202,6 +212,7 @@ public final class Picker {
                         Intent intent = new Intent(activity, ImageSelectActivity.class);
                         intent.putExtra("add_watermark", add_watermark);
                         intent.putExtra("watermark",watermark);
+                        intent.putExtra("isScan",isScan);
                         intent.putExtra(ImageSelectActivity.EXTRA_SELECTION_SPEC, mSelectionSpec);
                         //intent.putExtra(ImageSelectActivity.EXTRA_ENGINE, (Serializable) engine);
                         intent.putParcelableArrayListExtra(ImageSelectActivity.EXTRA_RESUME_LIST, (ArrayList<? extends android.os.Parcelable>) mResumeList);

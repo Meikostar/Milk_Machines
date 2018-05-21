@@ -248,14 +248,14 @@ public class PhotoUtils {
         return null;
     }
 
-    public static String commpressImg(Context context, String path, boolean add_watermark, String watermark) {
+    public static String commpressImg(Context context, String path, boolean add_watermark, String watermark,boolean ispress) {
         if (path != null) {
             BitmapFactory.Options options = new BitmapFactory.Options();
             options.inJustDecodeBounds = true;
             BitmapFactory.decodeFile(path, options);
             options.inSampleSize = calculateInSampleSize(options, 640);
             options.inJustDecodeBounds = false;
-            options.inScaled = true;
+            options.inScaled = ispress;
             Bitmap bitmap = BitmapFactory.decodeFile(path, options);
             int degree = readPictureDegree(path);
             //旋转照片角度并以最大宽度为640压缩图片

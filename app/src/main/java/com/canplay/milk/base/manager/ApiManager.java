@@ -225,8 +225,9 @@ public class ApiManager{
         }
         if(TextUtil.isNotEmpty(SpUtil.getInstance().getToken())){
             parametersMap.put("token", SpUtil.getInstance().getToken());
-            parametersMap.put("userId", SpUtil.getInstance().getUserId());
+
         }
+        parametersMap.put("userId", SpUtil.getInstance().getUserId());
         parametersMap.put("platform", "1"); //手表
         parametersMap.put("version", AppManager.info.versionCode + "");//客户端版本
         parametersMap.put("sign", getSign(parametersMap));

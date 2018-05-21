@@ -51,7 +51,7 @@ public class SquareTransform extends BitmapTransformation {
         final Rect rect = new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());
         final RectF rectF = new RectF(rect);
         // 值越大角度越明显
-        final float roundPx = 30;
+        final float roundPx = 10;
         paint.setAntiAlias(true);
         canvas.drawARGB(0, 0, 0, 0);
         paint.setColor(color);

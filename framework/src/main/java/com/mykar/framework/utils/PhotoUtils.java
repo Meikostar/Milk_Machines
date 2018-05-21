@@ -12,6 +12,7 @@ import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.MediaStore;
+import android.support.v4.content.FileProvider;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -106,8 +107,8 @@ public class PhotoUtils {
         }
         // 为以时间为图片命名
         File imageFile = new File(dir,
-                new SimpleDateFormat("yyMMddHHmmss").format(new Date())
-                        + ".jpg");
+
+                        "meiko.jpg");
         imgPath = imageFile.getAbsolutePath();
         Uri imgUri = Uri.fromFile(imageFile);
         return imgUri;
@@ -132,8 +133,32 @@ public class PhotoUtils {
         }
         return null;
     }
-
     /**
+     * 获取截取后的图片的路径
+     */
+    public String getCropImgPaths(int requestCode, int resultCode, String data,Context context) {
+        if (resultCode == activity.RESULT_OK) {
+            if (requestCode == FrameworkConstant.REQUESTCODE_CROP) {
+                return imgPath;
+
+            } else if (requestCode == FrameworkConstant.REQUESTCODE_CAMERA || requestCode ==FrameworkConstant. REQUESTCODE_LOCATION) {
+               imgPath=data;
+                if (imgPath != null) {
+                    Uri imageUri=null;
+                    if (Build.VERSION.SDK_INT >= 24) {
+                        String authority =context.getPackageName() + ".fileProvider";
+                        imageUri = FileProvider.getUriForFile(context, authority, new File(imgPath));
+                    } else {
+                        imageUri = Uri.fromFile(new File(imgPath));
+                    }
+
+                    cropImg(imageUri, 250, 250,FrameworkConstant. REQUESTCODE_CROP, true);
+                }
+                return null;
+            }
+        }
+        return null;
+    }    /**
      * 获取图片的路径
      */
     public String getImgPath(int requestCode, int resultCode, Intent data) {

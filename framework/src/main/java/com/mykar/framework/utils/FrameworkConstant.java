@@ -9,23 +9,23 @@ public class FrameworkConstant {
     /**
      * 存放发送图片的目录
      */
-    public static String PICTURE_PATH = Environment.getExternalStorageDirectory() + "/laser/image/";
+    public static String PICTURE_PATH = Environment.getExternalStorageDirectory() + "/milk/image/";
     /**
      * 存放拍摄照片的目录
      */
-    public static String PICTURE_APP_PATH = Environment.getExternalStorageDirectory() + "/laser/image/";///marvoto/baby_image/
+    public static String PICTURE_APP_PATH = Environment.getExternalStorageDirectory() + "/milk/image/";///marvoto/baby_image/
 
     /**
      * 存放截图图片的目录
      */
     public static String CROPPICTURE_PATH = Environment
-            .getExternalStorageDirectory() + "/laser/image/crop";
+            .getExternalStorageDirectory() + "/milk/image/crop";
 
     /**
      * 存放视频目录
      */
     public static String VIDEO_PATH = Environment
-            .getExternalStorageDirectory() + "/laser/videp/";
+            .getExternalStorageDirectory() + "/milk/videp/";
 
 
     /**

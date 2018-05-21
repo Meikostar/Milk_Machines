@@ -4,6 +4,8 @@ package com.canplay.milk.mvp.present;
 import com.canplay.milk.base.BasePresenter;
 import com.canplay.milk.base.BaseView;
 
+import java.io.File;
+
 public class LoginContract {
     public    interface View extends BaseView {
 
@@ -57,7 +59,7 @@ public class LoginContract {
         /**
          *  更新头像
          */
-        void updateBabyImg();
+        void updateBabyImg(File file);
 
         /**
          * 检验验证码

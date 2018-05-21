@@ -102,9 +102,9 @@ public interface BaseApi {
      * @param options
      * @return
      */
-    @FormUrlEncoded
+
     @POST("web/updateBabyImg")
-    Observable<BASE> updateBabyImg(@QueryMap Map<String, String> options);
+    Observable<BASE> updateBabyImg(@QueryMap Map<String, Object> options);
     /**
      *  手机注册
      * @param options

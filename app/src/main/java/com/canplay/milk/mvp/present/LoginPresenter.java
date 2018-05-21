@@ -11,8 +11,11 @@ import com.canplay.milk.mvp.http.BaseApi;
 import com.canplay.milk.net.MySubscriber;
 import com.canplay.milk.util.SpUtil;
 import com.canplay.milk.util.StringUtil;
+import com.canplay.milk.util.TextUtil;
 
+import java.io.File;
 import java.util.Map;
+import java.util.Objects;
 import java.util.TreeMap;
 
 import javax.inject.Inject;
@@ -271,10 +274,16 @@ public class LoginPresenter implements LoginContract.Presenter {
         });
     }
     @Override
-    public void updateBabyImg() {
+    public void updateBabyImg(File file) {
 
-        Map<String, String> params = new TreeMap<>();
-        subscription = ApiManager.setSubscribe(contactApi.updateBabyImg(ApiManager.getParameters(params, true)), new MySubscriber<BASE >() {
+        Map<String, Object> params = new TreeMap<>();
+        if(TextUtil.isNotEmpty(SpUtil.getInstance().getToken())){
+            params.put("token", SpUtil.getInstance().getToken());
+            params.put("userId", SpUtil.getInstance().getUserId());
+            params.put("file", file);
+        }
+
+        subscription = ApiManager.setSubscribe(contactApi.updateBabyImg(params), new MySubscriber<BASE >() {
             @Override
             public void onNext(BASE ruslt) {
 

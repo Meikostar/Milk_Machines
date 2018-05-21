@@ -11,6 +11,7 @@ import com.canplay.milk.mvp.activity.account.LoginActivity;
 import com.canplay.milk.mvp.activity.account.RegisteredActivity;
 import com.canplay.milk.mvp.activity.account.RegisteredSecondActivity;
 import com.canplay.milk.mvp.activity.mine.UpdateActivity;
+import com.canplay.milk.mvp.activity.mine.UserAvarActivity;
 
 import dagger.Component;
 
@@ -22,6 +23,7 @@ import dagger.Component;
 public interface BaseComponent{
 
     void inject(LoginActivity binderActivity);
+    void inject(UserAvarActivity binderActivity);
     void inject(UpdateActivity binderActivity);
     void inject(SetFragment binderActivity);
 

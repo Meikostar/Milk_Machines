@@ -66,6 +66,7 @@ public class ImageSelectActivity extends FragmentActivity implements AlbumCollec
     private String mCapturePhotoUriHolder;
     private ProgressDialog mProgressDialog;
     private boolean add_watermark;
+    private boolean isScan;
     private String watermark;
 
     @Override
@@ -77,6 +78,7 @@ public class ImageSelectActivity extends FragmentActivity implements AlbumCollec
 
         //是否添加水印
         add_watermark = getIntent().getBooleanExtra("add_watermark", false);
+        isScan = getIntent().getBooleanExtra("isScan", false);
         watermark = getIntent().getStringExtra("watermark");
         mMediaStoreCompat = new MediaStoreCompat(this, new Handler(Looper.getMainLooper()));
 
@@ -150,7 +152,7 @@ public class ImageSelectActivity extends FragmentActivity implements AlbumCollec
                 //TODO 压缩操作
                 for (Uri u : mCollection.asList()) {
                     String imgPath = PhotoUtils.getRealFilePath(ImageSelectActivity.this, u);
-                    arryList.add(PhotoUtils.commpressImg(ImageSelectActivity.this, imgPath, add_watermark,watermark));
+                    arryList.add(isScan?PhotoUtils.commpressImg(ImageSelectActivity.this, imgPath, add_watermark,watermark,isScan):imgPath);
                 }
                 subscriber.onNext(arryList);
             }
