@@ -644,8 +644,8 @@ public final class R {
         public static final int notification_bg_normal = 0x7f0200db;
         public static final int notification_bg_normal_pressed = 0x7f0200dc;
         public static final int notification_icon_background = 0x7f0200dd;
-        public static final int notification_template_icon_bg = 0x7f02012a;
-        public static final int notification_template_icon_low_bg = 0x7f02012b;
+        public static final int notification_template_icon_bg = 0x7f02012b;
+        public static final int notification_template_icon_low_bg = 0x7f02012c;
         public static final int notification_tile_bg = 0x7f0200de;
         public static final int notify_panel_notification_icon_bg = 0x7f0200df;
         public static final int overscroll_edge = 0x7f0200e3;
@@ -665,8 +665,8 @@ public final class R {
         public static final int vpi__tab_unselected_focused_holo = 0x7f02011c;
         public static final int vpi__tab_unselected_holo = 0x7f02011d;
         public static final int vpi__tab_unselected_pressed_holo = 0x7f02011e;
-        public static final int xlistview_arrow = 0x7f020128;
-        public static final int xlistview_progressbar = 0x7f020129;
+        public static final int xlistview_arrow = 0x7f020129;
+        public static final int xlistview_progressbar = 0x7f02012a;
     }
     public static final class id {
         public static final int action0 = 0x7f0f018d;

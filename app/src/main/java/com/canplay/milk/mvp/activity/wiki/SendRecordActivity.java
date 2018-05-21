@@ -10,7 +10,11 @@ import android.widget.TextView;
 
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseActivity;
+import com.canplay.milk.base.BaseApplication;
 import com.canplay.milk.bean.UploadFileBean;
+import com.canplay.milk.mvp.component.DaggerBaseComponent;
+import com.canplay.milk.mvp.present.LoginContract;
+import com.canplay.milk.mvp.present.LoginPresenter;
 import com.canplay.milk.permission.PermissionConst;
 import com.canplay.milk.permission.PermissionFail;
 import com.canplay.milk.permission.PermissionGen;
@@ -27,6 +31,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+import javax.inject.Inject;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.valuesfeng.picker.ImageSelectActivity;
@@ -36,8 +42,10 @@ import io.valuesfeng.picker.widget.ImageLoaderEngine;
 /***
  * 记录编辑
  */
-public class SendRecordActivity extends BaseActivity  {
+public class SendRecordActivity extends BaseActivity  implements LoginContract.View{
 
+    @Inject
+    LoginPresenter presenter;
     @BindView(R.id.navigationBar)
     NavigationBar navigationBar;
     @BindView(R.id.et_content)
@@ -67,7 +75,8 @@ public class SendRecordActivity extends BaseActivity  {
         setContentView(R.layout.activity_send_dynamic);
         ButterKnife.bind(this);
         navigationBar.setNavigationBarListener(this);
-
+        DaggerBaseComponent.builder().appComponent(((BaseApplication) getApplication()).getAppComponent()).build().inject(this);
+        presenter.attachView(this);
     }
 
     @Override
@@ -226,4 +235,13 @@ public class SendRecordActivity extends BaseActivity  {
         piuvRemarkImage.setData(img_path);
     }
 
+    @Override
+    public <T> void toEntity(T entity, int type) {
+
+    }
+
+    @Override
+    public void showTomast(String msg) {
+
+    }
 }

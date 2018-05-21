@@ -40,6 +40,8 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import rx.Subscription;
+import rx.functions.Action1;
 
 
 /**
@@ -99,9 +101,28 @@ public class SetFragment extends BaseFragment implements View.OnClickListener ,L
         super.onResume();
 
     }
-
+   private Subscription mSubscription;
 
     private void initListener() {
+
+
+        mSubscription = RxBus.getInstance().toObserverable(SubscriptionBean.RxBusSendBean.class).subscribe(new Action1<SubscriptionBean.RxBusSendBean>() {
+            @Override
+            public void call(SubscriptionBean.RxBusSendBean bean) {
+                if (bean == null) return;
+
+                if (bean.type == SubscriptionBean.UPDATE) {
+                    presenter.getMyBaseInfo();
+                }
+
+            }
+        }, new Action1<Throwable>() {
+            @Override
+            public void call(Throwable throwable) {
+                throwable.printStackTrace();
+            }
+        });
+        RxBus.getInstance().addSubscription(mSubscription);
         llWifi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -158,6 +179,9 @@ public class SetFragment extends BaseFragment implements View.OnClickListener ,L
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
+        if(mSubscription!=null){
+            mSubscription.unsubscribe();
+        }
     }
 
     @Override
@@ -171,6 +195,7 @@ public class SetFragment extends BaseFragment implements View.OnClickListener ,L
     public <T> void toEntity(T entity, int type) {
         if(type==6){
             RxBus.getInstance().send(SubscriptionBean.createSendBean(SubscriptionBean.FINISH,""));
+
             SpUtil.getInstance().clearData();
             SpUtil.getInstance().putString("firt","firt");
             startActivity(new Intent(getActivity(), LoginActivity.class));

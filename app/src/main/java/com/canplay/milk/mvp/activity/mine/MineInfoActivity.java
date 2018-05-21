@@ -8,7 +8,9 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseActivity;
+import com.canplay.milk.base.BaseApplication;
 import com.canplay.milk.bean.USER;
+import com.canplay.milk.mvp.component.DaggerBaseComponent;
 import com.canplay.milk.mvp.present.LoginContract;
 import com.canplay.milk.mvp.present.LoginPresenter;
 import com.canplay.milk.permission.PermissionConst;
@@ -57,6 +59,9 @@ public class MineInfoActivity extends BaseActivity implements LoginContract.View
     public void initViews() {
         setContentView(R.layout.activity_mine_info);
         ButterKnife.bind(this);
+        DaggerBaseComponent.builder().appComponent(((BaseApplication) getApplication()).getAppComponent()).build().inject(this);
+        presenter.attachView(this);     DaggerBaseComponent.builder().appComponent(((BaseApplication) getApplication()).getAppComponent()).build().inject(this);
+        presenter.attachView(this);
         navigationBar.setNavigationBarListener(this);
        user= SpUtil.getInstance().getUsers();
         if(user!=null){

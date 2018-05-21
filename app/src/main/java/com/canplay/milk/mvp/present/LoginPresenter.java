@@ -2,13 +2,17 @@ package com.canplay.milk.mvp.present;
 
 
 import android.support.annotation.NonNull;
+import android.text.TextUtils;
 
 
+import com.canplay.milk.base.config.NetConfig;
 import com.canplay.milk.base.manager.ApiManager;
+import com.canplay.milk.base.manager.AppManager;
 import com.canplay.milk.bean.BASE;
 import com.canplay.milk.bean.USER;
 import com.canplay.milk.mvp.http.BaseApi;
 import com.canplay.milk.net.MySubscriber;
+import com.canplay.milk.util.CryptUtil;
 import com.canplay.milk.util.SpUtil;
 import com.canplay.milk.util.StringUtil;
 import com.canplay.milk.util.TextUtil;
@@ -273,17 +277,67 @@ public class LoginPresenter implements LoginContract.Presenter {
             }
         });
     }
+    /*
+   计算密钥
+    */
+    private static String getSign(Map<String, Object> parametersMap){
+        StringBuilder sb = new StringBuilder();
+        for(Map.Entry<String, Object> e : parametersMap.entrySet()){
+            if(TextUtils.isEmpty((String) e.getValue())){
+                continue;
+            }
+            String value = e.getValue().toString().trim();
+            String[] valueArr = value.split(String.valueOf(NetConfig.CHARKEY));
+            if(valueArr.length <= 1){
+                sb.append(e.getKey());
+                sb.append("=");
+                sb.append(value);
+                sb.append("&");
+            }else{
+                StringBuilder str = new StringBuilder();
+                for(String c : valueArr){
+                    str.append(c);
+                    str.append(String.valueOf(NetConfig.CHARKEY));
+                }
+                str.delete(str.length() - 1, str.length());
+                sb.append(e.getKey());
+                sb.append("=");
+                sb.append(str.toString());
+                sb.append("&");
+            }
+        }
+        int len = sb.length();
+        sb.delete(len - 1, len);
+        try{
+            return CryptUtil.md5(sb.toString() + NetConfig.APP_KEY).toLowerCase().substring(NetConfig.startNum, NetConfig.endNum);
+        }catch(Exception e){
+            e.printStackTrace();
+            return "";
+        }
+    }
     @Override
     public void updateBabyImg(File file) {
 
-        Map<String, Object> params = new TreeMap<>();
+        Map<String, Object> parametersMap = new TreeMap<>();
         if(TextUtil.isNotEmpty(SpUtil.getInstance().getToken())){
-            params.put("token", SpUtil.getInstance().getToken());
-            params.put("userId", SpUtil.getInstance().getUserId());
-            params.put("file", file);
+
+                //把用户的userID和token带上
+                parametersMap.put("device", AppManager.imei);//设备标识
+                parametersMap.put("times", System.currentTimeMillis() + "");
+
+            if(TextUtil.isNotEmpty(SpUtil.getInstance().getToken())){
+                parametersMap.put("token", SpUtil.getInstance().getToken());
+
+            }
+            parametersMap.put("userId", SpUtil.getInstance().getUserId());
+            parametersMap.put("platform", "1"); //手表
+            parametersMap.put("version", AppManager.info.versionCode + "");//客户端版本
+            parametersMap.put("sign", getSign(parametersMap));
+
+            parametersMap.put("file", file);
         }
 
-        subscription = ApiManager.setSubscribe(contactApi.updateBabyImg(params), new MySubscriber<BASE >() {
+        subscription = ApiManager.setSubscribe(contactApi.updateBabyImg(parametersMap), new MySubscriber<BASE >() {
             @Override
             public void onNext(BASE ruslt) {
 
@@ -299,6 +353,42 @@ public class LoginPresenter implements LoginContract.Presenter {
             }
         });
     }
+    @Override
+    public void growRecordImgUpload(File file) {
+
+        Map<String, Object> parametersMap = new TreeMap<>();
+        if(TextUtil.isNotEmpty(SpUtil.getInstance().getToken())){
+            //把用户的userID和token带上
+            parametersMap.put("device", AppManager.imei);//设备标识
+            parametersMap.put("times", System.currentTimeMillis() + "");
+            if(TextUtil.isNotEmpty(SpUtil.getInstance().getToken())){
+                parametersMap.put("token", SpUtil.getInstance().getToken());
+
+            }
+            parametersMap.put("userId", SpUtil.getInstance().getUserId());
+            parametersMap.put("platform", "1"); //手表
+            parametersMap.put("version", AppManager.info.versionCode + "");//客户端版本
+            parametersMap.put("sign", getSign(parametersMap));
+            parametersMap.put("file", file);
+        }
+
+        subscription = ApiManager.setSubscribe(contactApi.updateBabyImg(parametersMap), new MySubscriber<BASE >() {
+            @Override
+            public void onNext(BASE ruslt) {
+
+                mView.toEntity(ruslt,0);
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+                super.onError(e);
+                mView.showTomast(e.getMessage());
+            }
+        });
+    }
+
     @Override
     public void logout() {
 

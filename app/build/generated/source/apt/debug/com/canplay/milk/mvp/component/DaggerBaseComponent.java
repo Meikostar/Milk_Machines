@@ -14,6 +14,8 @@ import com.canplay.milk.mvp.activity.account.RegisteredActivity;
 import com.canplay.milk.mvp.activity.account.RegisteredActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.account.RegisteredSecondActivity;
 import com.canplay.milk.mvp.activity.account.RegisteredSecondActivity_MembersInjector;
+import com.canplay.milk.mvp.activity.mine.MineInfoActivity;
+import com.canplay.milk.mvp.activity.mine.MineInfoActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.mine.UpdateActivity;
 import com.canplay.milk.mvp.activity.mine.UpdateActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.mine.UserAvarActivity;
@@ -32,6 +34,8 @@ public final class DaggerBaseComponent implements BaseComponent {
   private Provider<LoginPresenter> loginPresenterProvider;
 
   private MembersInjector<LoginActivity> loginActivityMembersInjector;
+
+  private MembersInjector<MineInfoActivity> mineInfoActivityMembersInjector;
 
   private MembersInjector<UserAvarActivity> userAvarActivityMembersInjector;
 
@@ -74,6 +78,9 @@ public final class DaggerBaseComponent implements BaseComponent {
     this.loginActivityMembersInjector =
         LoginActivity_MembersInjector.create(loginPresenterProvider);
 
+    this.mineInfoActivityMembersInjector =
+        MineInfoActivity_MembersInjector.create(loginPresenterProvider);
+
     this.userAvarActivityMembersInjector =
         UserAvarActivity_MembersInjector.create(loginPresenterProvider);
 
@@ -95,6 +102,11 @@ public final class DaggerBaseComponent implements BaseComponent {
   @Override
   public void inject(LoginActivity binderActivity) {
     loginActivityMembersInjector.injectMembers(binderActivity);
+  }
+
+  @Override
+  public void inject(MineInfoActivity binderActivity) {
+    mineInfoActivityMembersInjector.injectMembers(binderActivity);
   }
 
   @Override

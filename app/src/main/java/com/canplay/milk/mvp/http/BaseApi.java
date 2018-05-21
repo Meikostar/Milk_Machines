@@ -106,6 +106,15 @@ public interface BaseApi {
     @POST("web/updateBabyImg")
     Observable<BASE> updateBabyImg(@QueryMap Map<String, Object> options);
     /**
+     * 更新头像
+     * @param options
+     * @return
+     */
+
+    @POST("web/growRecordImgUpload")
+    Observable<BASE> growRecordImgUpload(@QueryMap Map<String, Object> options);
+
+    /**
      *  手机注册
      * @param options
      * @return

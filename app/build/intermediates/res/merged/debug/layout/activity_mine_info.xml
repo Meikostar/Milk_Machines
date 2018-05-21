@@ -34,10 +34,14 @@
                     android:layout_centerInParent="true"
                     android:id="@+id/iv_imgs"
                     android:src="@drawable/btn_per_head"
-                    android:layout_width="97dp"
-                    android:layout_height="97dp"
+                    android:layout_width="92dp"
+                    android:layout_height="92dp"
                     />
-
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/white_cycle_ring"
+                    android:layout_width="97dp"
+                    android:layout_height="97dp" />
             </RelativeLayout>
             <LinearLayout
                 android:background="@color/white"

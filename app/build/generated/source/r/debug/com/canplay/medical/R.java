@@ -4729,8 +4729,8 @@ containing a value of this type.
         public static final int notification_bg_normal=0x7f0200db;
         public static final int notification_bg_normal_pressed=0x7f0200dc;
         public static final int notification_icon_background=0x7f0200dd;
-        public static final int notification_template_icon_bg=0x7f02012a;
-        public static final int notification_template_icon_low_bg=0x7f02012b;
+        public static final int notification_template_icon_bg=0x7f02012b;
+        public static final int notification_template_icon_low_bg=0x7f02012c;
         public static final int notification_tile_bg=0x7f0200de;
         public static final int notify_panel_notification_icon_bg=0x7f0200df;
         public static final int open=0x7f0200e0;
@@ -4799,14 +4799,15 @@ containing a value of this type.
         public static final int whilte2_retagle=0x7f02011f;
         public static final int white1_retagle=0x7f020120;
         public static final int white3_retagle=0x7f020121;
-        public static final int white_retagle=0x7f020122;
-        public static final int whites_retagle=0x7f020123;
-        public static final int wifi1=0x7f020124;
-        public static final int wifi2=0x7f020125;
-        public static final int wifi3=0x7f020126;
-        public static final int wifi4=0x7f020127;
-        public static final int xlistview_arrow=0x7f020128;
-        public static final int xlistview_progressbar=0x7f020129;
+        public static final int white_cycle_ring=0x7f020122;
+        public static final int white_retagle=0x7f020123;
+        public static final int whites_retagle=0x7f020124;
+        public static final int wifi1=0x7f020125;
+        public static final int wifi2=0x7f020126;
+        public static final int wifi3=0x7f020127;
+        public static final int wifi4=0x7f020128;
+        public static final int xlistview_arrow=0x7f020129;
+        public static final int xlistview_progressbar=0x7f02012a;
     }
     public static final class id {
         public static final int action0=0x7f0f018d;

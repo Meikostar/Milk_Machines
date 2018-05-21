@@ -72,5 +72,7 @@ public class LoginContract {
         void updateMyBaseInfo(String name, String fatherName, String motherName);
 
         void getLastestVersion();
+
+        void growRecordImgUpload(File file);
     }
 }
