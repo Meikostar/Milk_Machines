@@ -12,10 +12,17 @@ public class BASE {
 //                "updateInfo":"sdlfsdf",	//暂时不用管
 //                "sdkUrlName":"sdfjsldf",//暂时不用管
 //                "createTime":1525702030000
-
+//"code":0,
+//        "data":"resourceKey",	//返回地址
+//        "msg":"",
+//        "times":1526483724536
     public long createTime;
+    public long times;
     public String sdkUrlName;
+    public String code;
     public String updateInfo;
+    public String data;
+    public String msg;
     public String platformType;
     public String version;
 

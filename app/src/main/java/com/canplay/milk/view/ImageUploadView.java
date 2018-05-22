@@ -144,8 +144,8 @@ public class ImageUploadView extends LinearLayout {
         mAdapter.setMaxCount(maxCount);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new GridViewManagers(context,3));
-        initTouchHelper();
-        mHelper.attachToRecyclerView(mRecyclerView);
+//        initTouchHelper();
+//        mHelper.attachToRecyclerView(mRecyclerView);
         mRecyclerView.addOnItemTouchListener(new OnRecyclerItemClickListener(mRecyclerView) {
             @Override
             public void onItemClick(RecyclerView.ViewHolder vh) {
@@ -154,9 +154,9 @@ public class ImageUploadView extends LinearLayout {
 
             @Override
             public void onItemLongClick(RecyclerView.ViewHolder vh) {
-                if (vh.getLayoutPosition()!=maxCount-1){
-                    mHelper.startDrag(vh);
-                }
+//                if (vh.getLayoutPosition()!=maxCount-1){
+//                    mHelper.startDrag(vh);
+//                }
             }
         });
     }

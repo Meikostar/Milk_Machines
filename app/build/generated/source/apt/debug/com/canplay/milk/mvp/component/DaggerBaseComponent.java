@@ -20,6 +20,8 @@ import com.canplay.milk.mvp.activity.mine.UpdateActivity;
 import com.canplay.milk.mvp.activity.mine.UpdateActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.mine.UserAvarActivity;
 import com.canplay.milk.mvp.activity.mine.UserAvarActivity_MembersInjector;
+import com.canplay.milk.mvp.activity.wiki.GroupRecordActivity;
+import com.canplay.milk.mvp.activity.wiki.GroupRecordActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.wiki.PastWipiActivity;
 import com.canplay.milk.mvp.activity.wiki.PastWipiActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.wiki.SendRecordActivity;
@@ -42,6 +44,8 @@ public final class DaggerBaseComponent implements BaseComponent {
   private MembersInjector<LoginActivity> loginActivityMembersInjector;
 
   private Provider<BasesPresenter> basesPresenterProvider;
+
+  private MembersInjector<GroupRecordActivity> groupRecordActivityMembersInjector;
 
   private MembersInjector<PastWipiActivity> pastWipiActivityMembersInjector;
 
@@ -92,11 +96,14 @@ public final class DaggerBaseComponent implements BaseComponent {
 
     this.basesPresenterProvider = BasesPresenter_Factory.create(apiManagerProvider);
 
+    this.groupRecordActivityMembersInjector =
+        GroupRecordActivity_MembersInjector.create(basesPresenterProvider);
+
     this.pastWipiActivityMembersInjector =
         PastWipiActivity_MembersInjector.create(basesPresenterProvider);
 
     this.sendRecordActivityMembersInjector =
-        SendRecordActivity_MembersInjector.create(loginPresenterProvider);
+        SendRecordActivity_MembersInjector.create(basesPresenterProvider);
 
     this.mineInfoActivityMembersInjector =
         MineInfoActivity_MembersInjector.create(loginPresenterProvider);
@@ -122,6 +129,11 @@ public final class DaggerBaseComponent implements BaseComponent {
   @Override
   public void inject(LoginActivity binderActivity) {
     loginActivityMembersInjector.injectMembers(binderActivity);
+  }
+
+  @Override
+  public void inject(GroupRecordActivity binderActivity) {
+    groupRecordActivityMembersInjector.injectMembers(binderActivity);
   }
 
   @Override

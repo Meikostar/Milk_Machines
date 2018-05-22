@@ -99,13 +99,31 @@ public interface BaseApi {
     Observable<BASE> logout(@QueryMap Map<String, String> options);
 
     /**
-     * 登出
+     * 往期百科列表
      * @param options
      * @return
      */
 
     @POST("web/getArticleList")
     Observable<WIPI> getArticleList(@QueryMap Map<String, String> options);
+
+    /**
+     * 成长记录列表
+     * @param options
+     * @return
+     */
+
+    @POST("web/growRecordList")
+    Observable<WIPI> growRecordList(@QueryMap Map<String, String> options);
+
+    /**
+     * 成长记录
+     * @param options
+     * @return
+     */
+
+    @POST("web/growRecordInsert")
+    Observable<String> growRecordInsert(@QueryMap Map<String, String> options);
 
 
     /**

@@ -40,6 +40,7 @@ public class BaseApplication extends DaemonApplication {
     //全局单例
     AppComponent mAppComponent;
     public static  BaseApplication cplayApplication;
+    public static String url="http://oss3m8u82.bkt.clouddn.com/";
     public static Map<String,String> map=new HashMap<>();
     public static BaseApplication getInstance() {
         if (cplayApplication == null) {

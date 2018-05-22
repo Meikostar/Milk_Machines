@@ -3,75 +3,102 @@
 
     <item
         is-multidex="true"
-        jar="F:\GitWorkSapce\Milk_Machine\app\libs\pinyin4j-2.5.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.2"
-        sha1="ae353005f973da1cd8545b54354504c2503f6865">
-        <dex dex="F:\GitWorkSapce\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\2\pinyin4j-2.5.0_994e53e3ee7f946ad99ed7baddd4f205884bd8d7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\GitWorkSapce\Milk_Machine\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.2"
-        sha1="f5a07b7e073802adff4f8d49f60fbe18341c86be">
-        <dex dex="F:\GitWorkSapce\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_6a15c374e7abe2dd4ab22a0ac1435cfa1fa92fba\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\GitWorkSapce\Milk_Machine\app\libs\eventbus-3.0.0-beta1.jar"
-        jumboMode="true"
+        jar="F:\GitWorkSpace\Milk_Machine\app\libs\eventbus-3.0.0-beta1.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="d4a559b2dfb3e8a00ed37c440e118584f60db046">
-        <dex dex="F:\GitWorkSapce\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\2\eventbus-3.0.0-beta1_f236fd344a8e38e5d65f3f68d086a08023b53564\classes.dex" />
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\2\eventbus-3.0.0-beta1_3ce809c6ce626353e16fc0a379c4e3e155171564\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="F:\GitWorkSapce\Milk_Machine\framework\build\intermediates\bundles\default\libs\gson-2.3.1.jar"
-        jumboMode="true"
+        jar="F:\GitWorkSpace\Milk_Machine\gallery\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="21332fb8bd3c444784ce2627719322b3385495ee">
-        <dex dex="F:\GitWorkSapce\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\8\gson-2.3.1_230b679b704a4bcbb85885574d532cfaf98c5c82\classes.dex" />
+        sha1="0e648ee72abc6af5b488029713eda7b2ce453a81">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\4\classes_b4fd4087dd585b1d4713e970841056b7cc40aaf4\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="F:\GitWorkSapce\Milk_Machine\app\libs\libammsdk.jar"
-        jumboMode="true"
+        jar="F:\GitWorkSpace\Milk_Machine\app\libs\pinyin4j-2.5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="ae353005f973da1cd8545b54354504c2503f6865">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\2\pinyin4j-2.5.0_84faeae5736f8dbec9cc66bf1bd8c93ad37bbcbf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\GitWorkSpace\Milk_Machine\LibMarsdaemon\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="3f246ac625b04f985715968abdbdf52ddff9b9bd">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\4\classes_c1fd2fef36b6693b18497eee19ebe6b2fda477ab\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\GitWorkSpace\Milk_Machine\framework\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="2efd7c51de1b553068fdf83c21cc45e2e6e5212a">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\4\classes_c73932efda2505fad12d740cd749fac31da88d9d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\GitWorkSpace\Milk_Machine\app\libs\libammsdk.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="11b09244aedaa51bfd09269637be7c32c60da314">
-        <dex dex="F:\GitWorkSapce\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\2\libammsdk_c2c8911f01f8b211906182b0123b1c6763197b7b\classes.dex" />
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\2\libammsdk_82c490c15b94dd34734f70c54b38eea609ba8ebb\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="F:\GitWorkSapce\Milk_Machine\app\libs\slf4j-api-1.7.21.jar"
-        jumboMode="true"
+        jar="F:\GitWorkSpace\Milk_Machine\app\libs\slf4j-api-1.7.21.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="081fd4ad622f032af32378b2f229f5efc5ed1ce8">
-        <dex dex="F:\GitWorkSapce\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\2\slf4j-api-1.7.21_d7e17e8a988bc297d14940f5d977d6ef1e14be5d\classes.dex" />
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\2\slf4j-api-1.7.21_a2c09e027232a2cd1aff0eff6a8873b9a2676adc\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="F:\GitWorkSapce\Milk_Machine\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.2"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="F:\GitWorkSapce\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_185a42a641f8dd64e5dc9b2e2a6382b0c3dbbe2c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\GitWorkSapce\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\libs\zxing-4.7.3.jar"
-        jumboMode="true"
+        jar="F:\GitWorkSpace\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\libs\zxing-4.7.3.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="8de9ca74af1dc9b963af4f072fb78eba58e9743a">
-        <dex dex="F:\GitWorkSapce\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\8\zxing-4.7.3_b2f88d52f433c0aebffcacea241821d016779c59\classes.dex" />
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\8\zxing-4.7.3_031541fafb62660e6134628782bc9b6e6c03a988\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\GitWorkSpace\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a6b0cc1a589e0bcf9a295802a71d3416260fe0b9">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\4\classes_10142fded220d58ab67f177e33f1bc78471a5397\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\GitWorkSpace\Milk_Machine\framework\build\intermediates\bundles\default\libs\gson-2.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="21332fb8bd3c444784ce2627719322b3385495ee">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\8\gson-2.3.1_5496f9010f25f29cf8e9af409da4ebe15c7ae41b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\GitWorkSpace\Milk_Machine\litepal\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9f8dccf3958372db35c072612f8cdd920b3f33a6">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\4\classes_bee35f0d054f296ea8e7ca898566f50967cfbd82\classes.dex" />
     </item>
 
 </items>

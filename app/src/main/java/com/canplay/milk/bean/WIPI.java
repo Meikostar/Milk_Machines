@@ -25,6 +25,7 @@ public class WIPI {
     public int pageSize;
     public int pageNum;
     public int endRow;
+    public int startRow;
     public int total;
     public int pages;
         public List<WIPI> list;
@@ -36,5 +37,10 @@ public class WIPI {
     public String resoureKey;
     public String validStatus;
     public String version;
+    public String userId;
+    public String content;
+    public String imgResourceKeys;
+
+
 
 }

@@ -22,5 +22,17 @@ public class BaseContract {
          * @param take
          */
         void getArticleList(final int  type, String from, String take);
+
+        /**
+         * 上传成长记录
+         * @param url
+         * @param content
+         */
+        void growRecordInsert(String url,String content);
+
+        /**
+         * 成长记录
+         */
+        void growRecordList();
     }
 }

@@ -9,7 +9,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.canplay.medical.R;
+import com.canplay.milk.bean.WIPI;
+import com.canplay.milk.util.TextUtil;
+import com.canplay.milk.util.TimeUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -49,13 +53,39 @@ public class GroupRecordAdapter extends BaseRecycleViewAdapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         ViewHolder holders = (ViewHolder) holder;
-
+        WIPI wipi= (WIPI) datas.get(position);
+        holders.txtName.setText(TimeUtil.formatTims(wipi.createTime));
+        if(TextUtil.isNotEmpty(wipi.content)){
+            holders.txtDetail.setText(wipi.content);
+        }
+        if(TextUtil.isNotEmpty(wipi.imgResourceKeys)){
+            String[] split = wipi.imgResourceKeys.split(",");
+            if(split.length==1){
+                holders.ivImg1.setVisibility(View.GONE);
+                holders.ivImg2.setVisibility(View.GONE);
+                holders.ivImg3.setVisibility(View.VISIBLE);
+                Glide.with(context).load(split[0]).asBitmap().placeholder(R.drawable.moren).into(holders.ivImg1);
+            }else  if(split.length==2){
+                holders.ivImg1.setVisibility(View.GONE);
+                holders.ivImg2.setVisibility(View.VISIBLE);
+                holders.ivImg3.setVisibility(View.VISIBLE);
+                Glide.with(context).load(split[0]).asBitmap().placeholder(R.drawable.moren).into(holders.ivImg1);
+                Glide.with(context).load(split[1]).asBitmap().placeholder(R.drawable.moren).into(holders.ivImg2);
+            }else  {
+                holders.ivImg1.setVisibility(View.VISIBLE);
+                holders.ivImg2.setVisibility(View.VISIBLE);
+                holders.ivImg3.setVisibility(View.VISIBLE);
+                Glide.with(context).load(split[0]).asBitmap().placeholder(R.drawable.moren).into(holders.ivImg1);
+                Glide.with(context).load(split[1]).asBitmap().placeholder(R.drawable.moren).into(holders.ivImg2);
+                Glide.with(context).load(split[2]).asBitmap().placeholder(R.drawable.moren).into(holders.ivImg3);
+            }
+        }
 
     }
 
     @Override
     public int getItemCount() {
-        int count = 4;
+        int count = 0;
 
         if (datas != null && datas.size() > 0) {
             count = datas.size();
