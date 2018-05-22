@@ -19,6 +19,7 @@ import com.bumptech.glide.Glide;
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseActivity;
 import com.canplay.milk.base.BaseApplication;
+import com.canplay.milk.bean.BASE;
 import com.canplay.milk.bean.UploadFileBean;
 import com.canplay.milk.mvp.activity.wiki.SendRecordActivity;
 import com.canplay.milk.mvp.component.DaggerBaseComponent;
@@ -29,9 +30,11 @@ import com.canplay.milk.permission.PermissionGen;
 import com.canplay.milk.permission.PermissionSuccess;
 import com.canplay.milk.util.SpUtil;
 import com.canplay.milk.util.TextUtil;
+import com.canplay.milk.util.UploadUtil;
 import com.canplay.milk.view.CircleTransform;
 import com.canplay.milk.view.NavigationBar;
 import com.canplay.milk.view.SquareTransform;
+import com.google.gson.Gson;
 import com.mykar.framework.utils.FrameworkConstant;
 import com.mykar.framework.utils.Log;
 import com.mykar.framework.utils.PhotoUtils;
@@ -40,7 +43,9 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
@@ -49,6 +54,11 @@ import butterknife.ButterKnife;
 import io.valuesfeng.picker.ImageSelectActivity;
 import io.valuesfeng.picker.Picker;
 import io.valuesfeng.picker.widget.ImageLoaderEngine;
+import rx.Observable;
+import rx.Observer;
+import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 /**
  * 用户头像
@@ -75,6 +85,7 @@ public class UserAvarActivity extends BaseActivity implements LoginContract.View
 
         DaggerBaseComponent.builder().appComponent(((BaseApplication) getApplication()).getAppComponent()).build().inject(this);
         presenter.attachView(this);
+        mGson=new Gson();
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
         if (Build.VERSION.SDK_INT >= 24) {
@@ -122,8 +133,16 @@ public class UserAvarActivity extends BaseActivity implements LoginContract.View
 
             }else {
               if(cropImage!=null){
+
                   showProgress("上传中...");
-                  presenter.updateBabyImg(cropImage);
+                  if(TextUtil.isNotEmpty(SpUtil.getInstance().getToken())){
+                      map.put("token", SpUtil.getInstance().getToken());
+
+                  }
+                  map.put("userId", SpUtil.getInstance().getUserId());
+                  maps.put("file",cropImage);
+                  updateAvator(map,maps);
+//                  presenter.updateBabyImg(cropImage);
                   Glide.get(this).clearMemory();
                   Glide.with(this).load(cropImage).asBitmap().transform(new SquareTransform(this)).placeholder(R.drawable.moren).into(ivImg);
               }
@@ -133,8 +152,47 @@ public class UserAvarActivity extends BaseActivity implements LoginContract.View
         }
     }
     private String imgPath;
+    private Gson mGson;
+
+    private Map<String, String> map = new HashMap<>();
+    private Map<String, File> maps = new HashMap<>();
+    public void updateAvator(final Map<String, String> map,final Map<String, File> maps ){
+        Observable.create(new Observable.OnSubscribe<String>() {
+            @Override
+            public void call(Subscriber<? super String> subscriber) {
+                String url="";
+                try {
+                    url = UploadUtil.UpLoadImg(UserAvarActivity.this, "/web/updateBabyImg", map, maps);
 
 
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                subscriber.onStart();
+                subscriber.onNext(url);
+                subscriber.onCompleted();
+            }})
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<String>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onNext(String s) {
+                        BASE info = mGson.fromJson(s, BASE.class);
+                       dimessProgress();
+                    }
+                });
+
+    }
 
     private int REQUEST_CODE_CHOOSE=2;
     @Override

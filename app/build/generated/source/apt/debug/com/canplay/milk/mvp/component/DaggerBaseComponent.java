@@ -20,6 +20,12 @@ import com.canplay.milk.mvp.activity.mine.UpdateActivity;
 import com.canplay.milk.mvp.activity.mine.UpdateActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.mine.UserAvarActivity;
 import com.canplay.milk.mvp.activity.mine.UserAvarActivity_MembersInjector;
+import com.canplay.milk.mvp.activity.wiki.PastWipiActivity;
+import com.canplay.milk.mvp.activity.wiki.PastWipiActivity_MembersInjector;
+import com.canplay.milk.mvp.activity.wiki.SendRecordActivity;
+import com.canplay.milk.mvp.activity.wiki.SendRecordActivity_MembersInjector;
+import com.canplay.milk.mvp.present.BasesPresenter;
+import com.canplay.milk.mvp.present.BasesPresenter_Factory;
 import com.canplay.milk.mvp.present.LoginPresenter;
 import com.canplay.milk.mvp.present.LoginPresenter_Factory;
 import dagger.MembersInjector;
@@ -34,6 +40,12 @@ public final class DaggerBaseComponent implements BaseComponent {
   private Provider<LoginPresenter> loginPresenterProvider;
 
   private MembersInjector<LoginActivity> loginActivityMembersInjector;
+
+  private Provider<BasesPresenter> basesPresenterProvider;
+
+  private MembersInjector<PastWipiActivity> pastWipiActivityMembersInjector;
+
+  private MembersInjector<SendRecordActivity> sendRecordActivityMembersInjector;
 
   private MembersInjector<MineInfoActivity> mineInfoActivityMembersInjector;
 
@@ -78,6 +90,14 @@ public final class DaggerBaseComponent implements BaseComponent {
     this.loginActivityMembersInjector =
         LoginActivity_MembersInjector.create(loginPresenterProvider);
 
+    this.basesPresenterProvider = BasesPresenter_Factory.create(apiManagerProvider);
+
+    this.pastWipiActivityMembersInjector =
+        PastWipiActivity_MembersInjector.create(basesPresenterProvider);
+
+    this.sendRecordActivityMembersInjector =
+        SendRecordActivity_MembersInjector.create(loginPresenterProvider);
+
     this.mineInfoActivityMembersInjector =
         MineInfoActivity_MembersInjector.create(loginPresenterProvider);
 
@@ -102,6 +122,16 @@ public final class DaggerBaseComponent implements BaseComponent {
   @Override
   public void inject(LoginActivity binderActivity) {
     loginActivityMembersInjector.injectMembers(binderActivity);
+  }
+
+  @Override
+  public void inject(PastWipiActivity binderActivity) {
+    pastWipiActivityMembersInjector.injectMembers(binderActivity);
+  }
+
+  @Override
+  public void inject(SendRecordActivity binderActivity) {
+    sendRecordActivityMembersInjector.injectMembers(binderActivity);
   }
 
   @Override

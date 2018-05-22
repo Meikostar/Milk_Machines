@@ -4,6 +4,14 @@
         "source": "F:\\GitWorkSpace\\Milk_Machine\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\xml\\preferences.xml"
     },
     {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\xml\\file_paths.xml",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\xml\\file_paths.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\xml\\preferences.xml",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\xml\\preferences.xml"
+    },
+    {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\xml\\file_paths.xml",
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\xml\\file_paths.xml"
     }

@@ -15,6 +15,12 @@ public class BaseContract {
     }
 
     public  interface Presenter extends BasePresenter<View> {
-
+        /**
+         * 获取百科列表
+         * @param type
+         * @param from
+         * @param take
+         */
+        void getArticleList(final int  type, String from, String take);
     }
 }

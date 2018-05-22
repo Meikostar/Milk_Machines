@@ -4,6 +4,7 @@ package com.canplay.milk.mvp.http;
 
 import com.canplay.milk.bean.BASE;
 import com.canplay.milk.bean.USER;
+import com.canplay.milk.bean.WIPI;
 
 import java.util.List;
 import java.util.Map;
@@ -96,6 +97,16 @@ public interface BaseApi {
 
     @POST("web/logout")
     Observable<BASE> logout(@QueryMap Map<String, String> options);
+
+    /**
+     * 登出
+     * @param options
+     * @return
+     */
+
+    @POST("web/getArticleList")
+    Observable<WIPI> getArticleList(@QueryMap Map<String, String> options);
+
 
     /**
      * 更新头像

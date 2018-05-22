@@ -13,6 +13,7 @@ import com.canplay.milk.mvp.activity.account.RegisteredSecondActivity;
 import com.canplay.milk.mvp.activity.mine.MineInfoActivity;
 import com.canplay.milk.mvp.activity.mine.UpdateActivity;
 import com.canplay.milk.mvp.activity.mine.UserAvarActivity;
+import com.canplay.milk.mvp.activity.wiki.PastWipiActivity;
 import com.canplay.milk.mvp.activity.wiki.SendRecordActivity;
 
 import dagger.Component;
@@ -25,6 +26,7 @@ import dagger.Component;
 public interface BaseComponent{
 
     void inject(LoginActivity binderActivity);
+    void inject(PastWipiActivity binderActivity);
     void inject(SendRecordActivity binderActivity);
     void inject(MineInfoActivity binderActivity);
     void inject(UserAvarActivity binderActivity);

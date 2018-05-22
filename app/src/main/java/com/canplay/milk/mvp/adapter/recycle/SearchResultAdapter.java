@@ -9,7 +9,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.canplay.medical.R;
+import com.canplay.milk.bean.WIPI;
+import com.canplay.milk.util.TextUtil;
+import com.canplay.milk.util.TimeUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -49,13 +53,26 @@ public class SearchResultAdapter extends BaseRecycleViewAdapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         ViewHolder holders = (ViewHolder) holder;
+        final WIPI wipi= (WIPI) datas.get(position);
+        if(TextUtil.isNotEmpty(wipi.title)){
+            holders.tvTitle.setText(wipi.title);
+        }  if(TextUtil.isNotEmpty(wipi.shortContent)){
+            holders.tvContent.setText(wipi.shortContent);
+        }
+        Glide.with(context).load(wipi.resoureKey).asBitmap().placeholder(R.drawable.moren).into(holders.ivImg);
 
-
+        holders.tvTime.setText(TimeUtil.formatTims(wipi.updateTime==0?wipi.createTime:wipi.updateTime));
+        holders.tvGoDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.clickListener(position,wipi.id);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        int count = 4;
+        int count = 0;
 
         if (datas != null && datas.size() > 0) {
             count = datas.size();
