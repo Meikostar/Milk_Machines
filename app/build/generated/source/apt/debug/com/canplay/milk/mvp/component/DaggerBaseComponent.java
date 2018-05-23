@@ -24,6 +24,8 @@ import com.canplay.milk.mvp.activity.wiki.GroupRecordActivity;
 import com.canplay.milk.mvp.activity.wiki.GroupRecordActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.wiki.PastWipiActivity;
 import com.canplay.milk.mvp.activity.wiki.PastWipiActivity_MembersInjector;
+import com.canplay.milk.mvp.activity.wiki.PreviewRecordActivity;
+import com.canplay.milk.mvp.activity.wiki.PreviewRecordActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.wiki.SendRecordActivity;
 import com.canplay.milk.mvp.activity.wiki.SendRecordActivity_MembersInjector;
 import com.canplay.milk.mvp.present.BasesPresenter;
@@ -44,6 +46,8 @@ public final class DaggerBaseComponent implements BaseComponent {
   private MembersInjector<LoginActivity> loginActivityMembersInjector;
 
   private Provider<BasesPresenter> basesPresenterProvider;
+
+  private MembersInjector<PreviewRecordActivity> previewRecordActivityMembersInjector;
 
   private MembersInjector<GroupRecordActivity> groupRecordActivityMembersInjector;
 
@@ -96,6 +100,9 @@ public final class DaggerBaseComponent implements BaseComponent {
 
     this.basesPresenterProvider = BasesPresenter_Factory.create(apiManagerProvider);
 
+    this.previewRecordActivityMembersInjector =
+        PreviewRecordActivity_MembersInjector.create(basesPresenterProvider);
+
     this.groupRecordActivityMembersInjector =
         GroupRecordActivity_MembersInjector.create(basesPresenterProvider);
 
@@ -129,6 +136,11 @@ public final class DaggerBaseComponent implements BaseComponent {
   @Override
   public void inject(LoginActivity binderActivity) {
     loginActivityMembersInjector.injectMembers(binderActivity);
+  }
+
+  @Override
+  public void inject(PreviewRecordActivity binderActivity) {
+    previewRecordActivityMembersInjector.injectMembers(binderActivity);
   }
 
   @Override

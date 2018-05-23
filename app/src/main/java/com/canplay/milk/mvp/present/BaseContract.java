@@ -33,6 +33,12 @@ public class BaseContract {
         /**
          * 成长记录
          */
-        void growRecordList();
+       void growRecordList(final int  type, String from, String take);
+
+
+        /**
+         * 跟新成长记录
+         */
+        void growRecordUpdate(String imgResourceKeys,String content,String growRecordId);
     }
 }

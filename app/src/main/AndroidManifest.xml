@@ -179,6 +179,10 @@
             android:name="com.canplay.milk.mvp.activity.wiki.NurseryActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.canplay.milk.mvp.activity.wiki.PreviewRecordActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
 
 
         <activity

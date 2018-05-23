@@ -124,6 +124,15 @@ public interface BaseApi {
 
     @POST("web/growRecordInsert")
     Observable<String> growRecordInsert(@QueryMap Map<String, String> options);
+    /**
+     * 成长记录
+     * @param options
+     * @return
+     */
+
+    @POST("web/growRecordUpdate")
+    Observable<String> growRecordUpdate(@QueryMap Map<String, String> options);
+
 
 
     /**

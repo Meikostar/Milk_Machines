@@ -656,6 +656,10 @@
         "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\layout\\editor_info.xml"
     },
     {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_preview_record.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\activity_preview_record.xml"
+    },
+    {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_activity_chooser_view.xml"
     },
@@ -962,6 +966,10 @@
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\6192085179e6056d54168618ede1f6f8f2213103\\output\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_record.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\item_record.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",

@@ -33,13 +33,16 @@ import com.canplay.milk.view.MarkaBaseDialog;
 import com.canplay.milk.view.NavigationBar;
 import com.canplay.milk.view.ProgressDialog;
 import com.canplay.milk.view.TimeSelectorDialog;
+import com.malinskiy.superrecyclerview.OnMoreListener;
 import com.malinskiy.superrecyclerview.SuperRecyclerView;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -69,6 +72,7 @@ public class GroupRecordActivity extends BaseActivity implements BaseContract.Vi
     private final int TYPE_PULL_REFRESH = 1;
     private final int TYPE_PULL_MORE = 2;
     private final int TYPE_REMOVE = 3;
+    private int cout=12;
     @Override
     public void initViews() {
         setContentView(R.layout.activity_group_record);
@@ -89,7 +93,7 @@ public class GroupRecordActivity extends BaseActivity implements BaseContract.Vi
             @Override
             public void onRefresh() {
                 // mSuperRecyclerView.showMoreProgress();
-                presenter.growRecordList();
+                presenter.growRecordList(TYPE_PULL_REFRESH,1+"",cout+"");
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -177,15 +181,59 @@ public class GroupRecordActivity extends BaseActivity implements BaseContract.Vi
     @Override
     public <T> void toEntity(T entity, int type) {
         WIPI lists= (WIPI) entity;
-        adapter.setDatas(lists.list);
+        onDataLoaded(type,lists.total,lists.list);
+
+
+    }
+    private List<WIPI> list=new ArrayList<>();
+    private int currpage=1;
+    public void onDataLoaded(int loadtype,final int haveNext, List<WIPI> datas) {
+
+        if (loadtype == TYPE_PULL_REFRESH) {
+            currpage=1;
+            list.clear();
+            for (WIPI info : datas) {
+                list.add(info);
+            }
+        } else {
+            for (WIPI info : datas) {
+                list.add(info);
+            }
+        }
+        adapter.setDatas(list);
         adapter.notifyDataSetChanged();
 //        mSuperRecyclerView.setLoadingMore(false);
         mSuperRecyclerView.hideMoreProgress();
-        mSuperRecyclerView.removeMoreListener();
-        mSuperRecyclerView.hideMoreProgress();
 
+        /**
+         * 判断是否需要加载更多，与服务器的总条数比
+         */
+        if (haveNext>list.size()) {
+            mSuperRecyclerView.setupMoreListener(new OnMoreListener() {
+                @Override
+                public void onMoreAsked(int overallItemsCount, int itemsBeforeMore, int maxLastVisiblePosition) {
+                    currpage++;
+                    mSuperRecyclerView.showMoreProgress();
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (haveNext>list.size())
+                                mSuperRecyclerView.hideMoreProgress();
+
+                            presenter.getArticleList(TYPE_PULL_MORE,cout*currpage+"",cout+"");
+
+
+                        }
+                    }, 2000);
+                }
+            }, 1);
+        } else {
+            mSuperRecyclerView.removeMoreListener();
+            mSuperRecyclerView.hideMoreProgress();
+
+        }
     }
-
     @Override
     public void toNextStep(int type) {
 

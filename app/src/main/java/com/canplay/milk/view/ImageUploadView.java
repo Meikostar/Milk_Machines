@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.canplay.medical.R;
 import com.canplay.milk.bean.UploadFileBean;
 import com.canplay.milk.mvp.present.OnRecyclerItemClickListener;
+import com.canplay.milk.util.TextUtil;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -349,7 +350,7 @@ public class ImageUploadView extends LinearLayout {
 //                    }
                 }else {
                     thisHolder.mUploadView.setIsVideo(false);
-                    thisHolder.mUploadView.setContent(imagePaths.get(position).getForderPath(), null);
+                    thisHolder.mUploadView.setContent(TextUtil.isEmpty(imagePaths.get(position).getForderPath())?imagePaths.get(position).getUrl_():imagePaths.get(position).getForderPath(), null);
                 }
                 if (bean.getStatus()==UploadFileBean.STATUS_UPLOADING || bean.getStatus()==UploadFileBean.STATUS_BEGIN_UPLOAD){
                     uploadingView = thisHolder.mUploadView;

@@ -6,6 +6,7 @@
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/ll_bg"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="6dp"
@@ -23,7 +24,6 @@
             android:orientation="vertical">
 
             <TextView
-
                 android:layout_marginLeft="10dp"
                 android:id="@+id/txt_name"
                 android:layout_width="wrap_content"
@@ -36,6 +36,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="18dp"
                 android:id="@+id/txt_detail"
+                android:lines="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="fffff"

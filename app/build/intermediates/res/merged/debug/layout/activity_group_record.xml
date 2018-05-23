@@ -12,6 +12,7 @@
         app:navigationRight_type="txt"
         app:navigationTitle="成长记录本" />
     <com.malinskiy.superrecyclerview.SuperRecyclerView
+        android:layout_marginTop="10dp"
         android:id="@+id/super_recycle_view"
         android:overScrollMode="never"
         android:scrollbars="none"

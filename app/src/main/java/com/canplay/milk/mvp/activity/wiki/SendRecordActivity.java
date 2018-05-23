@@ -15,6 +15,7 @@ import com.canplay.milk.base.RxBus;
 import com.canplay.milk.base.SubscriptionBean;
 import com.canplay.milk.bean.BASE;
 import com.canplay.milk.bean.UploadFileBean;
+import com.canplay.milk.bean.WIPI;
 import com.canplay.milk.mvp.activity.mine.UserAvarActivity;
 import com.canplay.milk.mvp.component.DaggerBaseComponent;
 import com.canplay.milk.mvp.present.BaseContract;
@@ -59,7 +60,7 @@ import rx.schedulers.Schedulers;
 /***
  * 记录编辑
  */
-public class SendRecordActivity extends BaseActivity  implements BaseContract.View{
+public class SendRecordActivity extends BaseActivity implements BaseContract.View {
 
     @Inject
     BasesPresenter presenter;
@@ -77,14 +78,14 @@ public class SendRecordActivity extends BaseActivity  implements BaseContract.Vi
     View llBottomButton;
 
 
-    private List<File> files=new ArrayList<>();
+    private List<File> files = new ArrayList<>();
 
     private ArrayList<UploadFileBean> img_path = new ArrayList<>();
 
     private String content;
 
-    private int count=9;
-
+    private int count = 9;
+    private WIPI wipi;
 
     @Override
     public void initViews() {
@@ -92,7 +93,10 @@ public class SendRecordActivity extends BaseActivity  implements BaseContract.Vi
         ButterKnife.bind(this);
         DaggerBaseComponent.builder().appComponent(((BaseApplication) getApplication()).getAppComponent()).build().inject(this);
         presenter.attachView(this);
-        mGson=new Gson();
+        mGson = new Gson();
+        wipi = (WIPI) getIntent().getSerializableExtra("data");
+
+
     }
 
     @Override
@@ -111,9 +115,14 @@ public class SendRecordActivity extends BaseActivity  implements BaseContract.Vi
 
             @Override
             public void onAddMoreClick() {
-                if(count-img_path.size()>=1){
-
-
+                if (count - img_path.size() >= 1) {
+                    closeKeyBoard();
+                    PermissionGen.with(SendRecordActivity.this)
+                            .addRequestCode(PermissionConst.REQUECT_CODE_CAMERA)
+                            .permissions(Manifest.permission.CAMERA,
+                                    Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                                    Manifest.permission.READ_EXTERNAL_STORAGE)
+                            .request();
                 }
             }
 
@@ -130,13 +139,13 @@ public class SendRecordActivity extends BaseActivity  implements BaseContract.Vi
 
             @Override
             public void changeText(CharSequence s) {
-                   if(TextUtil.isNotEmpty(s.toString())){
-                       content=  s.toString();
+                if (TextUtil.isNotEmpty(s.toString())) {
+                    content = s.toString();
 
-                   }else {
-                       content= "";
+                } else {
+                    content = "";
 
-                   }
+                }
 
             }
         });
@@ -162,16 +171,32 @@ public class SendRecordActivity extends BaseActivity  implements BaseContract.Vi
 
             @Override
             public void navigationRight() {
-             if(img_path.size()==0){
-                 showToasts("请选择图片 ");
-                 return;
-             }
-             if(TextUtil.isEmpty(etContent.getText().toString())){
-                 showToasts("说点什么吧");
-                 return;
-             }
-             showProgress("上传中...");
-                updateAvator(new File(img_path.get(0).getForderPath()));
+                if (img_path.size() == 0) {
+                    showToasts("请选择图片 ");
+                    return;
+                }
+                if (TextUtil.isEmpty(etContent.getText().toString())) {
+                    showToasts("说点什么吧");
+                    return;
+                }
+                showProgress("上传中...");
+                int i = 0;
+
+                for (UploadFileBean bean : img_path) {
+                    i++;
+                    if (TextUtil.isEmpty(bean.getForderPath())) {
+
+                        if (i == 0) {
+                            url = bean.getUrl_();
+                        } else {
+                            url = url + "," + bean.getUrl_();
+                        }
+                    } else {
+                        poition = i + 1;
+                        updateAvator(new File(bean.getForderPath()));
+                        return;
+                    }
+                }
             }
 
             @Override
@@ -181,14 +206,32 @@ public class SendRecordActivity extends BaseActivity  implements BaseContract.Vi
         });
     }
 
+    private int poition;
+
     @Override
     public void initData() {
-
+        if (wipi != null) {
+            if (TextUtil.isNotEmpty(wipi.imgResourceKeys)) {
+                String[] split = wipi.imgResourceKeys.split(",");
+                for (int i = 0; i < split.length; i++) {
+                    if (TextUtil.isNotEmpty(split[i])) {
+                        UploadFileBean bean = new UploadFileBean(1);
+                        bean.setUrl_(split[i]);
+                        img_path.add(bean);
+                    }
+                }
+                notifyImageDataChange();
+            }
+            if (TextUtil.isNotEmpty(wipi.content)) {
+                etContent.setText(wipi.content);
+            }
+        }
     }
+
     @PermissionSuccess(requestCode = PermissionConst.REQUECT_CODE_CAMERA)
     public void requestSdcardSuccess() {
         Picker.from(this)
-                .count(count)
+                .count(count - img_path.size())
                 .enableCamera(true)
                 .setEngine(new ImageLoaderEngine())
                 .setAdd_watermark(false)
@@ -199,8 +242,10 @@ public class SendRecordActivity extends BaseActivity  implements BaseContract.Vi
     public void requestSdcardFailed() {
 //        showToast(getString(R.string.getqxdefault));
     }
-   private int REQUEST_CODE_CHOOSE=3;
+
+    private int REQUEST_CODE_CHOOSE = 3;
     private int upload_position;
+
     /**
      * 删除照片和修改相册的回调
      *
@@ -211,7 +256,7 @@ public class SendRecordActivity extends BaseActivity  implements BaseContract.Vi
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK) {
-            if(requestCode==REQUEST_CODE_CHOOSE){
+            if (requestCode == REQUEST_CODE_CHOOSE) {
                 List<String> imgs = data.getStringArrayListExtra(ImageSelectActivity.EXTRA_RESULT_SELECTION);
 
                 for (String imgPath : imgs) {
@@ -223,7 +268,6 @@ public class SendRecordActivity extends BaseActivity  implements BaseContract.Vi
                 }
 
 
-
                 notifyImageDataChange();
                 upload_position = 0;
             }
@@ -233,17 +277,18 @@ public class SendRecordActivity extends BaseActivity  implements BaseContract.Vi
 
     private Map<String, String> map = new HashMap<>();
     private Map<String, File> maps = new HashMap<>();
-    public void updateAvator(File file){
-        if(TextUtil.isNotEmpty(SpUtil.getInstance().getToken())){
+
+    public void updateAvator(File file) {
+        if (TextUtil.isNotEmpty(SpUtil.getInstance().getToken())) {
             map.put("token", SpUtil.getInstance().getToken());
 
         }
         map.put("userId", SpUtil.getInstance().getUserId());
-        maps.put("file",file);
+        maps.put("file", file);
         Observable.create(new Observable.OnSubscribe<String>() {
             @Override
             public void call(Subscriber<? super String> subscriber) {
-                String url="";
+                String url = "";
                 try {
                     url = UploadUtil.UpLoadImg(SendRecordActivity.this, "/web/growRecordImgUpload", map, maps);
 
@@ -254,7 +299,8 @@ public class SendRecordActivity extends BaseActivity  implements BaseContract.Vi
                 subscriber.onStart();
                 subscriber.onNext(url);
                 subscriber.onCompleted();
-            }})
+            }
+        })
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<String>() {
@@ -271,27 +317,41 @@ public class SendRecordActivity extends BaseActivity  implements BaseContract.Vi
                     @Override
                     public void onNext(String s) {
                         BASE info = mGson.fromJson(s, BASE.class);
-                         if(info==null||info.data==null){
-                             dimessProgress();
-                             return;
-                         }
-                        if(i==img_path.size()){
-                            if(i==1){
-                                url=info.data;
-                            }else {
-                                url=url+","+info.data;
+                        if (info == null || info.data == null) {
+                            dimessProgress();
+                            return;
+                        }
+
+                        if (poition == img_path.size()) {
+                            if (poition == 1) {
+                                url = info.data;
+                            } else {
+                                url = url + "," + info.data;
                             }
-                            presenter.growRecordInsert(url,content);
+                            if (wipi != null) {
+                                presenter.growRecordUpdate(url, content, wipi.id);
+                            } else {
+                                presenter.growRecordInsert(url, content);
+                            }
+
                             dimessProgress();
 
-                        }else {
-                            if(i==1){
-                                url=info.data;
-                            }else {
-                                url=url+","+info.data;
+                        } else {
+                            if (i == 1) {
+                                url = info.data;
+                            } else {
+                                url = url + "," + info.data;
+                            }
+                            for (int i = poition; i < img_path.size() - poition; i++) {
+                                if (TextUtil.isEmpty(img_path.get( i).getForderPath())) {
+                                    url = url + "," + img_path.get(i).getUrl_();
+
+                                } else {
+                                    updateAvator(new File(img_path.get(i).getForderPath()));
+
+                                }
                             }
 
-                            updateAvator(new File(img_path.get(i).getForderPath()));
                             i++;
                         }
 
@@ -300,9 +360,11 @@ public class SendRecordActivity extends BaseActivity  implements BaseContract.Vi
                 });
 
     }
-    private String url="";
-    private int i=1;
+
+    private String url = "";
+    private int i = 1;
     private Gson mGson;
+
     private void notifyImageDataChange() {
         if (img_path == null || img_path.size() == 0) {
             ivAddPhoto.setVisibility(View.VISIBLE);
@@ -318,7 +380,7 @@ public class SendRecordActivity extends BaseActivity  implements BaseContract.Vi
     public <T> void toEntity(T entity, int type) {
         showToasts("上传成功");
         dimessProgress();
-        RxBus.getInstance().send(SubscriptionBean.createSendBean(SubscriptionBean.GROUP,""));
+        RxBus.getInstance().send(SubscriptionBean.createSendBean(SubscriptionBean.GROUP, ""));
         finish();
     }
 

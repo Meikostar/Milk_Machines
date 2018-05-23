@@ -5,6 +5,7 @@ import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
@@ -24,6 +25,7 @@ public class GroupRecordAdapter$ViewHolder_ViewBinding implements Unbinder {
     target.ivImg1 = Utils.findRequiredViewAsType(source, R.id.iv_img1, "field 'ivImg1'", ImageView.class);
     target.ivImg2 = Utils.findRequiredViewAsType(source, R.id.iv_img2, "field 'ivImg2'", ImageView.class);
     target.ivImg3 = Utils.findRequiredViewAsType(source, R.id.iv_img3, "field 'ivImg3'", ImageView.class);
+    target.llbg = Utils.findRequiredViewAsType(source, R.id.ll_bg, "field 'llbg'", LinearLayout.class);
   }
 
   @Override
@@ -38,5 +40,6 @@ public class GroupRecordAdapter$ViewHolder_ViewBinding implements Unbinder {
     target.ivImg1 = null;
     target.ivImg2 = null;
     target.ivImg3 = null;
+    target.llbg = null;
   }
 }

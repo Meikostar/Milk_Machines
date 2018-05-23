@@ -1,11 +1,12 @@
 package com.canplay.milk.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by mykar on 17/4/26.
  */
-public class WIPI {
+public class WIPI implements Serializable{
 //    "id": "535",
 //	"pageNum":1,
 //            "pageSize":3,

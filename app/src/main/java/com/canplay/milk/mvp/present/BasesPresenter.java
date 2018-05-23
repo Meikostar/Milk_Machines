@@ -39,8 +39,8 @@ public class BasesPresenter implements BaseContract.Presenter {
     public void getArticleList(final int  type, String from, String take) {
 
         Map<String, String> params = new TreeMap<>();
-        params.put("from",from);
-        params.put("take",take);
+        params.put("page",from);
+        params.put("pageSize",take);
         subscription = ApiManager.setSubscribe(contactApi.getArticleList(ApiManager.getParameters(params, true)), new MySubscriber<WIPI>() {
             @Override
             public void onNext(WIPI ruslt) {
@@ -59,15 +59,17 @@ public class BasesPresenter implements BaseContract.Presenter {
     }
 
     @Override
-    public void growRecordList() {
+    public void growRecordList(final int  type, String from, String take) {
 
         Map<String, String> params = new TreeMap<>();
         params.put("platformType","Android");
+        params.put("page",from);
+        params.put("pageSize",take);
         subscription = ApiManager.setSubscribe(contactApi.growRecordList(ApiManager.getParameters(params, true)), new MySubscriber<WIPI>() {
             @Override
             public void onNext(WIPI ruslt) {
 
-                mView.toEntity(ruslt,2);
+                mView.toEntity(ruslt,type);
 
             }
 
@@ -103,6 +105,28 @@ public class BasesPresenter implements BaseContract.Presenter {
         });
     }
 
+    @Override
+    public void growRecordUpdate(String imgResourceKeys,String content,String growRecordId) {
+
+        Map<String, String> params = new TreeMap<>();
+        params.put("content",content);
+        params.put("imgResourceKeys",imgResourceKeys);
+        subscription = ApiManager.setSubscribe(contactApi.growRecordUpdate(ApiManager.getParameters(params, true)), new MySubscriber<String>() {
+            @Override
+            public void onNext(String ruslt) {
+
+                mView.toEntity(ruslt,1);
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+                super.onError(e);
+                mView.showTomast(e.getMessage());
+            }
+        });
+    }
 
     @Override
     public void detachView(){

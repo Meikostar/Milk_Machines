@@ -186,6 +186,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
+            android:name="com.canplay.milk.mvp.activity.wiki.PreviewRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name="com.canplay.milk.mvp.activity.wiki.PastWipiActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
