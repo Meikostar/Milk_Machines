@@ -1,43 +1,28 @@
 package com.canplay.milk.mvp.activity.wiki;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
-import android.support.v4.content.FileProvider;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.LinearLayout;
 
-import com.canplay.medical.BuildConfig;
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseActivity;
 import com.canplay.milk.base.BaseApplication;
-import com.canplay.milk.base.BaseDailogManager;
 import com.canplay.milk.bean.WIPI;
 import com.canplay.milk.mvp.adapter.recycle.SearchResultAdapter;
 import com.canplay.milk.mvp.component.DaggerBaseComponent;
 import com.canplay.milk.mvp.present.BaseContract;
 import com.canplay.milk.mvp.present.BasesPresenter;
-import com.canplay.milk.util.StringUtil;
-import com.canplay.milk.view.ClearEditText;
 import com.canplay.milk.view.DivItemDecoration;
-import com.canplay.milk.view.MarkaBaseDialog;
 import com.canplay.milk.view.NavigationBar;
-import com.canplay.milk.view.ProgressDialog;
 import com.malinskiy.superrecyclerview.OnMoreListener;
 import com.malinskiy.superrecyclerview.SuperRecyclerView;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,25 +30,22 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 /**
  * 往期百科
  */
-public class PastWipiActivity extends BaseActivity implements BaseContract.View{
+public class PastWipiActivity extends BaseActivity implements BaseContract.View {
 
     @Inject
     BasesPresenter presenter;
     @BindView(R.id.navigationBar)
     NavigationBar navigationBar;
-    @BindView(R.id.et_search)
-    ClearEditText etSearch;
     @BindView(R.id.iv_search)
     ImageView ivSearch;
     @BindView(R.id.super_recycle_view)
     SuperRecyclerView mSuperRecyclerView;
+    @BindView(R.id.ll_bg)
+    LinearLayout llBg;
     private SearchResultAdapter adapter;
     private SwipeRefreshLayout.OnRefreshListener refreshListener;
     private LinearLayoutManager mLinearLayoutManager;
@@ -91,7 +73,7 @@ public class PastWipiActivity extends BaseActivity implements BaseContract.View{
             @Override
             public void onRefresh() {
                 // mSuperRecyclerView.showMoreProgress();
-                presenter.getArticleList(TYPE_PULL_REFRESH,1+"",cout+"");
+                presenter.getArticleList(TYPE_PULL_REFRESH, 1 + "", cout + "");
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -122,13 +104,19 @@ public class PastWipiActivity extends BaseActivity implements BaseContract.View{
 
     @Override
     public void bindEvents() {
-      adapter.setClickListener(new SearchResultAdapter.OnItemClickListener() {
-          @Override
-          public void clickListener(int type, String data) {
+        llBg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(PastWipiActivity.this,PastWipiSearchActivity.class));
+            }
+        });
+        adapter.setClickListener(new SearchResultAdapter.OnItemClickListener() {
+            @Override
+            public void clickListener(int type, String data) {
 //              new Intent(PastWipiActivity.this,)
 //              startActivity()
-          }
-      });
+            }
+        });
     }
 
 
@@ -138,12 +126,13 @@ public class PastWipiActivity extends BaseActivity implements BaseContract.View{
     }
 
 
-    private List<WIPI> list=new ArrayList<>();
-    private int currpage=1;
-    public void onDataLoaded(int loadtype,final int haveNext, List<WIPI> datas) {
+    private List<WIPI> list = new ArrayList<>();
+    private int currpage = 1;
+
+    public void onDataLoaded(int loadtype, final int haveNext, List<WIPI> datas) {
 
         if (loadtype == TYPE_PULL_REFRESH) {
-            currpage=1;
+            currpage = 1;
             list.clear();
             for (WIPI info : datas) {
                 list.add(info);
@@ -161,7 +150,7 @@ public class PastWipiActivity extends BaseActivity implements BaseContract.View{
         /**
          * 判断是否需要加载更多，与服务器的总条数比
          */
-        if (haveNext>list.size()) {
+        if (haveNext > list.size()) {
             mSuperRecyclerView.setupMoreListener(new OnMoreListener() {
                 @Override
                 public void onMoreAsked(int overallItemsCount, int itemsBeforeMore, int maxLastVisiblePosition) {
@@ -171,10 +160,10 @@ public class PastWipiActivity extends BaseActivity implements BaseContract.View{
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            if (haveNext>list.size())
+                            if (haveNext > list.size())
                                 mSuperRecyclerView.hideMoreProgress();
 
-                                presenter.getArticleList(TYPE_PULL_MORE,cout*currpage+"",cout+"");
+                            presenter.getArticleList(TYPE_PULL_MORE, cout * currpage + "", cout + "");
 
 
                         }
@@ -187,12 +176,14 @@ public class PastWipiActivity extends BaseActivity implements BaseContract.View{
 
         }
     }
-    private int cout=8;
+
+    private int cout = 8;
+
     @Override
     public <T> void toEntity(T entity, int type) {
-        WIPI   lists= (WIPI) entity;
+        WIPI lists = (WIPI) entity;
 
-        onDataLoaded(type,lists.total,lists.list);
+        onDataLoaded(type, lists.total, lists.list);
     }
 
     @Override
@@ -202,9 +193,8 @@ public class PastWipiActivity extends BaseActivity implements BaseContract.View{
 
     @Override
     public void showTomast(String msg) {
-         showToasts(msg);
+        showToasts(msg);
     }
-
 
 
 

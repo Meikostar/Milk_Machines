@@ -135,7 +135,7 @@ public class PreviewRecordActivity extends BaseActivity implements BaseContract.
             public void call(SubscriptionBean.RxBusSendBean bean) {
                 if (bean == null) return;
                 if (SubscriptionBean.GROUP == bean.type) {
-
+                   presenter.growRecordDetail(wipi.id);
 
                 }
 
@@ -161,9 +161,22 @@ public class PreviewRecordActivity extends BaseActivity implements BaseContract.
 
     @Override
     public <T> void toEntity(T entity, int type) {
-        WIPI lists = (WIPI) entity;
+         wipi = (WIPI) entity;
 
-
+        if(wipi!=null){
+            data.clear();
+            if(TextUtil.isNotEmpty(wipi.content)){
+                tvContent.setText(wipi.content);
+            }
+            tvTime.setText(TimeUtil.formatTims(wipi.updateTime==0?wipi.createTime:wipi.updateTime));
+            if(TextUtil.isNotEmpty(wipi.imgResourceKeys)){
+                String[] split = wipi.imgResourceKeys.split(",");
+                for(int i=0;i<split.length;i++){
+                    data.add(split[i]);
+                }
+                adapter.setData(data);
+            }
+        }
     }
 
     private List<WIPI> list = new ArrayList<>();
@@ -180,10 +193,5 @@ public class PreviewRecordActivity extends BaseActivity implements BaseContract.
     }
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
+
 }

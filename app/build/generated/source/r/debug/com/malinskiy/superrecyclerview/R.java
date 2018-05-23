@@ -52,11 +52,11 @@ public final class R {
         public static final int top = 0x7f0f003b;
     }
     public static final class layout {
-        public static final int layout_more_progress = 0x7f040070;
-        public static final int layout_progress = 0x7f040071;
-        public static final int layout_progress_recyclerview = 0x7f040072;
-        public static final int layout_recyclerview_horizontalscroll = 0x7f040073;
-        public static final int layout_recyclerview_verticalscroll = 0x7f040074;
+        public static final int layout_more_progress = 0x7f040072;
+        public static final int layout_progress = 0x7f040073;
+        public static final int layout_progress_recyclerview = 0x7f040074;
+        public static final int layout_recyclerview_horizontalscroll = 0x7f040075;
+        public static final int layout_recyclerview_verticalscroll = 0x7f040076;
     }
     public static final class styleable {
         public static final int[] RecyclerView = { 0x010100c4, 0x7f01016d, 0x7f01016e, 0x7f01016f, 0x7f010170 };

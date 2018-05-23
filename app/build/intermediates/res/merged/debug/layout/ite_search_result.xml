@@ -8,7 +8,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -69,7 +69,7 @@
                 android:maxLines="4"
                 android:textColor="@color/color72"
                 android:textSize="13sp"
-                tools:text="东方今典金佛的解决的房价的房价的搜房奇偶附近的及发动机佛的是奇偶及奇偶点三姐夫姐夫的姐夫的房间大姐夫的龙卷风" />
+                tools:text="" />
 
             <TextView
                 android:id="@+id/tv_go_detail"
@@ -82,7 +82,7 @@
                 android:padding="5dp"
                 android:textColor="#4ab789"
                 android:textSize="13sp"
-                tools:text="点击查看详情》" />
+                android:text="点击查看详情》" />
         </LinearLayout>
     </LinearLayout>
 

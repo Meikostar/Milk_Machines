@@ -552,6 +552,10 @@
         "source": "F:\\GitWorkSpace\\Milk_Machine\\zxingLibrary\\build\\intermediates\\bundles\\default\\res\\drawable\\black_cycle.xml"
     },
     {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\add.png",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\add.png"
+    },
+    {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\hm4.png",
         "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\hm4.png"
     },

@@ -58,6 +58,28 @@ public class BasesPresenter implements BaseContract.Presenter {
         });
     }
 
+    public void SearchArticleList(final int  type, String from, String take,String content) {
+
+        Map<String, String> params = new TreeMap<>();
+        params.put("content",content);
+        params.put("page",from);
+        params.put("pageSize",take);
+        subscription = ApiManager.setSubscribe(contactApi.getArticleList(ApiManager.getParameters(params, true)), new MySubscriber<WIPI>() {
+            @Override
+            public void onNext(WIPI ruslt) {
+
+                mView.toEntity(ruslt,type);
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+                super.onError(e);
+                mView.showTomast(e.getMessage());
+            }
+        });
+    }
     @Override
     public void growRecordList(final int  type, String from, String take) {
 
@@ -75,7 +97,44 @@ public class BasesPresenter implements BaseContract.Presenter {
 
             @Override
             public void onError(Throwable e) {
+                super.onError(e);
+                mView.showTomast(e.getMessage());
+            }
+        });
+    }
+    @Override
+    public void growRecordDetail( String id) {
 
+        Map<String, String> params = new TreeMap<>();
+        params.put("growRecordId",id);
+        subscription = ApiManager.setSubscribe(contactApi.growRecordDetail(ApiManager.getParameters(params, true)), new MySubscriber<WIPI>() {
+            @Override
+            public void onNext(WIPI ruslt) {
+                mView.toEntity(ruslt,6);
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                super.onError(e);
+                mView.showTomast(e.getMessage());
+            }
+        });
+    }
+    @Override
+    public void growRecordDelete( String id) {
+
+        Map<String, String> params = new TreeMap<>();
+        params.put("growRecordId",id);
+        subscription = ApiManager.setSubscribe(contactApi.growRecordDelete(ApiManager.getParameters(params, true)), new MySubscriber<String>() {
+            @Override
+            public void onNext(String ruslt) {
+
+                mView.toEntity(ruslt,8);
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
                 super.onError(e);
                 mView.showTomast(e.getMessage());
             }
@@ -110,6 +169,7 @@ public class BasesPresenter implements BaseContract.Presenter {
 
         Map<String, String> params = new TreeMap<>();
         params.put("content",content);
+        params.put("growRecordId",growRecordId);
         params.put("imgResourceKeys",imgResourceKeys);
         subscription = ApiManager.setSubscribe(contactApi.growRecordUpdate(ApiManager.getParameters(params, true)), new MySubscriber<String>() {
             @Override

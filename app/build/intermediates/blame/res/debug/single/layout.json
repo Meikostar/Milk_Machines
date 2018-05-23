@@ -384,6 +384,10 @@
         "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\layout\\acitivity_add_milk.xml"
     },
     {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_base_detele.xml",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\layout\\dialog_base_detele.xml"
+    },
+    {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_search.xml",
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\view_search.xml"
     },
@@ -708,6 +712,10 @@
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\6192085179e6056d54168618ede1f6f8f2213103\\output\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_preview_record.xml",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\layout\\activity_preview_record.xml"
+    },
+    {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_bind_phone.xml",
         "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\layout\\activity_bind_phone.xml"
     },
@@ -820,6 +828,10 @@
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\activity_remind_health.xml"
     },
     {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_record.xml",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\layout\\item_record.xml"
+    },
+    {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_image_select.xml",
         "source": "F:\\GitWorkSapce\\Milk_Machine\\gallery\\build\\intermediates\\bundles\\default\\res\\layout\\activity_image_select.xml"
     },
@@ -898,6 +910,10 @@
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_registered2.xml",
         "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\layout\\activity_registered2.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_search_pasts.xml",
+        "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\layout\\activity_search_pasts.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",

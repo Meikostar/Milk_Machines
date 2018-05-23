@@ -5,10 +5,10 @@ import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
 import com.canplay.medical.R;
-import com.canplay.milk.view.ClearEditText;
 import com.canplay.milk.view.NavigationBar;
 import com.malinskiy.superrecyclerview.SuperRecyclerView;
 import java.lang.IllegalStateException;
@@ -27,9 +27,9 @@ public class PastWipiActivity_ViewBinding implements Unbinder {
     this.target = target;
 
     target.navigationBar = Utils.findRequiredViewAsType(source, R.id.navigationBar, "field 'navigationBar'", NavigationBar.class);
-    target.etSearch = Utils.findRequiredViewAsType(source, R.id.et_search, "field 'etSearch'", ClearEditText.class);
     target.ivSearch = Utils.findRequiredViewAsType(source, R.id.iv_search, "field 'ivSearch'", ImageView.class);
     target.mSuperRecyclerView = Utils.findRequiredViewAsType(source, R.id.super_recycle_view, "field 'mSuperRecyclerView'", SuperRecyclerView.class);
+    target.llBg = Utils.findRequiredViewAsType(source, R.id.ll_bg, "field 'llBg'", LinearLayout.class);
   }
 
   @Override
@@ -40,8 +40,8 @@ public class PastWipiActivity_ViewBinding implements Unbinder {
     this.target = null;
 
     target.navigationBar = null;
-    target.etSearch = null;
     target.ivSearch = null;
     target.mSuperRecyclerView = null;
+    target.llBg = null;
   }
 }

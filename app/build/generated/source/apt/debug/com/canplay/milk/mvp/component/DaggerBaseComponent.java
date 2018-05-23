@@ -24,6 +24,8 @@ import com.canplay.milk.mvp.activity.wiki.GroupRecordActivity;
 import com.canplay.milk.mvp.activity.wiki.GroupRecordActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.wiki.PastWipiActivity;
 import com.canplay.milk.mvp.activity.wiki.PastWipiActivity_MembersInjector;
+import com.canplay.milk.mvp.activity.wiki.PastWipiSearchActivity;
+import com.canplay.milk.mvp.activity.wiki.PastWipiSearchActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.wiki.PreviewRecordActivity;
 import com.canplay.milk.mvp.activity.wiki.PreviewRecordActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.wiki.SendRecordActivity;
@@ -41,11 +43,13 @@ import javax.inject.Provider;
 public final class DaggerBaseComponent implements BaseComponent {
   private Provider<ApiManager> apiManagerProvider;
 
+  private Provider<BasesPresenter> basesPresenterProvider;
+
+  private MembersInjector<PastWipiSearchActivity> pastWipiSearchActivityMembersInjector;
+
   private Provider<LoginPresenter> loginPresenterProvider;
 
   private MembersInjector<LoginActivity> loginActivityMembersInjector;
-
-  private Provider<BasesPresenter> basesPresenterProvider;
 
   private MembersInjector<PreviewRecordActivity> previewRecordActivityMembersInjector;
 
@@ -93,12 +97,15 @@ public final class DaggerBaseComponent implements BaseComponent {
           }
         };
 
+    this.basesPresenterProvider = BasesPresenter_Factory.create(apiManagerProvider);
+
+    this.pastWipiSearchActivityMembersInjector =
+        PastWipiSearchActivity_MembersInjector.create(basesPresenterProvider);
+
     this.loginPresenterProvider = LoginPresenter_Factory.create(apiManagerProvider);
 
     this.loginActivityMembersInjector =
         LoginActivity_MembersInjector.create(loginPresenterProvider);
-
-    this.basesPresenterProvider = BasesPresenter_Factory.create(apiManagerProvider);
 
     this.previewRecordActivityMembersInjector =
         PreviewRecordActivity_MembersInjector.create(basesPresenterProvider);
@@ -131,6 +138,11 @@ public final class DaggerBaseComponent implements BaseComponent {
 
     this.registeredActivityMembersInjector =
         RegisteredActivity_MembersInjector.create(loginPresenterProvider);
+  }
+
+  @Override
+  public void inject(PastWipiSearchActivity binderActivity) {
+    pastWipiSearchActivityMembersInjector.injectMembers(binderActivity);
   }
 
   @Override

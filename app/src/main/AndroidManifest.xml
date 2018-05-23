@@ -189,6 +189,10 @@
             android:name="com.canplay.milk.mvp.activity.wiki.PastWipiActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.canplay.milk.mvp.activity.wiki.PastWipiSearchActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
 
         <activity
             android:name="com.canplay.milk.mvp.activity.wiki.GroupRecordActivity"

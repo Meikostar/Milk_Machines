@@ -1,6 +1,7 @@
 package com.canplay.milk.mvp.activity.wiki;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
@@ -108,6 +109,8 @@ public class GroupRecordActivity extends BaseActivity implements BaseContract.Vi
         };
         mSuperRecyclerView.setRefreshListener(refreshListener);
 
+        showPopwindow();
+
     }
     private void reflash() {
         if (mSuperRecyclerView != null) {
@@ -139,6 +142,14 @@ public class GroupRecordActivity extends BaseActivity implements BaseContract.Vi
 
              }
          });
+
+        adapter.setClickListener(new GroupRecordAdapter.OnItemClickListener() {
+            @Override
+            public void clickListener(int type, String ids) {
+                id=ids;
+                dialog.show();
+            }
+        });
     }
 
 
@@ -174,14 +185,34 @@ public class GroupRecordActivity extends BaseActivity implements BaseContract.Vi
             mSubscription.unsubscribe();
         }
     }
+   private String id;
+   private MarkaBaseDialog dialog;
+   public void showPopwindow(){
 
-
-
+         dialog = BaseDailogManager.getInstance().getBuilder(this).setLayoutID(R.layout.dialog_base_detele).setOnClickListener(new DialogInterface.OnClickListener() {
+           @Override
+           public void onClick(DialogInterface dialogInterface, int which) {
+               if(which==DialogInterface.BUTTON_POSITIVE){
+                   dialog.dismiss();
+                   presenter.growRecordDelete(id);
+               }else {
+                   dialog.dismiss();
+               }
+           }
+       }).create();
+   }
 
     @Override
     public <T> void toEntity(T entity, int type) {
-        WIPI lists= (WIPI) entity;
-        onDataLoaded(type,lists.total,lists.list);
+        dimessProgress();
+        if(type==8){
+            showToasts("删除成功");
+            reflash();
+        }else {
+            WIPI lists= (WIPI) entity;
+            onDataLoaded(type,lists.total,lists.list);
+        }
+
 
 
     }
@@ -221,7 +252,7 @@ public class GroupRecordActivity extends BaseActivity implements BaseContract.Vi
                             if (haveNext>list.size())
                                 mSuperRecyclerView.hideMoreProgress();
 
-                            presenter.getArticleList(TYPE_PULL_MORE,cout*currpage+"",cout+"");
+                            presenter.growRecordList(TYPE_PULL_MORE,cout*currpage+"",cout+"");
 
 
                         }
@@ -236,12 +267,13 @@ public class GroupRecordActivity extends BaseActivity implements BaseContract.Vi
     }
     @Override
     public void toNextStep(int type) {
-
+        dimessProgress();
     }
 
     @Override
     public void showTomast(String msg) {
-
+       showToasts(msg);
+        dimessProgress();
     }
 
 

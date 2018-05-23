@@ -117,6 +117,23 @@ public interface BaseApi {
     Observable<WIPI> growRecordList(@QueryMap Map<String, String> options);
 
     /**
+     * 成长详情
+     * @param options
+     * @return
+     */
+
+    @POST("web/growRecordDetail")
+    Observable<WIPI> growRecordDetail(@QueryMap Map<String, String> options);
+
+    /**
+     * 成长详情
+     * @param options
+     * @return
+     */
+
+    @POST("web/growRecordDelete")
+    Observable<String> growRecordDelete(@QueryMap Map<String, String> options);
+    /**
      * 成长记录
      * @param options
      * @return

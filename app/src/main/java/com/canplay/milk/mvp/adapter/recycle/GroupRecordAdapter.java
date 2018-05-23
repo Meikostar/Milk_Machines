@@ -68,6 +68,13 @@ public class GroupRecordAdapter extends BaseRecycleViewAdapter {
                 context.startActivity(intent);
             }
         });
+        holders.llbg.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                listener.clickListener(position,wipi.id);
+                return true;
+            }
+        });
         if (TextUtil.isNotEmpty(wipi.imgResourceKeys)) {
             String[] split = wipi.imgResourceKeys.split(",");
             if (split.length == 1) {

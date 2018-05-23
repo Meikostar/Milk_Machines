@@ -40,5 +40,22 @@ public class BaseContract {
          * 跟新成长记录
          */
         void growRecordUpdate(String imgResourceKeys,String content,String growRecordId);
+
+
+        /**
+         * 搜索文章
+         */
+        void SearchArticleList(final int  type, String from, String take,String content);
+
+
+        /**
+         * 记录详情
+         */
+        void growRecordDetail( String id);
+
+        /**
+         * 删除记录
+         */
+        void growRecordDelete( String id);
     }
 }

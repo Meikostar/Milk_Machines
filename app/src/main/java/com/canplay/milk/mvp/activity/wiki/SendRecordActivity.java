@@ -28,6 +28,7 @@ import com.canplay.milk.permission.PermissionGen;
 import com.canplay.milk.permission.PermissionSuccess;
 import com.canplay.milk.util.SpUtil;
 import com.canplay.milk.util.TextUtil;
+import com.canplay.milk.util.TimeUtil;
 import com.canplay.milk.util.UploadUtil;
 import com.canplay.milk.view.ClearEditText;
 import com.canplay.milk.view.ImageUploadView;
@@ -95,7 +96,7 @@ public class SendRecordActivity extends BaseActivity implements BaseContract.Vie
         presenter.attachView(this);
         mGson = new Gson();
         wipi = (WIPI) getIntent().getSerializableExtra("data");
-
+        txtTime.setText(TimeUtil.formatTims(System.currentTimeMillis()));
 
     }
 
@@ -180,19 +181,22 @@ public class SendRecordActivity extends BaseActivity implements BaseContract.Vie
                     return;
                 }
                 showProgress("上传中...");
-                int i = 0;
+                int a = 0;
 
                 for (UploadFileBean bean : img_path) {
-                    i++;
+                    a++;
                     if (TextUtil.isEmpty(bean.getForderPath())) {
 
-                        if (i == 0) {
+                        if (a == 1) {
                             url = bean.getUrl_();
                         } else {
                             url = url + "," + bean.getUrl_();
                         }
+                        if(a==img_path.size()){
+                            presenter.growRecordUpdate(url, content, wipi.id);
+                        }
                     } else {
-                        poition = i + 1;
+                        i = a ;
                         updateAvator(new File(bean.getForderPath()));
                         return;
                     }
@@ -322,8 +326,8 @@ public class SendRecordActivity extends BaseActivity implements BaseContract.Vie
                             return;
                         }
 
-                        if (poition == img_path.size()) {
-                            if (poition == 1) {
+                        if (i == img_path.size()) {
+                            if (i == 1) {
                                 url = info.data;
                             } else {
                                 url = url + "," + info.data;
@@ -342,7 +346,7 @@ public class SendRecordActivity extends BaseActivity implements BaseContract.Vie
                             } else {
                                 url = url + "," + info.data;
                             }
-                            for (int i = poition; i < img_path.size() - poition; i++) {
+
                                 if (TextUtil.isEmpty(img_path.get( i).getForderPath())) {
                                     url = url + "," + img_path.get(i).getUrl_();
 
@@ -350,7 +354,7 @@ public class SendRecordActivity extends BaseActivity implements BaseContract.Vie
                                     updateAvator(new File(img_path.get(i).getForderPath()));
 
                                 }
-                            }
+
 
                             i++;
                         }
