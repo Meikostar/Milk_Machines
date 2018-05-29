@@ -1,699 +1,722 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:2:1-355:12
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:2:1-364:12
 	package
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:3:5-34
-		INJECTED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml
-		INJECTED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:3:5-34
+		INJECTED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml
+		INJECTED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml
-		INJECTED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml
+		INJECTED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml
+		INJECTED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml
-		INJECTED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml
+		INJECTED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml
+		INJECTED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:5:5-80
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:5:5-80
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:5:22-78
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:5:22-78
 uses-permission#android.permission.VIBRATE
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:6:5-65
-MERGED from [Milk_Machine:zxingLibrary:unspecified] F:\GitWorkSapce\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\AndroidManifest.xml:11:5-66
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:6:5-65
+MERGED from [Milk_Machine:zxingLibrary:unspecified] F:\GitWorkSpace\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\AndroidManifest.xml:11:5-66
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:6:22-63
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:6:22-63
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:7:5-70
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:7:5-70
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:7:22-68
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:7:22-68
 uses-permission#android.permission.INTERNET
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:8:5-66
-MERGED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:11:5-67
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:8:5-66
+MERGED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:11:5-67
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:8:22-64
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:8:22-64
 uses-permission#android.permission.BLUETOOTH
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:9:5-68
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:9:5-68
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:9:22-65
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:9:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:10:5-74
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:10:5-74
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:10:22-71
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:10:22-71
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:11:5-71
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:11:5-71
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:11:22-68
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:11:22-68
 uses-permission#android.permission.READ_PROFILE
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:12:5-71
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:12:5-71
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:12:22-68
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:12:22-68
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:13:5-75
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:13:5-75
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:13:22-72
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:13:22-72
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:14:5-81
-MERGED from [Milk_Machine:gallery:unspecified] F:\GitWorkSapce\Milk_Machine\gallery\build\intermediates\bundles\default\AndroidManifest.xml:11:5-81
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:14:5-81
+MERGED from [Milk_Machine:gallery:unspecified] F:\GitWorkSpace\Milk_Machine\gallery\build\intermediates\bundles\default\AndroidManifest.xml:11:5-81
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:14:22-78
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:14:22-78
 uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:15:5-84
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:15:5-84
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:15:22-81
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:15:22-81
 uses-permission#android.permission.WRITE_SETTINGS
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:17:5-73
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:17:5-73
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:17:22-70
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:17:22-70
 uses-permission#android.permission.KILL_BACKGROUND_PROCESSES
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:18:5-84
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:18:5-84
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:18:22-81
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:18:22-81
 uses-sdk
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:20:5-43
-MERGED from [Milk_Machine:gallery:unspecified] F:\GitWorkSapce\Milk_Machine\gallery\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
-MERGED from [Milk_Machine:LibMarsdaemon:unspecified] F:\GitWorkSapce\Milk_Machine\LibMarsdaemon\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
-MERGED from [Milk_Machine:litepal:unspecified] F:\GitWorkSapce\Milk_Machine\litepal\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
-MERGED from [Milk_Machine:zxingLibrary:unspecified] F:\GitWorkSapce\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:design:23.3.0] C:\Users\Administrator\.android\build-cache\065ed127cad19bfa7f5a3a2d2ca23a5f0c4d3b67\output\AndroidManifest.xml:20:5-43
-MERGED from [Milk_Machine:framework:unspecified] F:\GitWorkSapce\Milk_Machine\framework\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:multidex:1.0.1] C:\Users\Administrator\.android\build-cache\79f5b0daf180b3f9f0a8eeaf6a704a31ed689863\output\AndroidManifest.xml:18:5-42
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Administrator\.android\build-cache\2f51c73abbfd2c323bea2c21c7f3db96b1ab38d2\output\AndroidManifest.xml:5:5-7:41
-MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\Administrator\.android\build-cache\2ea7c8b25f3e7c37b8979c3897efc047ac6da8a9\output\AndroidManifest.xml:19:5-43
-MERGED from [com.orhanobut:logger:1.15] C:\Users\Administrator\.android\build-cache\72332a3d9094f82638532b79b13a65a9f4ebf666\output\AndroidManifest.xml:6:5-43
-MERGED from [com.malinskiy:superrecyclerview:1.1.4] C:\Users\Administrator\.android\build-cache\d0279ca0d103ef1be4c739c0b501070c956be491\output\AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:recyclerview-v7:23.3.0] C:\Users\Administrator\.android\build-cache\57bddc77b0c4e5733cdd86c1090cf702d19194e8\output\AndroidManifest.xml:20:5-43
-MERGED from [com.github.castorflex.smoothprogressbar:library-circular:1.2.0] C:\Users\Administrator\.android\build-cache\6b06234db826e993be359dbbad49a6dc23b0ab7f\output\AndroidManifest.xml:8:5-10:41
-MERGED from [com.jakewharton:butterknife:8.5.1] C:\Users\Administrator\.android\build-cache\ade0f00b905a6196b78651d537408405f01b4bbf\output\AndroidManifest.xml:5:5-43
-MERGED from [me.guhy:SwipeRefreshPlus:1.0.8] C:\Users\Administrator\.android\build-cache\1d7e6342ee39a60f10d063baaf6dd80fc2e82cab\output\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\6192085179e6056d54168618ede1f6f8f2213103\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\7c1dd9101d388fa07baae8a49cb1dcba822d2e8c\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\2d2539e08d648f8652cb4fd2e2d6ab8457f3688d\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\a31fe6c091eef092e45bf301c7bee69d1af84f22\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\19f3e4dd28ddc5d555c06147aa8ebd86f624f48a\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\f0a86c268533fd21ce0d8e368b40da6b05d52f03\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\534e4b1094e5a0a03bfb7b588694123a4a3b643f\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\0f68a79eb583fa062eb1f76f4ef7ab31a8fe6a79\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\de13caf9cae9e4316760a364842319ef8f8226a3\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\31268a617e55c2b32c625f1eaf39b8855827709c\output\AndroidManifest.xml:20:5-44
-MERGED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:7:5-9:41
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:20:5-43
+MERGED from [Milk_Machine:gallery:unspecified] F:\GitWorkSpace\Milk_Machine\gallery\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+MERGED from [Milk_Machine:LibMarsdaemon:unspecified] F:\GitWorkSpace\Milk_Machine\LibMarsdaemon\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+MERGED from [Milk_Machine:litepal:unspecified] F:\GitWorkSpace\Milk_Machine\litepal\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+MERGED from [Milk_Machine:zxingLibrary:unspecified] F:\GitWorkSpace\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:23.3.0] C:\Users\Administrator\.android\build-cache\97abfc55d1e504c2314e10ab5909fa0eb140d1bc\output\AndroidManifest.xml:20:5-43
+MERGED from [Milk_Machine:framework:unspecified] F:\GitWorkSpace\Milk_Machine\framework\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\Administrator\.android\build-cache\f5ebc32c6f4ffe4c24dde7410b116e7da93e67b9\output\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Administrator\.android\build-cache\b21b4a8a229d67fe4c9d46878885e2f4832a3f3a\output\AndroidManifest.xml:5:5-7:41
+MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\Administrator\.android\build-cache\9224796eb7af8230b024224dc97032da1950957d\output\AndroidManifest.xml:19:5-43
+MERGED from [com.orhanobut:logger:1.15] C:\Users\Administrator\.android\build-cache\7e1eabea27807b68066a3754ada305ffc7d63308\output\AndroidManifest.xml:6:5-43
+MERGED from [com.malinskiy:superrecyclerview:1.1.4] C:\Users\Administrator\.android\build-cache\55925685d9f809c80be6919dc8e8d92137c54c1b\output\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:recyclerview-v7:23.3.0] C:\Users\Administrator\.android\build-cache\d47bcd9b4775e228fbc462cbc0baa8ea67075e56\output\AndroidManifest.xml:20:5-43
+MERGED from [com.github.castorflex.smoothprogressbar:library-circular:1.2.0] C:\Users\Administrator\.android\build-cache\a9be0f77c30cfd845b9978aea63e2bfaf45ce082\output\AndroidManifest.xml:8:5-10:41
+MERGED from [com.jakewharton:butterknife:8.5.1] C:\Users\Administrator\.android\build-cache\27ae7f0cf3701511a86f295979c80b1d430ab845\output\AndroidManifest.xml:5:5-43
+MERGED from [me.guhy:SwipeRefreshPlus:1.0.8] C:\Users\Administrator\.android\build-cache\728036cef145dfe45d3eb6a571d7e4324684464d\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Administrator\.android\build-cache\76040eb7c65026dd7b33b103fa8c5f1f965af952\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Administrator\.android\build-cache\7586a14ecd70e78524171d8ad41eac9df285955f\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Administrator\.android\build-cache\93412b1f37fb4d81d8cb10deb5ff05a8440046f8\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Administrator\.android\build-cache\93bacd57114c2926df3a2c3acfeb614f7d86ddbc\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Administrator\.android\build-cache\95055ddc47136c65c50a4d3bbb4d547e4a031a23\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Administrator\.android\build-cache\d9f081aee7f799c10530db19d8836ce3688c2371\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Administrator\.android\build-cache\90b7e7d33461daf8fafe53020ace0ec16a432109\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Administrator\.android\build-cache\6c20b752c6435bb8bc3222fd67158a4492c2fec4\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Administrator\.android\build-cache\6730d542e7859c0f449be55e58770b58b2b0cfa8\output\AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Administrator\.android\build-cache\5b35513e8e25fc00a2642e475b3dacd21a04a06e\output\AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\5a70535be1e4455de1451421e72b9e9978cc8531\output\AndroidManifest.xml:20:5-44
+MERGED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:7:5-9:41
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\6192085179e6056d54168618ede1f6f8f2213103\output\AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Administrator\.android\build-cache\76040eb7c65026dd7b33b103fa8c5f1f965af952\output\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		INJECTED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml
-		INJECTED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml
+		INJECTED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml
+		INJECTED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:20:15-40
-		INJECTED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml
-		INJECTED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:20:15-40
+		INJECTED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml
+		INJECTED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:21:5-75
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:21:5-75
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:21:22-73
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:21:22-73
 uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:22:5-75
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:22:5-75
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:22:22-73
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:22:22-73
 uses-permission#android.permission.CAMERA
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:23:5-65
-MERGED from [Milk_Machine:zxingLibrary:unspecified] F:\GitWorkSapce\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\AndroidManifest.xml:13:5-65
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:23:5-65
+MERGED from [Milk_Machine:zxingLibrary:unspecified] F:\GitWorkSpace\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\AndroidManifest.xml:13:5-65
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:23:22-62
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:23:22-62
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:26:5-80
-MERGED from [Milk_Machine:gallery:unspecified] F:\GitWorkSapce\Milk_Machine\gallery\build\intermediates\bundles\default\AndroidManifest.xml:12:5-80
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:26:5-80
+MERGED from [Milk_Machine:gallery:unspecified] F:\GitWorkSpace\Milk_Machine\gallery\build\intermediates\bundles\default\AndroidManifest.xml:12:5-80
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:26:22-77
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:26:22-77
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:27:5-79
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:27:5-79
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:27:22-76
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:27:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:28:5-81
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:28:5-81
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:28:22-78
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:28:22-78
 uses-feature#android.hardware.camera
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:34:5-59
-MERGED from [Milk_Machine:zxingLibrary:unspecified] F:\GitWorkSapce\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\AndroidManifest.xml:15:5-60
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:34:5-59
+MERGED from [Milk_Machine:zxingLibrary:unspecified] F:\GitWorkSpace\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\AndroidManifest.xml:15:5-60
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:34:19-57
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:34:19-57
 uses-feature#android.hardware.autofocus
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:35:5-62
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:35:5-62
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:35:19-60
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:35:19-60
 uses-permission#android.permission.FLASHLIGHT
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:36:5-68
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:36:5-68
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:36:22-66
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:36:22-66
 uses-permission#android.permission.WAKE_LOCK
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:38:5-67
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:38:5-67
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:38:22-65
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:38:22-65
 permission#com.canplay.medical.permission.JPUSH_MESSAGE
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:41:5-43:47
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:41:5-43:47
 	android:protectionLevel
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:43:9-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:43:9-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:42:9-68
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:42:9-68
 uses-permission#com.canplay.repast_wear.permission.JPUSH_MESSAGE
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:46:5-88
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:46:5-88
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:46:22-85
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:46:22-85
 uses-permission#android.permission.RECEIVE_USER_PRESENT
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:47:5-79
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:47:5-79
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:47:22-76
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:47:22-76
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:56:5-79
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:56:5-79
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:56:22-76
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:56:22-76
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:62:5-78
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:62:5-78
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:62:22-75
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:62:22-75
 uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:66:5-89
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:66:5-89
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:66:22-86
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:66:22-86
 uses-permission#android.permission.CHANGE_NETWORK_STATE
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:67:5-79
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:67:5-79
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:67:22-76
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:67:22-76
 uses-permission#android.permission.GET_TASKS
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:68:5-68
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:68:5-68
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:68:22-65
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:68:22-65
 uses-permission#android.permission.READ_LOGS
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:82:5-68
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:82:5-68
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:82:22-65
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:82:22-65
 application
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:84:5-353:19
-MERGED from [Milk_Machine:gallery:unspecified] F:\GitWorkSapce\Milk_Machine\gallery\build\intermediates\bundles\default\AndroidManifest.xml:14:5-16:19
-MERGED from [Milk_Machine:LibMarsdaemon:unspecified] F:\GitWorkSapce\Milk_Machine\LibMarsdaemon\build\intermediates\bundles\default\AndroidManifest.xml:11:5-15:19
-MERGED from [Milk_Machine:litepal:unspecified] F:\GitWorkSapce\Milk_Machine\litepal\build\intermediates\bundles\default\AndroidManifest.xml:11:5-14:19
-MERGED from [Milk_Machine:zxingLibrary:unspecified] F:\GitWorkSapce\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\AndroidManifest.xml:20:5-25:19
-MERGED from [com.android.support:design:23.3.0] C:\Users\Administrator\.android\build-cache\065ed127cad19bfa7f5a3a2d2ca23a5f0c4d3b67\output\AndroidManifest.xml:22:5-20
-MERGED from [Milk_Machine:framework:unspecified] F:\GitWorkSapce\Milk_Machine\framework\build\intermediates\bundles\default\AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Administrator\.android\build-cache\2f51c73abbfd2c323bea2c21c7f3db96b1ab38d2\output\AndroidManifest.xml:9:5-20
-MERGED from [com.malinskiy:superrecyclerview:1.1.4] C:\Users\Administrator\.android\build-cache\d0279ca0d103ef1be4c739c0b501070c956be491\output\AndroidManifest.xml:12:5-20
-MERGED from [com.github.castorflex.smoothprogressbar:library-circular:1.2.0] C:\Users\Administrator\.android\build-cache\6b06234db826e993be359dbbad49a6dc23b0ab7f\output\AndroidManifest.xml:12:5-20
-MERGED from [me.guhy:SwipeRefreshPlus:1.0.8] C:\Users\Administrator\.android\build-cache\1d7e6342ee39a60f10d063baaf6dd80fc2e82cab\output\AndroidManifest.xml:11:5-14:19
-MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\6192085179e6056d54168618ede1f6f8f2213103\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\7c1dd9101d388fa07baae8a49cb1dcba822d2e8c\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\2d2539e08d648f8652cb4fd2e2d6ab8457f3688d\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\a31fe6c091eef092e45bf301c7bee69d1af84f22\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\19f3e4dd28ddc5d555c06147aa8ebd86f624f48a\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\f0a86c268533fd21ce0d8e368b40da6b05d52f03\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\534e4b1094e5a0a03bfb7b588694123a4a3b643f\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\0f68a79eb583fa062eb1f76f4ef7ab31a8fe6a79\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\de13caf9cae9e4316760a364842319ef8f8226a3\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\31268a617e55c2b32c625f1eaf39b8855827709c\output\AndroidManifest.xml:26:5-20
-MERGED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:13:5-33:19
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:84:5-362:19
+MERGED from [Milk_Machine:gallery:unspecified] F:\GitWorkSpace\Milk_Machine\gallery\build\intermediates\bundles\default\AndroidManifest.xml:14:5-16:19
+MERGED from [Milk_Machine:LibMarsdaemon:unspecified] F:\GitWorkSpace\Milk_Machine\LibMarsdaemon\build\intermediates\bundles\default\AndroidManifest.xml:11:5-15:19
+MERGED from [Milk_Machine:litepal:unspecified] F:\GitWorkSpace\Milk_Machine\litepal\build\intermediates\bundles\default\AndroidManifest.xml:11:5-14:19
+MERGED from [Milk_Machine:zxingLibrary:unspecified] F:\GitWorkSpace\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\AndroidManifest.xml:20:5-25:19
+MERGED from [com.android.support:design:23.3.0] C:\Users\Administrator\.android\build-cache\97abfc55d1e504c2314e10ab5909fa0eb140d1bc\output\AndroidManifest.xml:22:5-20
+MERGED from [Milk_Machine:framework:unspecified] F:\GitWorkSpace\Milk_Machine\framework\build\intermediates\bundles\default\AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Administrator\.android\build-cache\b21b4a8a229d67fe4c9d46878885e2f4832a3f3a\output\AndroidManifest.xml:9:5-20
+MERGED from [com.malinskiy:superrecyclerview:1.1.4] C:\Users\Administrator\.android\build-cache\55925685d9f809c80be6919dc8e8d92137c54c1b\output\AndroidManifest.xml:12:5-20
+MERGED from [com.github.castorflex.smoothprogressbar:library-circular:1.2.0] C:\Users\Administrator\.android\build-cache\a9be0f77c30cfd845b9978aea63e2bfaf45ce082\output\AndroidManifest.xml:12:5-20
+MERGED from [me.guhy:SwipeRefreshPlus:1.0.8] C:\Users\Administrator\.android\build-cache\728036cef145dfe45d3eb6a571d7e4324684464d\output\AndroidManifest.xml:11:5-14:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Administrator\.android\build-cache\76040eb7c65026dd7b33b103fa8c5f1f965af952\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Administrator\.android\build-cache\7586a14ecd70e78524171d8ad41eac9df285955f\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Administrator\.android\build-cache\93412b1f37fb4d81d8cb10deb5ff05a8440046f8\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Administrator\.android\build-cache\93bacd57114c2926df3a2c3acfeb614f7d86ddbc\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Administrator\.android\build-cache\95055ddc47136c65c50a4d3bbb4d547e4a031a23\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Administrator\.android\build-cache\d9f081aee7f799c10530db19d8836ce3688c2371\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Administrator\.android\build-cache\90b7e7d33461daf8fafe53020ace0ec16a432109\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Administrator\.android\build-cache\6c20b752c6435bb8bc3222fd67158a4492c2fec4\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Administrator\.android\build-cache\6730d542e7859c0f449be55e58770b58b2b0cfa8\output\AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Administrator\.android\build-cache\5b35513e8e25fc00a2642e475b3dacd21a04a06e\output\AndroidManifest.xml:24:5-28:19
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\5a70535be1e4455de1451421e72b9e9978cc8531\output\AndroidManifest.xml:26:5-20
+MERGED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:13:5-33:19
 	android:label
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:88:9-41
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:88:9-41
 	android:supportsRtl
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:91:9-35
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:91:9-35
 	android:vmSafeMode
-		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:13:18-43
+		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:13:18-43
 	android:allowBackup
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:86:9-35
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:86:9-35
 	android:icon
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:87:9-38
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:87:9-38
 	android:largeHeap
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:89:9-33
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:89:9-33
 	android:persistent
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:90:9-34
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:90:9-34
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:92:9-40
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:92:9-40
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:85:9-61
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:85:9-61
 activity#com.canplay.milk.mvp.activity.account.GuideActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:93:9-102:20
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:93:9-102:20
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:96:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:96:13-49
 	android:configChanges
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:95:13-74
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:95:13-74
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:94:13-79
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:94:13-79
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:97:13-101:29
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:97:13-101:29
 action#android.intent.action.MAIN
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:98:17-69
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:98:17-69
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:98:25-66
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:98:25-66
 category#android.intent.category.LAUNCHER
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:100:17-77
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:100:17-77
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:100:27-74
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:100:27-74
 provider#android.support.v4.content.FileProvider
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:104:9-112:20
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:104:9-112:20
 	android:authorities
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:106:13-67
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:106:13-67
 	android:grantUriPermissions
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:108:13-47
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:108:13-47
 	android:exported
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:107:13-37
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:107:13-37
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:105:13-67
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:105:13-67
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:109:13-111:54
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:109:13-111:54
 	android:resource
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:111:17-51
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:111:17-51
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:110:17-67
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:110:17-67
 activity#com.canplay.milk.mvp.activity.MainActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:114:9-117:58
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:114:9-117:70
 	android:launchMode
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:116:13-43
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:116:13-43
 	android:windowSoftInputMode
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:117:13-55
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:117:13-67
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:115:13-70
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:115:13-70
 activity#com.canplay.milk.mvp.activity.home.AddMilkActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:118:9-121:58
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:118:9-121:70
 	android:launchMode
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:120:13-43
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:120:13-43
 	android:windowSoftInputMode
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:121:13-55
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:121:13-67
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:119:13-78
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:119:13-78
 activity#com.canplay.milk.mvp.activity.home.MilkDetailActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:122:9-125:58
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:123:9-126:70
 	android:launchMode
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:124:13-43
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:125:13-43
 	android:windowSoftInputMode
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:125:13-55
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:126:13-67
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:123:13-81
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:124:13-81
+activity#com.canplay.milk.mvp.activity.ImageListWitesActivity
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:127:9-130:70
+	android:launchMode
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:129:13-43
+	android:windowSoftInputMode
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:130:13-67
+	android:name
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:128:13-80
 activity#com.canplay.milk.mvp.activity.home.PushMilkActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:126:9-129:58
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:131:9-134:70
 	android:launchMode
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:128:13-43
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:133:13-43
 	android:windowSoftInputMode
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:129:13-55
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:134:13-67
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:127:13-79
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:132:13-79
 activity#com.canplay.milk.mvp.activity.home.AddBrandsActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:131:9-134:58
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:136:9-139:58
 	android:launchMode
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:133:13-43
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:138:13-43
 	android:windowSoftInputMode
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:134:13-55
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:139:13-55
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:132:13-80
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:137:13-80
 activity#com.canplay.milk.mvp.activity.home.RemindMilkActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:136:9-139:58
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:141:9-144:58
 	android:launchMode
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:138:13-43
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:143:13-43
 	android:windowSoftInputMode
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:139:13-55
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:144:13-55
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:137:13-81
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:142:13-81
 activity#com.canplay.milk.mvp.activity.home.RemindSettingActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:140:9-143:58
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:145:9-148:58
 	android:launchMode
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:142:13-43
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:147:13-43
 	android:windowSoftInputMode
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:143:13-55
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:148:13-55
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:141:13-84
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:146:13-84
 activity#com.canplay.milk.mvp.activity.home.SearchMilkActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:145:9-148:58
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:150:9-153:58
 	android:launchMode
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:147:13-43
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:152:13-43
 	android:windowSoftInputMode
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:148:13-55
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:153:13-55
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:146:13-81
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:151:13-81
 activity#com.canplay.milk.mvp.activity.mine.MineCodeActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:150:9-153:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:155:9-158:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:153:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:158:13-49
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:152:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:157:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:151:13-79
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:156:13-79
 activity#com.canplay.milk.mvp.activity.mine.MineInfoActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:154:9-157:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:159:9-163:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:157:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:163:13-49
+	android:windowSoftInputMode
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:160:13-67
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:156:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:162:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:155:13-79
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:161:13-79
 activity#com.canplay.milk.mvp.activity.mine.UpdateActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:158:9-161:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:164:9-167:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:161:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:167:13-49
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:160:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:166:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:159:13-77
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:165:13-77
 activity#com.canplay.milk.mvp.activity.mine.UserAvarActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:162:9-165:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:168:9-171:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:165:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:171:13-49
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:164:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:170:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:163:13-79
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:169:13-79
 activity#com.canplay.milk.mvp.activity.wiki.LookTImeActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:166:9-169:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:172:9-175:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:169:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:175:13-49
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:168:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:174:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:167:13-79
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:173:13-79
 activity#com.canplay.milk.mvp.activity.wiki.SeachResultActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:170:9-173:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:176:9-179:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:173:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:179:13-49
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:172:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:178:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:171:13-82
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:177:13-82
 activity#com.canplay.milk.mvp.activity.wiki.SendRecordActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:174:9-177:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:180:9-183:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:177:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:183:13-49
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:176:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:182:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:175:13-81
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:181:13-81
 activity#com.canplay.milk.mvp.activity.wiki.NurseryActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:178:9-181:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:184:9-187:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:181:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:187:13-49
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:180:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:186:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:179:13-78
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:185:13-78
 activity#com.canplay.milk.mvp.activity.wiki.PreviewRecordActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:182:9-185:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:188:9-191:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:185:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:191:13-49
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:184:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:190:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:183:13-84
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:189:13-84
 activity#com.canplay.milk.mvp.activity.wiki.PastWipiActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:188:9-191:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:194:9-197:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:191:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:197:13-49
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:190:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:196:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:189:13-79
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:195:13-79
 activity#com.canplay.milk.mvp.activity.wiki.PastWipiSearchActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:192:9-195:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:198:9-201:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:195:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:201:13-49
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:194:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:200:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:193:13-85
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:199:13-85
 activity#com.canplay.milk.mvp.activity.wiki.GroupRecordActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:197:9-200:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:203:9-206:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:200:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:206:13-49
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:199:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:205:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:198:13-82
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:204:13-82
 activity#com.canplay.milk.mvp.activity.mine.AboutActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:203:9-206:48
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:209:9-212:48
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:206:9-45
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:212:9-45
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:205:9-40
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:211:9-40
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:204:9-72
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:210:9-72
 activity#com.canplay.milk.mvp.activity.mine.EditorInfoActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:207:9-210:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:213:9-216:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:210:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:216:13-49
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:209:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:215:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:208:13-81
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:214:13-81
 activity#com.canplay.milk.mvp.activity.mine.DevelopActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:211:9-214:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:217:9-220:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:214:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:220:13-49
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:213:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:219:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:212:13-78
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:218:13-78
 activity#com.canplay.milk.mvp.activity.account.RegisteredSecondActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:215:9-218:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:221:9-225:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:218:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:225:13-49
+	android:windowSoftInputMode
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:224:13-67
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:217:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:223:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:216:13-90
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:222:13-90
 activity#com.canplay.milk.mvp.activity.account.LoginActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:219:9-222:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:226:9-229:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:222:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:229:13-49
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:221:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:228:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:220:13-79
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:227:13-79
 activity#com.canplay.milk.mvp.activity.account.RegisteredActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:223:9-226:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:230:9-234:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:226:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:234:13-49
+	android:windowSoftInputMode
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:233:13-67
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:225:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:232:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:224:13-84
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:231:13-84
 activity#com.canplay.milk.mvp.activity.mine.WifiSettingActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:228:9-231:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:236:9-239:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:231:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:239:13-49
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:230:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:238:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:229:13-82
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:237:13-82
 activity#com.canplay.milk.mvp.activity.mine.SettingActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:233:9-236:8
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:241:9-244:8
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:235:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:243:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:234:13-78
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:242:13-78
 activity#com.canplay.milk.mvp.activity.AlarmActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:237:9-240:15
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:245:9-248:15
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:239:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:247:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:238:13-71
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:246:13-71
 activity#com.google.zxing.client.android.activity.CaptureActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:242:9-245:52
-MERGED from [Milk_Machine:zxingLibrary:unspecified] F:\GitWorkSapce\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\AndroidManifest.xml:24:9-93
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:250:9-253:52
+MERGED from [Milk_Machine:zxingLibrary:unspecified] F:\GitWorkSpace\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\AndroidManifest.xml:24:9-93
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:245:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:253:13-49
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:244:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:252:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:243:13-84
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:251:13-84
 activity#com.canplay.milk.mvp.activity.WebViewWitesActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:247:9-250:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:255:9-258:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:250:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:258:13-49
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:249:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:257:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:248:13-78
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:256:13-78
 activity#com.canplay.milk.mvp.activity.account.ForgetPswActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:253:9-256:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:261:9-265:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:256:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:265:13-49
+	android:windowSoftInputMode
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:264:13-67
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:255:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:263:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:254:13-83
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:262:13-83
 activity#com.canplay.milk.mvp.activity.account.ForgetFirstActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:257:9-260:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:266:9-269:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:260:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:269:13-49
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:259:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:268:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:258:13-85
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:267:13-85
 activity#com.canplay.milk.mvp.activity.account.ChangePhoneActivity
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:262:9-265:52
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:271:9-274:52
 	android:screenOrientation
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:265:13-49
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:274:13-49
 	android:theme
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:264:13-44
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:273:13-44
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:263:13-85
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:272:13-85
 receiver#com.canplay.milk.receiver.AlarmReceiver
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:273:9-277:20
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:282:9-286:20
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:273:19-73
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:282:19-73
 intent-filter#com.canplay.alarm.lxm
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:274:13-276:29
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:283:13-285:29
 action#com.canplay.alarm.lxm
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:275:17-63
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:284:17-63
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:275:25-61
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:284:25-61
 service#com.canplay.milk.receiver.Service1
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:279:9-97
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:288:9-97
 	android:process
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:279:68-95
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:288:68-95
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:279:18-67
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:288:18-67
 receiver#com.canplay.milk.receiver.Receiver1
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:280:9-99
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:289:9-99
 	android:process
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:280:70-97
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:289:70-97
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:280:19-69
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:289:19-69
 service#com.canplay.milk.receiver.Service2
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:281:9-97
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:290:9-97
 	android:process
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:281:68-95
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:290:68-95
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:281:18-67
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:290:18-67
 receiver#com.canplay.milk.receiver.Receiver2
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:282:9-99
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:291:9-99
 	android:process
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:282:70-97
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:291:70-97
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:282:19-69
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:291:19-69
 receiver#com.canplay.milk.receiver.AlarmClockBroadcast
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:293:9-301:20
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:302:9-310:20
 	android:process
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:295:13-38
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:304:13-38
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:294:13-73
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:303:13-73
 receiver#com.canplay.milk.receiver.BootBroadcastReceiver
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:303:9-307:20
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:312:9-316:20
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:303:19-81
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:312:19-81
 intent-filter#android.intent.action.BOOT_COMPLETED
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:304:13-306:29
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:313:13-315:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:305:17-78
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:314:17-78
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:305:25-76
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:314:25-76
 receiver#com.canplay.milk.receiver.AlarmClockProcessReceiver
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:308:9-314:20
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:317:9-323:20
 	android:exported
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:310:13-37
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:319:13-37
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:309:13-79
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:318:13-79
 intent-filter#com.canplay.medical.AlarmClockOff
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:311:13-313:29
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:320:13-322:29
 action#com.canplay.medical.AlarmClockOff
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:312:17-75
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:321:17-75
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:312:25-73
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:321:25-73
 receiver#com.canplay.milk.receiver.WakeReceiver
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:323:9-330:20
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:332:9-339:20
 	android:enabled
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:325:13-35
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:334:13-35
 	android:exported
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:326:13-37
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:335:13-37
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:324:13-66
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:333:13-66
 intent-filter#com.kaku.weac.wake.gray
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:327:13-329:29
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:336:13-338:29
 action#com.kaku.weac.wake.gray
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:328:17-65
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:337:17-65
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:328:25-63
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:337:25-63
 service#com.canplay.milk.receiver.DaemonService$DaemonInnerService
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:332:9-336:40
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:341:9-345:40
 	android:enabled
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:334:13-35
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:343:13-35
 	android:process
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:336:13-38
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:345:13-38
 	android:exported
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:335:13-37
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:344:13-37
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:333:13-86
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:342:13-86
 service#com.canplay.milk.receiver.WakeReceiver$WakeNotifyService
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:337:9-340:39
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:346:9-349:39
 	android:enabled
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:339:13-35
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:348:13-35
 	android:exported
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:340:13-37
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:349:13-37
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:338:13-84
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:347:13-84
 service#com.canplay.milk.receiver.WakeReceiver$WakeGrayInnerService
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:342:9-345:39
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:351:9-354:39
 	android:enabled
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:344:13-35
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:353:13-35
 	android:exported
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:345:13-37
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:354:13-37
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:343:13-87
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:352:13-87
 service#com.canplay.milk.receiver.DaemonService
-ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:348:9-352:19
+ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:357:9-361:19
 	android:process
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:351:13-38
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:360:13-38
 	android:exported
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:350:13-36
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:359:13-36
 	android:name
-		ADDED from F:\GitWorkSapce\Milk_Machine\app\src\main\AndroidManifest.xml:349:13-67
+		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:358:13-67
 activity#io.valuesfeng.picker.ImageSelectActivity
-ADDED from [Milk_Machine:gallery:unspecified] F:\GitWorkSapce\Milk_Machine\gallery\build\intermediates\bundles\default\AndroidManifest.xml:15:9-77
+ADDED from [Milk_Machine:gallery:unspecified] F:\GitWorkSpace\Milk_Machine\gallery\build\intermediates\bundles\default\AndroidManifest.xml:15:9-77
 	android:name
-		ADDED from [Milk_Machine:gallery:unspecified] F:\GitWorkSapce\Milk_Machine\gallery\build\intermediates\bundles\default\AndroidManifest.xml:15:19-74
+		ADDED from [Milk_Machine:gallery:unspecified] F:\GitWorkSpace\Milk_Machine\gallery\build\intermediates\bundles\default\AndroidManifest.xml:15:19-74
 uses-feature#android.hardware.camera.autofocus
-ADDED from [Milk_Machine:zxingLibrary:unspecified] F:\GitWorkSapce\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\AndroidManifest.xml:17:5-70
+ADDED from [Milk_Machine:zxingLibrary:unspecified] F:\GitWorkSpace\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\AndroidManifest.xml:17:5-70
 	android:name
-		ADDED from [Milk_Machine:zxingLibrary:unspecified] F:\GitWorkSapce\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\AndroidManifest.xml:17:19-67
+		ADDED from [Milk_Machine:zxingLibrary:unspecified] F:\GitWorkSpace\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\AndroidManifest.xml:17:19-67
 meta-data#android.support.VERSION
-ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\6192085179e6056d54168618ede1f6f8f2213103\output\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\7c1dd9101d388fa07baae8a49cb1dcba822d2e8c\output\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\2d2539e08d648f8652cb4fd2e2d6ab8457f3688d\output\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\a31fe6c091eef092e45bf301c7bee69d1af84f22\output\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\19f3e4dd28ddc5d555c06147aa8ebd86f624f48a\output\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\f0a86c268533fd21ce0d8e368b40da6b05d52f03\output\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\534e4b1094e5a0a03bfb7b588694123a4a3b643f\output\AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\0f68a79eb583fa062eb1f76f4ef7ab31a8fe6a79\output\AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\de13caf9cae9e4316760a364842319ef8f8226a3\output\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\31268a617e55c2b32c625f1eaf39b8855827709c\output\AndroidManifest.xml:22:5-24:41
+ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Administrator\.android\build-cache\76040eb7c65026dd7b33b103fa8c5f1f965af952\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Administrator\.android\build-cache\7586a14ecd70e78524171d8ad41eac9df285955f\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Administrator\.android\build-cache\93412b1f37fb4d81d8cb10deb5ff05a8440046f8\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Administrator\.android\build-cache\93bacd57114c2926df3a2c3acfeb614f7d86ddbc\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Administrator\.android\build-cache\95055ddc47136c65c50a4d3bbb4d547e4a031a23\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Administrator\.android\build-cache\d9f081aee7f799c10530db19d8836ce3688c2371\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Administrator\.android\build-cache\90b7e7d33461daf8fafe53020ace0ec16a432109\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Administrator\.android\build-cache\6c20b752c6435bb8bc3222fd67158a4492c2fec4\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Administrator\.android\build-cache\6730d542e7859c0f449be55e58770b58b2b0cfa8\output\AndroidManifest.xml:26:9-28:38
 	android:value
-		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\6192085179e6056d54168618ede1f6f8f2213103\output\AndroidManifest.xml:27:9-38
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Administrator\.android\build-cache\76040eb7c65026dd7b33b103fa8c5f1f965af952\output\AndroidManifest.xml:28:13-35
 	android:name
-		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Administrator\.android\build-cache\6192085179e6056d54168618ede1f6f8f2213103\output\AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Administrator\.android\build-cache\76040eb7c65026dd7b33b103fa8c5f1f965af952\output\AndroidManifest.xml:27:13-51
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Administrator\.android\build-cache\5b35513e8e25fc00a2642e475b3dacd21a04a06e\output\AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Administrator\.android\build-cache\5b35513e8e25fc00a2642e475b3dacd21a04a06e\output\AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Administrator\.android\build-cache\5b35513e8e25fc00a2642e475b3dacd21a04a06e\output\AndroidManifest.xml:26:13-58
 activity#com.antfortune.freeline.MiddlewareActivity
-ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:14:9-16:52
+ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:14:9-16:52
 	android:screenOrientation
-		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:16:13-49
+		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:16:13-49
 	android:name
-		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:15:13-70
+		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:15:13-70
 service#com.antfortune.freeline.FreelineService
-ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:18:9-21:43
+ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:18:9-21:43
 	android:process
-		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:21:13-40
+		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:21:13-40
 	android:exported
-		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:20:13-36
+		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:20:13-36
 	android:name
-		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:19:13-67
+		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:19:13-67
 service#com.antfortune.freeline.FreelineService$InnerService
-ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:22:9-24:43
+ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:22:9-24:43
 	android:process
-		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:24:13-40
+		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:24:13-40
 	android:name
-		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:23:13-80
+		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:23:13-80
 receiver#com.antfortune.freeline.FreelineReceiver
-ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:26:9-32:20
+ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:26:9-32:20
 	android:name
-		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:26:19-74
+		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:26:19-74
 intent-filter#android.intent.action.FreelineReceiver+android.intent.category.DEFAULT
-ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:27:13-31:29
+ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:27:13-31:29
 action#android.intent.action.FreelineReceiver
-ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:28:17-81
+ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:28:17-81
 	android:name
-		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:28:25-78
+		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:28:25-78
 category#android.intent.category.DEFAULT
-ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:30:17-76
+ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:30:17-76
 	android:name
-		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\03683e62fb23e6445f3cf19f2c83e43e9e8956a1\output\AndroidManifest.xml:30:27-73
+		ADDED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\AndroidManifest.xml:30:27-73

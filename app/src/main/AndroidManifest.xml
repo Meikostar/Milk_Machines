@@ -114,19 +114,24 @@
         <activity
             android:name="com.canplay.milk.mvp.activity.MainActivity"
             android:launchMode="singleTop"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name="com.canplay.milk.mvp.activity.home.AddMilkActivity"
             android:launchMode="singleTop"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
         <activity
             android:name="com.canplay.milk.mvp.activity.home.MilkDetailActivity"
             android:launchMode="singleTop"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.canplay.milk.mvp.activity.ImageListWitesActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name="com.canplay.milk.mvp.activity.home.PushMilkActivity"
             android:launchMode="singleTop"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <activity
             android:name="com.canplay.milk.mvp.activity.home.AddBrandsActivity"
@@ -152,6 +157,7 @@
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait" />
         <activity
+            android:windowSoftInputMode="stateHidden|adjustResize"
             android:name="com.canplay.milk.mvp.activity.mine.MineInfoActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait" />
@@ -215,6 +221,7 @@
         <activity
             android:name="com.canplay.milk.mvp.activity.account.RegisteredSecondActivity"
             android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.canplay.milk.mvp.activity.account.LoginActivity"
@@ -223,6 +230,7 @@
         <activity
             android:name="com.canplay.milk.mvp.activity.account.RegisteredActivity"
             android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"
             android:screenOrientation="portrait" />
 
         <activity
@@ -253,6 +261,7 @@
         <activity
             android:name="com.canplay.milk.mvp.activity.account.ForgetPswActivity"
             android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.canplay.milk.mvp.activity.account.ForgetFirstActivity"

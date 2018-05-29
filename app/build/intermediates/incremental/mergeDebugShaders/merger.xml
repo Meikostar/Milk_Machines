@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="F:\GitWorkSapce\Milk_Machine\app\src\main\shaders"/></dataSet><dataSet config="debug"><source path="F:\GitWorkSapce\Milk_Machine\app\src\debug\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="F:\GitWorkSpace\Milk_Machine\app\src\main\shaders"/></dataSet><dataSet config="debug"><source path="F:\GitWorkSpace\Milk_Machine\app\src\debug\shaders"/></dataSet></merger>

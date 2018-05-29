@@ -23,6 +23,7 @@ public class SpUtil{
     public static final String USERNAME="userName";//国家
     public static final String FATHERTNAME="fatherName";//国家
     public static final String PHONE="phone";//国家
+    public static final String SEX="sex";//国家
     public static final String AVATOR="imgResourceKey";//国家
     public static final String MOTHERNAME="motherName";//国家
     private static SharedPreferences settings;
@@ -44,6 +45,8 @@ public class SpUtil{
         editor.putString(MOTHERNAME, location.motherName);
         editor.putString(FATHERTNAME, location.fatherName);
         editor.putString(PHONE, location.mobile);
+        editor.putString(SEX, location.sex);
+        editor.putString(WEIGHT, location.weight);
         return editor.commit();
     }
 
@@ -74,10 +77,14 @@ public class SpUtil{
         user.token=settings.getString(TOKEN, "");
         user.birthday=settings.getString(BIRTHDAY, "");
         user.userId=settings.getString(USERID, "");
+
         user.name=settings.getString(USERNAME, "");
         user.motherName=settings.getString(MOTHERNAME, "");
         user.fatherName=settings.getString(FATHERTNAME, "");
         user.mobile=settings.getString(PHONE, "");
+        user.imgResourceKey=settings.getString(AVATOR, "");
+        user.sex=settings.getString(SEX, "");
+        user.weight=settings.getString(WEIGHT, "");
         return user;
     }
     public String getUserId(){

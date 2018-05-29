@@ -19,6 +19,8 @@ import com.bumptech.glide.Glide;
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseActivity;
 import com.canplay.milk.base.BaseApplication;
+import com.canplay.milk.base.RxBus;
+import com.canplay.milk.base.SubscriptionBean;
 import com.canplay.milk.bean.BASE;
 import com.canplay.milk.bean.UploadFileBean;
 import com.canplay.milk.mvp.activity.wiki.SendRecordActivity;
@@ -119,6 +121,7 @@ public class UserAvarActivity extends BaseActivity implements LoginContract.View
         if (resultCode == RESULT_OK) {
             if(requestCode==REQUEST_CODE_CHOOSE){
                 List<String> imgs = data.getStringArrayListExtra(ImageSelectActivity.EXTRA_RESULT_SELECTION);
+
                 String[] milks = imgs.get(0).split("milk");
                 File output = new File(imgs.get(0));
                 if (Build.VERSION.SDK_INT >= 24) {
@@ -188,6 +191,7 @@ public class UserAvarActivity extends BaseActivity implements LoginContract.View
                     @Override
                     public void onNext(String s) {
                         BASE info = mGson.fromJson(s, BASE.class);
+                        RxBus.getInstance().send(SubscriptionBean.createSendBean(SubscriptionBean.UPDATE,""));
                        dimessProgress();
                     }
                 });

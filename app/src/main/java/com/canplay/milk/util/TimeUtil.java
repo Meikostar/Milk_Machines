@@ -33,11 +33,11 @@ public class TimeUtil {
     }
     public static String formatToFileName(long time){
         SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd");
-        return format.format(new Date(time*1000));
+        return format.format(new Date(time));
     }
     public static String formatToName(long time){
-        SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd");
-        return format.format(new Date(time*1000));
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        return format.format(new Date(time));
     }
     public static String formatTime(long time){
         SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd  HH:mm:ss");

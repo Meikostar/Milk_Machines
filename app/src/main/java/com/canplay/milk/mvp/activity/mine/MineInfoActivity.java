@@ -9,6 +9,8 @@ import com.bumptech.glide.Glide;
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseActivity;
 import com.canplay.milk.base.BaseApplication;
+import com.canplay.milk.base.RxBus;
+import com.canplay.milk.base.SubscriptionBean;
 import com.canplay.milk.bean.USER;
 import com.canplay.milk.mvp.component.DaggerBaseComponent;
 import com.canplay.milk.mvp.present.LoginContract;
@@ -29,6 +31,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.valuesfeng.picker.Picker;
 import io.valuesfeng.picker.widget.ImageLoaderEngine;
+import rx.Subscription;
+import rx.functions.Action1;
 
 
 /**
@@ -60,8 +64,8 @@ public class MineInfoActivity extends BaseActivity implements LoginContract.View
         setContentView(R.layout.activity_mine_info);
         ButterKnife.bind(this);
         DaggerBaseComponent.builder().appComponent(((BaseApplication) getApplication()).getAppComponent()).build().inject(this);
-        presenter.attachView(this);     DaggerBaseComponent.builder().appComponent(((BaseApplication) getApplication()).getAppComponent()).build().inject(this);
         presenter.attachView(this);
+
         navigationBar.setNavigationBarListener(this);
        user= SpUtil.getInstance().getUsers();
         if(user!=null){
@@ -106,11 +110,36 @@ public class MineInfoActivity extends BaseActivity implements LoginContract.View
 
              }
          });
+
     }
 
-
+    private Subscription mSubscription;
     public void initData() {
+        mSubscription = RxBus.getInstance().toObserverable(SubscriptionBean.RxBusSendBean.class).subscribe(new Action1<SubscriptionBean.RxBusSendBean>() {
+            @Override
+            public void call(SubscriptionBean.RxBusSendBean bean) {
+                if (bean == null) return;
+                if (bean.type == SubscriptionBean.UPDATE) {
+                    presenter.getMyBaseInfo();
+                }
 
+
+            }
+        }, new Action1<Throwable>() {
+            @Override
+            public void call(Throwable throwable) {
+                throwable.printStackTrace();
+            }
+        });
+        RxBus.getInstance().addSubscription(mSubscription);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(mSubscription!=null){
+            mSubscription.unsubscribe();
+        }
     }
 
     @PermissionSuccess(requestCode = PermissionConst.REQUECT_CODE_CAMERA)
@@ -126,8 +155,18 @@ public class MineInfoActivity extends BaseActivity implements LoginContract.View
 
     @Override
     public <T> void toEntity(T entity, int type) {
-        showToasts("编辑成功");
-        finish();
+        if(type==11){
+            showToasts("编辑成功");
+            finish();
+        }else {
+            user= (USER) entity;
+            if(user!=null){
+
+                Glide.with(this).load(user.imgResourceKey).asBitmap().transform(new CircleTransform(this)).placeholder(R.drawable.moren).into(ivImgs);
+                SpUtil.getInstance().putUser(user);
+            }
+        }
+
     }
 
     @Override

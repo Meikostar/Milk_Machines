@@ -61,15 +61,19 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\notification_action.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6730d542e7859c0f449be55e58770b58b2b0cfa8\\output\\res\\layout\\notification_action.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_action_menu_layout.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_popup_menu_header_item_layout.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow_custom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\93412b1f37fb4d81d8cb10deb5ff05a8440046f8\\output\\res\\layout\\notification_template_big_media_narrow_custom.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\press_record_item.xml",
@@ -84,8 +88,16 @@
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\6192085179e6056d54168618ede1f6f8f2213103\\output\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_custom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\93412b1f37fb4d81d8cb10deb5ff05a8440046f8\\output\\res\\layout\\notification_template_big_media_custom.xml"
+    },
+    {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\lp_pager_img_list.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\lp_pager_img_list.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_send_dynamic.xml",
@@ -97,7 +109,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_list_menu_item_icon.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\alarm_pop.xml",
@@ -105,7 +117,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\select_dialog_multichoice_material.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
@@ -161,7 +173,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_cyclewheels.xml",
@@ -169,7 +181,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_action_mode_bar.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\nevagbar_two.xml",
@@ -193,11 +205,11 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_action_bar_title_item.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\notification_template_part_chronometer.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6730d542e7859c0f449be55e58770b58b2b0cfa8\\output\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\xlistview_header_cart.xml",
@@ -225,7 +237,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_dialog_title_material.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_registered.xml",
@@ -233,11 +245,15 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_screen_simple.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_screen_simple.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_address_new_store_dialog.xml",
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\view_address_new_store_dialog.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_search_pasts.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\activity_search_pasts.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
@@ -305,7 +321,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
@@ -321,7 +337,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_list_menu_item_radio.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setting.xml",
@@ -425,7 +441,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_list_menu_item_checkbox.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_base_two_button.xml",
@@ -457,7 +473,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_develop.xml",
@@ -500,6 +516,10 @@
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\activity_mine_code.xml"
     },
     {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_base_detele.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\dialog_base_detele.xml"
+    },
+    {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\6192085179e6056d54168618ede1f6f8f2213103\\output\\res\\layout\\abc_dialog_title_material.xml"
     },
@@ -529,7 +549,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\notification_template_media_custom.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\93412b1f37fb4d81d8cb10deb5ff05a8440046f8\\output\\res\\layout\\notification_template_media_custom.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_capture.xml",
@@ -573,7 +593,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\notification_template_icon_group.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6730d542e7859c0f449be55e58770b58b2b0cfa8\\output\\res\\layout\\notification_template_icon_group.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\toast_view.xml",
@@ -605,11 +625,15 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_group.xml",
         "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\layout\\item_group.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\tooltip.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\tooltip.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_nersery.xml",
@@ -665,7 +689,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_activity_chooser_view.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\base_dailog_view.xml",
@@ -673,7 +697,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_expanded_menu_layout.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_expanded_menu_layout.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\lv_ring_select.xml",
@@ -706,6 +730,10 @@
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_more_progress.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\d0279ca0d103ef1be4c739c0b501070c956be491\\output\\res\\layout\\layout_more_progress.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\93412b1f37fb4d81d8cb10deb5ff05a8440046f8\\output\\res\\layout\\notification_media_action.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
@@ -789,7 +817,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_action_mode_close_item_material.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\change_notic_dialog.xml",
@@ -873,7 +901,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_search_view.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_search_view.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
@@ -912,12 +940,16 @@
         "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\layout\\activity_registered2.xml"
     },
     {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_image_list.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\activity_image_list.xml"
+    },
+    {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_search_pasts.xml",
         "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\layout\\activity_search_pasts.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\press_record_item.xml",
@@ -925,7 +957,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_alert_dialog_material.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_recyclerview_horizontalscroll.xml",
@@ -933,7 +965,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\notification_template_lines_media.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\93412b1f37fb4d81d8cb10deb5ff05a8440046f8\\output\\res\\layout\\notification_template_lines_media.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_nersery.xml",
@@ -953,15 +985,15 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_screen_content_include.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_screen_content_include.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\select_dialog_item_material.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\select_dialog_item_material.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_select_dialog_material.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\acitivity_remind_setting.xml",
@@ -973,7 +1005,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_no_more.xml",
@@ -989,7 +1021,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\notification_template_media.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\93412b1f37fb4d81d8cb10deb5ff05a8440046f8\\output\\res\\layout\\notification_template_media.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_nersery.xml",
@@ -1033,7 +1065,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_alert_dialog_title_material.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_dialog_time_selector.xml",
@@ -1104,6 +1136,10 @@
         "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\layout\\acitivity_wifi_setting.xml"
     },
     {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\93412b1f37fb4d81d8cb10deb5ff05a8440046f8\\output\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\6192085179e6056d54168618ede1f6f8f2213103\\output\\res\\layout\\abc_expanded_menu_layout.xml"
     },
@@ -1169,11 +1205,15 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\notification_action_tombstone.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6730d542e7859c0f449be55e58770b58b2b0cfa8\\output\\res\\layout\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\93412b1f37fb4d81d8cb10deb5ff05a8440046f8\\output\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\notification_template_part_time.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6730d542e7859c0f449be55e58770b58b2b0cfa8\\output\\res\\layout\\notification_template_part_time.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\photopick_gridlist_item.xml",
@@ -1181,11 +1221,11 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_action_menu_item_layout.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_action_menu_item_layout.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_guide_three.xml",
@@ -1225,11 +1265,15 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_screen_toolbar.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\93412b1f37fb4d81d8cb10deb5ff05a8440046f8\\output\\res\\layout\\notification_template_big_media.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_list_menu_item_layout.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\shrae_popwindow.xml",
@@ -1305,7 +1349,7 @@
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\d6684222313a7d4308cf7ad720520a08ce20f9f7\\output\\res\\layout\\abc_action_bar_up_container.xml"
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\76040eb7c65026dd7b33b103fa8c5f1f965af952\\output\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\acitivity_push_milk.xml",

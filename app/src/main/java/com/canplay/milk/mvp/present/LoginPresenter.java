@@ -16,6 +16,7 @@ import com.canplay.milk.util.CryptUtil;
 import com.canplay.milk.util.SpUtil;
 import com.canplay.milk.util.StringUtil;
 import com.canplay.milk.util.TextUtil;
+import com.canplay.milk.util.TimeUtil;
 
 import java.io.File;
 import java.util.Map;
@@ -142,8 +143,11 @@ public class LoginPresenter implements LoginContract.Presenter {
     @Override
     public void updateMyBaseInfo(String name, String fatherName, String motherName) {
         Map<String, String> params = new TreeMap<>();
-
+        USER users = SpUtil.getInstance().getUsers();
         params.put("name", name);
+        params.put("sex", users.sex);
+        params.put("birthdayDate", TimeUtil.formatToName(Long.valueOf(users.birthday)));
+        params.put("weight", users.weight);
         params.put("fatherName", fatherName);
         params.put("motherName", motherName);
         subscription = ApiManager.setSubscribe(contactApi.updateMyBaseInfo(ApiManager.getParameters(params, true)), new MySubscriber<USER>(){
@@ -158,7 +162,7 @@ public class LoginPresenter implements LoginContract.Presenter {
 
             @Override
             public void onNext(USER entity){
-                mView.toEntity(entity,0);
+                mView.toEntity(entity,11);
                 SpUtil.getInstance().putUser(entity);
 //                SpUtil.getInstance().putString(SpUtil.USER_ID,entity.merchantId);
             }
