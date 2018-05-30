@@ -86,7 +86,7 @@ public class RegisteredSecondActivity extends BaseActivity implements LoginContr
         selectorDialog.setDate(new Date(System.currentTimeMillis()))
                 .setBindClickListener(new TimeSelectorDialog.BindClickListener() {
                     @Override
-                    public void time(String time, int poition, String times) {
+                    public void time(String time, int poition, String times,String timess) {
                         if (TextUtil.isNotEmpty(time)) {
                             etDate.setText(time);
 

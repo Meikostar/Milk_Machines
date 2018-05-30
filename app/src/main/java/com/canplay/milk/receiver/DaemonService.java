@@ -32,6 +32,7 @@ import com.canplay.milk.bean.AlarmClock;
 import com.canplay.milk.bean.Daemon;
 import com.canplay.milk.util.AlarmClockOperate;
 import com.canplay.milk.util.MyUtil;
+import com.canplay.milk.util.SpUtil;
 import com.google.zxing.client.android.decode.WeacConstants;
 import com.google.zxing.client.android.utils.LogUtil;
 
@@ -68,7 +69,7 @@ public class DaemonService extends Service {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                List<AlarmClock> list = AlarmClockOperate.getInstance().loadAlarmClocks();
+                List<AlarmClock> list = SpUtil.getInstance().getAllAlarm();
                 for (AlarmClock alarmClock : list) {
                     // 当闹钟为开时刷新开启闹钟
                     if (alarmClock.isOnOff()) {

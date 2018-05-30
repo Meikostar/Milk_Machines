@@ -79,7 +79,7 @@ public class LookTImeActivity extends BaseActivity {
         selectorDialog.setDate(new Date(System.currentTimeMillis()))
                 .setBindClickListener(new TimeSelectorDialog.BindClickListener() {
                     @Override
-                    public void time(String data,int poition,String times) {
+                    public void time(String data,int poition,String times,String timess) {
                         time=data;
                         tvTime2.setText(times);
                     }

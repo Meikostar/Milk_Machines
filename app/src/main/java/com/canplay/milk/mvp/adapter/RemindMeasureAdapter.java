@@ -20,8 +20,11 @@ import com.canplay.milk.mvp.component.AlarmClockUpdateEvent;
 import com.canplay.milk.util.AlarmClockOperate;
 import com.canplay.milk.util.AudioPlayer;
 import com.canplay.milk.util.MyUtil;
+import com.canplay.milk.util.SpUtil;
+import com.canplay.milk.util.TextUtil;
 import com.canplay.milk.view.MCheckBox;
 import com.canplay.milk.view.SwipeListLayout;
+import com.google.gson.Gson;
 import com.google.zxing.client.android.utils.OttoAppConfig;
 
 
@@ -41,23 +44,28 @@ public class RemindMeasureAdapter extends BaseAdapter {
     private ListView lv_content;
     private Set<SwipeListLayout> sets = new HashSet();
     private selectItemListener listener;
-    public interface selectItemListener{
+
+    public interface selectItemListener {
         void delete(AlarmClock medicine, int type, int poistion);
     }
-    public void setListener(selectItemListener listener){
-        this.listener=listener;
+
+    public void setListener(selectItemListener listener) {
+        this.listener = listener;
     }
-    public void setData( List<AlarmClock> list){
-        this.list=list;
+
+    public void setData(List<AlarmClock> list) {
+        this.list = list;
         notifyDataSetChanged();
     }
-    public List<AlarmClock> getDatas(){
+
+    public List<AlarmClock> getDatas() {
         return list;
     }
+
     public RemindMeasureAdapter(Context context) {
 
         this.context = context;
-        this.list = list;
+
 
     }
 
@@ -68,7 +76,7 @@ public class RemindMeasureAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return list!=null?(list.size()==0?0:list.size()):3;
+        return list != null ? list.size() : 0;
     }
 
     @Override
@@ -87,7 +95,7 @@ public class RemindMeasureAdapter extends BaseAdapter {
         ViewHolder holder;
         if (convertView == null) {
             holder = new ViewHolder();
-            convertView = inflater.inflate(R.layout.item_remind_mesure, parent, false);
+            convertView = LayoutInflater.from(context).inflate(R.layout.item_remind_mesure, parent, false);
             holder.tvTime = (TextView) convertView.findViewById(R.id.tv_time);
             holder.tvState = (TextView) convertView.findViewById(R.id.tv_state);
             holder.tvDay = (TextView) convertView.findViewById(R.id.tv_day);
@@ -99,16 +107,25 @@ public class RemindMeasureAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        alarmClock=list.get(position);
-          holder.llbg.setOnClickListener(new View.OnClickListener() {
-              @Override
-              public void onClick(View v) {
-                  listener.delete(list.get(position),1,position);
-              }
-          });
-        if(list.get(position).isOnOff()){
+        final AlarmClock alarmClock = list.get(position);
+        holder.llbg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.delete(list.get(position), 1, position);
+            }
+        });
+
+        holder.llbg.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+
+                listener.delete(list.get(position), 6, position);
+                return true;
+            }
+        });
+        if (list.get(position).isOnOff()) {
             holder.ivchoose.setChecked(true);
-        }else {
+        } else {
             holder.ivchoose.setChecked(false);
         }
         holder.ivchoose.setOnCheckChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -117,14 +134,14 @@ public class RemindMeasureAdapter extends BaseAdapter {
                 if (isChecked) {
                     // 闹钟状态为开的话不更新数据
                     if (!list.get(position).isOnOff()) {
-                        updateTab(true);
+                        updateTab(true, alarmClock);
                     }
                 } else {
                     // 闹钟状态为关的话不处理
                     if (!list.get(position).isOnOff()) {
                         return;
                     }
-                    updateTab(false);
+                    updateTab(false, alarmClock);
                     // 取消闹钟
                     MyUtil.cancelAlarmClock(context,
                             list.get(position).getId());
@@ -169,21 +186,37 @@ public class RemindMeasureAdapter extends BaseAdapter {
 
         return convertView;
     }
-    private AlarmClock alarmClock;
+
     /**
      * 更新闹钟列表
      *
-     * @param onOff
-     *            开关
+     * @param onOff 开关
      */
-    private void updateTab(boolean onOff) {
+    private void updateTab(boolean onOff, AlarmClock alarmClock) {
         // 更新闹钟数据
 //                        TabAlarmClockOperate.getInstance(mContext).update(onOff,
 //                                alarmClock.getAlarmClockCode());
-        AlarmClockOperate.getInstance().updateAlarmClock(onOff,
-                alarmClock.getId());
-        OttoAppConfig.getInstance().post(new AlarmClockUpdateEvent());
+        alarmClock.setOnOff(onOff);
+        Gson gson = new Gson();
+        String jsonStr = gson.toJson(alarmClock); //将对象转换成Json
+        // 取得格式化后的时间
+        String time = MyUtil.formatTime(alarmClock.getHour(),
+                alarmClock.getMinute());
+        SpUtil.getInstance().putString(time, jsonStr);
+        if (onOff) {
+            MyUtil.startAlarmClock(context, alarmClock);
+        } else {
+            // 关闭闹钟
+            MyUtil.cancelAlarmClock(context,
+                    alarmClock.getId());
+            // 关闭小睡
+            MyUtil.cancelAlarmClock(context,
+                    -alarmClock.getId());
+        }
+
+
     }
+
     class ViewHolder {
 
         TextView tvTime;

@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         app:navigationRight_img="@drawable/gou2"
         app:navigationRight_type="img"
-        app:navigationTitle="质料修改" />
+        app:navigationTitle="资料修改" />
     <com.canplay.milk.view.scrollView.StickyScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -107,11 +107,12 @@
                     android:layout_height="35dp"
                     android:background="@null"
                     android:gravity="center_vertical"
-                    android:text="Mess gae"
-                    android:hint="输入baby昵称"
+                    android:text=""
+                    android:inputType="numberDecimal"
+                    android:hint="输入baby体重"
                     android:layout_marginRight="12dp"
                     android:maxLength="11"
-                    android:textColor="#3e3e3e"
+                    android:textColor="@color/color72"
                     android:textColorHint="#bdbdbd"/>
 
                 <TextView

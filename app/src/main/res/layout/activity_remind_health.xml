@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         app:navigationTitle="冲奶提醒" />
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:gravity="center_vertical"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
@@ -44,6 +45,7 @@
             android:layout_height="33dp"/>
     </LinearLayout>
     <TextView
+
         android:layout_marginTop="6dp"
         android:id="@+id/tv_remind"
         android:gravity="center"
@@ -54,18 +56,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.2dp"
-        android:background="@color/linecolor"/>
 
-    <com.canplay.milk.view.NoScrollViewPager
+
+    <ListView
         android:layout_weight="1"
-        android:layout_marginTop="10dp"
-        android:id="@+id/viewpager_main"
+        android:layout_marginTop="3dp"
+        android:id="@+id/rl_menu"
         android:background="@color/content_bg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        style="@style/lv_content"/>
     <LinearLayout
         android:gravity="center"
         android:layout_width="match_parent"

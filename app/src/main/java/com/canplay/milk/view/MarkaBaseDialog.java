@@ -46,6 +46,7 @@ public class MarkaBaseDialog extends Dialog {
 		private String rightButtonText;
 		private Button mButtonLeft;
 		private Button mButtonRight;
+		private ClearEditText et_content;
 		private LinearLayout mLayoutContent;
 		private LinearLayout mLayoutMessage;
 
@@ -144,6 +145,7 @@ public class MarkaBaseDialog extends Dialog {
 			dialog.setContentView(mView, new LayoutParams(w, h));
 			mButtonLeft = (Button) mView.findViewById(R.id.but_left);
 			mButtonRight=(Button)mView.findViewById(R.id.but_right);
+			et_content=(ClearEditText)mView.findViewById(R.id.et_content);
 			mTexViewTitle= (TextView) mView.findViewById(R.id.tv_title);
 			mLayoutContent = (LinearLayout)mView.findViewById(R.id.ll_content);
 
@@ -234,12 +236,16 @@ public class MarkaBaseDialog extends Dialog {
 					@Override
 					public void onClick(View v) {
 						if(onClickListener!=null)
+							if(et_content!=null){
+								contents=et_content.getText().toString();
+							}
 						onClickListener.onClick(dialog, DialogInterface.BUTTON_NEGATIVE);
 					}
 				});
 			}
 		}
 	}
+	public static String contents="";
 
 	@Override
 	public void show() {

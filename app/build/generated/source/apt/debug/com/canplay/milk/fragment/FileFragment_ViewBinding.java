@@ -10,6 +10,7 @@ import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
 import com.canplay.medical.R;
+import com.canplay.milk.view.CircleImageView;
 import java.lang.IllegalStateException;
 import java.lang.Override;
 
@@ -23,7 +24,7 @@ public class FileFragment_ViewBinding implements Unbinder {
     target.line = Utils.findRequiredView(source, R.id.line, "field 'line'");
     target.tvBirth = Utils.findRequiredViewAsType(source, R.id.tv_birth, "field 'tvBirth'", TextView.class);
     target.tvSex = Utils.findRequiredViewAsType(source, R.id.tv_sex, "field 'tvSex'", TextView.class);
-    target.ivImgs = Utils.findRequiredViewAsType(source, R.id.iv_imgs, "field 'ivImgs'", ImageView.class);
+    target.ivImgs = Utils.findRequiredViewAsType(source, R.id.iv_imgs, "field 'ivImgs'", CircleImageView.class);
     target.tvNick = Utils.findRequiredViewAsType(source, R.id.tv_nick, "field 'tvNick'", TextView.class);
     target.tvWeigh = Utils.findRequiredViewAsType(source, R.id.tv_weigh, "field 'tvWeigh'", TextView.class);
     target.llEditor = Utils.findRequiredViewAsType(source, R.id.ll_editor, "field 'llEditor'", LinearLayout.class);

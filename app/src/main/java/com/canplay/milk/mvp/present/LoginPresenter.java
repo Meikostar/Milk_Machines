@@ -171,6 +171,34 @@ public class LoginPresenter implements LoginContract.Presenter {
 
 
     @Override
+    public void EditorMyBaseInfo(String name, String weight, String birthday) {
+        Map<String, String> params = new TreeMap<>();
+        USER users = SpUtil.getInstance().getUsers();
+        params.put("name",name);
+        params.put("sex", users.sex);
+        params.put("birthdayDate", birthday);
+        params.put("weight", weight);
+        params.put("fatherName",  users.fatherName);
+        params.put("motherName",  users.motherName);
+        subscription = ApiManager.setSubscribe(contactApi.updateMyBaseInfo(ApiManager.getParameters(params, true)), new MySubscriber<USER>(){
+            @Override
+            public void onError(Throwable e){
+                super.onError(e);
+
+                mView.showTomast(e.getMessage());
+
+
+            }
+
+            @Override
+            public void onNext(USER entity){
+                mView.toEntity(entity,11);
+                SpUtil.getInstance().putUser(entity);
+//                SpUtil.getInstance().putString(SpUtil.USER_ID,entity.merchantId);
+            }
+        });
+    }
+    @Override
     public void downApk() {
 
         Map<String, String> params = new TreeMap<>();

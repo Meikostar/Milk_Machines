@@ -1,6 +1,7 @@
 package com.canplay.milk.mvp.activity.home;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -12,15 +13,18 @@ import android.widget.ToggleButton;
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseActivity;
 import com.canplay.milk.base.BaseDailogManager;
+import com.canplay.milk.base.RxBus;
+import com.canplay.milk.base.SubscriptionBean;
 import com.canplay.milk.bean.AlarmClock;
-import com.canplay.milk.mvp.activity.wiki.GroupRecordActivity;
-import com.canplay.milk.util.AlarmClockOperate;
 import com.canplay.milk.util.MyUtil;
+import com.canplay.milk.util.SpUtil;
 import com.canplay.milk.util.TextUtil;
 import com.canplay.milk.util.ToastUtil;
 import com.canplay.milk.view.ClearEditText;
+import com.canplay.milk.view.HourSelector;
 import com.canplay.milk.view.MarkaBaseDialog;
 import com.canplay.milk.view.NavigationBar;
+import com.google.gson.Gson;
 import com.google.zxing.client.android.decode.WeacConstants;
 
 import java.util.Collection;
@@ -56,15 +60,26 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
     TextView tvTag;
     @BindView(R.id.ll_tag)
     LinearLayout llTag;
+    @BindView(R.id.hour_select)
+    HourSelector hourSelect;
 
     @Override
     public void initViews() {
         setContentView(R.layout.acitivity_remind_setting);
         ButterKnife.bind(this);
         mMap = new TreeMap<>();
-
+        showDailog();
+        togBtnMonday.setOnCheckedChangeListener(this);
+        togBtnTuesday.setOnCheckedChangeListener(this);
+        togBtnWednesday.setOnCheckedChangeListener(this);
+        togBtnThursday.setOnCheckedChangeListener(this);
+        togBtnFriday.setOnCheckedChangeListener(this);
+        togBtnSaturday.setOnCheckedChangeListener(this);
+        togBtnSunday.setOnCheckedChangeListener(this);
+        mRepeatStr = new StringBuilder();
 //        mWindowAddPhoto = new PhotoPopupWindow(this);
     }
+
     @Override
     public void bindEvents() {
         navigationBar.setNavigationBarListener(new NavigationBar.NavigationBarListener() {
@@ -75,17 +90,22 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
 
             @Override
             public void navigationRight() {
-                if (!isMondayChecked &&!isTuesdayChecked && !isWednesdayChecked
-                        && !isThursdayChecked && !isFridayChecked &&! isSaturdayChecked
+                if (!isMondayChecked && !isTuesdayChecked && !isWednesdayChecked
+                        && !isThursdayChecked && !isFridayChecked && !isSaturdayChecked
                         && !isSundayChecked) {
                     ToastUtil.showToast("请选择提醒时间");
                     return;
                 }
-                if(TextUtil.isNotEmpty(tvTag.getText().toString())){
+                if (TextUtil.isNotEmpty(tvTag.getText().toString())) {
                     mAlarmClock.setTag(tvTag.getText().toString());
                 }
+                   mAlarmClock.setHour(Integer.valueOf(hourSelect.getHour()));
+                   mAlarmClock.setMinute(Integer.valueOf(hourSelect.getMinute()));
 
-                addList(mAlarmClock);
+                mAlarmClock.setId(SpUtil.getInstance().getAllAlarm().size());
+                addList(mAlarmClock, hourSelect.getSelector());
+                // 取得格式化后的时间
+
             }
 
             @Override
@@ -96,11 +116,12 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
         llTag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDailog();
+               dialog.show();
             }
         });
 
     }
+
     /**
      * 周一按钮状态，默认未选中
      */
@@ -141,10 +162,7 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
      */
     private StringBuilder mRepeatStr;
 
-    /**
-     * 重复描述组件
-     */
-    private TextView mRepeatDescribe;
+
 
     /**
      * 按键值顺序存放重复描述信息
@@ -264,36 +282,21 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
     private ClearEditText title;
 
     public void showDailog() {
-        if (view == null) {
-            view = View.inflate(this, R.layout.base_two_button_editor, null);
-             sure = (TextView) view.findViewById(R.id.but_left);
-             cancel = (TextView) view.findViewById(R.id.but_right);
-             title = (ClearEditText) view.findViewById(R.id.et_content);
 
-            cancel.setText(R.string.yihougx);
-            sure.setText(R.string.wozhidol);
-            dialog = BaseDailogManager.getInstance().getBuilder(this).setMessageView(view).create();
-            dialog.show();
-            sure.setOnClickListener(new View.OnClickListener() {
+
+            dialog = BaseDailogManager.getInstance().getBuilder(this).setLayoutID(R.layout.base_two_button_editor).setOnClickListener(new DialogInterface.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-                    if(!TextUtil.isEmpty(title.getText().toString())){
-                        tvTag.setText(title.getText().toString());
+                public void onClick(DialogInterface dialogInterface, int which) {
+                    if(which==DialogInterface.BUTTON_POSITIVE){
+                        dialog.dismiss();
+                        tvTag.setText(MarkaBaseDialog.contents);
+                    }else {
+                        dialog.dismiss();
                     }
-                    dialog.dismiss();
                 }
-            });
-            cancel.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    dialog.dismiss();
-                }
-            });
-        } else {
-            if (dialog != null) {
-                dialog.show();
-            }
-        }
+            }).create();
+
+
 
     }
 
@@ -365,8 +368,8 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
         if (isMondayChecked & isTuesdayChecked & isWednesdayChecked
                 & isThursdayChecked & isFridayChecked & isSaturdayChecked
                 & isSundayChecked) {
-            mRepeatDescribe.setText(getResources()
-                    .getString(R.string.every_day));
+//            mRepeatDescribe.setText(getResources()
+//                    .getString(R.string.every_day));
             mAlarmClock.setRepeat(getString(R.string.every_day));
             // 响铃周期
             mAlarmClock.setWeeks("2,3,4,5,6,7,1");
@@ -374,21 +377,21 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
         } else if (isMondayChecked & isTuesdayChecked & isWednesdayChecked
                 & isThursdayChecked & isFridayChecked & !isSaturdayChecked
                 & !isSundayChecked) {
-            mRepeatDescribe.setText(getString(R.string.week_day));
+//            mRepeatDescribe.setText(getString(R.string.week_day));
             mAlarmClock.setRepeat(getString(R.string.week_day));
             mAlarmClock.setWeeks("2,3,4,5,6");
             // 周六、日全部选中
         } else if (!isMondayChecked & !isTuesdayChecked & !isWednesdayChecked
                 & !isThursdayChecked & !isFridayChecked & isSaturdayChecked
                 & isSundayChecked) {
-            mRepeatDescribe.setText(getString(R.string.week_end));
+//            mRepeatDescribe.setText(getString(R.string.week_end));
             mAlarmClock.setRepeat(getString(R.string.week_end));
             mAlarmClock.setWeeks("7,1");
             // 没有选中任何一个
         } else if (!isMondayChecked & !isTuesdayChecked & !isWednesdayChecked
                 & !isThursdayChecked & !isFridayChecked & !isSaturdayChecked
                 & !isSundayChecked) {
-            mRepeatDescribe.setText(getString(R.string.repeat_once));
+//            mRepeatDescribe.setText(getString(R.string.repeat_once));
             mAlarmClock.setRepeat(getResources()
                     .getString(R.string.repeat_once));
             mAlarmClock.setWeeks(null);
@@ -402,7 +405,7 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
             }
             // 去掉最后一个"、"
             mRepeatStr.setLength(mRepeatStr.length() - 1);
-            mRepeatDescribe.setText(mRepeatStr.toString());
+//            mRepeatDescribe.setText(mRepeatStr.toString());
             mAlarmClock.setRepeat(mRepeatStr.toString());
 
             mRepeatStr.setLength(0);
@@ -431,8 +434,6 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
         }
 
     }
-
-
 
 
     @Override
@@ -479,25 +480,24 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
      */
     private List<AlarmClock> mAlarmClockList;
 
-    private void addList(AlarmClock ac) {
-        mAlarmClockList.clear();
-        AlarmClockOperate.getInstance().saveAlarmClock(ac);
-        int id = ac.getId();
-        int count = 0;
-        int position = 0;
-        List<AlarmClock> list = AlarmClockOperate.getInstance().loadAlarmClocks();
-        for (AlarmClock alarmClock : list) {
-            mAlarmClockList.add(alarmClock);
-            if (id == alarmClock.getId()) {
-                position = count;
-                if (alarmClock.isOnOff()) {
-                    MyUtil.startAlarmClock(this, alarmClock);
-                }
-            }
-            count++;
-        }
+    private void addList(AlarmClock ac, String times) {
 
+
+        Gson gson = new Gson();
+        String jsonStr = gson.toJson(ac); //将对象转换成Json
+        SpUtil.getInstance().putString(times, jsonStr);
+        String time = SpUtil.getInstance().getString("time");
+        if (TextUtil.isNotEmpty(time)) {
+            SpUtil.getInstance().putString("time", time + "," + times);
+        } else {
+            SpUtil.getInstance().putString("time", times);
+        }
+        MyUtil.startAlarmClock(this, ac);
+        showToasts("添加成功");
+        RxBus.getInstance().send(SubscriptionBean.createSendBean(SubscriptionBean.MESURE,""));
+        finish();
 
     }
+
 
 }

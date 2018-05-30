@@ -34,6 +34,7 @@ import com.canplay.milk.receiver.AlarmClockBroadcast;
 import com.canplay.milk.util.AlarmClockOperate;
 import com.canplay.milk.util.AudioPlayer;
 import com.canplay.milk.util.Parcelables;
+import com.canplay.milk.util.SpUtil;
 import com.canplay.milk.util.TimeUtil;
 import com.google.zxing.client.android.decode.WeacConstants;
 import com.google.zxing.client.android.utils.LogUtil;
@@ -156,7 +157,7 @@ public class AlarmActivity extends BaseActivity implements BaseContract.View {
         if(bytes!=null){
             mAlarmClock = Parcelables.toParcelable(bytes, AlarmClock.CREATOR);
         }else {
-            List<AlarmClock> alarmClocks = AlarmClockOperate.getInstance().loadAlarmClocks();
+            List<AlarmClock> alarmClocks = SpUtil.getInstance().getAllAlarm();
             String s = TimeUtil.formatHour(System.currentTimeMillis());
             String[] split = s.split(":");
             hour=Integer.valueOf(split[0]);

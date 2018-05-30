@@ -14,10 +14,14 @@ import com.canplay.medical.R;
 import com.canplay.milk.base.BaseApplication;
 import com.canplay.milk.base.BaseFragment;
 import com.canplay.milk.bean.Record;
+import com.canplay.milk.bean.USER;
 import com.canplay.milk.mvp.adapter.recycle.DataCyeleAdapter;
 import com.canplay.milk.mvp.component.DaggerBaseComponent;
 import com.canplay.milk.mvp.present.BaseContract;
 import com.canplay.milk.mvp.present.BasesPresenter;
+import com.canplay.milk.util.SpUtil;
+import com.canplay.milk.util.TextUtil;
+import com.canplay.milk.util.TimeUtil;
 import com.canplay.milk.view.DivItemDecoration;
 import com.malinskiy.superrecyclerview.OnMoreListener;
 import com.malinskiy.superrecyclerview.SuperRecyclerView;
@@ -101,7 +105,9 @@ public class DataFragment extends BaseFragment {
             }
         };
         mSuperRecyclerView.setRefreshListener(refreshListener);
+
     }
+    private USER user;
     public List<Record> list=new ArrayList<>();
     public List<Record> data=new ArrayList<>();
     public void onDataLoaded(int loadtype,final boolean haveNext, List<Record> datas) {

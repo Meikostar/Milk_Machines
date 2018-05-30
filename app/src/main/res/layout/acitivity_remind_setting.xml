@@ -33,7 +33,7 @@
      <com.canplay.milk.view.HourSelector
          android:layout_width="120dp"
          android:layout_height="150dp"
-
+          android:id="@+id/hour_select"
          android:layout_centerInParent="true"/>
 
     </RelativeLayout>

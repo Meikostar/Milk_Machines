@@ -1,4 +1,4 @@
-#Tue May 29 16:33:17 CST 2018
+#Wed May 30 19:47:57 CST 2018
 file.58=F\:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\libammsdk_82c490c15b94dd34734f70c54b38eea609ba8ebb\\classes.dex
 file.57=F\:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\common-1.0.0_1c4bb69efeb70b6c658b4737f6f3514e68095c88\\classes.dex
 file.56=F\:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_609dd672bc801b07d97937684fc298d1002f182a\\classes.dex

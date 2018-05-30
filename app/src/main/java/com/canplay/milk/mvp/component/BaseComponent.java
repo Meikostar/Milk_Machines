@@ -10,6 +10,7 @@ import com.canplay.milk.mvp.activity.account.ForgetPswActivity;
 import com.canplay.milk.mvp.activity.account.LoginActivity;
 import com.canplay.milk.mvp.activity.account.RegisteredActivity;
 import com.canplay.milk.mvp.activity.account.RegisteredSecondActivity;
+import com.canplay.milk.mvp.activity.mine.EditorInfoActivity;
 import com.canplay.milk.mvp.activity.mine.MineInfoActivity;
 import com.canplay.milk.mvp.activity.mine.UpdateActivity;
 import com.canplay.milk.mvp.activity.mine.UserAvarActivity;
@@ -29,6 +30,7 @@ import dagger.Component;
 public interface BaseComponent{
 
     void inject(PastWipiSearchActivity binderActivity);
+    void inject(EditorInfoActivity binderActivity);
     void inject(LoginActivity binderActivity);
     void inject(PreviewRecordActivity binderActivity);
     void inject(GroupRecordActivity binderActivity);

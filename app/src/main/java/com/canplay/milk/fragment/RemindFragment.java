@@ -20,6 +20,7 @@ import com.canplay.milk.mvp.present.BaseContract;
 import com.canplay.milk.mvp.present.BasesPresenter;
 import com.canplay.milk.util.AlarmClockOperate;
 import com.canplay.milk.util.MyUtil;
+import com.canplay.milk.util.SpUtil;
 import com.canplay.milk.util.TextUtil;
 
 
@@ -83,8 +84,7 @@ public class RemindFragment extends BaseFragment implements BaseContract.View {
             public void call(SubscriptionBean.RxBusSendBean bean) {
                 if (bean == null) return;
                 if (SubscriptionBean.MESURE == bean.type) {
-                    AlarmClock cont = (AlarmClock) bean.content;
-                    addList(cont);
+                    setData();
                 }
 
 
@@ -104,9 +104,12 @@ public class RemindFragment extends BaseFragment implements BaseContract.View {
 
             }
         });
-
+        setData();
     }
-
+    public void setData(){
+        List<AlarmClock> allAlarm = SpUtil.getInstance().getAllAlarm();
+        adapter.setData(allAlarm);
+    }
     private String name = "";
     private String time = "";
     //    private Mesure mesure=new Mesure();

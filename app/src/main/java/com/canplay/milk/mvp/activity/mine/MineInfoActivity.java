@@ -157,6 +157,7 @@ public class MineInfoActivity extends BaseActivity implements LoginContract.View
     public <T> void toEntity(T entity, int type) {
         if(type==11){
             showToasts("编辑成功");
+            RxBus.getInstance().send(SubscriptionBean.createSendBean(SubscriptionBean.UPDATE,""));
             finish();
         }else {
             user= (USER) entity;

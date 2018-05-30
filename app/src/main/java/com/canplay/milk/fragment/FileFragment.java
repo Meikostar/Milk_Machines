@@ -10,14 +10,28 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.canplay.medical.R;
 import com.canplay.milk.base.BaseFragment;
+import com.canplay.milk.base.RxBus;
+import com.canplay.milk.base.SubscriptionBean;
+import com.canplay.milk.bean.USER;
+import com.canplay.milk.mvp.activity.mine.EditorInfoActivity;
 import com.canplay.milk.mvp.activity.mine.MineInfoActivity;
+import com.canplay.milk.util.SpUtil;
+import com.canplay.milk.util.TextUtil;
+import com.canplay.milk.util.TimeUtil;
+import com.canplay.milk.view.CircleImageView;
+import com.canplay.milk.view.CircleTransform;
 import com.canplay.milk.view.PhotoPopupWindow;
+
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import rx.Subscription;
+import rx.functions.Action1;
 
 
 /**
@@ -33,7 +47,7 @@ public class FileFragment extends BaseFragment implements View.OnClickListener {
     @BindView(R.id.tv_sex)
     TextView tvSex;
     @BindView(R.id.iv_imgs)
-    ImageView ivImgs;
+    CircleImageView ivImgs;
     @BindView(R.id.tv_nick)
     TextView tvNick;
     @BindView(R.id.tv_weigh)
@@ -81,6 +95,7 @@ public class FileFragment extends BaseFragment implements View.OnClickListener {
 
 
         initListener();
+        initdata();
         return view;
     }
 
@@ -92,22 +107,61 @@ public class FileFragment extends BaseFragment implements View.OnClickListener {
 
     }
 
-
+    private USER user;
+    private Subscription mSubscription;
     private void initListener() {
+        mSubscription = RxBus.getInstance().toObserverable(SubscriptionBean.RxBusSendBean.class).subscribe(new Action1<SubscriptionBean.RxBusSendBean>() {
+            @Override
+            public void call(SubscriptionBean.RxBusSendBean bean) {
+                if (bean == null) return;
 
+                if (bean.type == SubscriptionBean.UPDATE) {
+                    initdata();
+                }
+
+            }
+        }, new Action1<Throwable>() {
+            @Override
+            public void call(Throwable throwable) {
+                throwable.printStackTrace();
+            }
+        });
+        RxBus.getInstance().addSubscription(mSubscription);
+     llEditor.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View v) {
+             startActivity(new Intent(getActivity(),EditorInfoActivity.class));
+         }
+     });
 
     }
 
-    private void initView() {
 
-    }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
+        if(mSubscription!=null){
+            mSubscription.unsubscribe();
+        }
     }
+   public void initdata(){
+       user= SpUtil.getInstance().getUsers();
+       if(user!=null) {
+           if (TextUtil.isNotEmpty(user.name)) {
+               tvNick.setText(user.name);
+           } if (TextUtil.isNotEmpty(user.sex)) {
+               tvSex.setText(Integer.valueOf(user.sex)==1?"男":"女");
+           }
+           if (TextUtil.isNotEmpty(user.weight)) {
+               tvWeigh.setText(user.weight+"kg");
+           }
+           Glide.with(this).load(user.imgResourceKey).asBitmap().transform(new CircleTransform(getActivity())).placeholder(R.drawable.moren).into(ivImgs);
 
+           tvBirth.setText(TimeUtil.formatToMD(Long.valueOf(user.birthday)));
+       }
+   }
     @Override
     public void onClick(View view) {
         switch (view.getId()) {

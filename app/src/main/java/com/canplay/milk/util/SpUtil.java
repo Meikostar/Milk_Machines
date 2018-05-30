@@ -4,7 +4,12 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.canplay.milk.base.ApplicationConfig;
+import com.canplay.milk.bean.AlarmClock;
 import com.canplay.milk.bean.USER;
+import com.google.gson.Gson;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SpUtil{
     public static String PREFERENCE_NAME = "repast_app_sp";
@@ -34,7 +39,7 @@ public class SpUtil{
     }
 
 
-
+    private static List<AlarmClock> list;
     public boolean putUser(USER location) {
         SharedPreferences.Editor editor = settings.edit();
         editor.putString(TOKEN, location.token+"");
@@ -61,10 +66,28 @@ public class SpUtil{
             synchronized (SpUtil.class) {
                 if (instance == null) {
                     instance = new SpUtil();
+                    list =new ArrayList<>();
                 }
             }
         }
         return instance;
+    }
+
+    public List<AlarmClock> getAllAlarm(){
+        list.clear();
+        String time = settings.getString("time", "");
+        if(TextUtil.isNotEmpty(time)){
+            String[] split = time.split(",");
+            for(int i=0;i<split.length;i++){
+                String data = settings.getString(split[i], "");
+                if(TextUtil.isNotEmpty(data)){
+                    Gson gson = new Gson();
+                    AlarmClock alarmClock = gson.fromJson(data, AlarmClock.class); //将json字符串转换成 AlarmClock对象
+                    list.add(alarmClock);
+                }
+            }
+        }
+        return list;
     }
     public boolean clearData(){
         SharedPreferences.Editor editor = settings.edit();
