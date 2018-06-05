@@ -146,9 +146,10 @@ public class AlarmActivity extends BaseActivity implements BaseContract.View {
         WeacStatus.sActivityNumber++;
 
         // 画面出现在解锁屏幕上,显示,常亮
-     getWindow().addFlags(
+        getWindow().addFlags(
                 WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
                         | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON
+                        | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
                         | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         bytes = getIntent()

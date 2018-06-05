@@ -4,11 +4,11 @@ package com.canplay.milk.mvp.activity.wiki;
 import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
 import com.canplay.medical.R;
-import com.canplay.milk.view.ClearEditText;
 import com.canplay.milk.view.NavigationBar;
 import com.malinskiy.superrecyclerview.SuperRecyclerView;
 import java.lang.IllegalStateException;
@@ -27,8 +27,9 @@ public class NurseryActivity_ViewBinding implements Unbinder {
     this.target = target;
 
     target.navigationBar = Utils.findRequiredViewAsType(source, R.id.navigationBar, "field 'navigationBar'", NavigationBar.class);
-    target.etSearch = Utils.findRequiredViewAsType(source, R.id.et_search, "field 'etSearch'", ClearEditText.class);
-    target.ivSearch = Utils.findRequiredViewAsType(source, R.id.iv_search, "field 'ivSearch'", ImageView.class);
+    target.tvContent = Utils.findRequiredViewAsType(source, R.id.tv_content, "field 'tvContent'", TextView.class);
+    target.tvTime = Utils.findRequiredViewAsType(source, R.id.tv_time, "field 'tvTime'", TextView.class);
+    target.llMy = Utils.findRequiredViewAsType(source, R.id.ll_my, "field 'llMy'", LinearLayout.class);
     target.mSuperRecyclerView = Utils.findRequiredViewAsType(source, R.id.super_recycle_view, "field 'mSuperRecyclerView'", SuperRecyclerView.class);
   }
 
@@ -40,8 +41,9 @@ public class NurseryActivity_ViewBinding implements Unbinder {
     this.target = null;
 
     target.navigationBar = null;
-    target.etSearch = null;
-    target.ivSearch = null;
+    target.tvContent = null;
+    target.tvTime = null;
+    target.llMy = null;
     target.mSuperRecyclerView = null;
   }
 }

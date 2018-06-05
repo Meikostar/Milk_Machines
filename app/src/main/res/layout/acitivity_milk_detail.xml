@@ -54,7 +54,7 @@
             <com.canplay.milk.view.BaseSelector
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
-                app:typep="0" />
+                app:typeps="0" />
 
             <TextView
                 android:layout_width="wrap_content"

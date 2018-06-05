@@ -4,8 +4,12 @@ package com.canplay.milk.mvp.component;
 import com.canplay.milk.base.AppComponent;
 import com.canplay.milk.base.manager.ApiManager;
 import com.canplay.milk.fragment.DataFragment;
+import com.canplay.milk.fragment.FileFragment;
+import com.canplay.milk.fragment.FileFragment_MembersInjector;
 import com.canplay.milk.fragment.SetFragment;
 import com.canplay.milk.fragment.SetFragment_MembersInjector;
+import com.canplay.milk.mvp.activity.MainActivity;
+import com.canplay.milk.mvp.activity.MainActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.account.ForgetPswActivity;
 import com.canplay.milk.mvp.activity.account.ForgetPswActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.account.LoginActivity;
@@ -14,6 +18,10 @@ import com.canplay.milk.mvp.activity.account.RegisteredActivity;
 import com.canplay.milk.mvp.activity.account.RegisteredActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.account.RegisteredSecondActivity;
 import com.canplay.milk.mvp.activity.account.RegisteredSecondActivity_MembersInjector;
+import com.canplay.milk.mvp.activity.home.AddMilkActivity;
+import com.canplay.milk.mvp.activity.home.AddMilkActivity_MembersInjector;
+import com.canplay.milk.mvp.activity.home.PushMilkActivity;
+import com.canplay.milk.mvp.activity.home.PushMilkActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.mine.EditorInfoActivity;
 import com.canplay.milk.mvp.activity.mine.EditorInfoActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.mine.MineInfoActivity;
@@ -24,6 +32,8 @@ import com.canplay.milk.mvp.activity.mine.UserAvarActivity;
 import com.canplay.milk.mvp.activity.mine.UserAvarActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.wiki.GroupRecordActivity;
 import com.canplay.milk.mvp.activity.wiki.GroupRecordActivity_MembersInjector;
+import com.canplay.milk.mvp.activity.wiki.NurseryActivity;
+import com.canplay.milk.mvp.activity.wiki.NurseryActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.wiki.PastWipiActivity;
 import com.canplay.milk.mvp.activity.wiki.PastWipiActivity_MembersInjector;
 import com.canplay.milk.mvp.activity.wiki.PastWipiSearchActivity;
@@ -48,6 +58,16 @@ public final class DaggerBaseComponent implements BaseComponent {
   private Provider<BasesPresenter> basesPresenterProvider;
 
   private MembersInjector<PastWipiSearchActivity> pastWipiSearchActivityMembersInjector;
+
+  private MembersInjector<AddMilkActivity> addMilkActivityMembersInjector;
+
+  private MembersInjector<MainActivity> mainActivityMembersInjector;
+
+  private MembersInjector<FileFragment> fileFragmentMembersInjector;
+
+  private MembersInjector<PushMilkActivity> pushMilkActivityMembersInjector;
+
+  private MembersInjector<NurseryActivity> nurseryActivityMembersInjector;
 
   private Provider<LoginPresenter> loginPresenterProvider;
 
@@ -106,6 +126,19 @@ public final class DaggerBaseComponent implements BaseComponent {
     this.pastWipiSearchActivityMembersInjector =
         PastWipiSearchActivity_MembersInjector.create(basesPresenterProvider);
 
+    this.addMilkActivityMembersInjector =
+        AddMilkActivity_MembersInjector.create(basesPresenterProvider);
+
+    this.mainActivityMembersInjector = MainActivity_MembersInjector.create(basesPresenterProvider);
+
+    this.fileFragmentMembersInjector = FileFragment_MembersInjector.create(basesPresenterProvider);
+
+    this.pushMilkActivityMembersInjector =
+        PushMilkActivity_MembersInjector.create(basesPresenterProvider);
+
+    this.nurseryActivityMembersInjector =
+        NurseryActivity_MembersInjector.create(basesPresenterProvider);
+
     this.loginPresenterProvider = LoginPresenter_Factory.create(apiManagerProvider);
 
     this.editorInfoActivityMembersInjector =
@@ -150,6 +183,31 @@ public final class DaggerBaseComponent implements BaseComponent {
   @Override
   public void inject(PastWipiSearchActivity binderActivity) {
     pastWipiSearchActivityMembersInjector.injectMembers(binderActivity);
+  }
+
+  @Override
+  public void inject(AddMilkActivity binderActivity) {
+    addMilkActivityMembersInjector.injectMembers(binderActivity);
+  }
+
+  @Override
+  public void inject(MainActivity binderActivity) {
+    mainActivityMembersInjector.injectMembers(binderActivity);
+  }
+
+  @Override
+  public void inject(FileFragment binderActivity) {
+    fileFragmentMembersInjector.injectMembers(binderActivity);
+  }
+
+  @Override
+  public void inject(PushMilkActivity binderActivity) {
+    pushMilkActivityMembersInjector.injectMembers(binderActivity);
+  }
+
+  @Override
+  public void inject(NurseryActivity binderActivity) {
+    nurseryActivityMembersInjector.injectMembers(binderActivity);
   }
 
   @Override

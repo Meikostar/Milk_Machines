@@ -6,6 +6,8 @@ import android.support.annotation.NonNull;
 
 import com.canplay.milk.base.manager.ApiManager;
 import com.canplay.milk.bean.BASE;
+import com.canplay.milk.bean.SetMilk;
+import com.canplay.milk.bean.Vaccines;
 import com.canplay.milk.bean.WIPI;
 import com.canplay.milk.mvp.http.BaseApi;
 import com.canplay.milk.net.MySubscriber;
@@ -34,6 +36,116 @@ public class BasesPresenter implements BaseContract.Presenter {
     @Inject
     BasesPresenter(ApiManager apiManager){
         contactApi = apiManager.createApi(BaseApi.class);
+    }
+
+
+    @Override
+    public void getUserMilkConf() {
+
+        Map<String, String> params = new TreeMap<>();
+        subscription = ApiManager.setSubscribe(contactApi.getUserMilkConf(ApiManager.getParameters(params, true)), new MySubscriber<SetMilk>() {
+            @Override
+            public void onNext(SetMilk ruslt) {
+
+                mView.toEntity(ruslt,1);
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+                super.onError(e);
+                mView.showTomast(e.getMessage());
+            }
+        });
+    }
+    @Override
+    public void setUserMilkConf(String consistence ,String waterQuantity	,String waterTemperature) {
+
+        Map<String, String> params = new TreeMap<>();
+        params.put("consistence",consistence);
+        params.put("waterQuantity",waterQuantity);
+        params.put("waterTemperature",waterTemperature);
+        subscription = ApiManager.setSubscribe(contactApi.setUserMilkConf(ApiManager.getParameters(params, true)), new MySubscriber<String>() {
+            @Override
+            public void onNext(String ruslt) {
+
+                mView.toEntity(ruslt,1);
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+                super.onError(e);
+                mView.showTomast(e.getMessage());
+            }
+        });
+    }
+    @Override
+    public void insertUserMilkRecord(String waterQuantity) {
+
+        Map<String, String> params = new TreeMap<>();
+        params.put("waterQuantity",waterQuantity);
+        subscription = ApiManager.setSubscribe(contactApi.insertUserMilkRecord(ApiManager.getParameters(params, true)), new MySubscriber<String>() {
+            @Override
+            public void onNext(String ruslt) {
+
+                mView.toEntity(ruslt,1);
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+                super.onError(e);
+                mView.showTomast(e.getMessage());
+            }
+        });
+    }
+
+
+    @Override
+    public void getUserMilkRecord() {
+
+        Map<String, String> params = new TreeMap<>();
+
+        subscription = ApiManager.setSubscribe(contactApi.getUserMilkRecord(ApiManager.getParameters(params, true)), new MySubscriber<List<BASE>>() {
+            @Override
+            public void onNext(List<BASE> ruslt) {
+
+                mView.toEntity(ruslt,1);
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+                super.onError(e);
+                mView.showTomast(e.getMessage());
+            }
+        });
+    }
+    @Override
+    public void getUserVaccineList() {
+
+        Map<String, String> params = new TreeMap<>();
+
+        subscription = ApiManager.setSubscribe(contactApi.getUserVaccineList(ApiManager.getParameters(params, true)), new MySubscriber<List<Vaccines>>() {
+            @Override
+            public void onNext(List<Vaccines> ruslt) {
+
+                mView.toEntity(ruslt,1);
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+                super.onError(e);
+                mView.showTomast(e.getMessage());
+            }
+        });
     }
     @Override
     public void getArticleList(final int  type, String from, String take) {

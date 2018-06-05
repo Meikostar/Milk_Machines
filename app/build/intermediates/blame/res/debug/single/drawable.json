@@ -352,6 +352,10 @@
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\drawable\\open.png"
     },
     {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\login_selectorss.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\drawable\\login_selectorss.xml"
+    },
+    {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\store_line.xml",
         "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\drawable\\store_line.xml"
     },

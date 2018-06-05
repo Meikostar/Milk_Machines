@@ -128,6 +128,12 @@ public class RemindMeasureAdapter extends BaseAdapter {
         } else {
             holder.ivchoose.setChecked(false);
         }
+        boolean isopen = SpUtil.getInstance().getBoolean("open", true);
+        if(isopen){
+            holder.ivchoose.setClickable(true);
+        }else {
+            holder.ivchoose.setClickable(false);
+        }
         holder.ivchoose.setOnCheckChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

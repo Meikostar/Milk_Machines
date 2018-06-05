@@ -62,6 +62,8 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
     LinearLayout llTag;
     @BindView(R.id.hour_select)
     HourSelector hourSelect;
+    @BindView(R.id.textView2)
+    TextView textView2;
 
     @Override
     public void initViews() {
@@ -76,6 +78,7 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
         togBtnFriday.setOnCheckedChangeListener(this);
         togBtnSaturday.setOnCheckedChangeListener(this);
         togBtnSunday.setOnCheckedChangeListener(this);
+
         mRepeatStr = new StringBuilder();
 //        mWindowAddPhoto = new PhotoPopupWindow(this);
     }
@@ -99,8 +102,8 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
                 if (TextUtil.isNotEmpty(tvTag.getText().toString())) {
                     mAlarmClock.setTag(tvTag.getText().toString());
                 }
-                   mAlarmClock.setHour(Integer.valueOf(hourSelect.getHour()));
-                   mAlarmClock.setMinute(Integer.valueOf(hourSelect.getMinute()));
+                mAlarmClock.setHour(Integer.valueOf(hourSelect.getHour()));
+                mAlarmClock.setMinute(Integer.valueOf(hourSelect.getMinute()));
 
                 mAlarmClock.setId(SpUtil.getInstance().getAllAlarm().size());
                 addList(mAlarmClock, hourSelect.getSelector());
@@ -116,7 +119,7 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
         llTag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               dialog.show();
+                dialog.show();
             }
         });
 
@@ -125,43 +128,42 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
     /**
      * 周一按钮状态，默认未选中
      */
-    private Boolean isMondayChecked = false;
+    private Boolean isMondayChecked = true;
 
     /**
      * 周二按钮状态，默认未选中
      */
-    private Boolean isTuesdayChecked = false;
+    private Boolean isTuesdayChecked = true;
 
     /**
      * 周三按钮状态，默认未选中
      */
-    private Boolean isWednesdayChecked = false;
+    private Boolean isWednesdayChecked = true;
 
     /**
      * 周四按钮状态，默认未选中
      */
-    private Boolean isThursdayChecked = false;
+    private Boolean isThursdayChecked = true;
 
     /**
      * 周五按钮状态，默认未选中
      */
-    private Boolean isFridayChecked = false;
+    private Boolean isFridayChecked = true;
 
     /**
      * 周六按钮状态，默认未选中
      */
-    private Boolean isSaturdayChecked = false;
+    private Boolean isSaturdayChecked = true;
 
     /**
      * 周日按钮状态，默认未选中
      */
-    private Boolean isSundayChecked = false;
+    private Boolean isSundayChecked = true;
 
     /**
      * 保存重复描述信息String
      */
     private StringBuilder mRepeatStr;
-
 
 
     /**
@@ -284,18 +286,18 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
     public void showDailog() {
 
 
-            dialog = BaseDailogManager.getInstance().getBuilder(this).setLayoutID(R.layout.base_two_button_editor).setOnClickListener(new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int which) {
-                    if(which==DialogInterface.BUTTON_POSITIVE){
-                        dialog.dismiss();
-                        tvTag.setText(MarkaBaseDialog.contents);
-                    }else {
-                        dialog.dismiss();
-                    }
-                }
-            }).create();
+        dialog = BaseDailogManager.getInstance().getBuilder(this).setLayoutID(R.layout.base_two_button_editor).setOnClickListener(new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int which) {
+                if (which == BaseDailogManager.RIGHT_BUTTON) {
+                    dialog.dismiss();
 
+                } else {
+                    dialog.dismiss();
+                    tvTag.setText(MarkaBaseDialog.contents);
+                }
+            }
+        }).create();
 
 
     }
@@ -368,8 +370,8 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
         if (isMondayChecked & isTuesdayChecked & isWednesdayChecked
                 & isThursdayChecked & isFridayChecked & isSaturdayChecked
                 & isSundayChecked) {
-//            mRepeatDescribe.setText(getResources()
-//                    .getString(R.string.every_day));
+            textView2.setText("提醒:"+getResources()
+                    .getString(R.string.every_day));
             mAlarmClock.setRepeat(getString(R.string.every_day));
             // 响铃周期
             mAlarmClock.setWeeks("2,3,4,5,6,7,1");
@@ -377,21 +379,21 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
         } else if (isMondayChecked & isTuesdayChecked & isWednesdayChecked
                 & isThursdayChecked & isFridayChecked & !isSaturdayChecked
                 & !isSundayChecked) {
-//            mRepeatDescribe.setText(getString(R.string.week_day));
+            textView2.setText("提醒:"+getString(R.string.week_day));
             mAlarmClock.setRepeat(getString(R.string.week_day));
             mAlarmClock.setWeeks("2,3,4,5,6");
             // 周六、日全部选中
         } else if (!isMondayChecked & !isTuesdayChecked & !isWednesdayChecked
                 & !isThursdayChecked & !isFridayChecked & isSaturdayChecked
                 & isSundayChecked) {
-//            mRepeatDescribe.setText(getString(R.string.week_end));
+            textView2.setText("提醒:"+getString(R.string.week_end));
             mAlarmClock.setRepeat(getString(R.string.week_end));
             mAlarmClock.setWeeks("7,1");
             // 没有选中任何一个
         } else if (!isMondayChecked & !isTuesdayChecked & !isWednesdayChecked
                 & !isThursdayChecked & !isFridayChecked & !isSaturdayChecked
                 & !isSundayChecked) {
-//            mRepeatDescribe.setText(getString(R.string.repeat_once));
+            textView2.setText(getString(R.string.repeat_once));
             mAlarmClock.setRepeat(getResources()
                     .getString(R.string.repeat_once));
             mAlarmClock.setWeeks(null);
@@ -405,7 +407,7 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
             }
             // 去掉最后一个"、"
             mRepeatStr.setLength(mRepeatStr.length() - 1);
-//            mRepeatDescribe.setText(mRepeatStr.toString());
+            textView2.setText("提醒:"+mRepeatStr.toString());
             mAlarmClock.setRepeat(mRepeatStr.toString());
 
             mRepeatStr.setLength(0);
@@ -453,7 +455,7 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
         // 小睡间隔10分钟
         mAlarmClock.setNapInterval(5);
         // 小睡3次
-        mAlarmClock.setNapTimes(3);
+
         // 取得铃声选择配置信息
         SharedPreferences share = getSharedPreferences(
                 WeacConstants.EXTRA_WEAC_SHARE, Activity.MODE_PRIVATE);
@@ -469,6 +471,13 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
         mAlarmClock.setRepeat("每天");
         // 响铃周期
         mAlarmClock.setWeeks("2,3,4,5,6,7,1");
+        togBtnMonday.setChecked(true);
+        togBtnTuesday.setChecked(true);
+        togBtnWednesday.setChecked(true);
+        togBtnThursday.setChecked(true);
+        togBtnFriday.setChecked(true);
+        togBtnSaturday.setChecked(true);
+        togBtnSunday.setChecked(true);
     }
 
     /**
@@ -487,17 +496,26 @@ public class RemindSettingActivity extends BaseActivity implements CompoundButto
         String jsonStr = gson.toJson(ac); //将对象转换成Json
         SpUtil.getInstance().putString(times, jsonStr);
         String time = SpUtil.getInstance().getString("time");
-        if (TextUtil.isNotEmpty(time)) {
-            SpUtil.getInstance().putString("time", time + "," + times);
+        if (time != null && !time.contains(times)) {
+            if (TextUtil.isNotEmpty(time)) {
+                SpUtil.getInstance().putString("time", time + "," + times);
+            }
         } else {
             SpUtil.getInstance().putString("time", times);
         }
+
         MyUtil.startAlarmClock(this, ac);
         showToasts("添加成功");
-        RxBus.getInstance().send(SubscriptionBean.createSendBean(SubscriptionBean.MESURE,""));
+        RxBus.getInstance().send(SubscriptionBean.createSendBean(SubscriptionBean.MESURE, ""));
         finish();
 
     }
 
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
+    }
 }

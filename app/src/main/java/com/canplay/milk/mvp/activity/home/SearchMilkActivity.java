@@ -23,7 +23,9 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-
+/**
+ * 奶粉列表
+ */
 public class SearchMilkActivity extends BaseActivity implements NavigationBar.NavigationBarListener {
 
     public static final String KEY_PICKED_CITY = "picked_city";

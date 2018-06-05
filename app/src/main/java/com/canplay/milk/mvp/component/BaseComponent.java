@@ -3,18 +3,23 @@ package com.canplay.milk.mvp.component;
 
 import com.canplay.milk.base.AppComponent;
 import com.canplay.milk.fragment.DataFragment;
+import com.canplay.milk.fragment.FileFragment;
 import com.canplay.milk.fragment.RemindFragment;
 import com.canplay.milk.fragment.SetFragment;
 import com.canplay.milk.mvp.ActivityScope;
+import com.canplay.milk.mvp.activity.MainActivity;
 import com.canplay.milk.mvp.activity.account.ForgetPswActivity;
 import com.canplay.milk.mvp.activity.account.LoginActivity;
 import com.canplay.milk.mvp.activity.account.RegisteredActivity;
 import com.canplay.milk.mvp.activity.account.RegisteredSecondActivity;
+import com.canplay.milk.mvp.activity.home.AddMilkActivity;
+import com.canplay.milk.mvp.activity.home.PushMilkActivity;
 import com.canplay.milk.mvp.activity.mine.EditorInfoActivity;
 import com.canplay.milk.mvp.activity.mine.MineInfoActivity;
 import com.canplay.milk.mvp.activity.mine.UpdateActivity;
 import com.canplay.milk.mvp.activity.mine.UserAvarActivity;
 import com.canplay.milk.mvp.activity.wiki.GroupRecordActivity;
+import com.canplay.milk.mvp.activity.wiki.NurseryActivity;
 import com.canplay.milk.mvp.activity.wiki.PastWipiActivity;
 import com.canplay.milk.mvp.activity.wiki.PastWipiSearchActivity;
 import com.canplay.milk.mvp.activity.wiki.PreviewRecordActivity;
@@ -30,6 +35,11 @@ import dagger.Component;
 public interface BaseComponent{
 
     void inject(PastWipiSearchActivity binderActivity);
+    void inject(AddMilkActivity binderActivity);
+    void inject(MainActivity binderActivity);
+    void inject(FileFragment binderActivity);
+    void inject(PushMilkActivity binderActivity);
+    void inject(NurseryActivity binderActivity);
     void inject(EditorInfoActivity binderActivity);
     void inject(LoginActivity binderActivity);
     void inject(PreviewRecordActivity binderActivity);

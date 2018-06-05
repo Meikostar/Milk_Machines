@@ -5,6 +5,7 @@ import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
@@ -31,6 +32,10 @@ public class HomeFragment_ViewBinding implements Unbinder {
     target.tvYm = Utils.findRequiredViewAsType(source, R.id.tv_ym, "field 'tvYm'", TextView.class);
     target.tvTime = Utils.findRequiredViewAsType(source, R.id.tv_time, "field 'tvTime'", TextView.class);
     target.ivPop = Utils.findRequiredViewAsType(source, R.id.iv_pop, "field 'ivPop'", ImageView.class);
+    target.llSet = Utils.findRequiredViewAsType(source, R.id.ll_set, "field 'llSet'", LinearLayout.class);
+    target.llInfo = Utils.findRequiredViewAsType(source, R.id.ll_info, "field 'llInfo'", LinearLayout.class);
+    target.llTime = Utils.findRequiredViewAsType(source, R.id.ll_time, "field 'llTime'", LinearLayout.class);
+    target.llMilk = Utils.findRequiredViewAsType(source, R.id.ll_milk, "field 'llMilk'", LinearLayout.class);
   }
 
   @Override
@@ -52,5 +57,9 @@ public class HomeFragment_ViewBinding implements Unbinder {
     target.tvYm = null;
     target.tvTime = null;
     target.ivPop = null;
+    target.llSet = null;
+    target.llInfo = null;
+    target.llTime = null;
+    target.llMilk = null;
   }
 }

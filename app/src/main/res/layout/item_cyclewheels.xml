@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     android:padding="0dp"
     android:background="@android:color/transparent">
     <TextView
@@ -11,8 +12,10 @@
         android:layout_height="30.5dp"
         android:textSize="13.5sp"
         android:text=""
+
         android:singleLine="true"
         android:gravity="center"
+        android:layout_centerInParent="true"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" />
 </RelativeLayout>

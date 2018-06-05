@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 
 import com.canplay.milk.base.ApplicationConfig;
 import com.canplay.milk.bean.AlarmClock;
+import com.canplay.milk.bean.SetMilk;
 import com.canplay.milk.bean.USER;
 import com.google.gson.Gson;
 
@@ -31,6 +32,11 @@ public class SpUtil{
     public static final String SEX="sex";//国家
     public static final String AVATOR="imgResourceKey";//国家
     public static final String MOTHERNAME="motherName";//国家
+    public static final String ML="mls";//国家
+    public static final String WD="wds";//国家
+    public static final String ND="nds";//国家
+    public static final String ONPENSTATE="remindStatus";//国家
+    public static final String MILK_ID="milkInfoId";//国家
     private static SharedPreferences settings;
     public static String USER_ID="merchantId";
 
@@ -54,7 +60,16 @@ public class SpUtil{
         editor.putString(WEIGHT, location.weight);
         return editor.commit();
     }
+    public boolean putMilk(SetMilk location) {
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString(ML, location.waterQuantity+"");
+        editor.putString(WD, location.waterTemperature+"");
+        editor.putString(ND, location.consistence);
+        editor.putInt(ONPENSTATE, location.remindStatus);
+        editor.putString(MILK_ID, location.milkInfoId);
 
+        return editor.commit();
+    }
 
     /**
      * 返回单例对象
@@ -108,6 +123,17 @@ public class SpUtil{
         user.imgResourceKey=settings.getString(AVATOR, "");
         user.sex=settings.getString(SEX, "");
         user.weight=settings.getString(WEIGHT, "");
+        return user;
+    }
+    public SetMilk getMilk(){
+
+        SetMilk user = new SetMilk();
+        user.waterTemperature=settings.getString(WD, "");
+        user.waterQuantity=settings.getString(ML, "");
+        user.consistence=settings.getString(ND, "");
+        user.remindStatus=settings.getInt(ONPENSTATE, 0);
+        user.milkInfoId=settings.getString(MILK_ID, "");
+
         return user;
     }
     public String getUserId(){

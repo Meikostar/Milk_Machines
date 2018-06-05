@@ -14,6 +14,7 @@ import com.canplay.medical.R;
 import com.canplay.milk.base.BaseFragment;
 import com.canplay.milk.mvp.activity.wiki.GroupRecordActivity;
 import com.canplay.milk.mvp.activity.wiki.LookTImeActivity;
+import com.canplay.milk.mvp.activity.wiki.NurseryActivity;
 import com.canplay.milk.mvp.activity.wiki.PastWipiActivity;
 import com.canplay.milk.mvp.activity.wiki.SeachResultActivity;
 import com.canplay.milk.view.PhotoPopupWindow;
@@ -80,7 +81,7 @@ public class WikiPediaFragment extends BaseFragment implements View.OnClickListe
         llTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), LookTImeActivity.class));
+                startActivity(new Intent(getActivity(), NurseryActivity.class));
 
             }
         });

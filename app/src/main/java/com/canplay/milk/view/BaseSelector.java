@@ -52,7 +52,7 @@ public class BaseSelector extends LinearLayout {
             hour = mTypedArray.getInteger(R.styleable.BaseSelector_hours,12);
             hourColor = mTypedArray.getResourceId(R.styleable.BaseSelector_hourColors,0);
             minter=mTypedArray.getInteger(R.styleable.BaseSelector_minters,0);
-            type=mTypedArray.getInteger(R.styleable.BaseSelector_minters,0);
+            type=mTypedArray.getInteger(R.styleable.BaseSelector_typeps,0);
 
         }
         init();
@@ -139,6 +139,29 @@ public class BaseSelector extends LinearLayout {
     }
 
 
-
+    public void setData(int type,String content){
+        if(type==0){
+            mCycleWheelViewBase.selection(Integer.valueOf(content)+1);
+        }else if(type==1){
+            if(content.equals("high ")){
+                mCycleWheelViewBase.selection(0);
+            }else if(content.equals("middle ")){
+                mCycleWheelViewBase.selection(1);
+            }else {
+                mCycleWheelViewBase.selection(1);
+            }
+            mCycleWheelViewBase.setLabels(data1,null);
+        }else if(type==2){
+            int i=0;
+            for(String cont:data2){
+                if(cont.equals(content)){
+                    mCycleWheelViewBase.selection(i+1);
+                    return;
+                }
+                i++;
+            }
+            mCycleWheelViewBase.setLabels(data2,null);
+        }
+    }
 
 }

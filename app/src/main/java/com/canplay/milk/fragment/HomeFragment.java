@@ -7,16 +7,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.canplay.medical.R;
-import com.canplay.milk.base.BaseApplication;
 import com.canplay.milk.base.BaseFragment;
 import com.canplay.milk.bean.ShareBean;
 import com.canplay.milk.mvp.activity.home.AddMilkActivity;
+import com.canplay.milk.mvp.activity.home.MilkDetailActivity;
+import com.canplay.milk.mvp.activity.home.PushMilkActivity;
 import com.canplay.milk.mvp.activity.home.RemindMilkActivity;
+import com.canplay.milk.mvp.activity.home.SearchMilkActivity;
 import com.canplay.milk.mvp.activity.mine.MineInfoActivity;
-import com.canplay.milk.mvp.component.DaggerBaseComponent;
+import com.canplay.milk.mvp.activity.wiki.LookTImeActivity;
 import com.canplay.milk.util.ThirdShareManager;
 import com.canplay.milk.view.EditorNameDialog;
 import com.canplay.milk.view.PhotoPopupWindow;
@@ -58,6 +61,14 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     TextView tvTime;
     @BindView(R.id.iv_pop)
     ImageView ivPop;
+    @BindView(R.id.ll_set)
+    LinearLayout llSet;
+    @BindView(R.id.ll_info)
+    LinearLayout llInfo;
+    @BindView(R.id.ll_time)
+    LinearLayout llTime;
+    @BindView(R.id.ll_milk)
+    LinearLayout llMilk;
 
 
     private EditorNameDialog dialog;
@@ -79,10 +90,10 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         sharePopupWindow.setSureListener(new SharePopupWindow.ClickListener() {
             @Override
             public void clickListener(int type) {
-                if(type==1){
-                    ThirdShareManager.getInstance().shareWeChat(new ShareBean(),true);
-                }else {
-                    ThirdShareManager.getInstance().shareWeChat(new ShareBean(),false);
+                if (type == 1) {
+                    ThirdShareManager.getInstance().shareWeChat(new ShareBean(), true);
+                } else {
+                    ThirdShareManager.getInstance().shareWeChat(new ShareBean(), false);
                 }
                 sharePopupWindow.dismiss();
             }
@@ -96,6 +107,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
     public PhotoPopupWindow mWindowAddPhoto;
     public SharePopupWindow sharePopupWindow;
+
     @Override
     public void onResume() {
         super.onResume();
@@ -104,6 +116,26 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
 
     private void initListener() {
+
+        llSet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), AddMilkActivity.class));
+            }
+        });
+        llInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), MilkDetailActivity.class));
+
+            }
+        });
+        llTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), LookTImeActivity.class));
+            }
+        });
         ivImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -114,7 +146,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         tvAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), AddMilkActivity.class));
+                startActivity(new Intent(getActivity(), PushMilkActivity.class));
             }
         });
         ivPop.setOnClickListener(new View.OnClickListener() {
@@ -159,10 +191,10 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             public void clickListener(int poition) {
                 switch (poition) {
                     case 0://冲奶提醒
-                     startActivity(new Intent(getActivity(),RemindMilkActivity.class));
+                        startActivity(new Intent(getActivity(), RemindMilkActivity.class));
                         break;
                     case 1://WIFI设置
-                        startActivity(new Intent(getActivity(),RemindMilkActivity.class));
+                        startActivity(new Intent(getActivity(), RemindMilkActivity.class));
                         break;
                     case 2://饮水设置
 

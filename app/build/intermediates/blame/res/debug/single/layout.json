@@ -4,12 +4,12 @@
         "source": "F:\\GitWorkSpace\\Milk_Machine\\gallery\\build\\intermediates\\bundles\\default\\res\\layout\\include_select_image_top.xml"
     },
     {
-        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6192085179e6056d54168618ede1f6f8f2213103\\output\\res\\layout\\notification_action.xml"
-    },
-    {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\order_detail_item.xml",
         "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\order_detail_item.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6192085179e6056d54168618ede1f6f8f2213103\\output\\res\\layout\\notification_action.xml"
     },
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_mine_info.xml",
@@ -330,6 +330,10 @@
     {
         "merged": "F:\\GitWorkSapce\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\gs_dialog_update.xml",
         "source": "F:\\GitWorkSapce\\Milk_Machine\\app\\src\\main\\res\\layout\\gs_dialog_update.xml"
+    },
+    {
+        "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\base_dailog_pop.xml",
+        "source": "F:\\GitWorkSpace\\Milk_Machine\\app\\src\\main\\res\\layout\\base_dailog_pop.xml"
     },
     {
         "merged": "F:\\GitWorkSpace\\Milk_Machine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_registered2.xml",

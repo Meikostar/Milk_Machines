@@ -8,9 +8,8 @@
          android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:background="@drawable/white_retagle"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:paddingLeft="5.7dp"
         android:layout_gravity="center"
         android:orientation="vertical">
         <LinearLayout
@@ -53,7 +52,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/green1_oval_line"
                 android:gravity="center_vertical"
-                android:hint="输入单次奶冲参考奶粉重量"
+                android:hint="请输入提醒标题"
                 android:maxLength="11"
                 android:text=""
                 android:textColor="#9fa0a0"

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/content_bg">
+
     <com.canplay.milk.view.NavigationBar
         android:id="@+id/navigationBar"
         android:layout_width="match_parent"
@@ -121,6 +122,7 @@
                 android:layout_width="30dp"
                 android:layout_height="35dp" />
             <TextView
+                android:id="@+id/tv_wd"
                 android:layout_marginTop="3dp"
                 android:textSize="15.5sp"
                 android:layout_width="wrap_content"
@@ -161,7 +163,7 @@
     <TextView
         android:layout_marginTop="55dp"
         android:id="@+id/tv_begin"
-        android:background="@drawable/green1_retagle"
+        android:background="@drawable/login_selectorss"
         android:textSize="15.5sp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"

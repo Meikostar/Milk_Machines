@@ -49,7 +49,7 @@
         android:layout_marginTop="6dp"
         android:id="@+id/tv_remind"
         android:gravity="center"
-        android:text="洗一次冲奶将会在两小时后提醒"
+        android:text=""
         android:textSize="13sp"
         android:layout_marginLeft="32dp"
         android:textColor="@color/color72"

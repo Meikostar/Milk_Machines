@@ -111,8 +111,8 @@
     <orderEntry type="library" exported="" name="rxandroid-1.2.1" level="project" />
     <orderEntry type="library" exported="" name="okio-1.11.0" level="project" />
     <orderEntry type="library" exported="" name="runtime-1.0.0" level="project" />
+    <orderEntry type="library" exported="" name="recyclerview-v7-23.3.0" level="project" />
     <orderEntry type="library" exported="" name="okhttp-3.6.0" level="project" />
-    <orderEntry type="library" exported="" name="recyclerview-v7-23.1.0" level="project" />
     <orderEntry type="library" exported="" name="common-1.0.0" level="project" />
     <orderEntry type="library" exported="" name="1_common-1.0.0" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-26.1.0" level="project" />

@@ -25,5 +25,8 @@ public class BASE {
     public String msg;
     public String platformType;
     public String version;
+    public String sumMilk;
+
+    public String dateStr;
 
 }

@@ -158,6 +158,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/ll_info"
                     android:layout_width="match_parent"
                     android:layout_height="59dp"
                     android:gravity="center_vertical"
@@ -195,6 +196,7 @@
                     android:layout_height="0.5dp"
                     android:background="@color/linecolor" />
                 <LinearLayout
+                    android:id="@+id/ll_set"
                     android:layout_width="match_parent"
                     android:layout_height="59dp"
                     android:gravity="center_vertical"
@@ -212,7 +214,7 @@
                         android:layout_weight="1"
                         android:gravity="center_vertical"
                         android:paddingLeft="9.5dp"
-                        android:text="奶粉设置"
+                        android:text="冲奶设置"
                         android:textColor="@color/a0"
                         android:textSize="16sp" />
 
@@ -233,6 +235,7 @@
                     android:background="@color/linecolor" />
 
                 <LinearLayout
+                    android:id="@+id/ll_time"
                     android:layout_width="match_parent"
                     android:layout_height="59dp"
                     android:gravity="center_vertical"
@@ -271,6 +274,7 @@
                     android:background="@color/linecolor" />
 
                 <LinearLayout
+                    android:id="@+id/ll_milk"
                     android:layout_marginBottom="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="59dp"

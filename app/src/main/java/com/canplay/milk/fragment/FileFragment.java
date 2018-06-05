@@ -12,12 +12,17 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.canplay.medical.R;
+import com.canplay.milk.base.BaseApplication;
 import com.canplay.milk.base.BaseFragment;
 import com.canplay.milk.base.RxBus;
 import com.canplay.milk.base.SubscriptionBean;
+import com.canplay.milk.bean.BASE;
 import com.canplay.milk.bean.USER;
 import com.canplay.milk.mvp.activity.mine.EditorInfoActivity;
 import com.canplay.milk.mvp.activity.mine.MineInfoActivity;
+import com.canplay.milk.mvp.component.DaggerBaseComponent;
+import com.canplay.milk.mvp.present.BaseContract;
+import com.canplay.milk.mvp.present.BasesPresenter;
 import com.canplay.milk.util.SpUtil;
 import com.canplay.milk.util.TextUtil;
 import com.canplay.milk.util.TimeUtil;
@@ -25,7 +30,10 @@ import com.canplay.milk.view.CircleImageView;
 import com.canplay.milk.view.CircleTransform;
 import com.canplay.milk.view.PhotoPopupWindow;
 
+import java.util.List;
 import java.util.Map;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -37,7 +45,10 @@ import rx.functions.Action1;
 /**
  * 档案
  */
-public class FileFragment extends BaseFragment implements View.OnClickListener {
+public class FileFragment extends BaseFragment implements View.OnClickListener,  BaseContract.View {
+
+    @Inject
+    BasesPresenter presenter;
 
     Unbinder unbinder;
     @BindView(R.id.line)
@@ -92,8 +103,9 @@ public class FileFragment extends BaseFragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.file_fragment, null);
         unbinder = ButterKnife.bind(this, view);
-
-
+        DaggerBaseComponent.builder().appComponent(((BaseApplication) getActivity().getApplication()).getAppComponent()).build().inject(this);
+        presenter.attachView(this);
+        presenter.getUserMilkRecord();
         initListener();
         initdata();
         return view;
@@ -169,4 +181,46 @@ public class FileFragment extends BaseFragment implements View.OnClickListener {
         }
     }
 
+    @Override
+    public <T> void toEntity(T entity, int type) {
+        List<BASE> data= (List<BASE>) entity;
+        if(data!=null){
+            if(data.size()==1){
+//                tvText1.setText(TimeUtil.formatToMD(data.get(0).dateStr));
+                tvText1.setText(data.get(0).dateStr);
+                tvText2.setText(data.get(0).times+"");
+                tvText3.setText(data.get(0).sumMilk);
+//                tvText4.setText(data.get(0).dateStr);
+//                tvText7.setText(data.get(1).dateStr);
+            }else if(data.size()==2){
+                tvText1.setText(data.get(0).dateStr);
+                tvText2.setText(data.get(0).times+"");
+                tvText3.setText(data.get(0).sumMilk);
+                tvText4.setText(data.get(1).dateStr);
+                tvText5.setText(data.get(1).times+"");
+                tvText6.setText(data.get(1).sumMilk);
+//                tvText7.setText(data.get(1).dateStr);
+            }else if(data.size()==3){
+                tvText1.setText(data.get(0).dateStr);
+                tvText2.setText(data.get(0).times+"");
+                tvText3.setText(data.get(0).sumMilk);
+                tvText4.setText(data.get(1).dateStr);
+                tvText5.setText(data.get(1).times+"");
+                tvText6.setText(data.get(1).sumMilk);
+                tvText7.setText(data.get(2).dateStr);
+                tvText8.setText(data.get(2).times+"");
+                tvText9.setText(data.get(2).sumMilk);
+            }
+        }
+    }
+
+    @Override
+    public void toNextStep(int type) {
+
+    }
+
+    @Override
+    public void showTomast(String msg) {
+     showToast(msg);
+    }
 }

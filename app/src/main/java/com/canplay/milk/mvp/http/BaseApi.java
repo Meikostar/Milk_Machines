@@ -3,7 +3,9 @@ package com.canplay.milk.mvp.http;
 
 
 import com.canplay.milk.bean.BASE;
+import com.canplay.milk.bean.SetMilk;
 import com.canplay.milk.bean.USER;
+import com.canplay.milk.bean.Vaccines;
 import com.canplay.milk.bean.WIPI;
 
 import java.util.List;
@@ -107,6 +109,43 @@ public interface BaseApi {
     @POST("web/getArticleList")
     Observable<WIPI> getArticleList(@QueryMap Map<String, String> options);
 
+
+    /**
+     * 疫苗助手列表
+     * @param options
+     * @return
+     */
+
+    @POST("web/listUserVaccineList")
+    Observable<List<Vaccines>> getUserVaccineList(@QueryMap Map<String, String> options);
+
+    /**
+     * 疫苗助手列表
+     * @param options
+     * @return
+     */
+
+    @POST("web/insertUserMilkRecord")
+    Observable<String> insertUserMilkRecord(@QueryMap Map<String, String> options);
+
+    /**
+     * 疫苗助手列表
+     * @param options
+     * @return
+     */
+
+    @POST("web/listUserMilkRecord")
+    Observable<List<BASE>> getUserMilkRecord(@QueryMap Map<String, String> options);
+
+    /**
+     * 疫苗助手列表
+     * @param options
+     * @return
+     */
+
+    @POST("web/setUserMilkConf")
+    Observable<String> setUserMilkConf(@QueryMap Map<String, String> options);
+
     /**
      * 成长记录列表
      * @param options
@@ -133,6 +172,17 @@ public interface BaseApi {
 
     @POST("web/growRecordDelete")
     Observable<String> growRecordDelete(@QueryMap Map<String, String> options);
+
+    /**
+     * 设置冲奶设置
+     * @param options
+     * @return
+     */
+
+    @POST("web/getUserMilkConf")
+    Observable<SetMilk> getUserMilkConf(@QueryMap Map<String, String> options);
+
+
     /**
      * 成长记录
      * @param options

@@ -94,8 +94,8 @@ public class HourSelector extends LinearLayout {
 
         mCycleWheelViewHour.setLabelSize(30f);
         mCycleWheelViewHour.setAlphaGradual(0.7f);
-        mCycleWheelViewHour.setCycleEnable(false);
-        mCycleWheelViewHour.selection(hour+1);
+        mCycleWheelViewHour.setCycleEnable(true);
+        mCycleWheelViewHour.selection(hour);
         mCycleWheelViewHour.setLabelColor(Color.parseColor("#b3b3b3"));
         mCycleWheelViewHour.setDivider(Color.parseColor("#e3e3e3"), 1);
         mCycleWheelViewHour.setLabelSelectColor(Color.parseColor("#333333"));
@@ -141,7 +141,7 @@ public class HourSelector extends LinearLayout {
         mCycleWheelViewMinute.setLabelSelectSize(30f);
         mCycleWheelViewMinute.setLabelSize(30f);
         mCycleWheelViewMinute.setAlphaGradual(0.7f);
-        mCycleWheelViewMinute.setCycleEnable(false);
+        mCycleWheelViewMinute.setCycleEnable(true);
         mCycleWheelViewMinute.setSelection(minter);
         mCycleWheelViewMinute.setLabelColor(Color.parseColor("#b3b3b3"));
         mCycleWheelViewMinute.setDivider(Color.parseColor("#e3e3e3"), 1);

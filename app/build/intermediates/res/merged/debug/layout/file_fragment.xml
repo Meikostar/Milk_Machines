@@ -36,90 +36,97 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <RelativeLayout
-                android:background="@drawable/icon_per_pic"
                 android:layout_width="match_parent"
                 android:layout_height="132dp"
-                >
+                android:background="@drawable/icon_per_pic">
+
                 <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="75dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:orientation="vertical">
+
                     <TextView
-                        android:background="@drawable/hui_cycle"
-                        android:layout_below="@+id/iv_img"
-                        android:layout_width="50dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_height="50dp"
-                        android:gravity="center"
                         android:id="@+id/tv_birth"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/iv_img"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/hui_cycle"
+                        android:gravity="center"
                         android:text=""
                         android:textColor="@color/slow_black"
                         android:textSize="11sp" />
+
                     <TextView
-                        android:background="@drawable/hui_cycle"
-                        android:layout_marginTop="10dp"
-                        android:layout_below="@+id/iv_img"
-                        android:layout_width="50dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_height="50dp"
-                        android:gravity="center"
                         android:id="@+id/tv_sex"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/iv_img"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/hui_cycle"
+                        android:gravity="center"
                         android:text=""
                         android:textColor="@color/slow_black"
                         android:textSize="11sp" />
                 </LinearLayout>
+
                 <com.canplay.milk.view.CircleImageView
-                    app:border_width="6dp"
-                    app:border_color="@color/white"
-                    android:layout_centerInParent="true"
                     android:id="@+id/iv_imgs"
-                    android:src="@drawable/btn_per_head"
                     android:layout_width="92dp"
                     android:layout_height="92dp"
-                    />
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/btn_per_head"
+                    app:border_color="@color/white"
+                    app:border_width="6dp" />
+
                 <LinearLayout
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="75dp"
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="75dp"
+                    android:orientation="vertical">
+
                     <TextView
-                        android:background="@drawable/hui_cycle"
-                        android:layout_below="@+id/iv_img"
+                        android:id="@+id/tv_nick"
                         android:layout_width="50dp"
-                        android:layout_centerHorizontal="true"
                         android:layout_height="50dp"
+                        android:layout_below="@+id/iv_img"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/hui_cycle"
                         android:gravity="center"
                         android:singleLine="true"
-                        android:id="@+id/tv_nick"
                         android:text=""
                         android:textColor="@color/slow_black"
                         android:textSize="11sp" />
-                    <TextView
-                        android:background="@drawable/hui_cycle"
 
+                    <TextView
+                        android:id="@+id/tv_weigh"
+
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/iv_img"
+                        android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
                         android:layout_marginTop="10dp"
-                        android:layout_below="@+id/iv_img"
-                        android:layout_width="50dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_height="50dp"
+                        android:background="@drawable/hui_cycle"
                         android:gravity="center"
-                        android:id="@+id/tv_weigh"
                         android:text=""
                         android:textColor="@color/slow_black"
                         android:textSize="11sp" />
                 </LinearLayout>
             </RelativeLayout>
+
             <LinearLayout
                 android:id="@+id/ll_editor"
-                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
+                android:background="@color/white"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -142,8 +149,7 @@
                 <ImageView
                     android:layout_width="15dp"
                     android:layout_height="24dp"
-                    android:layout_marginRight="20dp"
-                />
+                    android:layout_marginRight="20dp" />
             </LinearLayout>
 
             <View
@@ -180,213 +186,244 @@
                 <ImageView
                     android:layout_width="15dp"
                     android:layout_height="24dp"
-                    android:layout_marginRight="20dp"
-                    />
+                    android:layout_marginRight="20dp" />
             </LinearLayout>
+
             <TextView
                 android:id="@+id/tv_title"
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:textColor="@color/a0"
                 android:text="前三日喂奶记录"
+                android:textColor="@color/a0"
                 android:textSize="16sp" />
 
             <RelativeLayout
-                android:background="@drawable/blue_retagle"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="180dp">
+                android:background="@drawable/blue_retagle">
+
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
                     <View
-                        android:layout_weight="18"
                         android:layout_width="0dp"
-                        android:layout_height="1dp"/>
+                        android:layout_height="1dp"
+                        android:layout_weight="18" />
+
                     <View
-                        android:background="@color/white"
                         android:layout_width="0.8dp"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
                     <View
-                        android:layout_weight="25"
                         android:layout_width="0dp"
-                        android:layout_height="1dp"/>
+                        android:layout_height="1dp"
+                        android:layout_weight="25" />
+
                     <View
-                        android:background="@color/white"
                         android:layout_width="0.8dp"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
                     <View
-                        android:layout_weight="25"
                         android:layout_width="0dp"
-                        android:layout_height="1dp"/>
+                        android:layout_height="1dp"
+                        android:layout_weight="25" />
                 </LinearLayout>
+
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
                     <View
-                        android:layout_weight="3"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"/>
+                        android:layout_height="0dp"
+                        android:layout_weight="3" />
+
                     <View
-                        android:background="@color/white"
                         android:layout_width="match_parent"
-                        android:layout_height="0.8dp"/>
+                        android:layout_height="0.8dp"
+                        android:background="@color/white" />
+
                     <View
-                        android:layout_weight="5"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"/>
+                        android:layout_height="0dp"
+                        android:layout_weight="5" />
+
                     <View
-                        android:background="@color/white"
                         android:layout_width="match_parent"
-                        android:layout_height="0.8dp"/>
+                        android:layout_height="0.8dp"
+                        android:background="@color/white" />
+
                     <View
-                        android:layout_weight="5"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"/>
+                        android:layout_height="0dp"
+                        android:layout_weight="5" />
+
                     <View
-                        android:background="@color/white"
                         android:layout_width="match_parent"
-                        android:layout_height="0.8dp"/>
+                        android:layout_height="0.8dp"
+                        android:background="@color/white" />
+
                     <View
-                        android:layout_weight="5"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"/>
+                        android:layout_height="0dp"
+                        android:layout_weight="5" />
 
                 </LinearLayout>
+
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
                     <LinearLayout
-                        android:layout_weight="3.5"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp">
+                        android:layout_height="0dp"
+                        android:layout_weight="3.5">
+
                         <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="18"
                             android:gravity="center"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
                             android:text="时间"
-                            android:layout_weight="18"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent" />
-                        <TextView
-                            android:gravity="center"
                             android:textColor="@color/white"
-                            android:textSize="16sp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="25"
+                            android:gravity="center"
                             android:text="次数"
-                            android:layout_weight="25"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent" />
-                        <TextView
-                            android:gravity="center"
                             android:textColor="@color/white"
-                            android:textSize="16sp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="25"
+                            android:gravity="center"
                             android:text="奶量（ml）"
-                            android:layout_weight="25"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent" />
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
                     </LinearLayout>
+
                     <LinearLayout
-                        android:layout_weight="5"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp">
+                        android:layout_height="0dp"
+                        android:layout_weight="5">
+
                         <TextView
-                            android:gravity="center"
                             android:id="@+id/tv_text1"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
-                            android:text="3月4日"
-                            android:layout_weight="18"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent" />
-                        <TextView
+                            android:layout_height="match_parent"
+                            android:layout_weight="18"
                             android:gravity="center"
+                            android:text="3月4日"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
                             android:id="@+id/tv_text2"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
-                            android:text="5"
-                            android:layout_weight="25"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent" />
-                        <TextView
+                            android:layout_height="match_parent"
+                            android:layout_weight="25"
                             android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
                             android:id="@+id/tv_text3"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
-                            android:text="456"
-                            android:layout_weight="25"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_weight="5"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp">
-                        <TextView
+                            android:layout_height="match_parent"
+                            android:layout_weight="25"
                             android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5">
+
+                        <TextView
                             android:id="@+id/tv_text4"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
-                            android:text="3月4日"
-                            android:layout_weight="18"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent" />
-                        <TextView
+                            android:layout_height="match_parent"
+                            android:layout_weight="18"
                             android:gravity="center"
+                            android:text="3月4日"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
                             android:id="@+id/tv_text5"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
-                            android:text="5"
-                            android:layout_weight="25"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent" />
-                        <TextView
+                            android:layout_height="match_parent"
+                            android:layout_weight="25"
                             android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
                             android:id="@+id/tv_text6"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
-                            android:text="456"
-                            android:layout_weight="25"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent" />
+                            android:layout_height="match_parent"
+                            android:layout_weight="25"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
                     </LinearLayout>
+
                     <LinearLayout
-                        android:layout_weight="5"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp">
+                        android:layout_height="0dp"
+                        android:layout_weight="5">
+
                         <TextView
-                            android:gravity="center"
                             android:id="@+id/tv_text7"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
-                            android:text="3月4日"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
                             android:layout_weight="18"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent" />
-                        <TextView
                             android:gravity="center"
+                            android:text="3月4日"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
                             android:id="@+id/tv_text8"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
-                            android:text="5"
-                            android:layout_weight="25"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent" />
-                        <TextView
+                            android:layout_height="match_parent"
+                            android:layout_weight="25"
                             android:gravity="center"
-                            android:id="@+id/tv_text9"
+                            android:text="0"
                             android:textColor="@color/white"
-                            android:textSize="16sp"
-                            android:text="456"
-                            android:layout_weight="25"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_text9"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent" />
+                            android:layout_height="match_parent"
+                            android:layout_weight="25"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -394,13 +431,13 @@
 
             <TextView
                 android:id="@+id/tv_time"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:textColor="@color/a0"
                 android:text="时间：2018年"
+                android:textColor="@color/a0"
                 android:textSize="16sp" />
         </LinearLayout>
     </com.canplay.milk.view.scrollView.StickyScrollView>

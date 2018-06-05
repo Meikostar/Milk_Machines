@@ -57,5 +57,25 @@ public class BaseContract {
          * 删除记录
          */
         void growRecordDelete( String id);
+        /**
+         * 疫苗助手列表
+         */
+        void getUserVaccineList();
+        /**
+         * 上报奶量
+         */
+        void insertUserMilkRecord(String waterQuantity);
+        /**
+         * 三日喂奶记录
+         */
+        void getUserMilkRecord();
+        /**
+         * 获取冲奶设置
+         */
+        void getUserMilkConf();
+        /**
+         * 设置冲奶设置
+         */
+        void setUserMilkConf(String consistence ,String waterQuantity	,String waterTemperature);
     }
 }

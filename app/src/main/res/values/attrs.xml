@@ -28,7 +28,7 @@
     <declare-styleable name="BaseSelector">
         <attr name="hours" format="integer"/>
         <attr name="minters" format="integer"/>
-        <attr name="typep" format="integer"/>
+        <attr name="typeps" format="integer"/>
         <attr name="hourColors" format="color"/>
     </declare-styleable>
     <!--Banner无限轮播属性-->

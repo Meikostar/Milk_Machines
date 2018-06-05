@@ -126,15 +126,18 @@
                 android:textOn="@string/sunday"></ToggleButton>
         </LinearLayout>
     </LinearLayout>
+
     <TextView
-        android:layout_marginTop="6dp"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="20dp"
-        android:textColor="@color/a0"
-        android:textSize="16sp"
+        android:layout_marginTop="6dp"
         android:text="提示：每天"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:textColor="@color/a0"
+        android:textSize="16sp" />
+
     <LinearLayout
         android:id="@+id/ll_tag"
         android:layout_marginTop="14dp"
@@ -161,7 +164,7 @@
             android:layout_marginRight="20dp"
             android:textColor="@color/a0"
             android:textSize="16sp"
-            android:text="宝宝早餐"
+            android:text="编辑提醒标题"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>

@@ -13,19 +13,25 @@ import android.view.View;
 import com.canplay.medical.R;
 
 import com.canplay.milk.base.BaseActivity;
+import com.canplay.milk.base.BaseApplication;
 import com.canplay.milk.base.BaseDailogManager;
 import com.canplay.milk.base.RxBus;
 import com.canplay.milk.base.SubscriptionBean;
+import com.canplay.milk.bean.SetMilk;
 import com.canplay.milk.fragment.FileFragment;
 import com.canplay.milk.fragment.HomeFragment;
 import com.canplay.milk.fragment.SetFragment;
 import com.canplay.milk.fragment.WikiPediaFragment;
 import com.canplay.milk.mvp.activity.account.LoginActivity;
 import com.canplay.milk.mvp.adapter.FragmentViewPagerAdapter;
+import com.canplay.milk.mvp.component.DaggerBaseComponent;
+import com.canplay.milk.mvp.present.BaseContract;
+import com.canplay.milk.mvp.present.BasesPresenter;
 import com.canplay.milk.permission.PermissionConst;
 import com.canplay.milk.permission.PermissionGen;
 import com.canplay.milk.permission.PermissionSuccess;
 import com.canplay.milk.receiver.Service1;
+import com.canplay.milk.util.SpUtil;
 import com.canplay.milk.view.BottonNevgBar;
 import com.canplay.milk.view.ChangeNoticeDialog;
 import com.canplay.milk.view.MarkaBaseDialog;
@@ -34,17 +40,21 @@ import com.canplay.milk.view.NoScrollViewPager;
 import com.google.zxing.client.android.activity.CaptureActivity;
 
 
-
-
 import java.util.ArrayList;
 import java.util.List;
 
 
 import rx.Subscription;
 import rx.functions.Action1;
-import android.content.DialogInterface;
-public class MainActivity extends BaseActivity {
 
+import android.content.DialogInterface;
+
+import javax.inject.Inject;
+
+public class MainActivity extends BaseActivity implements BaseContract.View {
+
+    @Inject
+    BasesPresenter presenter;
     NoScrollViewPager viewpagerMain;
     BottonNevgBar bnbHome;
     private Subscription mSubscription;
@@ -59,11 +69,15 @@ public class MainActivity extends BaseActivity {
     private View line;
     private ChangeNoticeDialog dialog;
     private MarkaBaseDialog exitDialog;
+
     @Override
     public void initViews() {
         setContentView(R.layout.activity_main);
         bnbHome = (BottonNevgBar) findViewById(R.id.bnb_home);
-        line =  findViewById(R.id.line);
+        line = findViewById(R.id.line);
+        DaggerBaseComponent.builder().appComponent(((BaseApplication) getApplication()).getAppComponent()).build().inject(this);
+        presenter.attachView(this);
+        presenter.getUserMilkConf();
         PermissionGen.with(MainActivity.this)
                 .addRequestCode(PermissionConst.REQUECT_DATE)
                 .permissions(
@@ -71,26 +85,28 @@ public class MainActivity extends BaseActivity {
                         Manifest.permission.WRITE_EXTERNAL_STORAGE,
                         Manifest.permission.READ_EXTERNAL_STORAGE)
                 .request();
-        exitDialog= BaseDailogManager.getInstance().getBuilder(this).setOnClickListener(new DialogInterface.OnClickListener() {
+        exitDialog = BaseDailogManager.getInstance().getBuilder(this).setOnClickListener(new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                if(which==DialogInterface.BUTTON_POSITIVE){
+                if (which == DialogInterface.BUTTON_POSITIVE) {
                     dialog.dismiss();
                     finish();
-                }else {
+                } else {
                     dialog.dismiss();
                 }
             }
         }).create();
         viewpagerMain = (NoScrollViewPager) findViewById(R.id.viewpager_main);
         viewpagerMain.setScanScroll(false);
-        dialog=new ChangeNoticeDialog(this,line);
+        dialog = new ChangeNoticeDialog(this, line);
 
     }
+
     private void alarm() {
         startService(new Intent(MainActivity.this, Service1.class));
 
     }
+
     @Override
     public void bindEvents() {
 
@@ -101,10 +117,12 @@ public class MainActivity extends BaseActivity {
             @Override
             public void call(SubscriptionBean.RxBusSendBean bean) {
                 if (bean == null) return;
-                if(SubscriptionBean.MENU_SCAN==bean.type){
-                  dialog.show();
-                }else if(SubscriptionBean.FINISH==bean.type){
+                if (SubscriptionBean.MENU_SCAN == bean.type) {
+                    dialog.show();
+                } else if (SubscriptionBean.FINISH == bean.type) {
                     finish();
+                } else if (SubscriptionBean.REFEST_SET == bean.type) {
+                    presenter.getUserMilkConf();
                 }
 
 
@@ -124,6 +142,7 @@ public class MainActivity extends BaseActivity {
             }
         });
     }
+
     @Override
     public void initData() {
         addFragment();
@@ -157,7 +176,8 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onChagne(int currentIndex) {
                 current = currentIndex;
-                bnbHome.setSelect(currentIndex);alarm();
+                bnbHome.setSelect(currentIndex);
+                alarm();
                 viewpagerMain.setCurrentItem(currentIndex);
             }
         });
@@ -166,10 +186,10 @@ public class MainActivity extends BaseActivity {
     private void addFragment() {
         mFragments = new ArrayList<>();
 
-        setFragment=new SetFragment();
-        fileFragment=new FileFragment();
-        homeFragment=new HomeFragment();
-        wikiPediaFragment=new WikiPediaFragment();
+        setFragment = new SetFragment();
+        fileFragment = new FileFragment();
+        homeFragment = new HomeFragment();
+        wikiPediaFragment = new WikiPediaFragment();
         mFragments.add(homeFragment);
         mFragments.add(wikiPediaFragment);
         mFragments.add(fileFragment);
@@ -183,7 +203,7 @@ public class MainActivity extends BaseActivity {
         if (mSubscription != null) {
             RxBus.getInstance().unSub(mSubscription);
         }
-        if(exitDialog!=null){
+        if (exitDialog != null) {
             exitDialog.dismiss();
         }
     }
@@ -206,7 +226,8 @@ public class MainActivity extends BaseActivity {
         startActivityForResult(intent, REQUEST_CODE_SCAN);
     }
 
-    private int REQUEST_CODE_SCAN=6;
+    private int REQUEST_CODE_SCAN = 6;
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -216,17 +237,15 @@ public class MainActivity extends BaseActivity {
             if (data != null) {
 
                 String content = data.getStringExtra("scan_result");
-                showToasts("扫描结果为：" +content);
+                showToasts("扫描结果为：" + content);
 //                result.setText("扫描结果为：" + content);
             }
         }
     }
 
 
-    public boolean onKeyDown(int keyCode,KeyEvent event)
-    {
-        switch(keyCode)
-        {
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        switch (keyCode) {
             case KeyEvent.KEYCODE_BACK:
                 exitDialog.show();
                 return true;
@@ -234,4 +253,19 @@ public class MainActivity extends BaseActivity {
         return super.onKeyDown(keyCode, event);
     }
 
+    @Override
+    public <T> void toEntity(T entity, int type) {
+        SetMilk milk= (SetMilk) entity;
+        SpUtil.getInstance().putMilk(milk);
+    }
+
+    @Override
+    public void toNextStep(int type) {
+
+    }
+
+    @Override
+    public void showTomast(String msg) {
+        showToasts(msg);
+    }
 }
