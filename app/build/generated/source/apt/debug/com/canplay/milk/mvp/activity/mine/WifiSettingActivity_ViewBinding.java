@@ -9,6 +9,7 @@ import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
 import com.canplay.medical.R;
+import com.canplay.milk.view.ClearEditText;
 import com.canplay.milk.view.MCheckBox;
 import com.canplay.milk.view.NavigationBar;
 import java.lang.IllegalStateException;
@@ -31,7 +32,6 @@ public class WifiSettingActivity_ViewBinding implements Unbinder {
     target.ivWifi = Utils.findRequiredViewAsType(source, R.id.iv_wifi, "field 'ivWifi'", MCheckBox.class);
     target.tvName = Utils.findRequiredViewAsType(source, R.id.tv_name, "field 'tvName'", TextView.class);
     target.imageView3 = Utils.findRequiredViewAsType(source, R.id.imageView3, "field 'imageView3'", ImageView.class);
-    target.tvNames = Utils.findRequiredViewAsType(source, R.id.tv_names, "field 'tvNames'", TextView.class);
     target.tvStatus = Utils.findRequiredViewAsType(source, R.id.tv_status, "field 'tvStatus'", TextView.class);
     target.tvEquptname = Utils.findRequiredViewAsType(source, R.id.tv_equptname, "field 'tvEquptname'", TextView.class);
     target.tvUser = Utils.findRequiredViewAsType(source, R.id.tv_user, "field 'tvUser'", TextView.class);
@@ -39,6 +39,7 @@ public class WifiSettingActivity_ViewBinding implements Unbinder {
     target.tvGet = Utils.findRequiredViewAsType(source, R.id.tv_get, "field 'tvGet'", TextView.class);
     target.tvSearch = Utils.findRequiredViewAsType(source, R.id.tv_search, "field 'tvSearch'", TextView.class);
     target.tvOpen = Utils.findRequiredViewAsType(source, R.id.tv_open, "field 'tvOpen'", TextView.class);
+    target.etWifi = Utils.findRequiredViewAsType(source, R.id.et_wifi, "field 'etWifi'", ClearEditText.class);
   }
 
   @Override
@@ -53,7 +54,6 @@ public class WifiSettingActivity_ViewBinding implements Unbinder {
     target.ivWifi = null;
     target.tvName = null;
     target.imageView3 = null;
-    target.tvNames = null;
     target.tvStatus = null;
     target.tvEquptname = null;
     target.tvUser = null;
@@ -61,5 +61,6 @@ public class WifiSettingActivity_ViewBinding implements Unbinder {
     target.tvGet = null;
     target.tvSearch = null;
     target.tvOpen = null;
+    target.etWifi = null;
   }
 }

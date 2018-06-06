@@ -54,7 +54,7 @@ public class ConfigUtils {
 
 
     public static String getIp() {
-        return shared.getString(IP, "192.168.1.170");
+        return shared.getString(IP, "192.168.50.133");
     }
 
     public static int getPort() {

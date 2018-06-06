@@ -68,6 +68,8 @@ android {
         compile project(':LibMarsdaemon')
         compile project(':zxingLibrary')
         compile project(':framework')
+        compile project(':esptouch')
+
 //        compile project(':zxingLibrary')
 
         //Logcat

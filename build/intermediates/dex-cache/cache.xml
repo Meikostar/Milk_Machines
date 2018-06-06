@@ -3,12 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\7586a14ecd70e78524171d8ad41eac9df285955f\output\jars\classes.jar"
+        jar="C:\Users\Administrator\.android\build-cache\5a70535be1e4455de1451421e72b9e9978cc8531\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_06004466028597e5216b603251dee81871ff7b84\classes.dex" />
+        sha1="e176fd06c2ad5b50a2f5cb4de6000a83a7cb48f5">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_22e84df170d5b4b692d333c1ae3a9226362310f6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.2.0\41e67dba73c3347e4503761642c39d0e06ca1f2\retrofit-2.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="041e67dba73c3347e4503761642c39d0e06ca1f2">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\retrofit-2.2.0_5127af66b76a6a65810e00277050022b19264d6f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\2b41b5cf48b682e72f1e6b8893dd1d94591e57a4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="49d8172be63283e93a2b261a9a36843936d93d02">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b10cace0edf4ba13770a3c9559c4383dbce92638\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -21,48 +39,138 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\26.1.0\814258103cf26a15fcc26ecce35f5b7d24b73f8\support-annotations-26.1.0.jar"
+        jar="F:\GitWorkSpace\Milk_Machine\esptouch\build\intermediates\bundles\default\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="0814258103cf26a15fcc26ecce35f5b7d24b73f8">
-        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-26.1.0_8b973bb99f664607e3a0f6f9c9c166f38956ddbc\classes.dex" />
+        sha1="89085439ff6cdc9caad2bcc674e5ba228058ea75">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\4\classes_80c2c7502ca0a2c32238f2b244a53bb2b9a23adb\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\76040eb7c65026dd7b33b103fa8c5f1f965af952\output\jars\classes.jar"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.alibaba\fastjson\1.2.31\1ca964122c53f03f6fc3938b58c16d63b40490ab\fastjson-1.2.31.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="f428e2fbc9ed0b297e3a3f420e51e6982f66822d">
-        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_46eaec1ef02376e86ba991c149dacb7d06e5a92c\classes.dex" />
+        sha1="1ca964122c53f03f6fc3938b58c16d63b40490ab">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\fastjson-1.2.31_ab5b2a670e6eb898440b8756efa756f436d430b9\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\93412b1f37fb4d81d8cb10deb5ff05a8440046f8\output\jars\classes.jar"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.dagger\dagger-compiler\2.5\96b9c749db4590549166740ba989fe3580eb0a19\dagger-compiler-2.5.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="f97cf85b0fe70d37a705111dafa6b1b418ea1650">
-        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3d905c04ef55a5e538794327d9b6469cd6a89746\classes.dex" />
+        sha1="96b9c749db4590549166740ba989fe3580eb0a19">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\dagger-compiler-2.5_9b897e1a832f79ae92466e40260bccfe0524d264\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\d9f081aee7f799c10530db19d8836ce3688c2371\output\jars\classes.jar"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\org.simpleframework\simple-xml\2.7.1\dd91fb744c2ff921407475cb29a1e3fee397d411\simple-xml-2.7.1.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="40392f30a601db5675cdf18192aab013d6fee6ec">
-        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_50b72bc6d22b991621d03abfd0907a993f95d0f8\classes.dex" />
+        sha1="dd91fb744c2ff921407475cb29a1e3fee397d411">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\simple-xml-2.7.1_96b43fe34e3dc94102c15c428f3d0c6a495b0e3b\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\5b35513e8e25fc00a2642e475b3dacd21a04a06e\output\jars\classes.jar"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.dagger\dagger\2.5\571f4e0451db64a7b41dbeb5f2503986fe5acdb4\dagger-2.5.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
-        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d613844466a4a81842661c833803140e9d2149f2\classes.dex" />
+        sha1="571f4e0451db64a7b41dbeb5f2503986fe5acdb4">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\dagger-2.5_f78c5b62c6d85b4b1a9054b506c6534ede927cff\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.12.0\3742beff8024d0a0073d284b7c5e4cbf73d99b25\okio-1.12.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="3742beff8024d0a0073d284b7c5e4cbf73d99b25">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.12.0_b08f41d5c651425814124acdb4968a1e1d0b1c3e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.7_2e85dbf641c4a16c73925139bd4ff50ebb0450dd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\27ae7f0cf3701511a86f295979c80b1d430ab845\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="19f281a785ca0eb5f6799fc7bf7ca199a9ca1e8b">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7f01d43dd82e8a21dbb18437f26bbfac22f02ebe\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\9224796eb7af8230b024224dc97032da1950957d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b71bc972f99964363dbbd2af04672c718dc089e9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\f5ebc32c6f4ffe4c24dde7410b116e7da93e67b9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7fd079f2df7c91900a1ef111a71af81abca7d431\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\logging-interceptor\3.7.0\9ccaeec4a3f4fae5cde9a8b8f0743ad002ad5734\logging-interceptor-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9ccaeec4a3f4fae5cde9a8b8f0743ad002ad5734">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\logging-interceptor-3.7.0_2fe298d3a32b1cd8a0a8acc82c06318788e1318b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\glide-3.7.0_1f3ddf859a86296da03fddcf50d19f29d652df81\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.2.0\a09926806199499a20b2f5168779499abfa33342\converter-gson-2.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a09926806199499a20b2f5168779499abfa33342">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\converter-gson-2.2.0_04baf9506aff2da76f835c7bcd98adc79126927e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.2.9\cc0d879e3c75fe106aed3651fbdaebe628ac67ef\rxjava-1.2.9.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="cc0d879e3c75fe106aed3651fbdaebe628ac67ef">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\rxjava-1.2.9_c380b6ac152f80db72fca4f278e6ca180284a1ae\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\b21b4a8a229d67fe4c9d46878885e2f4832a3f3a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_47fa3c8b037da6a1348d733e166015c6e705b556\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -75,21 +183,21 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\d47bcd9b4775e228fbc462cbc0baa8ea67075e56\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e21df453cf17b057caad7f043490c733278b8407\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="F:\GitWorkSpace\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\libs\zxing-4.7.3.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="8de9ca74af1dc9b963af4f072fb78eba58e9743a">
         <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\8\zxing-4.7.3_031541fafb62660e6134628782bc9b6e6c03a988\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\90b7e7d33461daf8fafe53020ace0ec16a432109\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="6f4138a4e065826cb044d49faea4cfd7191773d1">
-        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c5d69f21aee9fe73175f9866135ad3afa4a53342\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -102,12 +210,48 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\android.arch.lifecycle\common\1.0.0\e414a4cb28434e25c4f6aa71426eb20cf4874ae9\common-1.0.0.jar"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
-        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\common-1.0.0_1c4bb69efeb70b6c658b4737f6f3514e68095c88\classes.dex" />
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\library-2.4.0_dd460f45d27a359687729c3c169358b1eda3100b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\adapter-rxjava\2.2.0\d80514b6f44f0c4c6234e2d67fea783a25e77275\adapter-rxjava-2.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d80514b6f44f0c4c6234e2d67fea783a25e77275">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\adapter-rxjava-2.2.0_06d987253da6a92ebebc265a6059f82a3b656623\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\728036cef145dfe45d3eb6a571d7e4324684464d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a3b3d2d4b21d2fd300777b8455255b5dc0cf6616">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_127c90d931e890f3801e7eef9e4fa5eaf3bc39a8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-urlconnection\3.7.0\22c61dda6d7e63a7325932c85b0a3412443b1f5a\okhttp-urlconnection-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="22c61dda6d7e63a7325932c85b0a3412443b1f5a">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-urlconnection-3.7.0_c0649693318b8fe2b3d15eb32e0680cbe59f0d84\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\a9be0f77c30cfd845b9978aea63e2bfaf45ce082\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e6e5cb683c74a95072d8fbf47a997e64546fc284">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_fdb22424d2b078ecea16e6d4823b7e2c9b40a15f\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -129,6 +273,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\19.0\6ce200f6b23222af3d8abb6b6459e6c44f4bb0e9\guava-19.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6ce200f6b23222af3d8abb6b6459e6c44f4bb0e9">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\guava-19.0_17ae7ca79b8f5169fcac93232ebfb33f3026d9d0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="F:\GitWorkSpace\Milk_Machine\LibMarsdaemon\build\intermediates\bundles\default\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -138,12 +291,39 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\android.arch.core\common\1.0.0\a2d487452376193fc8c103dd2b9bd5f2b1b44563\common-1.0.0.jar"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup\otto\1.3.8\cf615176cd1177edf71d3c9605f8dc148fede6be\otto-1.3.8.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
-        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\common-1.0.0_34ca24e8cff1f829d4bac2a8acae5d89393e0831\classes.dex" />
+        sha1="cf615176cd1177edf71d3c9605f8dc148fede6be">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\otto-1.3.8_e9db0628aafd4857a0f5165f559642d620bd29bb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\97abfc55d1e504c2314e10ab5909fa0eb140d1bc\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_dd20a33d009134eab56ed237230faaf2db393838\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-simplexml\2.2.0\3585dc3d225e2ca03af1a2cece159eb511fa0528\converter-simplexml-2.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="3585dc3d225e2ca03af1a2cece159eb511fa0528">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\converter-simplexml-2.2.0_c630822b1ee18b80285061efa8e47241a2d79d68\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.7.0\6edbebdd8868708db718d15c09c4b28037fd487e\okhttp-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6edbebdd8868708db718d15c09c4b28037fd487e">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.7.0_5fe48df42b4b143a1f7a0817ac92bb352cf626be\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -156,30 +336,39 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\95055ddc47136c65c50a4d3bbb4d547e4a031a23\output\jars\classes.jar"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.5.1\bb67dad90bab7cd77a8f7f1b8442b47e3a2326bc\butterknife-annotations-8.5.1.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
-        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_87318e7943f84fb9c8cf3e4104d657d9acc5255f\classes.dex" />
+        sha1="bb67dad90bab7cd77a8f7f1b8442b47e3a2326bc">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\butterknife-annotations-8.5.1_5290ebd889bdf836ef1f87a7f8bc931d4b8fa107\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\6730d542e7859c0f449be55e58770b58b2b0cfa8\output\jars\classes.jar"
+        jar="C:\Users\Administrator\.android\build-cache\7e1eabea27807b68066a3754ada305ffc7d63308\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
-        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b0bf53a86c89aff5225093bc34ccb9af2a437a0b\classes.dex" />
+        sha1="2a156b99fc7cc034308f942906b09d32754a4470">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_609dd672bc801b07d97937684fc298d1002f182a\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\93bacd57114c2926df3a2c3acfeb614f7d86ddbc\output\jars\classes.jar"
+        jar="C:\Users\Administrator\.android\build-cache\55925685d9f809c80be6919dc8e8d92137c54c1b\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
-        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_73bd0dd1c86dbb1e6bce53a5e9ef79a97cb067e3\classes.dex" />
+        sha1="8a9ee7bc61bec4070d7412c7ea45968eef3b7d9b">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_32fb403f007c42bb209a7481b90f4a4829c3747f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\TOOLS\ADS\AndroidSDK\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_1008d867f696d4a70c502980097ed6711d792721\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -192,12 +381,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\6c20b752c6435bb8bc3222fd67158a4492c2fec4\output\jars\classes.jar"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="508f50705b4fde51a16259f29c854201a3044516">
-        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_32b07521b4f37d285693b7fbbabb88a3349baaa5\classes.dex" />
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\javax.inject-1_273da2ba53aedc2691b5c6c4485ebe7b12b6e634\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -216,6 +405,15 @@
         revision="26.0.2"
         sha1="9f8dccf3958372db35c072612f8cdd920b3f33a6">
         <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\4\classes_bee35f0d054f296ea8e7ca898566f50967cfbd82\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.dagger\dagger-producers\2.5\a02d8016dddbe70c7c6c2093fae96bef5cb9fdbb\dagger-producers-2.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a02d8016dddbe70c7c6c2093fae96bef5cb9fdbb">
+        <dex dex="F:\GitWorkSpace\Milk_Machine\app\build\intermediates\transforms\dex\debug\folders\1000\10\dagger-producers-2.5_6e420ea6d964cdad1a69510def80f598334ad24e\classes.dex" />
     </item>
 
 </items>

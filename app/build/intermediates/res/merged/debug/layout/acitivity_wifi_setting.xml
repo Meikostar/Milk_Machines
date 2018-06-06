@@ -120,17 +120,19 @@
                     android:layout_marginLeft="12dp"
                     android:src="@drawable/wifi3"
                     android:textSize="15sp" />
-
-                <TextView
-                    android:id="@+id/tv_names"
-                    android:layout_width="fill_parent"
-                    android:layout_height="35dp"
+                <com.canplay.milk.view.ClearEditText
+                    android:textSize="15.5sp"
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="12dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:background="@null"
                     android:gravity="center_vertical"
-                    android:text="WFI15u98"
+                    android:text=""
+                    android:hint="输入wifi密码"
+                    android:id="@+id/et_wifi"
                     android:textColor="#9fa0a0"
-                    android:textSize="15.5sp" />
+                    android:textColorHint="#bdbdbd"/>
 
             </LinearLayout>
 

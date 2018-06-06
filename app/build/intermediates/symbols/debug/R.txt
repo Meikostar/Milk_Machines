@@ -1531,6 +1531,7 @@ int id et_search 0x7f0f0128
 int id et_user 0x7f0f00ff
 int id et_wd 0x7f0f00dc
 int id et_weight 0x7f0f00dd
+int id et_wifi 0x7f0f00d0
 int id exitUntilCollapsed 0x7f0f002b
 int id expand_activities_button 0x7f0f0081
 int id expanded_menu 0x7f0f0095
@@ -1849,7 +1850,6 @@ int id tv_name 0x7f0f00ba
 int id tv_name1 0x7f0f0149
 int id tv_name2 0x7f0f014b
 int id tv_name3 0x7f0f014c
-int id tv_names 0x7f0f00d0
 int id tv_new 0x7f0f01d2
 int id tv_next 0x7f0f00fe
 int id tv_nick 0x7f0f0164

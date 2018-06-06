@@ -5190,6 +5190,7 @@ containing a value of this type.
         public static final int et_user=0x7f0f00ff;
         public static final int et_wd=0x7f0f00dc;
         public static final int et_weight=0x7f0f00dd;
+        public static final int et_wifi=0x7f0f00d0;
         public static final int exitUntilCollapsed=0x7f0f002b;
         public static final int expand_activities_button=0x7f0f0081;
         public static final int expanded_menu=0x7f0f0095;
@@ -5508,7 +5509,6 @@ containing a value of this type.
         public static final int tv_name1=0x7f0f0149;
         public static final int tv_name2=0x7f0f014b;
         public static final int tv_name3=0x7f0f014c;
-        public static final int tv_names=0x7f0f00d0;
         public static final int tv_new=0x7f0f01d2;
         public static final int tv_next=0x7f0f00fe;
         public static final int tv_nick=0x7f0f0164;

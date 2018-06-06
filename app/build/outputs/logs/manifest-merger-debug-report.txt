@@ -70,13 +70,14 @@ ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:18:5-84
 		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:18:22-81
 uses-sdk
 ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\Administrator\.android\build-cache\f5ebc32c6f4ffe4c24dde7410b116e7da93e67b9\output\AndroidManifest.xml:18:5-42
 MERGED from [Milk_Machine:gallery:unspecified] F:\GitWorkSpace\Milk_Machine\gallery\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
 MERGED from [Milk_Machine:LibMarsdaemon:unspecified] F:\GitWorkSpace\Milk_Machine\LibMarsdaemon\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
 MERGED from [Milk_Machine:litepal:unspecified] F:\GitWorkSpace\Milk_Machine\litepal\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
 MERGED from [Milk_Machine:zxingLibrary:unspecified] F:\GitWorkSpace\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:design:23.3.0] C:\Users\Administrator\.android\build-cache\97abfc55d1e504c2314e10ab5909fa0eb140d1bc\output\AndroidManifest.xml:20:5-43
 MERGED from [Milk_Machine:framework:unspecified] F:\GitWorkSpace\Milk_Machine\framework\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:multidex:1.0.1] C:\Users\Administrator\.android\build-cache\f5ebc32c6f4ffe4c24dde7410b116e7da93e67b9\output\AndroidManifest.xml:18:5-42
+MERGED from [Milk_Machine:esptouch:unspecified] F:\GitWorkSpace\Milk_Machine\esptouch\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Administrator\.android\build-cache\b21b4a8a229d67fe4c9d46878885e2f4832a3f3a\output\AndroidManifest.xml:5:5-7:41
 MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\Administrator\.android\build-cache\9224796eb7af8230b024224dc97032da1950957d\output\AndroidManifest.xml:19:5-43
 MERGED from [com.orhanobut:logger:1.15] C:\Users\Administrator\.android\build-cache\7e1eabea27807b68066a3754ada305ffc7d63308\output\AndroidManifest.xml:6:5-43
@@ -108,10 +109,12 @@ MERGED from [com.antfortune.freeline:runtime:0.8.7] C:\Users\Administrator\.andr
 		INJECTED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:21:5-75
+MERGED from [Milk_Machine:esptouch:unspecified] F:\GitWorkSpace\Milk_Machine\esptouch\build\intermediates\bundles\default\AndroidManifest.xml:11:5-76
 	android:name
 		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:21:22-73
 uses-permission#android.permission.CHANGE_WIFI_STATE
 ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:22:5-75
+MERGED from [Milk_Machine:esptouch:unspecified] F:\GitWorkSpace\Milk_Machine\esptouch\build\intermediates\bundles\default\AndroidManifest.xml:13:5-76
 	android:name
 		ADDED from F:\GitWorkSpace\Milk_Machine\app\src\main\AndroidManifest.xml:22:22-73
 uses-permission#android.permission.CAMERA
@@ -666,6 +669,10 @@ uses-feature#android.hardware.camera.autofocus
 ADDED from [Milk_Machine:zxingLibrary:unspecified] F:\GitWorkSpace\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\AndroidManifest.xml:17:5-70
 	android:name
 		ADDED from [Milk_Machine:zxingLibrary:unspecified] F:\GitWorkSpace\Milk_Machine\zxingLibrary\build\intermediates\bundles\default\AndroidManifest.xml:17:19-67
+uses-permission#android.permission.CHANGE_WIFI_MULTICAST_STATE
+ADDED from [Milk_Machine:esptouch:unspecified] F:\GitWorkSpace\Milk_Machine\esptouch\build\intermediates\bundles\default\AndroidManifest.xml:12:5-86
+	android:name
+		ADDED from [Milk_Machine:esptouch:unspecified] F:\GitWorkSpace\Milk_Machine\esptouch\build\intermediates\bundles\default\AndroidManifest.xml:12:22-83
 meta-data#android.support.VERSION
 ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Administrator\.android\build-cache\76040eb7c65026dd7b33b103fa8c5f1f965af952\output\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Administrator\.android\build-cache\7586a14ecd70e78524171d8ad41eac9df285955f\output\AndroidManifest.xml:26:9-28:38
